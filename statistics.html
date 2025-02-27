@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Metamorphosis</title>
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+    <main class="main">
+      <div class="container">
+        <div class="main-content">
+          <section class="sidebar" id="sidebar"></section>
+          <div class="app-content">
+            <div class="stats-grid">
+              <div class="block light light-down p-24">
+                <div class="flex flex-column">
+                  <div
+                    class="flex align-center justify-center gap-12"
+                    style="padding: 0 85px"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="./assets/images/icons.svg#chart"></use>
+                    </svg>
+                    <h2 class="title">Статистика</h2>
+                  </div>
+                  <p class="subtitle text-center mt-10">Топ стран</p>
+                  <div class="down-separator" style="margin-top: 15px"></div>
+                </div>
+                <div class="table-container">
+                  <div class="table-item">
+                    <table class="country__list list-wrapper">
+                      <thead class="list-header">
+                        <tr>
+                          <th class="list-title">Страны</th>
+                          <th class="list-title">Статистика</th>
+                        </tr>
+                      </thead>
+                      <tbody class="list-body list-container"></tbody>
+                    </table>
+                  </div>
+                  <div class="list-pagination"></div>
+                </div>
+              </div>
+              <div class="block light light-down p-24">
+                <div class="flex flex-column">
+                  <div
+                    class="flex align-center justify-center gap-12"
+                    style="padding: 0 85px"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="./assets/images/icons.svg#chart"></use>
+                    </svg>
+                    <h2 class="title">Статистика</h2>
+                  </div>
+                  <p class="subtitle text-center mt-10">
+                    Самые лучшие промокоды
+                  </p>
+                  <div class="down-separator" style="margin-top: 15px"></div>
+                </div>
+                <div class="table-container">
+                  <div class="table-item">
+                    <table class="promoStat__list list-wrapper">
+                      <thead class="list-header">
+                        <tr>
+                          <th class="list-title">Промокоды</th>
+                          <th class="list-title">Статистика</th>
+                        </tr>
+                      </thead>
+                      <tbody class="list-body list-container"></tbody>
+                    </table>
+                  </div>
+                  <div class="list-pagination"></div>
+                </div>
+              </div>
+              <div class="block light light-down p-24">
+                <div class="flex flex-column">
+                  <div
+                    class="flex align-center justify-center gap-12"
+                    style="padding: 0 85px"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="./assets/images/icons.svg#chart"></use>
+                    </svg>
+                    <h2 class="title">Статистика</h2>
+                  </div>
+                  <p class="subtitle text-center mt-10">Самые лучшие мамонты</p>
+                  <div class="down-separator" style="margin-top: 15px"></div>
+                </div>
+                <div class="table-container">
+                  <div class="table-item">
+                    <table class="usersStat__list list-wrapper">
+                      <thead class="list-header">
+                        <tr>
+                          <th class="list-title">Почта</th>
+                          <th class="list-title">Статистика</th>
+                        </tr>
+                      </thead>
+                      <tbody class="list-body list-container"></tbody>
+                    </table>
+                  </div>
+                  <div class="list-pagination"></div>
+                </div>
+              </div>
+              <div class="block light light-down p-24">
+                <div class="flex flex-column">
+                  <div
+                    class="flex align-center justify-center gap-12"
+                    style="padding: 0 85px"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="./assets/images/icons.svg#chart"></use>
+                    </svg>
+                    <h2 class="title">Статистика</h2>
+                  </div>
+                  <p class="subtitle text-center mt-10">Самые лучшие домены</p>
+                  <div class="down-separator" style="margin-top: 15px"></div>
+                </div>
+                <div class="table-container">
+                  <div class="table-item">
+                    <table class="domenStat__list list-wrapper">
+                      <thead class="list-header">
+                        <tr>
+                          <th class="list-title">Домены</th>
+                          <th class="list-title">Статистика</th>
+                        </tr>
+                      </thead>
+                      <tbody class="list-body list-container"></tbody>
+                    </table>
+                  </div>
+                  <div class="list-pagination"></div>
+                </div>
+              </div>
+            </div>
+            <div class="block statistics-info-block">
+              <div class="content">
+                <div class="custom-select" id="selectStatistics">
+                  <button class="select-selected">Домены</button>
+                  <svg class="icon select-carret">
+                    <use
+                      xlink:href="./assets/images/icons.svg#arrow-down"
+                    ></use>
+                  </svg>
+                  <div class="select-items"></div>
+                </div>
+              </div>
+              <img
+                class="illustration"
+                src="./assets/images/statistics-illustration.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/data/countryStat.js"></script>
+    <script src="./assets/js/data/countryStatTemplate.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <script>
+      renderList(items, {
+        itemsPerPage: 10,
+        containerSelector: ".country__list",
+        tepmlateFn: (item) => usersItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+    <script src="./assets/js/data/promoStat.js"></script>
+    <script src="./assets/js/data/promoStatTemplate.js"></script>
+    <script>
+      renderList(items, {
+        itemsPerPage: 10,
+        containerSelector: ".promoStat__list",
+        tepmlateFn: (item) => usersItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+    <script src="./assets/js/data/usersStat.js"></script>
+    <script src="./assets/js/data/usersStatTemplate.js"></script>
+    <script>
+      renderList(items, {
+        itemsPerPage: 10,
+        containerSelector: ".usersStat__list",
+        tepmlateFn: (item) => usersItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+    <script src="./assets/js/data/domenStat.js"></script>
+    <script src="./assets/js/data/domenStatTemplate.js"></script>
+    <script>
+      renderList(items, {
+        itemsPerPage: 10,
+        containerSelector: ".domenStat__list",
+        tepmlateFn: (item) => usersItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+  </body>
+</html>

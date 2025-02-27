@@ -1,0 +1,15 @@
+const usersItemTemplate = (item) => {
+  return `<tr class="list-item">
+            <td><div class="item">${item.login}</div></td>
+            <td><div class="item">${item.balance}</div></td>
+            <td><div class="item"><img src="${item.countryImg}" alt="">${item.country}</div></td>
+            <td><div class="item">${item.domen}</div></td>
+            <td><div class="item">${item.date}</div></td>
+            <td>
+              <div class="item actions">
+                <button class="action-btn edit-btn" data-id="${item.login}" title="Редактировать"><svg class="icon"><use xlink:href="./assets/images/icons.svg#edit"></use></svg></button>
+                <button class="action-btn delete-btn" data-id="${item.login}" title="Удалить"><svg class="icon"><use xlink:href="./assets/images/icons.svg#delete"></use></svg></button>
+              </div>
+            </td>
+          </tr>`;
+};

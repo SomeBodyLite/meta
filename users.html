@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Metamorphosis</title>
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+    <main class="main">
+      <div class="container">
+        <div class="main-content">
+          <section class="sidebar" id="sidebar"></section>
+          <div class="app-content">
+            <div
+              class="block light light-down"
+              style="padding: 27px 38px 50px; width: 100%; max-width: 426px; height: fit-content;"
+            >
+              <div class="flex align-center justify-center gap-12">
+                <svg class="icon">
+                  <use xlink:href="./assets/images/icons.svg#statistics"></use>
+                </svg>
+                <h2 class="title">Cтатистика</h2>
+              </div>
+              <p class="subtitle text-center mt-10">Количество пользователей</p>
+              <div class="down-separator" style="margin-top: 16px"></div>
+              <div class="grid-auto gap-30" style="padding-top: 25px">
+                <div class="block-inner flex-column gap-10">
+                  <h3 class="title text-center">День</h3>
+                  <span
+                    class="p-4 radius-20 bg-gradient-accent text-white text-center fz-32 fw-800"
+                    >10</span
+                  >
+                </div>
+                <div class="block-inner flex-column gap-10">
+                  <h3 class="title text-center">Неделя</h3>
+                  <span
+                    class="p-4 radius-20 bg-gradient-accent text-white text-center fz-32 fw-800"
+                    >70</span
+                  >
+                </div>
+              </div>
+              <div class="grid-auto gap-30" style="padding-top: 20px">
+                <div class="block-inner flex-column gap-10">
+                  <h3 class="title text-center">Месяц</h3>
+                  <span
+                    class="p-4 radius-20 bg-gradient-accent text-white text-center fz-32 fw-800"
+                    >140</span
+                  >
+                </div>
+                <div class="block-inner flex-column gap-10">
+                  <h3 class="title text-center">Все время</h3>
+                  <span
+                    class="p-4 radius-20 bg-gradient-accent text-white text-center fz-32 fw-800"
+                    >1024</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="block w-100 p-32 light">
+              <div class="flex justify-between">
+                <div class="flex flex-column">
+                  <div
+                    class="flex align-center justify-center gap-12"
+                    style="padding: 0 55px"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="./assets/images/icons.svg#users"></use>
+                    </svg>
+                    <h2 class="title">Пользователи</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 15px"></div>
+                </div>
+                <div class="flex align-center gap-24">
+                  <div class="flex align-center gap-10">
+                    <svg class="icon">
+                      <use xlink:href="./assets/images/icons.svg#filter"></use>
+                    </svg>
+                    <span
+                      class="fz-20 fw-600 text-white"
+                      style="margin-right: 10px"
+                      >Поиск по:</span
+                    >
+                    <div class="custom-select" id="selectUsers">
+                      <button class="select-selected"></button>
+                      <svg class="icon select-carret">
+                        <use
+                          xlink:href="./assets/images/icons.svg#arrow-down"
+                        ></use>
+                      </svg>
+                      <div class="select-items"></div>
+                    </div>
+                  </div>
+                  <div class="form-group border">
+                    <label class="form-group__label">
+                      <input
+                        type="text"
+                        class="form-group__input"
+                        placeholder="Введите почту мамонта"
+                      />
+                      <button class="form-group__button"></button>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="table-container">
+                <div class="table-item">
+                  <table class="users__list list-wrapper">
+                    <thead class="list-header">
+                      <tr>
+                        <th class="list-title">Логин</th>
+                        <th class="list-title">Баланс</th>
+                        <th class="list-title">Страна</th>
+                        <th class="list-title">Домен</th>
+                        <th class="list-title">Дата регистрации</th>
+                        <th class="list-title">Действия</th>
+                      </tr>
+                    </thead>
+                    <tbody class="list-body list-container"></tbody>
+                  </table>
+                </div>
+                <div class="list-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/data/users.js"></script>
+    <script src="./assets/js/data/usersTemplate.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+      renderList(items, {
+        itemsPerPage: 5,
+        containerSelector: ".users__list",
+        tepmlateFn: (item) => usersItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+  </body>
+</html>

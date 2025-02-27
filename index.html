@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Metamorphosis</title>
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+    <main class="main">
+      <div class="container">
+        <div class="main-content">
+          <section class="sidebar" id="sidebar"></section>
+          <div class="app-content">
+            <div class="flex flex-column" style="gap: 48px">
+              <div class="block light light-down main-statistics-block">
+                <div class="flex align-center justify-center gap-12">
+                  <svg class="icon">
+                    <use
+                      xlink:href="./assets/images/icons.svg#statistics"
+                    ></use>
+                  </svg>
+                  <h2 class="title">Общая статистика</h2>
+                </div>
+                <div class="down-separator" style="margin-top: 16px"></div>
+                <div class="flex gap-30" style="padding-top: 25px">
+                  <div class="block-inner flex-column gap-10 align-center">
+                    <h3 class="title text-center">Регистрации</h3>
+                    <span class="value text-center fz-32 fw-800">1000</span>
+                  </div>
+                  <div class="block-inner flex-column gap-10 align-center">
+                    <h3 class="title text-center">Депозиты</h3>
+                    <span class="value text-center fz-32 fw-800">120000$</span>
+                  </div>
+                </div>
+              </div>
+              <div class="block main-info-block">
+                <div class="content">
+                  <p>Вы работаете вместе с нами</p>
+                  <span>150 дней</span>
+                </div>
+                <img
+                  class="illustration"
+                  src="./assets/images/main-illustration.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="flex gap-48 flex-column w-100">
+              <div class="block light p-32 relative">
+                <div class="flex align-center gap-12">
+                  <svg class="icon">
+                    <use xlink:href="./assets/images/icons.svg#chart"></use>
+                  </svg>
+                  <h2 class="title">Статистика</h2>
+                </div>
+                <div
+                  class="custom-select absolute"
+                  style="top: 20px; right: 20px"
+                  id="selectMain"
+                >
+                  <button class="select-selected"></button>
+                  <svg class="icon select-carret">
+                    <use
+                      xlink:href="./assets/images/icons.svg#arrow-down"
+                    ></use>
+                  </svg>
+                  <div class="select-items"></div>
+                </div>
+                <div class="chart-container pt-30">
+                  <canvas id="depositsChart"></canvas>
+                </div>
+              </div>
+              <div class="grid-main-auto gap-40">
+                <div class="block light p-32">
+                  <div class="flex align-center gap-12">
+                    <svg class="icon" style="width: 38px; height: 38px">
+                      <use xlink:href="./assets/images/icons.svg#logs"></use>
+                    </svg>
+                    <h2 class="title">Последняя активность</h2>
+                  </div>
+                  <div class="recent-activity">
+                    <div class="item">
+                      <img
+                        class="item-icon"
+                        src="./assets/images/star-blue.svg"
+                        alt=""
+                      />
+                      <p class="item-text">hhgs837lk@gmail.com</p>
+                      <span class="item-time">час назад</span>
+                    </div>
+                    <div class="item">
+                      <img
+                        class="item-icon"
+                        src="./assets/images/star-red.svg"
+                        alt=""
+                      />
+                      <p class="item-text">hhgs837lk@gmail.com</p>
+                      <span class="item-time">час назад</span>
+                    </div>
+                    <div class="item">
+                      <img
+                        class="item-icon"
+                        src="./assets/images/star-yellow.svg"
+                        alt=""
+                      />
+                      <p class="item-text">hhgs837lk@gmail.com</p>
+                      <span class="item-time">час назад</span>
+                    </div>
+                    <div class="item">
+                      <img
+                        class="item-icon"
+                        src="./assets/images/star-blue.svg"
+                        alt=""
+                      />
+                      <p class="item-text">hhgs837lk@gmail.com</p>
+                      <span class="item-time">час назад</span>
+                    </div>
+                    <div class="item">
+                      <img
+                        class="item-icon"
+                        src="./assets/images/star-red.svg"
+                        alt=""
+                      />
+                      <p class="item-text">hhgs837lk@gmail.com</p>
+                      <span class="item-time">час назад</span>
+                    </div>
+                    <div class="item">
+                      <img
+                        class="item-icon"
+                        src="./assets/images/star-yellow.svg"
+                        alt=""
+                      />
+                      <p class="item-text">hhgs837lk@gmail.com</p>
+                      <span class="item-time">час назад</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="block light p-32">
+                  <div class="flex align-center gap-12">
+                    <svg class="icon" style="width: 38px; height: 38px">
+                      <use xlink:href="./assets/images/icons.svg#clock"></use>
+                    </svg>
+                    <h2 class="title">Последние регистрации</h2>
+                  </div>
+                  <div class="recent-registrations">
+                    <div class="item green">
+                      <img
+                        class="item-icon"
+                        src="./assets/images/star-blue.svg"
+                        alt=""
+                      />
+                      <div class="flex flex-column">
+                        <p class="item-text">hhgs837lk@gmail.com</p>
+                        <div class="item-status">Верифицирован</div>
+                      </div>
+                      <span class="item-time">06.12.2024 00:40</span>
+                    </div>
+                    <div class="item yellow">
+                      <img
+                        class="item-icon"
+                        src="./assets/images/star-yellow.svg"
+                        alt=""
+                      />
+                      <div class="flex flex-column">
+                        <p class="item-text">hhgs837lk@gmail.com</p>
+                        <div class="item-status">На проверке</div>
+                      </div>
+                      <span class="item-time">06.12.2024 00:40</span>
+                    </div>
+                    <div class="item red">
+                      <img
+                        class="item-icon"
+                        src="./assets/images/star-red.svg"
+                        alt=""
+                      />
+                      <div class="flex flex-column">
+                        <p class="item-text">hhgs837lk@gmail.com</p>
+                        <div class="item-status">Не верифицирован</div>
+                      </div>
+                      <span class="item-time">06.12.2024 00:40</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/chart.js"></script>
+    <script>
+     const ctx = document.getElementById("depositsChart").getContext("2d");
+
+// Данные
+const labels = Array.from({ length: 31 }, (_, i) => `${i + 1} декабря`);
+const data = Array.from({ length: 31 }, () => Math.floor(Math.random() * 1600));
+
+// Создаём массив цветов для каждой колонки
+const defaultBackgroundColors = data.map(() => "rgba(0, 122, 255, 0.6)");
+
+const chart = new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        label: "Депозиты",
+        data: data,
+        backgroundColor: [...defaultBackgroundColors], // Передаем массив цветов
+        borderRadius: 10,
+      },
+    ],
+  },
+  options: {
+    interaction: {
+      mode: "index",
+      intersect: false,
+    },
+    responsive: true,
+    maintainAspectRatio: true,
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          color: "#242C3F",
+          font: {
+            family: "Montserrat",
+            size: 21,
+            weight: "600",
+          },
+          callback: (value) => `$${value}`,
+        },
+        grid: { color: "rgba(255, 255, 255, 0.1)" },
+      },
+      x: {
+        ticks: {
+          color: "#576482",
+          font: {
+            family: "Montserrat",
+            size: 10,
+            weight: "500",
+          },
+        },
+        grid: { display: false },
+      },
+    },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        enabled: false, // Отключаем стандартный тултип
+        external: function (context) {
+          const tooltipModel = context.tooltip;
+          let tooltip = document.getElementById("custom-tooltip");
+
+          if (!tooltip) {
+            tooltip = document.createElement("div");
+            tooltip.id = "custom-tooltip";
+            tooltip.style.position = "absolute";
+            tooltip.style.zIndex = "1";
+            tooltip.style.background = "#121827";
+            tooltip.style.color = "white";
+            tooltip.style.padding = "10px";
+            tooltip.style.borderRadius = "12px";
+            tooltip.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.2)";
+            tooltip.style.pointerEvents = "none";
+            tooltip.style.opacity = "0";
+            tooltip.style.transition = "opacity 0.2s ease";
+            tooltip.style.textAlign = "center";
+            document.body.appendChild(tooltip);
+          }
+
+          if (tooltipModel.opacity === 0) {
+            tooltip.style.opacity = "0";
+            return;
+          }
+
+          if (tooltipModel.body) {
+            const label = tooltipModel.dataPoints[0].label;
+            const value = tooltipModel.dataPoints[0].formattedValue;
+
+            tooltip.innerHTML = `<strong style="font-size: 16px; color: #AEB6C8;">${label}</strong>
+                                  <hr style="border: none; height: 1px; background: rgba(255,255,255,0.2); margin: 6px 0;">
+                                  <span style="font-size: 20px; font-weight: 600;">${value}$</span>`;
+          }
+
+          const position = context.chart.canvas.getBoundingClientRect();
+          tooltip.style.opacity = "1";
+          tooltip.style.left = position.left + window.pageXOffset + tooltipModel.caretX - tooltip.offsetWidth / 2 + "px";
+          tooltip.style.top = position.top + window.pageYOffset + tooltipModel.caretY - 50 + "px";
+        },
+      },
+    },
+    onHover: (event, chartElement) => {
+      if (chartElement.length) {
+        const index = chartElement[0].index;
+
+        // Обновляем цвета столбцов
+        chart.data.datasets[0].backgroundColor = defaultBackgroundColors.map((color, i) =>
+          i === index ? "rgba(255, 0, 0, 0.6)" : "rgba(0, 122, 255, 0.6)"
+        );
+
+        chart.update();
+      }
+    },
+  },
+});
+
+    </script>
+  </body>
+</html>

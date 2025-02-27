@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+    <style>
+      .ui {
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ui">
+      <div class="icons">
+        <svg class="icon">
+          <use xlink:href="./assets/images/icons.svg#eye"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#eye-off"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#logout-2"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#logs"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#payments"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#pin"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#readed"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#security"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#statistics"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#support"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#swap"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#arrow-down"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#arrow-left"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#blacklist"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#arrow-right"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#chart"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#delete"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#deposits"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#edit"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#filter"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#logout"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#error-icon"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#success-icon"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#close"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#ticket"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#users"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#home"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#settings"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#copy"></use>
+        </svg>
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#clock"></use>
+        </svg>
+      </div>
+      <div class="form-group">
+        <div class="form-group__title">Имя пользователя</div>
+        <label class="form-group__label">
+          <input type="text" class="form-group__input" placeholder="Текст" />
+          <button class="form-group__button"></button>
+        </label>
+      </div>
+      <div class="form-group border">
+        <div class="form-group__title">Имя пользователя</div>
+        <label class="form-group__label">
+          <input type="text" class="form-group__input" placeholder="Текст" />
+          <button class="form-group__button"></button>
+        </label>
+      </div>
+      <div class="form-group radius-12">
+        <div class="form-group__title">Имя пользователя</div>
+        <label class="form-group__label">
+          <input type="text" class="form-group__input" placeholder="Текст" />
+          <button class="form-group__button"></button>
+        </label>
+      </div>
+      <div class="form-group password">
+        <div class="form-group__title">Пароль</div>
+        <label class="form-group__label">
+          <input type="text" class="form-group__input" placeholder="Пароль" />
+          <button class="form-group__button"></button>
+        </label>
+      </div>
+      <div class="form-group small">
+        <div class="form-group__title">Пароль</div>
+        <label class="form-group__label">
+          <input type="text" class="form-group__input" placeholder="Пароль" />
+          <button class="form-group__button"></button>
+        </label>
+      </div>
+      <div class="absolute" style="right: 20px; top: 20px; z-index: 99;">
+        <button class="button" onclick="showNotification('Ошибка авторизации', 'Введено неверное имя полльзователя или пароль', 'error')">Создать error</button>
+        <button class="button" onclick="showNotification('Успешная авторизация', 'Вы успешно авторизовались', 'success')">Создать success</button>
+        <button class="button" onclick="showNotification('Скопированно', '', 'success')">Создать пустое</button>
+      </div>
+      <button class="btn btn-primary">Продолжить</button>
+      <button class="btn btn-gradient">Продолжить</button>
+      <button class="btn btn-secondary">Продолжить</button>
+      <div class="notify-container">
+        <div class="notify-content">
+          <!-- <div class="notify-item">
+            <div class="notify-item-content">
+              <div class="notify-header">
+                <svg class="icon">
+                  <use xlink:href="./assets/images/icons.svg#error-icon"></use>
+                </svg>
+                <h3 class="notify-header_text">Ошибка авторизации</h3>
+              </div>
+              <div class="notify-body">
+                <p class="notify-body-text">Введено неверное имя полльзователя или пароль</p>
+              </div>
+            </div>
+            <button class="notify-close">
+              <svg class="icon">
+                <use xlink:href="./assets/images/icons.svg#close"></use>
+              </svg>
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

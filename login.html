@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Metamorphosis</title>
+  </head>
+  <body>
+    <div class="notify-container">
+      <div class="notify-content"></div>
+    </div>
+    <section class="login">
+      <div class="container">
+        <div class="section-content">
+          <div class="block p-16 relative">
+            <h1 class="login-title">Metamorphosis</h1>
+            <p class="login-subtitle">Авторизуйтесь, чтобы продолжить</p>
+            <div class="login-content">
+              <div class="form-group radius-12" style="margin-top: 40px">
+                <div class="form-group__title">Имя пользователя</div>
+                <label class="form-group__label">
+                  <input
+                    type="text"
+                    class="form-group__input"
+                    placeholder="Введите имя пользователя"
+                  />
+                  <button class="form-group__button"></button>
+                </label>
+              </div>
+              <div
+                class="form-group radius-12 password"
+                style="margin-top: 20px"
+              >
+                <div class="form-group__title">Пароль</div>
+                <label class="form-group__label">
+                  <input
+                    type="text"
+                    class="form-group__input"
+                    placeholder="Введите пароль"
+                  />
+                  <button class="form-group__button"></button>
+                </label>
+              </div>
+              <button
+                class="btn btn-primary"
+                style="margin-top: 36px"
+                onclick="showNotification('Ошибка авторизации', 'Введено неверное имя полльзователя или пароль', 'error')"
+              >
+                Продолжить
+              </button>
+            </div>
+            <p class="login-footer">
+              Нет аккаунта? <a href="#">Зарегистрироваться!</a>
+            </p>
+            <img
+              class="absolute no-actions"
+              style="right: calc(100% + 304px); top: -75px; width: 404px"
+              src="./assets/images/login-fly-1.png"
+              alt=""
+            />
+            <img
+              class="absolute no-actions"
+              style="left: calc(100% + 321px); top: -75px; width: 330px"
+              src="./assets/images/login-fly-2.png"
+              alt=""
+            />
+            <img
+              class="absolute no-actions"
+              src="./assets/images/fly.png"
+              style="width: 190px; top: -95px; left: -77px"
+              alt="Fly"
+            />
+            <img
+              class="absolute no-actions"
+              src="./assets/images/dummy.svg"
+              style="
+                filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25));
+                top: 180px;
+                left: 100%;
+                z-index: -1;
+              "
+              alt=""
+            />
+            <img
+              class="absolute no-actions"
+              src="./assets/images/dummy.svg"
+              style="filter: blur(10px); top: 180px; left: 100%; z-index: -2"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

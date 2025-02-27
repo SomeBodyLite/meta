@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="page-list">
+      <a class="page-list-item" href="/index.html">Главная</a>
+      <a class="page-list-item" href="/users.html">Пользователи</a>
+      <a class="page-list-item" href="/login.html">Логин</a>
+      <a class="page-list-item" href="/deposits.html">Депозиты</a>
+      <a class="page-list-item" href="/payments.html">Выплаты</a>
+      <a class="page-list-item" href="/promos.html">Промокоды</a>
+      <a class="page-list-item" href="/kit.html">KIT</a>
+    </div>
+    <style>
+      .page-list {
+        list-style: none;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 300px;
+      }
+      .page-list-item {
+        background: #3E77A0;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+      .page-list-item a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+      }
+      .page-list-item:hover {
+        background: #4a90c2;
+      }
+    </style>
+  </body>
+</html>

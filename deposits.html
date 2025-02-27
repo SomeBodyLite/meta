@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Metamorphosis</title>
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+    <main class="main">
+      <div class="container">
+        <div class="main-content">
+          <section class="sidebar" id="sidebar"></section>
+          <div class="app-content">
+            <div
+              class="block light light-down"
+              style="
+                padding: 27px 38px 50px;
+                width: 100%;
+                max-width: 426px;
+                height: fit-content;
+              "
+            >
+              <div class="flex align-center justify-center gap-12">
+                <svg class="icon">
+                  <use xlink:href="./assets/images/icons.svg#statistics"></use>
+                </svg>
+                <h2 class="title">Cтатистика</h2>
+              </div>
+              <p class="subtitle text-center mt-10">Cумма депозитов</p>
+              <div class="down-separator" style="margin-top: 16px"></div>
+              <div class="relative mt-10">
+                <div
+                  class="custom-select absolute"
+                  style="top: 0; right: 0"
+                  id="selectDepositsStats"
+                >
+                  <button class="select-selected"></button>
+                  <svg class="icon select-carret">
+                    <use
+                      xlink:href="./assets/images/icons.svg#arrow-down"
+                    ></use>
+                  </svg>
+                  <div class="select-items"></div>
+                </div>
+                <div style="padding: 50px; padding-top: 100px; font-size: 20px">
+                  chart placeholder
+                </div>
+              </div>
+            </div>
+            <div class="block w-100 p-32 light">
+              <div class="flex justify-between">
+                <div class="flex flex-column">
+                  <div
+                    class="flex align-center justify-center gap-12"
+                    style="padding: 0 85px"
+                  >
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#deposits"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Депозиты</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 15px"></div>
+                </div>
+                <div class="flex align-center gap-24">
+                  <div class="flex align-center gap-10">
+                    <svg class="icon">
+                      <use xlink:href="./assets/images/icons.svg#filter"></use>
+                    </svg>
+                    <span
+                      class="fz-20 fw-600 text-white"
+                      style="margin-right: 10px"
+                      >Поиск по:</span
+                    >
+                    <div class="custom-select" id="selectUsers">
+                      <button class="select-selected"></button>
+                      <svg class="icon select-carret">
+                        <use
+                          xlink:href="./assets/images/icons.svg#arrow-down"
+                        ></use>
+                      </svg>
+                      <div class="select-items"></div>
+                    </div>
+                  </div>
+                  <div class="form-group border">
+                    <label class="form-group__label">
+                      <input
+                        type="text"
+                        class="form-group__input"
+                        placeholder="Введите почту мамонта"
+                      />
+                      <button class="form-group__button"></button>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="table-container">
+                <div class="table-item">
+                  <table class="deposits__list list-wrapper">
+                    <thead class="list-header">
+                      <tr>
+                        <th class="list-title">Логин</th>
+                        <th class="list-title">Монета</th>
+                        <th class="list-title">Сумма</th>
+                        <th class="list-title">Домен</th>
+                        <th class="list-title">Хэш</th>
+                        <th class="list-title">Дата депозита</th>
+                        <th class="list-title">Действия</th>
+                      </tr>
+                    </thead>
+                    <tbody class="list-body list-container"></tbody>
+                  </table>
+                </div>
+                <div class="list-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/data/deposits.js"></script>
+    <script src="./assets/js/data/depositsTemplate.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+      renderList(items, {
+        itemsPerPage: 5,
+        containerSelector: ".deposits__list",
+        tepmlateFn: (item) => usersItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+  </body>
+</html>
