@@ -193,122 +193,154 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/chart.js"></script>
     <script>
-     const ctx = document.getElementById("depositsChart").getContext("2d");
+      const ctx = document.getElementById("depositsChart").getContext("2d");
 
-// Данные
-const labels = Array.from({ length: 31 }, (_, i) => `${i + 1} декабря`);
-const data = Array.from({ length: 31 }, () => Math.floor(Math.random() * 1600));
+      // Получаем даты от 30 дней назад до сегодня
+      const today = new Date();
+      const labels = Array.from({ length: 31 }, (_, i) => {
+        const date = new Date();
+        date.setDate(today.getDate() - 30 + i);
+        return date.toLocaleDateString("ru-RU", {
+          day: "numeric",
+          month: "long",
+        });
+      });
 
-// Создаём массив цветов для каждой колонки
-const defaultBackgroundColors = data.map(() => "rgba(0, 122, 255, 0.6)");
+      // Данные
+      const data = Array.from({ length: 31 }, () =>
+        Math.floor(Math.random() * 1600)
+      );
 
-const chart = new Chart(ctx, {
-  type: "bar",
-  data: {
-    labels: labels,
-    datasets: [
-      {
-        label: "Депозиты",
-        data: data,
-        backgroundColor: [...defaultBackgroundColors], // Передаем массив цветов
-        borderRadius: 10,
-      },
-    ],
-  },
-  options: {
-    interaction: {
-      mode: "index",
-      intersect: false,
-    },
-    responsive: true,
-    maintainAspectRatio: true,
-    scales: {
-      y: {
-        beginAtZero: true,
-        ticks: {
-          color: "#242C3F",
-          font: {
-            family: "Montserrat",
-            size: 21,
-            weight: "600",
-          },
-          callback: (value) => `$${value}`,
+      // Создаём массив цветов для каждой колонки
+      const defaultBackgroundColors = data.map(() => "rgba(0, 122, 255, 0.6)");
+
+      const chart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: "Депозиты",
+              data: data,
+              // backgroundColor: [...defaultBackgroundColors],
+              backgroundColor: (ctx) => {
+                const gradient = ctx.chart.ctx.createLinearGradient(
+                  0,
+                  0,
+                  0,
+                  ctx.chart.height
+                );
+                gradient.addColorStop(0, "#78B7FF");
+                gradient.addColorStop(1, "#4490D3");
+                return gradient;
+              },
+              borderRadius: 10,
+            },
+          ],
         },
-        grid: { color: "rgba(255, 255, 255, 0.1)" },
-      },
-      x: {
-        ticks: {
-          color: "#576482",
-          font: {
-            family: "Montserrat",
-            size: 10,
-            weight: "500",
+        options: {
+          interaction: {
+            mode: "index",
+            intersect: false,
           },
-        },
-        grid: { display: false },
-      },
-    },
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        enabled: false, // Отключаем стандартный тултип
-        external: function (context) {
-          const tooltipModel = context.tooltip;
-          let tooltip = document.getElementById("custom-tooltip");
+          responsive: true,
+          maintainAspectRatio: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                color: "#242C3F",
+                font: {
+                  family: "Montserrat",
+                  size: 21,
+                  weight: "600",
+                },
+                callback: (value) => `$${value}`,
+              },
+              grid: { color: "rgba(255, 255, 255, 0.1)" },
+            },
+            x: {
+              ticks: {
+                color: "#576482",
+                font: {
+                  family: "Montserrat",
+                  size: 10,
+                  weight: "500",
+                },
+                callback: function (val, index) {
+                  // Показываем только первую и последнюю дату
+                  if (index === 0 || index === labels.length - 1) {
+                    return labels[index];
+                  }
+                  return "";
+                },
+                autoSkip: false, // Отключаем автоматический пропуск меток
+                maxRotation: 0, // Отключаем поворот меток
+                minRotation: 0, // Отключаем поворот меток
+              },
+              grid: { display: false },
+            },
+          },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              enabled: false, // Отключаем стандартный тултип
+              external: function (context) {
+                const tooltipModel = context.tooltip;
+                let tooltip = document.getElementById("custom-tooltip");
 
-          if (!tooltip) {
-            tooltip = document.createElement("div");
-            tooltip.id = "custom-tooltip";
-            tooltip.style.position = "absolute";
-            tooltip.style.zIndex = "1";
-            tooltip.style.background = "#121827";
-            tooltip.style.color = "white";
-            tooltip.style.padding = "10px";
-            tooltip.style.borderRadius = "12px";
-            tooltip.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.2)";
-            tooltip.style.pointerEvents = "none";
-            tooltip.style.opacity = "0";
-            tooltip.style.transition = "opacity 0.2s ease";
-            tooltip.style.textAlign = "center";
-            document.body.appendChild(tooltip);
-          }
+                if (!tooltip) {
+                  tooltip = document.createElement("div");
+                  tooltip.id = "custom-tooltip";
+                  tooltip.style.position = "absolute";
+                  tooltip.style.zIndex = "1";
+                  tooltip.style.background = "#121827";
+                  tooltip.style.color = "white";
+                  tooltip.style.padding = "10px";
+                  tooltip.style.borderRadius = "12px";
+                  tooltip.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.2)";
+                  tooltip.style.pointerEvents = "none";
+                  tooltip.style.opacity = "0";
+                  tooltip.style.transition =
+                    "opacity 0.2s ease, inset .3s ease";
+                  tooltip.style.transform = "translateY(-60px)";
+                  tooltip.style.textAlign = "center";
+                  document.body.appendChild(tooltip);
+                }
 
-          if (tooltipModel.opacity === 0) {
-            tooltip.style.opacity = "0";
-            return;
-          }
+                if (tooltipModel.opacity === 0) {
+                  tooltip.style.opacity = "0";
+                  return;
+                }
 
-          if (tooltipModel.body) {
-            const label = tooltipModel.dataPoints[0].label;
-            const value = tooltipModel.dataPoints[0].formattedValue;
+                if (tooltipModel.body) {
+                  const label = tooltipModel.dataPoints[0].label;
+                  const value = tooltipModel.dataPoints[0].formattedValue;
 
-            tooltip.innerHTML = `<strong style="font-size: 16px; color: #AEB6C8;">${label}</strong>
-                                  <hr style="border: none; height: 1px; background: rgba(255,255,255,0.2); margin: 6px 0;">
+                  tooltip.innerHTML = `<strong style="font-size: 16px; color: #AEB6C8;">${label}</strong>
+                                  <div class="down-separator" style="margin: 6px 0"></div>
                                   <span style="font-size: 20px; font-weight: 600;">${value}$</span>`;
-          }
+                }
 
-          const position = context.chart.canvas.getBoundingClientRect();
-          tooltip.style.opacity = "1";
-          tooltip.style.left = position.left + window.pageXOffset + tooltipModel.caretX - tooltip.offsetWidth / 2 + "px";
-          tooltip.style.top = position.top + window.pageYOffset + tooltipModel.caretY - 50 + "px";
+                const position = context.chart.canvas.getBoundingClientRect();
+                tooltip.style.opacity = "1";
+                tooltip.style.left =
+                  position.left +
+                  window.pageXOffset +
+                  tooltipModel.caretX -
+                  tooltip.offsetWidth / 2 +
+                  "px";
+                tooltip.style.top =
+                  position.top +
+                  window.pageYOffset +
+                  tooltipModel.caretY -
+                  50 +
+                  "px";
+              },
+            },
+          },
         },
-      },
-    },
-    onHover: (event, chartElement) => {
-      if (chartElement.length) {
-        const index = chartElement[0].index;
-
-        // Обновляем цвета столбцов
-        chart.data.datasets[0].backgroundColor = defaultBackgroundColors.map((color, i) =>
-          i === index ? "rgba(255, 0, 0, 0.6)" : "rgba(0, 122, 255, 0.6)"
-        );
-
-        chart.update();
-      }
-    },
-  },
-});
-
+      });
     </script>
   </body>
 </html>
