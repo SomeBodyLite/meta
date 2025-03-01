@@ -132,14 +132,24 @@
         Math.floor(Math.random() * 180)
       );
 
+      // Градиент для фона
+      const gradient = ctx.createLinearGradient(0, 0, 0, 150);
+      gradient.addColorStop(0, "rgba(133, 191, 250, 0.65)");
+      gradient.addColorStop(1, "rgba(255, 255, 255, 0.00)");
+
+      // Градиент для линии
+      const lineGradient = ctx.createLinearGradient(0, 0, ctx.canvas.width, 0);
+      lineGradient.addColorStop(0, "#3E91F0");
+      lineGradient.addColorStop(0.495, "#A0D1FF");
+      lineGradient.addColorStop(0.98, "#3E91F0");
+
       const data = {
         labels: [1, 6, 12, 18, 24, 30],
         datasets: [
           {
-            // data: [10, 50, 60, 83, 40, 55],
             data: dataset,
-            borderColor: "rgba(102, 153, 255, 1)",
-            backgroundColor: "rgba(102, 153, 255, 0.2)",
+            borderColor: lineGradient,
+            backgroundColor: gradient,
             fill: true,
             tension: 0.4,
             pointBackgroundColor: "white",
@@ -218,7 +228,7 @@
                 const value = tooltipModel.dataPoints[0].formattedValue;
 
                 tooltip.innerHTML = `
-                                  <span style="font-size: 12; font-weight: 700;">${value}$</span>`;
+            <span style="font-size: 12; font-weight: 700;">${value}$</span>`;
               }
 
               const position = context.chart.canvas.getBoundingClientRect();

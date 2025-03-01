@@ -1423,7 +1423,7 @@ h6.title {
     }
   }
 
-  tr:last-child td {
+  tr:not(.hidden):last-child td {
     border-bottom: none;
   }
 
