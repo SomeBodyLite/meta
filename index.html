@@ -195,7 +195,7 @@
     <script>
       const ctx = document.getElementById("depositsChart").getContext("2d");
 
-      // Получаем даты от 30 дней назад до сегодня
+      // даты от 30 дней назад до сегодня
       const today = new Date();
       const labels = Array.from({ length: 31 }, (_, i) => {
         const date = new Date();
@@ -206,13 +206,49 @@
         });
       });
 
-      // Данные
+      // Рандомные Данные
       const data = Array.from({ length: 31 }, () =>
         Math.floor(Math.random() * 1600)
       );
 
-      // Создаём массив цветов для каждой колонки
-      const defaultBackgroundColors = data.map(() => "rgba(0, 122, 255, 0.6)");
+      let hoverValue = undefined;
+      const hoverSegment = {
+        id: "hoverSegment",
+        beforeDatasetsDraw(chart, args, plugins) {
+          const {
+            ctx,
+            chartArea: { top, bottom, left, right, width, height },
+            scales: { x, y },
+          } = chart;
+          ctx.save();
+
+          const segment = width / (x.max + 10);
+
+          ctx.fillStyle = "rgba(142, 201, 255, 0.19)";
+          if (hoverValue !== undefined) {
+            ctx.fillRect(
+              x.getPixelForValue(hoverValue) - segment / 2,
+              top,
+              segment,
+              height
+            );
+          }
+        },
+        afterEvent(chart, args, plugins) {
+          const {
+            ctx,
+            chartArea: { top, bottom, left, right, width, height },
+            scales: { x, y },
+          } = chart;
+
+          if (args.inChartArea) {
+            hoverValue = x.getValueForPixel(args.event.x);
+          } else {
+            hoverValue = undefined;
+          }
+          args.changed = true;
+        },
+      };
 
       const chart = new Chart(ctx, {
         type: "bar",
@@ -222,18 +258,21 @@
             {
               label: "Депозиты",
               data: data,
-              // backgroundColor: [...defaultBackgroundColors],
               backgroundColor: (ctx) => {
-                const gradient = ctx.chart.ctx.createLinearGradient(
+                const chartCtx = ctx.chart.ctx;
+                const gradient = chartCtx.createRadialGradient(
+                  ctx.chart.width / 2,
+                  ctx.chart.height / 2,
                   0,
-                  0,
-                  0,
-                  ctx.chart.height
+                  ctx.chart.width / 2,
+                  ctx.chart.height / 2,
+                  ctx.chart.height / 2
                 );
                 gradient.addColorStop(0, "#78B7FF");
                 gradient.addColorStop(1, "#4490D3");
                 return gradient;
               },
+
               borderRadius: 10,
             },
           ],
@@ -340,6 +379,7 @@
             },
           },
         },
+        plugins: [hoverSegment],
       });
     </script>
   </body>

@@ -6,14 +6,14 @@ const usersItemTemplate = (item) => {
             <td><div class="item">${item.activations}</div></td>
             <td>
               <div class="item actions">
-                <button class="action-btn stats-btn" data-id="${item.promo}" title="Статистика">
-                  <svg class="icon hover"><use xlink:href="./assets/images/icons.svg#chart"></use></svg>
+                <button class="action-btn stats-btn" data-modal="stats-promo" data-promo="${item.promo}" data-activations="${item.activations}" data-deposits="${item.deposits}" data-conversion="${item.conversion}" data-registrations='${JSON.stringify(item.registrations)}' title="Статистика">
+                  <svg class="icon"><use xlink:href="./assets/images/icons.svg#chart"></use></svg>
                 </button>
                 <button class="action-btn edit-btn" data-modal="edit-promo" data-promo="${item.promo}" data-value="${item.value}" data-playthrough="${item.playthrough}" title="Редактировать">
-                  <svg class="icon hover"><use xlink:href="./assets/images/icons.svg#edit"></use></svg>
+                  <svg class="icon"><use xlink:href="./assets/images/icons.svg#edit"></use></svg>
                 </button>
                 <button class="action-btn delete-btn" data-id="${item.promo}" title="Удалить">
-                  <svg class="icon hover"><use xlink:href="./assets/images/icons.svg#delete"></use></svg>
+                  <svg class="icon"><use xlink:href="./assets/images/icons.svg#delete"></use></svg>
                 </button>
               </div>
             </td>

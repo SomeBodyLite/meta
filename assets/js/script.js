@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const input = group.querySelector(".form-group__input");
     const button = group.querySelector(".form-group__button");
 
-    // Устанавливаем тип input в password, если у form-group есть класс password
     if (group.classList.contains("password")) {
       input.type = "password";
       input.setAttribute("autocomplete", "off");
@@ -73,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // MODALS
 document.addEventListener("DOMContentLoaded", function () {
-  var modalButtons = document.querySelectorAll(".js-open-modal, .edit-btn"),
+  var modalButtons = document.querySelectorAll(".js-open-modal, .edit-btn, .stats-btn"),
     overlay = document.querySelector(".js-overlay-modal"),
     closeButtons = document.querySelectorAll(".js-modal-close");
 
@@ -81,12 +80,44 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // Открываем модальное окно
       var modalId = this.getAttribute("data-modal"),
         modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
 
       modalElem.classList.add("active");
       overlay.classList.add("active");
+
+      if (this.classList.contains("stats-btn")) {
+        const promoCode = this.getAttribute("data-promo");
+        const activations = this.getAttribute("data-activations");
+        const deposits = this.getAttribute("data-deposits");
+        const conversion = this.getAttribute("data-conversion");
+        const registrations = JSON.parse(this.getAttribute("data-registrations"));
+
+        document.getElementById("stats-promo-code").textContent = promoCode;
+        document.getElementById("stats-activations").textContent = activations;
+        document.getElementById("stats-deposits").textContent = deposits;
+        document.getElementById("stats-conversion").textContent = conversion;
+
+        const registrationsContainer = document.getElementById("stats-registrations");
+        registrationsContainer.innerHTML = ""; // Очищаем контейнер
+
+        registrations.forEach((reg) => {
+          const registrationItem = `
+            <div class="item">
+              <div class="cover">
+                <div class="progress" style="width: ${reg.progress}%"></div>
+                <div class="cover-item">
+                  <img class="img" src="${reg.countryImg}" alt="${reg.country}" />
+                  ${reg.country}
+                </div>
+                <span class="cover-item">${reg.registrations}</span>
+              </div>
+              <div class="value">${reg.deposits}</div>
+            </div>
+          `;
+          registrationsContainer.insertAdjacentHTML("beforeend", registrationItem);
+        });
+      }
 
       // Если это кнопка редактирования, заполняем модальное окно данными
       if (this.classList.contains("edit-btn")) {
@@ -350,32 +381,32 @@ function renderList(
     const copyButtons = container.querySelectorAll(".copy-btn");
     const statsButtons = container.querySelectorAll(".stats-btn");
 
-    statsButtons.forEach((button) => {
-      button.addEventListener("click", (event) => {
-        const buttonElement = event.target.closest(".stats-btn"); // Ищем ближайшую кнопку
-        const itemId = buttonElement.getAttribute("data-id"); // Извлекаем data-id
-        console.log(`Статистика элемента с ID: ${itemId}`);
-        // Ваша логика для статистики
-      });
-    });
+    // statsButtons.forEach((button) => {
+    //   button.addEventListener("click", (event) => {
+    //     const buttonElement = event.target.closest(".stats-btn"); 
+    //     const itemId = buttonElement.getAttribute("data-id");
+    //     console.log(`Статистика элемента с ID: ${itemId}`);
+    //     //  логика для статистики
+    //   });
+    // });
     
-    editButtons.forEach((button) => {
-      button.addEventListener("click", (event) => {
-        const buttonElement = event.target.closest(".edit-btn"); // Ищем ближайшую кнопку
-        const itemId = buttonElement.getAttribute("data-id"); // Извлекаем data-id
-        console.log(`Редактировать элемент с ID: ${itemId}`);
-        // Ваша логика для редактирования
-      });
-    });
+    // editButtons.forEach((button) => {
+    //   button.addEventListener("click", (event) => {
+    //     const buttonElement = event.target.closest(".edit-btn");
+    //     const itemId = buttonElement.getAttribute("data-id"); 
+    //     console.log(`Редактировать элемент с ID: ${itemId}`);
+    //     //  логика для редактирования
+    //   });
+    // });
     
-    deleteButtons.forEach((button) => {
-      button.addEventListener("click", (event) => {
-        const buttonElement = event.target.closest(".delete-btn"); // Ищем ближайшую кнопку
-        const itemId = buttonElement.getAttribute("data-id"); // Извлекаем data-id
-        console.log(`Удалить элемент с ID: ${itemId}`);
-        // Ваша логика для удаления
-      });
-    });
+    // deleteButtons.forEach((button) => {
+    //   button.addEventListener("click", (event) => {
+    //     const buttonElement = event.target.closest(".delete-btn"); 
+    //     const itemId = buttonElement.getAttribute("data-id"); 
+    //     console.log(`Удалить элемент с ID: ${itemId}`);
+    //     //  логика для удаления
+    //   });
+    // });
 
     copyButtons.forEach((button) => {
       button.addEventListener("click", (event) => {
@@ -538,7 +569,39 @@ function renderList(
   callbackShow();
 }
 
+// statistics tabs
 function range(start, end) {
   const length = end - start + 1;
   return Array.from({ length }, (_, index) => index + start);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.stats-pagination .btn');
+  const pages = document.querySelectorAll('[data-list-page]');
+
+  buttons.forEach(button => {
+      button.addEventListener('click', function() {
+          const targetPage = this.getAttribute('data-select-page');
+
+          pages.forEach(page => {
+              page.classList.remove('active');
+          });
+
+          const activePage = document.querySelector(`[data-list-page="${targetPage}"]`);
+          if (activePage) {
+              activePage.classList.add('active');
+          }
+
+          buttons.forEach(btn => {
+              btn.classList.remove('active');
+          });
+
+          this.classList.add('active');
+      });
+  });
+
+  if (pages.length > 0) {
+      pages[0].classList.add('active');
+  }
+});
+// END statistics tabs

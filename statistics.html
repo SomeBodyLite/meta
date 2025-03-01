@@ -14,124 +14,297 @@
         <div class="main-content">
           <section class="sidebar" id="sidebar"></section>
           <div class="app-content">
-            <div class="stats-grid">
-              <div class="block light light-down p-24">
-                <div class="flex flex-column">
-                  <div
-                    class="flex align-center justify-center gap-12"
-                    style="padding: 0 85px"
-                  >
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#chart"></use>
-                    </svg>
-                    <h2 class="title">Статистика</h2>
+            <div
+              class="w-100"
+              style="border-radius: 28px; background: rgba(18, 22, 36, 0.31)"
+            >
+              <div class="stats-grid" data-list-page="1">
+                <div class="block light light-down p-24">
+                  <div class="flex flex-column">
+                    <div
+                      class="flex align-center justify-center gap-12"
+                      style="padding: 0 85px"
+                    >
+                      <svg class="icon">
+                        <use xlink:href="./assets/images/icons.svg#chart"></use>
+                      </svg>
+                      <h2 class="title">Статистика</h2>
+                    </div>
+                    <p class="subtitle text-center mt-10">Топ стран</p>
+                    <div class="down-separator" style="margin-top: 15px"></div>
                   </div>
-                  <p class="subtitle text-center mt-10">Топ стран</p>
-                  <div class="down-separator" style="margin-top: 15px"></div>
+                  <div class="table-container">
+                    <div class="table-item">
+                      <table class="country__list list-wrapper">
+                        <thead class="list-header">
+                          <tr>
+                            <th class="list-title">Страны</th>
+                            <th class="list-title">Статистика</th>
+                          </tr>
+                        </thead>
+                        <tbody class="list-body list-container"></tbody>
+                      </table>
+                    </div>
+                    <div class="list-pagination"></div>
+                  </div>
                 </div>
-                <div class="table-container">
-                  <div class="table-item">
-                    <table class="country__list list-wrapper">
-                      <thead class="list-header">
-                        <tr>
-                          <th class="list-title">Страны</th>
-                          <th class="list-title">Статистика</th>
-                        </tr>
-                      </thead>
-                      <tbody class="list-body list-container"></tbody>
-                    </table>
+                <div class="block light light-down p-24">
+                  <div class="flex flex-column">
+                    <div
+                      class="flex align-center justify-center gap-12"
+                      style="padding: 0 85px"
+                    >
+                      <svg class="icon">
+                        <use xlink:href="./assets/images/icons.svg#chart"></use>
+                      </svg>
+                      <h2 class="title">Статистика</h2>
+                    </div>
+                    <p class="subtitle text-center mt-10">
+                      Самые лучшие промокоды
+                    </p>
+                    <div class="down-separator" style="margin-top: 15px"></div>
                   </div>
-                  <div class="list-pagination"></div>
+                  <div class="table-container">
+                    <div class="table-item">
+                      <table class="promoStat__list list-wrapper">
+                        <thead class="list-header">
+                          <tr>
+                            <th class="list-title">Промокоды</th>
+                            <th class="list-title">Статистика</th>
+                          </tr>
+                        </thead>
+                        <tbody class="list-body list-container"></tbody>
+                      </table>
+                    </div>
+                    <div class="list-pagination"></div>
+                  </div>
+                </div>
+                <div class="block light light-down p-24">
+                  <div class="flex flex-column">
+                    <div
+                      class="flex align-center justify-center gap-12"
+                      style="padding: 0 85px"
+                    >
+                      <svg class="icon">
+                        <use xlink:href="./assets/images/icons.svg#chart"></use>
+                      </svg>
+                      <h2 class="title">Статистика</h2>
+                    </div>
+                    <p class="subtitle text-center mt-10">
+                      Самые лучшие мамонты
+                    </p>
+                    <div class="down-separator" style="margin-top: 15px"></div>
+                  </div>
+                  <div class="table-container">
+                    <div class="table-item">
+                      <table class="usersStat__list list-wrapper">
+                        <thead class="list-header">
+                          <tr>
+                            <th class="list-title">Почта</th>
+                            <th class="list-title">Статистика</th>
+                          </tr>
+                        </thead>
+                        <tbody class="list-body list-container"></tbody>
+                      </table>
+                    </div>
+                    <div class="list-pagination"></div>
+                  </div>
+                </div>
+                <div class="block light light-down p-24">
+                  <div class="flex flex-column">
+                    <div
+                      class="flex align-center justify-center gap-12"
+                      style="padding: 0 85px"
+                    >
+                      <svg class="icon">
+                        <use xlink:href="./assets/images/icons.svg#chart"></use>
+                      </svg>
+                      <h2 class="title">Статистика</h2>
+                    </div>
+                    <p class="subtitle text-center mt-10">
+                      Самые лучшие домены
+                    </p>
+                    <div class="down-separator" style="margin-top: 15px"></div>
+                  </div>
+                  <div class="table-container">
+                    <div class="table-item">
+                      <table class="domenStat__list list-wrapper">
+                        <thead class="list-header">
+                          <tr>
+                            <th class="list-title">Домены</th>
+                            <th class="list-title">Статистика</th>
+                          </tr>
+                        </thead>
+                        <tbody class="list-body list-container"></tbody>
+                      </table>
+                    </div>
+                    <div class="list-pagination"></div>
+                  </div>
                 </div>
               </div>
-              <div class="block light light-down p-24">
-                <div class="flex flex-column">
-                  <div
-                    class="flex align-center justify-center gap-12"
-                    style="padding: 0 85px"
-                  >
+              <div class="stats-page2" data-list-page="2">
+                <div
+                  class="block light light-down"
+                  style="
+                    width: 100%;
+                    height: fit-content;
+                    padding: 29px;
+                    padding-bottom: 60px;
+                  "
+                >
+                  <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#chart"></use>
+                      <use
+                        xlink:href="./assets/images/icons.svg#statistics"
+                      ></use>
                     </svg>
-                    <h2 class="title">Статистика</h2>
+                    <h2 class="title">Cтатистика</h2>
                   </div>
                   <p class="subtitle text-center mt-10">
-                    Самые лучшие промокоды
+                    Сравнение депозитов с прошлым периодом
                   </p>
-                  <div class="down-separator" style="margin-top: 15px"></div>
-                </div>
-                <div class="table-container">
-                  <div class="table-item">
-                    <table class="promoStat__list list-wrapper">
-                      <thead class="list-header">
-                        <tr>
-                          <th class="list-title">Промокоды</th>
-                          <th class="list-title">Статистика</th>
-                        </tr>
-                      </thead>
-                      <tbody class="list-body list-container"></tbody>
-                    </table>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="grid-auto gap-30" style="padding-top: 25px">
+                    <div class="block-inner-2 green-block flex-column gap-10">
+                      <h3 class="title text-center">День</h3>
+                      <div class="flex gap-12 align-center justify-between">
+                        <span
+                          class="p-10 radius-20 text-white text-center fz-24 fw-800"
+                          >$ 140</span>
+                          <p class="fz-32 fw-800">+12%</p>
+                      </div>
+                    </div>
+                    <div class="block-inner-2 red-block flex-column gap-10">
+                      <h3 class="title text-center">Неделя</h3>
+                      <div class="flex gap-12 align-center justify-between">
+                        <span
+                          class="p-10 radius-20 text-white text-center fz-24 fw-800"
+                          >$ 1200</span>
+                          <p class="fz-32 fw-800">-19%</p>
+                      </div>
+                    </div>
+                    <div class="block-inner-2 green-block flex-column gap-10">
+                      <h3 class="title text-center">Месяц</h3>
+                      <div class="flex gap-12 align-center justify-between">
+                        <span
+                          class="p-10 radius-20 text-white text-center fz-24 fw-800"
+                          >$ 18000</span>
+                          <p class="fz-32 fw-800">+12%</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="list-pagination"></div>
+                </div>
+                <div
+                  class="block light light-down"
+                  style="
+                    width: 100%;
+                    height: fit-content;
+                    padding: 29px;
+                    padding-bottom: 60px;
+                  "
+                >
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#statistics"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Cтатистика</h2>
+                  </div>
+                  <p class="subtitle text-center mt-10">
+                    Сравнение количества регистраций с прошлым периодом
+                  </p>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="grid-auto gap-30" style="padding-top: 25px">
+                    <div class="block-inner-2 green-block flex-column gap-10">
+                      <h3 class="title text-center">День</h3>
+                      <div class="flex gap-12 align-center justify-between">
+                        <span
+                          class="p-10 radius-20 text-white text-center fz-24 fw-800"
+                          >140</span>
+                          <p class="fz-32 fw-800">+12%</p>
+                      </div>
+                    </div>
+                    <div class="block-inner-2 red-block flex-column gap-10">
+                      <h3 class="title text-center">Неделя</h3>
+                      <div class="flex gap-12 align-center justify-between">
+                        <span
+                          class="p-10 radius-20 text-white text-center fz-24 fw-800"
+                          >1200</span>
+                          <p class="fz-32 fw-800">-19%</p>
+                      </div>
+                    </div>
+                    <div class="block-inner-2 green-block flex-column gap-10">
+                      <h3 class="title text-center">Месяц</h3>
+                      <div class="flex gap-12 align-center justify-between">
+                        <span
+                          class="p-10 radius-20 text-white text-center fz-24 fw-800"
+                          >18000</span>
+                          <p class="fz-32 fw-800">+12%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="block light light-down"
+                  style="
+                    width: 100%;
+                    height: fit-content;
+                    padding: 29px;
+                    padding-bottom: 60px;
+                  "
+                >
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#statistics"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Cтатистика</h2>
+                  </div>
+                  <p class="subtitle text-center mt-10">
+                    Колличество и сумма минимальных депозитов и додепов
+                  </p>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="grid-auto gap-30" style="padding-top: 25px">
+                    <div class="block-inner-2  flex-column gap-10">
+                      <h3 class="title text-center">Минимальные депозиты</h3>
+                      <div class="flex gap-12 align-center justify-between">
+                        <span
+                          class="p-10 radius-20 text-white text-center fz-24 fw-800"
+                          >10</span>
+                      </div>
+                    </div>
+                    <div class="block-inner-2  flex-column gap-10">
+                      <h3 class="title text-center">Додепы</h3>
+                      <div class="flex gap-12 align-center justify-between">
+                        <span
+                          class="p-10 radius-20 text-white text-center fz-24 fw-800"
+                          >70</span>
+                      </div>
+                    </div>
+                    <div class="block-inner-2  flex-column gap-10">
+                      <h3 class="title text-center">Минимальные депозиты</h3>
+                      <div class="flex gap-12 align-center justify-between">
+                        <span
+                          class="p-10 radius-20 text-white text-center fz-24 fw-800"
+                          >190$</span>
+                      </div>
+                    </div>
+                    <div class="block-inner-2  flex-column gap-10">
+                      <h3 class="title text-center">Додепы</h3>
+                      <div class="flex gap-12 align-center justify-between">
+                        <span
+                          class="p-10 radius-20 text-white text-center fz-24 fw-800"
+                          >10000$</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="block light light-down p-24">
-                <div class="flex flex-column">
-                  <div
-                    class="flex align-center justify-center gap-12"
-                    style="padding: 0 85px"
-                  >
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#chart"></use>
-                    </svg>
-                    <h2 class="title">Статистика</h2>
-                  </div>
-                  <p class="subtitle text-center mt-10">Самые лучшие мамонты</p>
-                  <div class="down-separator" style="margin-top: 15px"></div>
-                </div>
-                <div class="table-container">
-                  <div class="table-item">
-                    <table class="usersStat__list list-wrapper">
-                      <thead class="list-header">
-                        <tr>
-                          <th class="list-title">Почта</th>
-                          <th class="list-title">Статистика</th>
-                        </tr>
-                      </thead>
-                      <tbody class="list-body list-container"></tbody>
-                    </table>
-                  </div>
-                  <div class="list-pagination"></div>
-                </div>
-              </div>
-              <div class="block light light-down p-24">
-                <div class="flex flex-column">
-                  <div
-                    class="flex align-center justify-center gap-12"
-                    style="padding: 0 85px"
-                  >
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#chart"></use>
-                    </svg>
-                    <h2 class="title">Статистика</h2>
-                  </div>
-                  <p class="subtitle text-center mt-10">Самые лучшие домены</p>
-                  <div class="down-separator" style="margin-top: 15px"></div>
-                </div>
-                <div class="table-container">
-                  <div class="table-item">
-                    <table class="domenStat__list list-wrapper">
-                      <thead class="list-header">
-                        <tr>
-                          <th class="list-title">Домены</th>
-                          <th class="list-title">Статистика</th>
-                        </tr>
-                      </thead>
-                      <tbody class="list-body list-container"></tbody>
-                    </table>
-                  </div>
-                  <div class="list-pagination"></div>
-                </div>
+              <div class="stats-pagination">
+                <button class="btn active" data-select-page="1">1</button>
+                <button class="btn" data-select-page="2">2</button>
               </div>
             </div>
             <div class="block statistics-info-block">
@@ -156,45 +329,377 @@
         </div>
       </div>
     </main>
+    <!-- Модалка для статистики промо -->
+    <!-- <div class="modal light" data-modal="total-stats-promo" >
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#statistics"></use>
+          </svg>
+          <h2 class="title">Cтатистика</h2>
+        </div>
+        <span class="fw-700 mt-10 fz-18 text-white">промо</span>
+      </div>
+      <div class="down-separator mt-30 mb-30"></div>
+      <div class="modal-info">
+        <div class="item">
+          <h3 class="fz-18 fw-700 text-white">Активации</h3>
+          <div class="cover">
+            <div class="progress" style="width: 50%"></div>
+            <span class="cover-item">1000</span>
+          </div>
+        </div>
+        <div class="item">
+          <h3 class="fz-18 fw-700 text-white">Сумма депозитов</h3>
+          <div class="cover">
+            <div class="progress" style="width: 50%"></div>
+            <span class="cover-item">800$</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- модалка для статистики юзера -->
+    <!-- <div class="modal light" data-modal="total-stats-user" >
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#statistics"></use>
+          </svg>
+          <h2 class="title">Cтатистика</h2>
+        </div>
+        <div class="flex gap-12 align-center justify-center mt-10">
+          <span class="fw-700 fz-18 text-white">Ldanio12@gmail.com</span>
+          <img class="stats-user-img" src="./assets/images/locations/afghanistan_img.svg" alt="">
+          <span class="fw-700 fz-18 text-white">Af</span>
+        </div>
+      </div>
+      <div class="down-separator mt-20 mb-20"></div>
+      <div class="modal-info">
+        <div class="item">
+          <h3 class="fz-18 fw-700 text-white">Депозит</h3>
+          <div class="cover">
+            <div class="progress" style="width: 50%"></div>
+            <span class="cover-item">800$</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Модалка для статистики домена -->
+    <!-- <div class="modal light" data-modal="total-stats-domain">
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#statistics"></use>
+          </svg>
+          <h2 class="title">Cтатистика</h2>
+        </div>
+        <span class="fw-700 mt-10 fz-18 text-white">$домен</span>
+      </div>
+      <div class="down-separator mt-30 mb-30"></div>
+      <div class="modal-info">
+        <div class="item">
+          <h3 class="fz-18 fw-700 text-white">Регистрации</h3>
+          <div class="cover">
+            <div class="progress" style="width: 50%"></div>
+            <span class="cover-item">1000</span>
+          </div>
+        </div>
+        <div class="item">
+          <h3 class="fz-18 fw-700 text-white">Сумма депозитов</h3>
+          <div class="cover">
+            <div class="progress" style="width: 50%"></div>
+            <span class="cover-item">800$</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Модалка для статистики страны -->
+    <!-- <div class="modal light" data-modal="total-stats-country">
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#statistics"></use>
+          </svg>
+          <h2 class="title">Cтатистика</h2>
+        </div>
+        <div class="flex gap-12 align-center justify-center mt-10">
+          <img class="stats-user-img" src="./assets/images/locations/afghanistan_img.svg" alt="">
+          <span class="fw-700 fz-18 text-white">Af</span>
+        </div>
+      </div>
+      <div class="down-separator mt-30 mb-30"></div>
+      <div class="modal-info">
+        <div class="item">
+          <h3 class="fz-18 fw-700 text-white">Регистрации</h3>
+          <div class="cover">
+            <div class="progress" style="width: 50%"></div>
+            <span class="cover-item">1000</span>
+          </div>
+        </div>
+        <div class="item">
+          <h3 class="fz-18 fw-700 text-white">Сумма депозитов</h3>
+          <div class="cover">
+            <div class="progress" style="width: 50%"></div>
+            <span class="cover-item">800$</span>
+          </div>
+        </div>
+        <div class="item">
+          <h3 class="fz-18 fw-700 text-white">Конверсия</h3>
+          <div class="cover">
+            <div class="progress" style="width: 50%"></div>
+            <span class="cover-item">500</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="modal light" data-modal="stats-modal">
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#statistics"></use>
+          </svg>
+          <h2 class="title">Cтатистика</h2>
+        </div>
+        <!-- Динамический заголовок -->
+         <div class="flex gap-12 align-center justify-center mt-10">
+          <span class="fw-700 fz-18 text-white" id="stats-title"></span>
+         </div>
+      </div>
+      <div class="down-separator mt-30 mb-30"></div>
+      <div class="modal-info" id="stats-content">
+        <!-- Динамическое содержимое -->
+      </div>
+    </div>
+    <div class="overlay js-overlay-modal"></div>
     <script src="./assets/js/data/countryStat.js"></script>
     <script src="./assets/js/data/countryStatTemplate.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function clearDynamicElements() {
+          const dynamicElements = document.querySelectorAll(".dynamic-element");
+          dynamicElements.forEach((element) => element.remove());
+        }
+        var modalButtons = document.querySelectorAll(".js-open-modal, .list-item"),
+          overlay = document.querySelector(".js-overlay-modal"),
+          closeButtons = document.querySelectorAll(".js-modal-close");
+
+        modalButtons.forEach(function (item) {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            var modalElem = document.querySelector('.modal[data-modal="stats-modal"]');
+            modalElem.classList.add("active");
+            overlay.classList.add("active");
+
+            // Очищаем динамические элементы
+            clearDynamicElements();
+
+            const type = this.getAttribute("data-type"); 
+            const title = this.getAttribute("data-title"); 
+            const statsContent = document.getElementById("stats-content");
+
+            statsContent.innerHTML = "";
+
+            document.getElementById("stats-title").textContent = title;
+
+            if (type === "promo") {
+              const activations = this.getAttribute("data-activations");
+              const activationsWidth = this.getAttribute("data-activationsWidth");
+              const deposits = this.getAttribute("data-deposits");
+              const depositsWidth = this.getAttribute("data-depositsWidth");
+
+              statsContent.innerHTML = `
+                <div class="item">
+                  <h3 class="fz-18 fw-700 text-white">Активации</h3>
+                  <div class="cover">
+                    <div class="progress" style="width: ${activationsWidth}%"></div>
+                    <span class="cover-item">${activations}</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <h3 class="fz-18 fw-700 text-white">Сумма депозитов</h3>
+                  <div class="cover">
+                    <div class="progress" style="width: ${depositsWidth}%"></div>
+                    <span class="cover-item">${deposits}</span>
+                  </div>
+                </div>
+              `;
+            }
+
+            if (type === "user") {
+              const country = this.getAttribute("data-country");
+              const countryImg = this.getAttribute("data-country-img");
+              const deposit = this.getAttribute("data-deposit");
+              const depositWidth = this.getAttribute("data-depositWidth");
+
+              statsContent.innerHTML = `
+                <div class="item">
+                  <h3 class="fz-18 fw-700 text-white">Депозит</h3>
+                  <div class="cover">
+                    <div class="progress" style="width: ${depositWidth}%"></div>
+                    <span class="cover-item">${deposit}</span>
+                  </div>
+                </div>
+              `;
+
+              // Добавляем изображение страны и название
+              document.getElementById("stats-title").insertAdjacentHTML(
+                "afterend",
+                `<div class="flex gap-12 align-center justify-center dynamic-element">
+                  <img class="stats-user-img" src="${countryImg}" alt="${country}">
+                  <span class="fw-700 fz-18 text-white">${country}</span>
+                </div>`
+              );
+            }
+
+            if (type === "domain") {
+              const registrations = this.getAttribute("data-registrations");
+              const registrationsWidth = this.getAttribute("data-registrationsWidth");
+              const deposits = this.getAttribute("data-deposits");
+              const depositsWidth = this.getAttribute("data-depositsWidth");
+
+              statsContent.innerHTML = `
+                <div class="item">
+                  <h3 class="fz-18 fw-700 text-white">Регистрации</h3>
+                  <div class="cover">
+                    <div class="progress" style="width: ${registrationsWidth}%"></div>
+                    <span class="cover-item">${registrations}</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <h3 class="fz-18 fw-700 text-white">Сумма депозитов</h3>
+                  <div class="cover">
+                    <div class="progress" style="width: ${depositsWidth}%"></div>
+                    <span class="cover-item">${deposits}</span>
+                  </div>
+                </div>
+              `;
+            }
+
+            if (type === "country") {
+              const registrations = this.getAttribute("data-registrations");
+              const registrationsWidth = this.getAttribute("data-registrationsWidth");
+              const deposits = this.getAttribute("data-deposits");
+              const depositsWidth = this.getAttribute("data-depositsWidth");
+              const conversion = this.getAttribute("data-conversion");
+              const conversionWidth = this.getAttribute("data-conversionWidth");
+
+              statsContent.innerHTML = `
+                <div class="item">
+                  <h3 class="fz-18 fw-700 text-white">Регистрации</h3>
+                  <div class="cover">
+                    <div class="progress" style="width: ${registrationsWidth}%"></div>
+                    <span class="cover-item">${registrations}</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <h3 class="fz-18 fw-700 text-white">Сумма депозитов</h3>
+                  <div class="cover">
+                    <div class="progress" style="width: ${depositsWidth}%"></div>
+                    <span class="cover-item">${deposits}</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <h3 class="fz-18 fw-700 text-white">Конверсия</h3>
+                  <div class="cover">
+                    <div class="progress" style="width: ${conversionWidth}%"></div>
+                    <span class="cover-item">${conversion}</span>
+                  </div>
+                </div>
+              `;
+
+              document.getElementById("stats-title").insertAdjacentHTML(
+                "beforebegin",
+                `<div class="flex gap-12 align-center justify-center dynamic-element">
+                  <img class="stats-user-img" src="${this.getAttribute("data-country-img")}" alt="${title}">
+                </div>`
+              );
+            }
+          });
+        });
+
+        closeButtons.forEach(function (item) {
+          item.addEventListener("click", function (e) {
+            var parentModal = this.closest(".modal");
+            parentModal.classList.remove("active");
+            overlay.classList.remove("active");
+
+            // Очищаем динамические элементы при закрытии модалки
+            clearDynamicElements();
+          });
+        });
+
+        document.body.addEventListener("keyup", function (e) {
+          if (e.keyCode === 27) {
+            document.querySelector(".modal.active").classList.remove("active");
+            document.querySelector(".overlay").classList.remove("active");
+
+            // Очищаем динамические элементы при закрытии модалки
+            clearDynamicElements();
+          }
+        });
+
+        overlay.addEventListener("click", function () {
+          document.querySelector(".modal.active").classList.remove("active");
+          this.classList.remove("active");
+
+          // Очищаем динамические элементы при закрытии модалки
+          clearDynamicElements();
+        });
+      });
+    </script>
 
     <script>
-      renderList(items, {
+      renderList(countryItems, {
         itemsPerPage: 10,
         containerSelector: ".country__list",
-        tepmlateFn: (item) => usersItemTemplate(item),
+        tepmlateFn: (item) => countryItemTemplate(item),
         callbackShow: () => console.log("Page updated"),
       });
     </script>
     <script src="./assets/js/data/promoStat.js"></script>
     <script src="./assets/js/data/promoStatTemplate.js"></script>
     <script>
-      renderList(items, {
+      renderList(promoItems, {
         itemsPerPage: 10,
         containerSelector: ".promoStat__list",
-        tepmlateFn: (item) => usersItemTemplate(item),
+        tepmlateFn: (item) => promoItemTemplate(item),
         callbackShow: () => console.log("Page updated"),
       });
     </script>
     <script src="./assets/js/data/usersStat.js"></script>
     <script src="./assets/js/data/usersStatTemplate.js"></script>
     <script>
-      renderList(items, {
+      renderList(userItems, {
         itemsPerPage: 10,
         containerSelector: ".usersStat__list",
-        tepmlateFn: (item) => usersItemTemplate(item),
+        tepmlateFn: (item) => userItemTemplate(item),
         callbackShow: () => console.log("Page updated"),
       });
     </script>
     <script src="./assets/js/data/domenStat.js"></script>
     <script src="./assets/js/data/domenStatTemplate.js"></script>
     <script>
-      renderList(items, {
+      renderList(domainItems, {
         itemsPerPage: 10,
         containerSelector: ".domenStat__list",
-        tepmlateFn: (item) => usersItemTemplate(item),
+        tepmlateFn: (item) => domainItemTemplate(item),
         callbackShow: () => console.log("Page updated"),
       });
     </script>

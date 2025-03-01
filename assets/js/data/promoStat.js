@@ -1,50 +1,18 @@
-var items = [
+const promoItems = [
   {
     promo: "Promo 1",
-    progress: "40",
+    progress: "70",
+    activations: "100",
+    activationsWidth: "50",
+    deposits: "800$",
+    depositsWidth: "70",
   },
   {
     promo: "Promo 2",
-    progress: "30",
-  },
-  {
-    promo: "Promo 1",
     progress: "40",
-  },
-  {
-    promo: "Promo 2",
-    progress: "30",
-  },
-  {
-    promo: "Promo 1",
-    progress: "40",
-  },
-  {
-    promo: "Promo 2",
-    progress: "30",
-  },
-  {
-    promo: "Promo 1",
-    progress: "40",
-  },
-  {
-    promo: "Promo 2",
-    progress: "30",
-  },
-  {
-    promo: "Promo 1",
-    progress: "40",
-  },
-  {
-    promo: "Promo 2",
-    progress: "30",
-  },
-  {
-    promo: "Promo 1",
-    progress: "40",
-  },
-  {
-    promo: "Promo 2",
-    progress: "30",
+    activations: "50",
+    activationsWidth: "15",
+    deposits: "300$",
+    depositsWidth: "30",
   },
 ];

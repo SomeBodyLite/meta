@@ -31,7 +31,10 @@
               </div>
               <div class="down-separator" style="margin-top: 16px"></div>
               <div class="mt-25 flex flex-column gap-20">
-                <div class="block light-down p-16 radius-20" style="background-color: #0E1323;">
+                <div
+                  class="block light-down p-16 radius-20"
+                  style="background-color: #0e1323"
+                >
                   <div class="flex align-start">
                     <div class="flex flex-column">
                       <h6 class="title">Промокод</h6>
@@ -51,7 +54,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="block light-down p-16 radius-20" style="background-color: #0E1323;">
+                <div
+                  class="block light-down p-16 radius-20"
+                  style="background-color: #0e1323"
+                >
                   <div class="flex align-start">
                     <div class="flex flex-column flex-100">
                       <h6 class="title">Сумма</h6>
@@ -71,7 +77,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="block light-down p-16 radius-20" style="background-color: #0E1323;">
+                <div
+                  class="block light-down p-16 radius-20"
+                  style="background-color: #0e1323"
+                >
                   <div class="flex align-start">
                     <div class="flex flex-column flex-100">
                       <h6 class="title">Отыгрыш</h6>
@@ -156,7 +165,9 @@
           <svg class="icon">
             <use xlink:href="./assets/images/icons.svg#edit"></use>
           </svg>
-          <h2 class="title">Редактирование промокода: <span id="promo-code"></span></h2>
+          <h2 class="title">
+            Редактирование промокода: <span id="promo-code"></span>
+          </h2>
         </div>
         <div class="down-separator" style="margin-top: 15px"></div>
       </div>
@@ -190,7 +201,12 @@
                 Необходимо ли отыграть промокод для вывода средств
               </p>
             </div>
-            <input name="1" type="checkbox" id="promo-playthrough" class="switch" />
+            <input
+              name="1"
+              type="checkbox"
+              id="promo-playthrough"
+              class="switch"
+            />
           </div>
         </div>
         <div class="flex justify-end gap-12">
@@ -208,6 +224,61 @@
             Сохранить
           </button>
         </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="stats-promo">
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#statistics"></use>
+          </svg>
+          <h2 class="title">Cтатистика: <span id="stats-promo-code"></span></h2>
+        </div>
+        <p class="subtitle text-center mt-10">количество регистраций</p>
+        <div class="down-separator" style="margin-top: 15px"></div>
+      </div>
+      <div class="flex flex-column">
+        <div class="grid-auto gap-20" style="padding-top: 25px">
+          <div class="flex-column gap-10">
+            <h4 class="fz-16 text-white fw-600 title text-center">
+              Активаций за все время
+            </h4>
+            <span
+              class="mt-auto p-10 radius-20 bg-dark text-white text-center fz-24 fw-800"
+              id="stats-activations"
+              >140</span
+            >
+          </div>
+          <div class="flex-column gap-10">
+            <h4 class="fz-16 text-white fw-600 title text-center">
+              Депозитов за все время
+            </h4>
+            <span
+              class="mt-auto p-10 radius-20 bg-dark text-white text-center fz-24 fw-800"
+              id="stats-deposits"
+              >190$</span
+            >
+          </div>
+          <div class="flex-column gap-10">
+            <h4 class="fz-16 text-white fw-600 title text-center">Конверсия</h4>
+            <span
+              class="mt-auto p-10 radius-20 bg-dark text-white text-center fz-24 fw-800"
+              id="stats-conversion"
+              >3$</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="down-separator mt-30 mb-30"></div>
+      <div class="flex justify-between mb-24">
+        <h3 class="fz-18 fw-700 text-white">Регистрации</h3>
+        <h3 class="fz-18 fw-700 text-white">Сумма депозитов</h3>
+      </div>
+      <div class="modal-stats-grid" id="stats-registrations">
+        <!-- Здесь будут динамически добавляться элементы -->
       </div>
     </div>
     <script>

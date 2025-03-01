@@ -45,8 +45,8 @@
                   </svg>
                   <div class="select-items"></div>
                 </div>
-                <div style="padding: 50px; padding-top: 100px; font-size: 20px">
-                  chart placeholder
+                <div class="chart-container" style="padding-top: 60px">
+                  <canvas id="statChart" width="400" height="200"></canvas>
                 </div>
               </div>
             </div>
@@ -125,6 +125,127 @@
     <script src="./assets/js/data/deposits.js"></script>
     <script src="./assets/js/data/depositsTemplate.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("statChart").getContext("2d");
+      const dataset = Array.from({ length: 6 }, () =>
+        Math.floor(Math.random() * 180)
+      );
+
+      const data = {
+        labels: [1, 6, 12, 18, 24, 30],
+        datasets: [
+          {
+            // data: [10, 50, 60, 83, 40, 55],
+            data: dataset,
+            borderColor: "rgba(102, 153, 255, 1)",
+            backgroundColor: "rgba(102, 153, 255, 0.2)",
+            fill: true,
+            tension: 0.4,
+            pointBackgroundColor: "white",
+            pointBorderColor: "rgba(102, 153, 255, 1)",
+            pointRadius: 0,
+            pointHoverRadius: 7,
+          },
+        ],
+      };
+
+      const options = {
+        interaction: {
+          mode: "index",
+          intersect: false,
+        },
+        responsive: true,
+        maintainAspectRatio: true,
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: {
+              color: "white",
+              font: {
+                family: "Montserrat",
+                size: 15,
+                weight: "700",
+              },
+            },
+          },
+          y: {
+            grid: { color: "rgba(255, 255, 255, 0.1)" },
+            ticks: {
+              color: "white",
+              callback: (value) => `$${value}`,
+              font: {
+                family: "Montserrat",
+                size: 15,
+                weight: "700",
+              },
+            },
+          },
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            enabled: false,
+            external: function (context) {
+              const tooltipModel = context.tooltip;
+              let tooltip = document.getElementById("custom-tooltip");
+
+              if (!tooltip) {
+                tooltip = document.createElement("div");
+                tooltip.id = "custom-tooltip";
+                tooltip.style.position = "absolute";
+                tooltip.style.zIndex = "1";
+                tooltip.style.background = "#151B2C";
+                tooltip.style.color = "white";
+                tooltip.style.padding = "4px 13px";
+                tooltip.style.borderRadius = "12px";
+                tooltip.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.2)";
+                tooltip.style.pointerEvents = "none";
+                tooltip.style.opacity = "0";
+                tooltip.style.transition = "opacity 0.2s ease, inset .3s ease";
+                tooltip.style.transform = "translateY(0px)";
+                tooltip.style.textAlign = "center";
+                document.body.appendChild(tooltip);
+              }
+
+              if (tooltipModel.opacity === 0) {
+                tooltip.style.opacity = "0";
+                return;
+              }
+
+              if (tooltipModel.body) {
+                const label = tooltipModel.dataPoints[0].label;
+                const value = tooltipModel.dataPoints[0].formattedValue;
+
+                tooltip.innerHTML = `
+                                  <span style="font-size: 12; font-weight: 700;">${value}$</span>`;
+              }
+
+              const position = context.chart.canvas.getBoundingClientRect();
+              tooltip.style.opacity = "1";
+              tooltip.style.left =
+                position.left +
+                window.pageXOffset +
+                tooltipModel.caretX -
+                tooltip.offsetWidth / 2 +
+                "px";
+              tooltip.style.top =
+                position.top +
+                window.pageYOffset +
+                tooltipModel.caretY -
+                50 +
+                "px";
+            },
+          },
+        },
+      };
+
+      new Chart(ctx, {
+        type: "line",
+        data,
+        options,
+      });
+    </script>
     <script>
       renderList(items, {
         itemsPerPage: 5,
