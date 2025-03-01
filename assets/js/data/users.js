@@ -12,7 +12,7 @@ const items = [
     login: "AnotherUser2@example.com",
     balance: "678",
     countryImg: "./assets/images/locations/united_kingdom_img.svg",
-    country: "UK",
+    country: "GB",
     domen: "@test",
     date: "23.07.2023",
     actions: "789",
