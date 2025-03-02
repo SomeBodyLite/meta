@@ -49,6 +49,20 @@ if (sidebar) {
     .then((response) => response.text())
     .then((data) => {
       sidebar.innerHTML = data;
+
+      const currentUrl = window.location.pathname;
+
+      const sidebarItems = sidebar.querySelectorAll(".sidebar-item");
+
+      sidebarItems.forEach((item) => {
+        const itemHref = new URL(item.getAttribute("href"), window.location.origin).pathname;
+
+        if (currentUrl === itemHref) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
     });
 }
 
@@ -99,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("stats-conversion").textContent = conversion;
 
         const registrationsContainer = document.getElementById("stats-registrations");
-        registrationsContainer.innerHTML = ""; // Очищаем контейнер
+        registrationsContainer.innerHTML = ""; 
 
         registrations.forEach((reg) => {
           const registrationItem = `
@@ -119,13 +133,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
 
-      // Если это кнопка редактирования, заполняем модальное окно данными
       if (this.classList.contains("edit-btn")) {
         const promoCode = this.getAttribute("data-promo");
         const promoValue = this.getAttribute("data-value");
         const promoPlaythrough = this.getAttribute("data-playthrough");
 
-        // Заполняем поля в модальном окне
         document.getElementById("promo-code").textContent = promoCode;
         document.getElementById("promo-value").value = promoValue;
         document.getElementById("promo-playthrough").checked = promoPlaythrough === "true";
@@ -161,7 +173,7 @@ function showNotification(title, message, type) {
   const container = document.querySelector(".notify-container");
   const content = container.querySelector(".notify-content");
 
-  // Создаем элемент уведомления
+  // Создание уведомления
   const notifyItem = document.createElement("div");
   notifyItem.classList.add("notify-item");
   notifyItem.innerHTML = `
@@ -235,6 +247,7 @@ class CustomSelect {
     this.selectSelected = container.querySelector(".select-selected");
     this.selectItems = container.querySelector(".select-items");
     this.init();
+    this.initInput();
   }
 
   init() {
@@ -249,6 +262,14 @@ class CustomSelect {
     });
   }
 
+  initInput() {
+    const input = document.querySelector(`input[data-pair="${this.container.id}"]`);
+    if (input) {
+      this.input = input;
+      this.updateInput(this.selectSelected.textContent, this.selectSelected.getAttribute("data-value"));
+    }
+  }
+
   updateOptions(options) {
     this.selectItems.innerHTML = "";
 
@@ -257,16 +278,19 @@ class CustomSelect {
       item.classList.add("select-item");
       item.textContent = option.label;
       item.setAttribute("data-value", option.value);
+      item.setAttribute("data-placeholder", option.placeholderText || ""); 
       this.selectItems.appendChild(item);
 
       item.addEventListener("click", () => {
         this.setSelected(item.textContent, item.getAttribute("data-value"));
+        this.updateInput(item.textContent, item.getAttribute("data-value"), item.getAttribute("data-placeholder"));
       });
     });
 
-    // Устанавливаем первое значение из массива в селект
+   
     if (options.length > 0) {
       this.setSelected(options[0].label, options[0].value);
+      this.updateInput(options[0].label, options[0].value, options[0].placeholderText || "");
     }
   }
 
@@ -274,6 +298,13 @@ class CustomSelect {
     this.selectSelected.textContent = label;
     this.selectSelected.setAttribute("data-value", value);
     this.container.classList.remove("open");
+  }
+
+  updateInput(label, value, placeholderText) {
+    if (this.input) {
+      this.input.placeholder = placeholderText; 
+      this.input.setAttribute("data-search", value); 
+    }
   }
 }
 
@@ -289,46 +320,42 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const Main = [
-    { label: "Месяц", value: "month" },
-    { label: "День", value: "day" },
-    { label: "Неделя", value: "week" },
-    { label: "Все время", value: "all" },
+    { label: "Месяц", value: "month", placeholderText: "Введите месяц" },
+    { label: "День", value: "day", placeholderText: "Введите день" },
+    { label: "Неделя", value: "week", placeholderText: "Введите неделю" },
+    { label: "Все время", value: "all", placeholderText: "Введите период" },
   ];
 
   const Users = [
-    { label: "Почте", value: "mails" },
-    { label: "Домену", value: "domen" },
-    { label: "Промокоду", value: "promo" },
-    { label: "Стране", value: "country" },
-    { label: "Кошельку", value: "wallet" },
-  ];
-  const DepositsStats = [
-    { label: "Месяц", value: "month" },
-    { label: "День", value: "day" },
-    { label: "Неделя", value: "week" },
-    { label: "Все время", value: "all" },
-  ];
-  const Deposits = [
-    { label: "Почте", value: "mails" },
-    { label: "Домену", value: "domen" },
-    { label: "Промокоду", value: "promo" },
-    { label: "Стране", value: "country" },
-    { label: "Кошельку", value: "wallet" },
-  ];
-  const Statistics = [
-    { label: "Общая", value: "all" },
-    { label: "meta.ru", value: "domenRu" },
-    { label: "meta.pro", value: "domenPro" },
-    { label: "meta.com", value: "domenCom" },
-    { label: "meta.ru", value: "domenRu" },
-    { label: "meta.pro", value: "domenPro" },
-    { label: "meta.com", value: "domenCom" },
-    { label: "meta.ru", value: "domenRu" },
-    { label: "meta.pro", value: "domenPro" },
-    { label: "meta.com", value: "domenCom" },
+    { label: "Почте", value: "mails", placeholderText: "Введите почту пользователя" },
+    { label: "Домену", value: "domain", placeholderText: "Введите домен пользователя" },
+    { label: "Промокоду", value: "promo", placeholderText: "Введите промокод" },
+    { label: "Стране", value: "country", placeholderText: "Введите страну" },
+    { label: "Кошельку", value: "wallet", placeholderText: "Введите кошелек" },
   ];
 
-  // Пуш данных в селект
+  const DepositsStats = [
+    { label: "Месяц", value: "month", placeholderText: "Введите месяц" },
+    { label: "День", value: "day", placeholderText: "Введите день" },
+    { label: "Неделя", value: "week", placeholderText: "Введите неделю" },
+    { label: "Все время", value: "all", placeholderText: "Введите период" },
+  ];
+
+  const Deposits = [
+    { label: "Почте", value: "mails", placeholderText: "Введите почту" },
+    { label: "Домену", value: "domain", placeholderText: "Введите домен" },
+    { label: "Промокоду", value: "promo", placeholderText: "Введите промокод" },
+    { label: "Стране", value: "country", placeholderText: "Введите страну" },
+    { label: "Кошельку", value: "wallet", placeholderText: "Введите кошелек" },
+  ];
+
+  const Statistics = [
+    { label: "Общая", value: "all"},
+    { label: "meta.ru", value: "domainRu"},
+    { label: "meta.pro", value: "domainPro"},
+    { label: "meta.com", value: "domainCom"},
+  ];
+
   updateSelect("selectMain", Main);
   updateSelect("selectUsers", Users);
   updateSelect("selectDepositsStats", DepositsStats);
@@ -456,7 +483,7 @@ function renderList(
       pagination.replaceChildren();
     }
 
-    // Создаем элемент для отображения текста
+    // пуш элемент для отображения текста
     const infoText = document.createElement("div");
     infoText.classList.add("pagination-info");
     pagination.appendChild(infoText);

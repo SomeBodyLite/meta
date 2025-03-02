@@ -16,7 +16,12 @@
           <div class="app-content">
             <div
               class="block light light-down"
-              style="padding: 27px 38px 50px; width: 100%; max-width: 426px; height: fit-content;"
+              style="
+                padding: 27px 38px 50px;
+                width: 100%;
+                max-width: 426px;
+                height: fit-content;
+              "
             >
               <div class="flex align-center justify-center gap-12">
                 <svg class="icon">
@@ -61,17 +66,14 @@
             </div>
             <div class="block w-100 p-32 light">
               <div class="flex justify-between">
-                <div class="flex flex-column">
-                  <div
-                    class="flex align-center justify-center gap-12"
-                    style="padding: 0 55px"
-                  >
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#users"></use>
-                    </svg>
-                    <h2 class="title">Пользователи</h2>
-                  </div>
-                  <div class="down-separator" style="margin-top: 15px"></div>
+                <div
+                  class="flex align-center justify-center gap-12"
+                  style="padding: 0 55px"
+                >
+                  <svg class="icon">
+                    <use xlink:href="./assets/images/icons.svg#users"></use>
+                  </svg>
+                  <h2 class="title">Пользователи</h2>
                 </div>
                 <div class="flex align-center gap-24">
                   <div class="flex align-center gap-10">
@@ -96,6 +98,8 @@
                   <div class="form-group border">
                     <label class="form-group__label">
                       <input
+                        style="min-width: 295px;"
+                        data-pair="selectUsers"
                         type="text"
                         class="form-group__input"
                         placeholder="Введите почту пользователя"
@@ -105,6 +109,7 @@
                   </div>
                 </div>
               </div>
+              <div class="down-separator" style="margin-top: 25px"></div>
               <div class="table-container">
                 <div class="table-item">
                   <table class="users__list list-wrapper">

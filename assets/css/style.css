@@ -665,6 +665,9 @@ input {
     }
   }
 }
+button:hover .icon{
+  fill: var(--accent-color);
+}
 
 .container {
   max-width: 1855px;
@@ -1347,7 +1350,6 @@ h6.title {
     border: 2px solid rgba(255, 255, 255, 0.03);
     pointer-events: none;
     user-select: none;
-
   }
 }
 
@@ -1376,7 +1378,6 @@ h6.title {
     }
   }
 
-
   .list-title {
     color: #FFF;
     font-size: 16px;
@@ -1384,6 +1385,7 @@ h6.title {
     line-height: normal;
   }
 }
+
 
 @keyframes listAnim {
   0% {
@@ -1405,8 +1407,8 @@ h6.title {
   width: 25%;
 }
 
-.list-body {
 
+.list-body {
   &.anim-1 {
     animation: listAnim 0.2s ease-in-out;
   }
@@ -1436,6 +1438,7 @@ h6.title {
     border-right: 2px solid rgba(255, 255, 255, 0.03);
     border-bottom: 2px solid rgba(255, 255, 255, 0.03);
     white-space: nowrap;
+    vertical-align: middle; 
 
     .progress {
       border-radius: 36px;
@@ -1454,7 +1457,7 @@ h6.title {
 
     .item {
       display: flex;
-      align-items: center;
+      align-items: center; 
       gap: 5px;
       border-radius: 25px;
       background: linear-gradient(180deg, rgba(18, 22, 37, 0.47) 0.29%, rgba(17, 22, 45, 0.76) 99.71%);
@@ -1463,6 +1466,8 @@ h6.title {
       img {
         filter: drop-shadow(0px 1px 6.4px rgba(255, 255, 255, 0.12));
         width: 20px;
+        height: 20px; 
+        object-fit: contain; 
       }
 
       &.actions {
@@ -1481,7 +1486,7 @@ h6.title {
       svg,
       img {
         width: 20px;
-        height: 20px
+        height: 20px;
       }
     }
 
@@ -1489,7 +1494,6 @@ h6.title {
       border-radius: 0 26px 26px 0;
       border-right: none;
     }
-
   }
 }
 
