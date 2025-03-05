@@ -9,21 +9,21 @@ const items = [
     registrations: [
       {
         country: "USA",
-        countryImg: "./assets/images/locations/usa_img.svg",
+        countryImg: "us",
         registrations: "1000",
         deposits: "10000$",
         progress: 50,
       },
       {
         country: "Canada",
-        countryImg: "./assets/images/locations/canada_img.svg",
+        countryImg: "ca",
         registrations: "500",
         deposits: "5000$",
         progress: 20,
       },
       {
         country: "Canada",
-        countryImg: "./assets/images/locations/canada_img.svg",
+        countryImg: "ca",
         registrations: "500",
         deposits: "5000$",
         progress: 10,

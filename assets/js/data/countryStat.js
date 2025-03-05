@@ -2,7 +2,7 @@ const countryItems = [
   {
     country: "DE",
     progress: "70",
-    countryImg: "./assets/images/locations/germany_img.svg",
+    countryImg: "de",
     registrations: "1000",
     registrationsWidth: "90",
     deposits: "800$",
@@ -13,7 +13,7 @@ const countryItems = [
   {
     country: "AU",
     progress: "30",
-    countryImg: "./assets/images/locations/australia_img.svg",
+    countryImg: "au",
     registrations: "200",
     registrationsWidth: "40",
     deposits: "100$",

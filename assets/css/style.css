@@ -212,6 +212,7 @@ input {
 .mb-20 {
   margin-bottom: 20px;
 }
+
 .mb-24 {
   margin-bottom: 24px;
 }
@@ -222,6 +223,10 @@ input {
 
 .mt-10 {
   margin-top: 10px;
+}
+
+.mt-12 {
+  margin-top: 12px;
 }
 
 .mt-20 {
@@ -664,9 +669,22 @@ input {
       fill: var(--accent-color);
     }
   }
+
+  &.stroke-hover {
+    stroke: #fff;
+
+    &:hover {
+      stroke: var(--accent-color);
+    }
+  }
 }
-button:hover .icon{
+
+button:hover .icon {
   fill: var(--accent-color);
+}
+
+button:hover .icon.stroke-hover {
+  stroke: var(--accent-color);
 }
 
 .container {
@@ -737,7 +755,7 @@ button:hover .icon{
     .form-group__label {
       .form-group__input {
         font-size: 14px;
-        padding: 5% 8px 8px 8px;
+        padding: 7px 8px 8px 8px;
       }
     }
 
@@ -1438,7 +1456,7 @@ h6.title {
     border-right: 2px solid rgba(255, 255, 255, 0.03);
     border-bottom: 2px solid rgba(255, 255, 255, 0.03);
     white-space: nowrap;
-    vertical-align: middle; 
+    vertical-align: middle;
 
     .progress {
       border-radius: 36px;
@@ -1457,7 +1475,7 @@ h6.title {
 
     .item {
       display: flex;
-      align-items: center; 
+      align-items: center;
       gap: 5px;
       border-radius: 25px;
       background: linear-gradient(180deg, rgba(18, 22, 37, 0.47) 0.29%, rgba(17, 22, 45, 0.76) 99.71%);
@@ -1466,8 +1484,8 @@ h6.title {
       img {
         filter: drop-shadow(0px 1px 6.4px rgba(255, 255, 255, 0.12));
         width: 20px;
-        height: 20px; 
-        object-fit: contain; 
+        height: 20px;
+        object-fit: contain;
       }
 
       &.actions {
@@ -1591,8 +1609,7 @@ h6.title {
   &[data-modal="total-stats-user"],
   &[data-modal="total-stats-country"],
   &[data-modal="stats-promo"],
-  &[data-modal="stats-modal"]
-   {
+  &[data-modal="stats-modal"] {
     /* max-width: 740px; */
     max-width: 670px;
     padding: 25px;
@@ -1832,4 +1849,52 @@ canvas {
 .stats-user-img {
   width: 30px;
   filter: drop-shadow(4px 3px 9.4px rgba(255, 255, 255, 0.15));
+}
+
+.flag-icon {
+  filter: drop-shadow(4px 3px 9.4px rgba(255, 255, 255, 0.28));
+  border-radius: 3px;
+  width: 23px;
+  height: 17px;
+}
+
+.flag-icon-big {
+  width: 33px;
+  height: 25px;
+  border-radius: 6px;
+}
+
+.support-side {
+  padding: 25px 32px;
+}
+
+.chats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+  scrollbar-width: thin;
+  margin-top: 20px;
+
+  .chat-item {
+    border-radius: 12px;
+    background: #0E1323;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      width: 53%;
+      height: 28px;
+      border-radius: 100%;
+      background: rgba(172, 172, 172, 0.37);
+      filter: blur(33px);
+      bottom: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }

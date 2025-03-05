@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/flag-icon.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Metamorphosis</title>
   </head>
@@ -562,7 +563,7 @@
               document.getElementById("stats-title").insertAdjacentHTML(
                 "afterend",
                 `<div class="flex gap-12 align-center justify-center dynamic-element">
-                  <img class="stats-user-img" src="${countryImg}" alt="${country}">
+                  <span class="flag-icon flag-icon-${countryImg}"></span>
                   <span class="fw-700 fz-18 text-white">${country}</span>
                 </div>`
               );
@@ -627,40 +628,11 @@
               document.getElementById("stats-title").insertAdjacentHTML(
                 "beforebegin",
                 `<div class="flex gap-12 align-center justify-center dynamic-element">
-                  <img class="stats-user-img" src="${this.getAttribute("data-country-img")}" alt="${title}">
+                  <span class="flag-icon flag-icon-big flag-icon-${this.getAttribute("data-country-img")}">
                 </div>`
               );
             }
           });
-        });
-
-        closeButtons.forEach(function (item) {
-          item.addEventListener("click", function (e) {
-            var parentModal = this.closest(".modal");
-            parentModal.classList.remove("active");
-            overlay.classList.remove("active");
-
-            // Очищаем динамические элементы при закрытии модалки
-            clearDynamicElements();
-          });
-        });
-
-        document.body.addEventListener("keyup", function (e) {
-          if (e.keyCode === 27) {
-            document.querySelector(".modal.active").classList.remove("active");
-            document.querySelector(".overlay").classList.remove("active");
-
-            // Очищаем динамические элементы при закрытии модалки
-            clearDynamicElements();
-          }
-        });
-
-        overlay.addEventListener("click", function () {
-          document.querySelector(".modal.active").classList.remove("active");
-          this.classList.remove("active");
-
-          // Очищаем динамические элементы при закрытии модалки
-          clearDynamicElements();
         });
       });
     </script>

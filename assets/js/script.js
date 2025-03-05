@@ -51,11 +51,15 @@ if (sidebar) {
       sidebar.innerHTML = data;
 
       const currentUrl = window.location.pathname;
+      console.log('currentUrl: ', currentUrl);
 
       const sidebarItems = sidebar.querySelectorAll(".sidebar-item");
 
       sidebarItems.forEach((item) => {
+        // const itemHref = item.getAttribute("href");
         const itemHref = new URL(item.getAttribute("href"), window.location.origin).pathname;
+        console.log('itemHref: ', itemHref);
+        
 
         if (currentUrl === itemHref) {
           item.classList.add("active");
@@ -121,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <div class="cover">
                 <div class="progress" style="width: ${reg.progress}%"></div>
                 <div class="cover-item">
-                  <img class="img" src="${reg.countryImg}" alt="${reg.country}" />
+                  <span class="flag-icon flag-icon-big flag-icon-${reg.countryImg}"></span>
                   ${reg.country}
                 </div>
                 <span class="cover-item">${reg.registrations}</span>

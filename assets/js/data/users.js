@@ -2,7 +2,7 @@ const items = [
   {
     login: "RandomUser1@example.com",
     balance: "345",
-    countryImg: "./assets/images/locations/usa_img.svg",
+    countryImg: "us",
     country: "US",
     domen: "@example",
     date: "12.03.2023",
@@ -11,7 +11,7 @@ const items = [
   {
     login: "AnotherUser2@example.com",
     balance: "678",
-    countryImg: "./assets/images/locations/united_kingdom_img.svg",
+    countryImg: "gb",
     country: "GB",
     domen: "@test",
     date: "23.07.2023",
@@ -20,7 +20,7 @@ const items = [
   {
     login: "User3@example.com",
     balance: "910",
-    countryImg: "./assets/images/locations/canada_img.svg",
+    countryImg: "ca",
     country: "CA",
     domen: "@sample",
     date: "14.11.2023",
@@ -29,7 +29,7 @@ const items = [
   {
     login: "ExampleUser4@example.com",
     balance: "112",
-    countryImg: "./assets/images/locations/denmark_img.svg",
+    countryImg: "de",
     country: "DE",
     domen: "@demo",
     date: "05.09.2023",
@@ -38,7 +38,7 @@ const items = [
   {
     login: "TestUser5@example.com",
     balance: "314",
-    countryImg: "./assets/images/locations/france_img.svg",
+    countryImg: "fr",
     country: "FR",
     domen: "@trial",
     date: "18.01.2024",
@@ -47,7 +47,7 @@ const items = [
   {
     login: "SampleUser6@example.com",
     balance: "516",
-    countryImg: "./assets/images/locations/australia_img.svg",
+    countryImg: "au",
     country: "AU",
     domen: "@sample",
     date: "27.02.2024",
@@ -56,7 +56,7 @@ const items = [
   {
     login: "TrialUser7@example.com",
     balance: "718",
-    countryImg: "./assets/images/locations/japan_img.svg",
+    countryImg: "jp",
     country: "JP",
     domen: "@test",
     date: "30.04.2024",
@@ -65,7 +65,7 @@ const items = [
   {
     login: "DemoUser8@example.com",
     balance: "920",
-    countryImg: "./assets/images/locations/india_img.svg",
+    countryImg: "in",
     country: "IN",
     domen: "@example",
     date: "11.06.2024",
@@ -74,7 +74,7 @@ const items = [
   {
     login: "ExampleUser9@example.com",
     balance: "122",
-    countryImg: "./assets/images/locations/brazil_img.svg",
+    countryImg: "br",
     country: "BR",
     domen: "@demo",
     date: "22.08.2024",
@@ -83,7 +83,7 @@ const items = [
   {
     login: "RandomUser10@example.com",
     balance: "324",
-    countryImg: "./assets/images/locations/russian_federation_img.svg",
+    countryImg: "ru",
     country: "RU",
     domen: "@test",
     date: "31.12.2024",
