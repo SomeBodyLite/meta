@@ -1,10 +1,21 @@
+const timeoutDuration = 2000;
+// sda
+
+
+
+
+
+
+
+
+
 const header = document.getElementById("header");
 if (header) {
   fetch("./components/header.html")
     .then((response) => response.text())
     .then((data) => {
       header.innerHTML = data;
-     
+
       const notifyContainer = document.createElement("div");
       notifyContainer.classList.add("notify-container");
 
@@ -51,15 +62,17 @@ if (sidebar) {
       sidebar.innerHTML = data;
 
       const currentUrl = window.location.pathname;
-      console.log('currentUrl: ', currentUrl);
+      console.log("currentUrl: ", currentUrl);
 
       const sidebarItems = sidebar.querySelectorAll(".sidebar-item");
 
       sidebarItems.forEach((item) => {
         // const itemHref = item.getAttribute("href");
-        const itemHref = new URL(item.getAttribute("href"), window.location.origin).pathname;
-        console.log('itemHref: ', itemHref);
-        
+        const itemHref = new URL(
+          item.getAttribute("href"),
+          window.location.origin
+        ).pathname;
+        console.log("itemHref: ", itemHref);
 
         if (currentUrl === itemHref) {
           item.classList.add("active");
@@ -71,26 +84,38 @@ if (sidebar) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".form-group.password").forEach((group) => {
+  document.querySelectorAll(".form-group").forEach((group) => {
     const input = group.querySelector(".form-group__input");
     const button = group.querySelector(".form-group__button");
 
     if (group.classList.contains("password")) {
       input.type = "password";
-      input.setAttribute("autocomplete", "off");
+    }
+    if (group.classList.contains("copy")) {
+      input.setAttribute("readonly", true);
     }
 
     button.addEventListener("click", function (event) {
       event.preventDefault();
-      group.classList.toggle("show");
-      input.type = input.type === "password" ? "text" : "password";
+
+      if (group.classList.contains("password")) {
+        group.classList.toggle("show");
+        input.type = input.type === "password" ? "text" : "password";
+      }
+
+      if (group.classList.contains("copy")) {
+        input.select();
+        copyToClipboard(input.value);
+      }
     });
   });
 });
 
 // MODALS
 document.addEventListener("DOMContentLoaded", function () {
-  var modalButtons = document.querySelectorAll(".js-open-modal, .edit-btn, .stats-btn"),
+  var modalButtons = document.querySelectorAll(
+      ".js-open-modal, .edit-btn, .stats-btn, .delete-btn"
+    ),
     overlay = document.querySelector(".js-overlay-modal"),
     closeButtons = document.querySelectorAll(".js-modal-close");
 
@@ -99,7 +124,9 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       var modalId = this.getAttribute("data-modal"),
-        modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+        modalElem = document.querySelector(
+          '.modal[data-modal="' + modalId + '"]'
+        );
 
       modalElem.classList.add("active");
       overlay.classList.add("active");
@@ -109,15 +136,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const activations = this.getAttribute("data-activations");
         const deposits = this.getAttribute("data-deposits");
         const conversion = this.getAttribute("data-conversion");
-        const registrations = JSON.parse(this.getAttribute("data-registrations"));
+        const registrations = JSON.parse(
+          this.getAttribute("data-registrations")
+        );
 
         document.getElementById("stats-promo-code").textContent = promoCode;
         document.getElementById("stats-activations").textContent = activations;
         document.getElementById("stats-deposits").textContent = deposits;
         document.getElementById("stats-conversion").textContent = conversion;
 
-        const registrationsContainer = document.getElementById("stats-registrations");
-        registrationsContainer.innerHTML = ""; 
+        const registrationsContainer = document.getElementById(
+          "stats-registrations"
+        );
+        registrationsContainer.innerHTML = "";
 
         registrations.forEach((reg) => {
           const registrationItem = `
@@ -133,7 +164,10 @@ document.addEventListener("DOMContentLoaded", function () {
               <div class="value">${reg.deposits}</div>
             </div>
           `;
-          registrationsContainer.insertAdjacentHTML("beforeend", registrationItem);
+          registrationsContainer.insertAdjacentHTML(
+            "beforeend",
+            registrationItem
+          );
         });
       }
 
@@ -145,6 +179,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("promo-code").textContent = promoCode;
         document.getElementById("promo-value").value = promoValue;
         document.getElementById("promo-playthrough").checked = promoPlaythrough === "true";
+      }
+
+      if (this.classList.contains("delete-btn")) {
+        console.log("sdasd");
       }
     });
   });
@@ -173,11 +211,10 @@ document.addEventListener("DOMContentLoaded", function () {
 // END MODALS
 
 // NOTIFY
-function showNotification(title, message, type) {
+function showNotification(title, message, type = 'success', timeout = 5000) {
   const container = document.querySelector(".notify-container");
   const content = container.querySelector(".notify-content");
 
-  // Создание уведомления
   const notifyItem = document.createElement("div");
   notifyItem.classList.add("notify-item");
   notifyItem.innerHTML = `
@@ -212,6 +249,10 @@ function showNotification(title, message, type) {
       event.stopPropagation();
       closeNotification(notifyItem, "closing");
     });
+
+  if (timeout) {
+    setTimeout(() => closeNotification(notifyItem, "closing"), timeout);
+  }
 }
 
 function closeNotification(notifyItem, className) {
@@ -244,6 +285,19 @@ if (document.querySelector(".notify-container")) {
 
 // NOTIFY END
 
+function copyToClipboard(text) {
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      console.log("Скопировано в буфер обмена:", text);
+      showNotification("Скопировано", "", "success", 800);
+    })
+    .catch((err) => {
+      console.error("Ошибка при копировании:", err);
+      showNotification("Ошибка", err, "error");
+    });
+}
+
 // CUSTOM SELECT
 class CustomSelect {
   constructor(container) {
@@ -267,10 +321,15 @@ class CustomSelect {
   }
 
   initInput() {
-    const input = document.querySelector(`input[data-pair="${this.container.id}"]`);
+    const input = document.querySelector(
+      `input[data-pair="${this.container.id}"]`
+    );
     if (input) {
       this.input = input;
-      this.updateInput(this.selectSelected.textContent, this.selectSelected.getAttribute("data-value"));
+      this.updateInput(
+        this.selectSelected.textContent,
+        this.selectSelected.getAttribute("data-value")
+      );
     }
   }
 
@@ -282,19 +341,26 @@ class CustomSelect {
       item.classList.add("select-item");
       item.textContent = option.label;
       item.setAttribute("data-value", option.value);
-      item.setAttribute("data-placeholder", option.placeholderText || ""); 
+      item.setAttribute("data-placeholder", option.placeholderText || "");
       this.selectItems.appendChild(item);
 
       item.addEventListener("click", () => {
         this.setSelected(item.textContent, item.getAttribute("data-value"));
-        this.updateInput(item.textContent, item.getAttribute("data-value"), item.getAttribute("data-placeholder"));
+        this.updateInput(
+          item.textContent,
+          item.getAttribute("data-value"),
+          item.getAttribute("data-placeholder")
+        );
       });
     });
 
-   
     if (options.length > 0) {
       this.setSelected(options[0].label, options[0].value);
-      this.updateInput(options[0].label, options[0].value, options[0].placeholderText || "");
+      this.updateInput(
+        options[0].label,
+        options[0].value,
+        options[0].placeholderText || ""
+      );
     }
   }
 
@@ -306,8 +372,8 @@ class CustomSelect {
 
   updateInput(label, value, placeholderText) {
     if (this.input) {
-      this.input.placeholder = placeholderText; 
-      this.input.setAttribute("data-search", value); 
+      this.input.placeholder = placeholderText;
+      this.input.setAttribute("data-search", value);
     }
   }
 }
@@ -331,8 +397,16 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const Users = [
-    { label: "Почте", value: "mails", placeholderText: "Введите почту пользователя" },
-    { label: "Домену", value: "domain", placeholderText: "Введите домен пользователя" },
+    {
+      label: "Почте",
+      value: "mails",
+      placeholderText: "Введите почту пользователя",
+    },
+    {
+      label: "Домену",
+      value: "domain",
+      placeholderText: "Введите домен пользователя",
+    },
     { label: "Промокоду", value: "promo", placeholderText: "Введите промокод" },
     { label: "Стране", value: "country", placeholderText: "Введите страну" },
     { label: "Кошельку", value: "wallet", placeholderText: "Введите кошелек" },
@@ -354,10 +428,10 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const Statistics = [
-    { label: "Общая", value: "all"},
-    { label: "meta.ru", value: "domainRu"},
-    { label: "meta.pro", value: "domainPro"},
-    { label: "meta.com", value: "domainCom"},
+    { label: "Общая", value: "all" },
+    { label: "meta.ru", value: "domainRu" },
+    { label: "meta.pro", value: "domainPro" },
+    { label: "meta.com", value: "domainCom" },
   ];
 
   updateSelect("selectMain", Main);
@@ -410,30 +484,20 @@ function renderList(
     const editButtons = container.querySelectorAll(".edit-btn");
     const deleteButtons = container.querySelectorAll(".delete-btn");
     const copyButtons = container.querySelectorAll(".copy-btn");
-    const statsButtons = container.querySelectorAll(".stats-btn");
 
-    // statsButtons.forEach((button) => {
-    //   button.addEventListener("click", (event) => {
-    //     const buttonElement = event.target.closest(".stats-btn"); 
-    //     const itemId = buttonElement.getAttribute("data-id");
-    //     console.log(`Статистика элемента с ID: ${itemId}`);
-    //     //  логика для статистики
-    //   });
-    // });
-    
     // editButtons.forEach((button) => {
     //   button.addEventListener("click", (event) => {
     //     const buttonElement = event.target.closest(".edit-btn");
-    //     const itemId = buttonElement.getAttribute("data-id"); 
+    //     const itemId = buttonElement.getAttribute("data-id");
     //     console.log(`Редактировать элемент с ID: ${itemId}`);
     //     //  логика для редактирования
     //   });
     // });
-    
+
     // deleteButtons.forEach((button) => {
     //   button.addEventListener("click", (event) => {
-    //     const buttonElement = event.target.closest(".delete-btn"); 
-    //     const itemId = buttonElement.getAttribute("data-id"); 
+    //     const buttonElement = event.target.closest(".delete-btn");
+    //     const itemId = buttonElement.getAttribute("data-id");
     //     console.log(`Удалить элемент с ID: ${itemId}`);
     //     //  логика для удаления
     //   });
@@ -443,23 +507,10 @@ function renderList(
       button.addEventListener("click", (event) => {
         const fullHash = event.target
           .closest(".copy-btn")
-          .getAttribute("data-hash");
+          .getAttribute("data-value");
         copyToClipboard(fullHash);
       });
     });
-  }
-
-  function copyToClipboard(text) {
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
-        console.log("Хэш скопирован в буфер обмена:", text);
-        showNotification("Скопировано", "", "success");
-      })
-      .catch((err) => {
-        console.error("Ошибка при копировании:", err);
-        showNotification("Ошибка", err, "error");
-      });
   }
 
   function showPage() {
@@ -506,7 +557,7 @@ function renderList(
             createPageButtons(items);
             updateActiveButtonStates();
             callbackShow();
-            updateInfoText(); 
+            updateInfoText();
           });
         }
 
@@ -532,7 +583,7 @@ function renderList(
 
     if (totalPageNumbers >= _total) {
       updateListPagination(range(1, _total), pagination, items);
-      updateInfoText(); 
+      updateInfoText();
       return;
     }
 
@@ -551,7 +602,7 @@ function renderList(
         pagination,
         items
       );
-      updateInfoText(); 
+      updateInfoText();
       return;
     }
 
@@ -566,7 +617,7 @@ function renderList(
         pagination,
         items
       );
-      updateInfoText(); 
+      updateInfoText();
       return;
     }
 
@@ -581,7 +632,7 @@ function renderList(
       pagination,
       items
     );
-    updateInfoText(); 
+    updateInfoText();
   }
 
   function updateActiveButtonStates() {
@@ -606,33 +657,115 @@ function range(start, end) {
   return Array.from({ length }, (_, index) => index + start);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const buttons = document.querySelectorAll('.stats-pagination .btn');
-  const pages = document.querySelectorAll('[data-list-page]');
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".stats-pagination .btn");
+  const pages = document.querySelectorAll("[data-list-page]");
 
-  buttons.forEach(button => {
-      button.addEventListener('click', function() {
-          const targetPage = this.getAttribute('data-select-page');
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const targetPage = this.getAttribute("data-select-page");
 
-          pages.forEach(page => {
-              page.classList.remove('active');
-          });
-
-          const activePage = document.querySelector(`[data-list-page="${targetPage}"]`);
-          if (activePage) {
-              activePage.classList.add('active');
-          }
-
-          buttons.forEach(btn => {
-              btn.classList.remove('active');
-          });
-
-          this.classList.add('active');
+      pages.forEach((page) => {
+        page.classList.remove("active");
       });
+
+      const activePage = document.querySelector(
+        `[data-list-page="${targetPage}"]`
+      );
+      if (activePage) {
+        activePage.classList.add("active");
+      }
+
+      buttons.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      this.classList.add("active");
+    });
   });
 
   if (pages.length > 0) {
-      pages[0].classList.add('active');
+    pages[0].classList.add("active");
   }
 });
 // END statistics tabs
+
+// CHAT SCRIPT
+function updateChatStyles(containerSelector = ".chat-container") {
+  document.querySelectorAll(containerSelector).forEach((container) => {
+    const chatItems = container.querySelectorAll(".chat-item");
+
+    let prevType = null;
+    let group = [];
+
+    function applyClasses(group) {
+      if (group.length === 0) return;
+
+      group.forEach((item) => {
+        item.classList.remove(
+          "chat-first",
+          "chat-middle",
+          "chat-last",
+          "chat-single"
+        );
+      });
+
+      if (group.length === 1) {
+        group[0].classList.add("chat-single");
+      } else {
+        group[0].classList.add("chat-first");
+        for (let i = 1; i < group.length - 1; i++) {
+          group[i].classList.add("chat-middle");
+        }
+        group[group.length - 1].classList.add("chat-last");
+      }
+    }
+
+    chatItems.forEach((item) => {
+      const currentType = item.classList.contains("user") ? "user" : "other";
+
+      if (currentType !== prevType) {
+        applyClasses(group);
+        group = [];
+      }
+
+      group.push(item);
+      prevType = currentType;
+    });
+
+    applyClasses(group);
+  });
+}
+
+// вызов при загрузке страницы
+document.addEventListener("DOMContentLoaded", () => updateChatStyles());
+
+// ВЫЗЫВАЙМ ФУНКЦИЮ ПРИ ДОБАВЛЕНИИ СООБЩЕНИЯ
+updateChatStyles();
+// END CHAT SCRIPT
+
+// COUNTER
+function initCounter(counterId, min = 1, max = 10) {
+  const counter = document.getElementById(counterId);
+  if (!counter) return;
+
+  const input = counter.querySelector(".counter-input");
+  const decrementBtn = counter.querySelector(".counter-btn.left");
+  const incrementBtn = counter.querySelector(".counter-btn.right");
+
+  decrementBtn.addEventListener("click", () => {
+    let value = parseInt(input.value, 10);
+    if (value > min) input.value = value - 1;
+  });
+
+  incrementBtn.addEventListener("click", () => {
+    let value = parseInt(input.value, 10);
+    if (value < max) input.value = value + 1;
+  });
+}
+
+// Инициализация с разными параметрами
+// initCounter("counter1", 1, 5);
+// initCounter("counter2", 0, 100);
+
+// END COUNTER

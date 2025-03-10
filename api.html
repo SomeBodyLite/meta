@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Metamorphosis</title>
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+    <main class="main">
+      <div class="container">
+        <div class="main-content">
+          <section class="sidebar" id="sidebar"></section>
+          <div class="app-content">
+            <div
+              class="block light"
+              style="
+                padding: 27px 30px 25px;
+                width: 100%;
+                max-width: 660px;
+                height: fit-content;
+              "
+            >
+              <div class="flex align-center justify-center gap-12">
+                <svg class="icon">
+                  <use xlink:href="./assets/images/icons.svg#chart"></use>
+                </svg>
+                <h2 class="title">Информация</h2>
+              </div>
+              <div class="down-separator" style="margin: 16px 31px 0; width: unset;"></div>
+              <div class="mt-25 flex flex-column gap-20">
+                <div class="api-block">
+                  <div class="flex align-center gap-12">
+                    <svg class="icon">
+                      <use xlink:href="./assets/images/icons.svg#warning"></use>
+                    </svg>
+                    <h1 class="title fz-24 fw-600 text-white">Важно</h1>
+                  </div>
+                  <p class="text">В случае утечки вашего API-токена злоумышленники смогут получить полный доступ к вашей панели</p>
+                </div>
+              </div>
+            </div>
+            <div class="block w-100 p-32 light">
+              <div class="flex justify-center">
+                  <div
+                    class="flex align-center justify-center gap-12"
+                    style="padding: 0 85px"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="./assets/images/icons.svg#ticket"></use>
+                    </svg>
+                    <h2 class="title">Полезное</h2>
+                  </div>
+                
+              </div>
+              <div class="down-separator" style="margin-top: 15px"></div>
+              <div class="block-inner-3 light-down mt-25" >
+                <h3 class="fz-24 fw-600 text-white">API-токен</h3>
+                <p class="subtitle fz-16 mt-10">Ваш токен для подключения к API-сервису.</p>
+                <div class="form-group radius-12 border copy mt-25">
+                  <label class="form-group__label">
+                    <input type="text" class="form-group__input" placeholder="API KEY" value="jdhdsod[dh265207t2653#^*hLKdNDKS;hVGSVHJNSML,DKJHGFDSAszXCGVHBJKLM;’\]JHSGFDSZd">
+                    <button class="form-group__button">
+                      <svg class="icon hover stroke-hover">
+                        <use xlink:href="./assets/images/icons.svg#copy"></use>
+                      </svg>
+                    </button>
+                  </label>
+                </div>
+                <div class="flex justify-end gap-20 mt-25 ">
+                  <button class="btn btn-primary radius-20 fz-20 fw-600" style="padding: 14px 35px;">Запросить новый API-ключ</button>
+                  <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px;">Сохранить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

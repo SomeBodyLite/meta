@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Metamorphosis</title>
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+    <main class="main">
+      <div class="container">
+        <div class="main-content">
+          <section class="sidebar" id="sidebar"></section>
+          <div class="app-content settings">
+            <div class="settings-tabs">
+              <button class="settings-tab" data-tab="general">Общие</button>
+              <button class="settings-tab" data-tab="security">
+                Безопасность
+              </button>
+              <button class="settings-tab" data-tab="payments">
+                Платежные системы
+              </button>
+              <button class="settings-tab" data-tab="support-agent">
+                Агент поддержки
+              </button>
+              <button class="settings-tab" data-tab="blacklist">
+                Черный список
+              </button>
+              <button class="settings-tab" data-tab="support">Саппорт</button>
+              <button class="settings-tab" data-tab="domains">Домены</button>
+              <button class="settings-tab" data-tab="smart-deposit">
+                Смарт депозит
+              </button>
+            </div>
+            <div class="settings-container" data-tab="general">
+              <div class="flex flex-column gap-40">
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#settings"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Супер аккаунт</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-28 mt-25">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center">
+                        <div class="flex flex-column">
+                          <h3 class="title">Ключевое слово</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Если почта аккаунта при регистрации будет в себе
+                            иметь слово которое вы введете снизу, то аккаунт
+                            будет автоматически активирован, а так же к нему
+                            будут применены настройки выбранные снизу.
+                          </p>
+                        </div>
+                        <div class="form-group border small">
+                          <label class="form-group__label">
+                            <input
+                              type="text"
+                              class="form-group__input fw-500 text-center"
+                              placeholder="ключевое слово"
+                              value="2822992"
+                            />
+                            <button class="form-group__button"></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-start">
+                        <div class="flex flex-column flex-100">
+                          <h3 class="title">Фейк вывод</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Включена ли подкрутка по умолчанию при регистрации
+                          </p>
+                        </div>
+                        <input name="1" type="checkbox" class="switch" />
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-start">
+                        <div class="flex flex-column flex-100">
+                          <h3 class="title">Подкрутка</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Включена ли подкрутка по умолчанию при регистрации
+                          </p>
+                        </div>
+                        <input name="2" type="checkbox" class="switch" />
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-start">
+                        <div class="flex flex-column flex-100">
+                          <h3 class="title">Верифицирован</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Выдавать статус верифицирован, сразу после
+                            регистрации
+                          </p>
+                        </div>
+                        <input name="3" type="checkbox" class="switch" />
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-start">
+                        <div class="flex flex-column flex-100">
+                          <h3 class="title">Абуз промокодов</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Возможность использовать промокоды ∞ количество раз
+                          </p>
+                        </div>
+                        <input name="4" type="checkbox" class="switch" />
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-start">
+                        <div class="flex flex-column flex-100">
+                          <h3 class="title">Заход на любые домена</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Пользователь может заходить на любые домена
+                          </p>
+                        </div>
+                        <input name="5" type="checkbox" class="switch" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-column gap-40">
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#settings"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Параметры</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-16">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-start">
+                        <div class="flex flex-column flex-100">
+                          <h3 class="title">Заявки</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Верифицировать заявки KYC юзеров спустя сколько
+                            минут
+                          </p>
+                        </div>
+                        <div class="counter" id="counter1">
+                          <button class="counter-btn left">
+                            <svg class="icon hover">
+                              <use
+                                xlink:href="./assets/images/icons.svg#arrow-left"
+                              ></use>
+                            </svg>
+                          </button>
+                          <input
+                            type="text"
+                            class="counter-input"
+                            value="1"
+                            readonly
+                          />
+                          <button class="counter-btn right">
+                            <svg class="icon hover">
+                              <use
+                                xlink:href="./assets/images/icons.svg#arrow-right"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-start">
+                        <div class="flex flex-column flex-100">
+                          <h3 class="title">Депозиты</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Зачислять депозиты меньше минимальной суммы
+                          </p>
+                        </div>
+                        <input name="6" type="checkbox" class="switch" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#settings"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Текстовые переменные</h2>
+                  </div>
+                  <p class="subtitle text-center mt-8">
+                    Эти переменные могут быть использованы как в общении с
+                    мамонтом, так и для отправки уведомлений.
+                  </p>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column">
+                    <div class="table-container">
+                      <div class="table-item">
+                        <table class="params__list list-wrapper">
+                          <thead class="list-header">
+                            <tr>
+                              <th class="list-title">Переменная</th>
+                              <th class="list-title">Значение</th>
+                            </tr>
+                          </thead>
+                          <tbody class="list-body list-container"></tbody>
+                        </table>
+                      </div>
+                      <div class="list-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="settings-container" data-tab="security">
+              <div class="flex flex-column gap-40" style="max-width: 895px;">
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#security"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Кошельки</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-28 mt-25">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center">
+                        <div class="flex flex-column">
+                          <h3 class="title fw-400">Кошельки</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Вы можете сохранить кошельки только один раз. После чего это будет возможно только с включенной двухфакторной защитой
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-20">
+                        <div class="flex flex-column">
+                          <div class="flex align-center gap-12">
+                            <img src="./assets/images/coins/bitcoin.svg" width="19" alt="">
+                            <h3 class="title">Bitcoin</h3>
+                          </div>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Кошелек для получения авто-выплат на сети BTC
+                          </p>
+                        </div>
+                        <div class="form-group border small copy alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500 " placeholder="ключевое слово" value="ayujhsdhjawuoyhdashjkldioaWhioads">
+                            <button class="form-group__button"><svg class="icon hover stroke-hover">
+                              <use xlink:href="./assets/images/icons.svg#copy"></use>
+                            </svg></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-20">
+                        <div class="flex flex-column">
+                          <div class="flex align-center gap-12">
+                            <img src="./assets/images/coins/ethereum.svg" width="19" alt="">
+                            <h3 class="title">Ethereum</h3>
+                          </div>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Кошелек для получения авто-выплат на сети ERC20
+                          </p>
+                        </div>
+                        <div class="form-group border small copy alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500 " placeholder="ключевое слово" value="ayujhsdhjawuoyhdashjkldioaWhioads">
+                            <button class="form-group__button"><svg class="icon hover stroke-hover">
+                              <use xlink:href="./assets/images/icons.svg#copy"></use>
+                            </svg></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-20">
+                        <div class="flex flex-column">
+                          <div class="flex align-center gap-12">
+                            <img src="./assets/images/coins/tron.svg" width="19" alt="">
+                            <h3 class="title">Tron</h3>
+                          </div>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Кошелек для получения авто-выплат на сети TRC20
+                          </p>
+                        </div>
+                        <div class="form-group border small copy alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500 " placeholder="ключевое слово" value="ayujhsdhjawuoyhdashjkldioaWhioads">
+                            <button class="form-group__button"><svg class="icon hover stroke-hover">
+                              <use xlink:href="./assets/images/icons.svg#copy"></use>
+                            </svg></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-20">
+                        <div class="flex flex-column">
+                          <div class="flex align-center gap-12">
+                            <img src="./assets/images/coins/binance.svg" width="19" alt="">
+                            <h3 class="title">Binance Smart Chain</h3>
+                          </div>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Кошелек для получения авто-выплат на сети BEP20
+                          </p>
+                        </div>
+                        <div class="form-group border small copy alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500 " placeholder="ключевое слово" value="ayujhsdhjawuoyhdashjkldioaWhioads">
+                            <button class="form-group__button"><svg class="icon hover stroke-hover">
+                              <use xlink:href="./assets/images/icons.svg#copy"></use>
+                            </svg></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-20">
+                        <div class="flex flex-column">
+                          <div class="flex align-center gap-12">
+                            <img src="./assets/images/coins/ripple.svg" width="19" alt="">
+                            <h3 class="title">Ripple</h3>
+                          </div>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Кошелек для получения авто-выплат на сети XRP
+                          </p>
+                        </div>
+                        <div class="form-group border small copy alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500 " placeholder="ключевое слово" value="ayujhsdhjawuoyhdashjkldioaWhioads">
+                            <button class="form-group__button"><svg class="icon hover stroke-hover">
+                              <use xlink:href="./assets/images/icons.svg#copy"></use>
+                            </svg></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-20">
+                        <div class="flex flex-column">
+                          <div class="flex align-center gap-12">
+                            <img src="./assets/images/coins/solana.svg" width="19" alt="">
+                            <h3 class="title">Solana</h3>
+                          </div>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Кошелек пользователя в сети Solana
+                          </p>
+                        </div>
+                        <div class="form-group border small copy alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500 " placeholder="ключевое слово" value="ayujhsdhjawuoyhdashjkldioaWhioads">
+                            <button class="form-group__button"><svg class="icon hover stroke-hover">
+                              <use xlink:href="./assets/images/icons.svg#copy"></use>
+                            </svg></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-20">
+                        <div class="flex flex-column">
+                          <div class="flex align-center gap-12">
+                            <img src="./assets/images/coins/ton.svg" width="19" alt="">
+                            <h3 class="title">TON</h3>
+                          </div>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Кошелек пользователя в сети TON
+                          </p>
+                        </div>
+                        <div class="form-group border small copy alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500 " placeholder="ключевое слово" value="ayujhsdhjawuoyhdashjkldioaWhioads">
+                            <button class="form-group__button"><svg class="icon hover stroke-hover">
+                              <use xlink:href="./assets/images/icons.svg#copy"></use>
+                            </svg></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block light light-down" style="padding: 32px 30px;">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#security"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Изменение пароля</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-28 mt-25">
+                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                      <div class="flex align-start">
+                        <div class="flex flex-column flex-100">
+                          <h3 class="title">Старый пароль</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Введите старый пароль
+                          </p>
+                        </div>
+                        <div class="form-group password border small alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input" placeholder="Пароль" />
+                            <button class="form-group__button"></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                      <div class="flex align-start">
+                        <div class="flex flex-column flex-100">
+                          <h3 class="title">Новый пароль</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Придумайте новый пароль
+                          </p>
+                        </div>
+                        <div class="form-group password border small alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input" placeholder="Пароль" />
+                            <button class="form-group__button"></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end">
+                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px;">Сохранить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-column gap-40">
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12 ">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#security"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Двухфакторная аутентификация</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-16 mt-25">
+                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                      <div class="flex align-center">
+                        <div class="flex flex-column">
+                          <h3 class="title">Важно</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Для активации используйте Google Authenticator или любое другое ТОТР приложение
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                      <div class="flex align-center justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">QR-код</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Отсканируйте QR-код
+                          </p>
+                        </div>
+                        <div class="qr-container">
+                          <img src="./assets/images/qr-placeholder.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                      <div class="flex flex-column gap-12 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Секретный ключ</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Вы можете вписать секретный ключ вручную
+                          </p>
+                        </div>
+                        <div class="form-group border small copy alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500 " placeholder="ключевое слово" value="ayujhsdhjawuoyhdashjkldioaWhioads">
+                            <button class="form-group__button"><svg class="icon hover stroke-hover">
+                              <use xlink:href="./assets/images/icons.svg#copy"></use>
+                            </svg></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                      <div class="flex align-center">
+                        <div class="flex flex-column flex-100">
+                          <h3 class="title">ТОТР-код</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Введите код из приложения, чтобы включить 2FA
+                          </p>
+                        </div>
+                        <div class="form-group border small alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input" placeholder="Код" style="min-width: 280px;" />
+                            <button class="form-group__button"></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end mt-20">
+                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px;">Сохранить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="settings-container" data-tab="payments">
+              Контент Платежные системы
+            </div>
+            <div class="settings-container" data-tab="support-agent">
+              Контент Агент поддержки
+            </div>
+            <div class="settings-container" data-tab="blacklist">
+              <div class="flex flex-column gap-40" style="max-width: 895px;">
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#blacklist"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Добавить в черный список</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-28 mt-25">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center">
+                        <div class="flex flex-column">
+                          <h3 class="title">Важно</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            При добавлении в чёрный список фиксируются почта и IP-адрес пользователя. При попытке входа на сайт пользователь из чёрного списка будет видеть пустую страницу.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-20">
+                        <div class="flex flex-column">
+                          <div class="flex align-center gap-12">
+                            <h3 class="title">E-mail</h3>
+                          </div>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Введите электронную почту пользователя
+                          </p>
+                        </div>
+                        <div class="form-group border small alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500 " placeholder="Почта" value="">
+                            <button class="form-group__button"></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end mt-20">
+                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px;" onclick="showNotification('Успешно')">Добавить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-column gap-40">
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex justify-between align-center">
+                    <div class="flex align-center justify-center gap-12" style="padding: 0 18px;">
+                      <svg class="icon">
+                        <use
+                          xlink:href="./assets/images/icons.svg#blacklist"
+                        ></use>
+                      </svg>
+                      <h2 class="title">Черный список</h2>
+                    </div>
+                    <div class="form-group border">
+                      <label class="form-group__label">
+                        <input type="text" class="form-group__input" placeholder="Введите почту пользователя">
+                        <button class="form-group__button"></button>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-16 mt-25">
+                    <div class="table-container">
+                      <div class="table-item">
+                        <table class="blacklist__list list-wrapper">
+                          <thead class="list-header">
+                            <tr>
+                              <th class="list-title">Почта</th>
+                              <th class="list-title">Дата добавления</th>
+                              <th class="list-title">Действия</th>
+                            </tr>
+                          </thead>
+                          <tbody class="list-body list-container"></tbody>
+                        </table>
+                      </div>
+                      <div class="list-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="settings-container" data-tab="support">
+              Контент Саппорт
+            </div>
+            <div class="settings-container" data-tab="domains">
+              <div class="flex flex-column gap-40 w-100" style="max-width: 895px;">
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#shield"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Добавить новый домен</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-28 mt-25">                  
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-20">
+                        <div class="flex flex-column">
+                          <div class="flex align-center gap-12">
+                            <h3 class="title">Домен</h3>
+                          </div>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Впишите название домена
+                          </p>
+                        </div>
+                        <div class="form-group border small alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500 " placeholder="Домен" value="">
+                            <button class="form-group__button"></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-20">
+                        <div class="flex flex-column">
+                          <div class="flex align-center gap-12">
+                            <h3 class="title">Дизайн</h3>
+                          </div>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Выберите дизайн
+                          </p>
+                        </div>
+                        <div class="form-group border small alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500 " placeholder="Почта" value="">
+                            <button class="form-group__button"></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end mt-20">
+                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px;" onclick="showNotification('Успешно')">Добавить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-column gap-40 w-100">
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex justify-between align-center">
+                    <div class="flex align-center justify-center gap-12" style="padding: 0 18px;">
+                      <svg class="icon">
+                        <use
+                          xlink:href="./assets/images/icons.svg#shield"
+                        ></use>
+                      </svg>
+                      <h2 class="title">Мои домены</h2>
+                    </div>
+                    <div class="form-group border">
+                      <label class="form-group__label">
+                        <input type="text" class="form-group__input" placeholder="Введите домен или DNS">
+                        <button class="form-group__button"></button>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-16 mt-25">
+                    <div class="table-container">
+                      <div class="table-item">
+                        <table class="domenSetting__list list-wrapper">
+                          <thead class="list-header">
+                            <tr>
+                              <th class="list-title">Домен</th>
+                              <th class="list-title">DNS</th>
+                              <th class="list-title">Дата</th>
+                              <th class="list-title">Действия</th>
+                            </tr>
+                          </thead>
+                          <tbody class="list-body list-container"></tbody>
+                        </table>
+                      </div>
+                      <div class="list-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="settings-container" data-tab="smart-deposit">
+              Контент Смарт депозит
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="overlay js-overlay-modal"></div>
+    <div class="modal" data-modal="delete-domain">
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#edit"></use>
+          </svg>
+          <h2 class="title">
+            Редактирование домена: <span id="promo-code"></span>
+          </h2>
+        </div>
+        <div class="down-separator" style="margin-top: 15px"></div>
+      </div>
+      <div class="mt-25 flex flex-column gap-20">
+        <div class="block-inner p-16">
+          <div class="flex align-start">
+            <div class="flex flex-column flex-100">
+              <h6 class="title text-left">Домен</h6>
+              <p class="fz-14 fw-500 text-gray lh-normal text-left">
+                Текст
+              </p>
+            </div>
+            <div class="form-group border small">
+              <label class="form-group__label">
+                <input
+                  type="text"
+                  id="promo-value"
+                  class="form-group__input"
+                  placeholder="введите сумму"
+                />
+                <button class="form-group__button"></button>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end gap-12">
+          <button
+            class="btn btn-secondary radius-20 js-modal-close"
+            style="padding: 14px 50px"
+          >
+            Отмена
+          </button>
+          <button
+            class="btn btn-gradient radius-20 js-modal-close"
+            style="padding: 14px 50px"
+            onclick="showNotification('Успешно', 'Промокод обновлён.', 'success')"
+          >
+            Сохранить
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/data/params.js"></script>
+    <script src="./assets/js/data/paramsTemplate.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/settings.js"></script>
+    <script>
+      initCounter("counter1", 0, 10);
+    </script>
+    <script>
+      renderList(items, {
+        itemsPerPage: 5,
+        containerSelector: ".params__list",
+        tepmlateFn: (item) => usersItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+    <script src="./assets/js/data/blacklist.js"></script>
+    <script src="./assets/js/data/blacklistTemplate.js"></script>
+    <script>
+      renderList(blacklistItems, {
+        itemsPerPage: 10,
+        containerSelector: ".blacklist__list",
+        tepmlateFn: (item) => blacklistItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+    <script src="./assets/js/data/domenSetting.js"></script>
+    <script src="./assets/js/data/domenSettingTemplate.js"></script>
+    <script>
+      renderList(domenSettingItems, {
+        itemsPerPage: 10,
+        containerSelector: ".domenSetting__list",
+        tepmlateFn: (item) => domenSettingItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+  </body>
+</html>

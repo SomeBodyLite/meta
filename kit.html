@@ -72,6 +72,9 @@
           <use xlink:href="./assets/images/icons.svg#delete"></use>
         </svg>
         <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#shield"></use>
+        </svg>
+        <svg class="icon hover">
           <use xlink:href="./assets/images/icons.svg#deposits"></use>
         </svg>
         <svg class="icon hover">
@@ -116,6 +119,9 @@
         <svg class="icon">
           <use xlink:href="./assets/images/icons.svg#read-2"></use>
         </svg>
+        <svg class="icon">
+          <use xlink:href="./assets/images/icons.svg#warning"></use>
+        </svg>
       </div>
       <div class="form-group">
         <div class="form-group__title">Имя пользователя</div>
@@ -152,10 +158,49 @@
           <button class="form-group__button"></button>
         </label>
       </div>
-      <div class="absolute" style="right: 20px; top: 20px; z-index: 99;">
-        <button class="button" onclick="showNotification('Ошибка авторизации', 'Введено неверное имя полльзователя или пароль', 'error')">Создать error</button>
-        <button class="button" onclick="showNotification('Успешная авторизация', 'Вы успешно авторизовались', 'success')">Создать success</button>
-        <button class="button" onclick="showNotification('Скопированно', '', 'success')">Создать пустое</button>
+      <div class="form-group copy">
+        <div class="form-group__title">Пароль</div>
+        <label class="form-group__label">
+          <input type="text" class="form-group__input" placeholder="Пароль" />
+          <button class="form-group__button">
+            <svg class="icon hover stroke-hover">
+              <use xlink:href="./assets/images/icons.svg#copy"></use>
+            </svg>
+          </button>
+        </label>
+      </div>
+      <div class="counter" id="counter1">
+        <button class="counter-btn left">
+          <svg class="icon hover">
+            <use xlink:href="./assets/images/icons.svg#arrow-left"></use>
+          </svg>
+        </button>
+        <input type="text" class="counter-input" value="1" readonly />
+        <button class="counter-btn right">
+          <svg class="icon hover">
+            <use xlink:href="./assets/images/icons.svg#arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="absolute" style="right: 20px; top: 20px; z-index: 99">
+        <button
+          class="button"
+          onclick="showNotification('Ошибка авторизации', 'Введено неверное имя полльзователя или пароль', 'error')"
+        >
+          Создать error
+        </button>
+        <button
+          class="button"
+          onclick="showNotification('Успешная авторизация', 'Вы успешно авторизовались', 'success')"
+        >
+          Создать success
+        </button>
+        <button
+          class="button"
+          onclick="showNotification('Скопированно', '', 'success')"
+        >
+          Создать пустое
+        </button>
       </div>
       <button class="btn btn-primary">Продолжить</button>
       <button class="btn btn-gradient">Продолжить</button>
@@ -184,5 +229,8 @@
       </div>
     </div>
     <script src="./assets/js/script.js"></script>
+    <script>
+      initCounter("counter1", 0, 10);
+    </script>
   </body>
 </html>

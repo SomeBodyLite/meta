@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Metamorphosis</title>
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+    <main class="main">
+      <div class="container">
+        <div class="main-content">
+          <section class="sidebar" id="sidebar"></section>
+          <div class="app-content">
+            <div class="block w-100 p-32 light">
+              <div class="flex justify-between">
+                <div
+                  class="flex align-center justify-center gap-12"
+                  style="padding: 0 55px"
+                >
+                  <div class="flex flex-column">
+                    <div class="flex align-center justify-center gap-12">
+                      <svg class="icon">
+                        <use xlink:href="./assets/images/icons.svg#users"></use>
+                      </svg>
+                      <h2 class="title">Действия пользователей</h2>
+                    </div>
+                    <p class="subtitle mt-10 text-center">Последние 100 логов</p>
+                  </div>
+                </div>
+              </div>
+              <div class="down-separator" style="margin-top: 25px"></div>
+              <div class="table-container">
+                <div class="table-item">
+                  <table class="logs__list list-wrapper">
+                    <thead class="list-header">
+                      <tr>
+                        <th class="list-title">Логин</th>
+                        <th class="list-title">Действия</th>
+                        <th class="list-title">Айпи</th>
+                        <th class="list-title">Время</th>
+                      </tr>
+                    </thead>
+                    <tbody class="list-body list-container"></tbody>
+                  </table>
+                </div>
+                <div class="list-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/data/logs.js"></script>
+    <script src="./assets/js/data/logsTemplate.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+      renderList(items, {
+        itemsPerPage: 5,
+        containerSelector: ".logs__list",
+        tepmlateFn: (item) => usersItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+  </body>
+</html>
