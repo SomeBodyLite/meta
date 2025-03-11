@@ -1,7 +1,7 @@
 const domenSettingItemTemplate = (item) => {
 
   return `<tr class="list-item">
-            <td><div class="item"><a class="text-white text-underline" href="https://${item.domain}" target="_blank">${item.domain}</a></div></td>
+            <td><div class="item"><a class="text-white text-underline" href="${item.domainEdit}">${item.domain}</a></div></td>
             <td><div class="item">${item.dns}</div></td>
             <td><div class="item">${item.date}</div></td>
             <td>

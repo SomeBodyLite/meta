@@ -95,19 +95,21 @@ document.addEventListener("DOMContentLoaded", function () {
       input.setAttribute("readonly", true);
     }
 
-    button.addEventListener("click", function (event) {
-      event.preventDefault();
+    if (button) {
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
 
-      if (group.classList.contains("password")) {
-        group.classList.toggle("show");
-        input.type = input.type === "password" ? "text" : "password";
-      }
+        if (group.classList.contains("password")) {
+          group.classList.toggle("show");
+          input.type = input.type === "password" ? "text" : "password";
+        }
 
-      if (group.classList.contains("copy")) {
-        input.select();
-        copyToClipboard(input.value);
-      }
-    });
+        if (group.classList.contains("copy")) {
+          input.select();
+          copyToClipboard(input.value);
+        }
+      });
+    }
   });
 });
 
@@ -182,7 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (this.classList.contains("delete-btn")) {
-        console.log("sdasd");
+        const dataValue = this.getAttribute("data-value");
+        document.getElementById("data-delete-value").textContent = dataValue;
       }
     });
   });
@@ -433,12 +436,25 @@ document.addEventListener("DOMContentLoaded", () => {
     { label: "meta.pro", value: "domainPro" },
     { label: "meta.com", value: "domainCom" },
   ];
+  const Designs = [
+    { label: "Общая", value: "all" },
+    { label: "meta.ru", value: "domainRu" },
+    { label: "meta.pro", value: "domainPro" },
+    { label: "meta.com", value: "domainCom" },
+  ];
+  const Values = [
+    { label: "%", value: "percent" },
+    { label: "USD", value: "usd" },
+  ];
 
   updateSelect("selectMain", Main);
   updateSelect("selectUsers", Users);
   updateSelect("selectDepositsStats", DepositsStats);
   updateSelect("selectDeposits", Deposits);
   updateSelect("selectStatistics", Statistics);
+  updateSelect("selectDomainDesign", Designs);
+  updateSelect("selectValue", Values);
+  updateSelect("selectValue2", Values);
 });
 
 function updateSelect(id, options) {
@@ -769,3 +785,75 @@ function initCounter(counterId, min = 1, max = 10) {
 // initCounter("counter2", 0, 100);
 
 // END COUNTER
+
+
+// multiselect
+let countries = [];
+const selectedCountries = new Set();
+const input = document.getElementById("country-input");
+const dropdown = document.getElementById("dropdown");
+const selectedContainer = document.getElementById("selected-container");
+
+fetch('./assets/js/json/countries.json')
+  .then(response => response.json())
+  .then(data => {
+    countries = data;
+  })
+  .catch(error => console.error('Ошибка загрузки данных:', error));
+
+input.addEventListener("input", () => {
+  const query = input.value.toLowerCase();
+  dropdown.innerHTML = "";
+
+  if (!query) {
+    dropdown.classList.remove("visible");
+    return;
+  }
+
+  const filtered = countries.filter(
+    country => country.name.toLowerCase().includes(query) || country.code.toLowerCase().includes(query)
+  );
+
+  if (filtered.length > 0) {
+    filtered.forEach(country => {
+      const option = document.createElement("div");
+      option.classList.add("dropdown-item");
+      option.innerHTML = `<img src="/assets/flags/4x3/${country.code}.svg" alt="${country.name}" class="flag"> ${country.name} (${country.code})`;
+      option.addEventListener("click", () => selectCountry(country));
+      dropdown.appendChild(option);
+    });
+  } else {
+    const noResults = document.createElement("div");
+    noResults.classList.add("no-results");
+    noResults.textContent = "Совпадений нет";
+    dropdown.appendChild(noResults);
+  }
+
+  dropdown.classList.add("visible");
+});
+
+function selectCountry(country) {
+  if (selectedCountries.has(country.code)) return;
+  selectedCountries.add(country.code);
+  renderSelectedCountries();
+  input.value = "";
+  dropdown.classList.remove("visible");
+}
+
+function renderSelectedCountries() {
+  selectedContainer.innerHTML = "";
+  selectedCountries.forEach(code => {
+    const country = countries.find(c => c.code === code);
+    const countryTag = document.createElement("div");
+    countryTag.classList.add("selected-item");
+    countryTag.innerHTML = `<img src="/assets/flags/4x3/${country.code}.svg" alt="${country.name}" class="flag"> ${country.code} <span class="remove">&times;</span>`;
+    countryTag.querySelector(".remove").addEventListener("click", () => removeCountry(country));
+    selectedContainer.appendChild(countryTag);
+  });
+}
+
+function removeCountry(country) {
+  selectedCountries.delete(country.code);
+  renderSelectedCountries();
+}
+// END multiselect

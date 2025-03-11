@@ -101,6 +101,11 @@
     <path d="M10.4062 11L22.5897 22.9999" stroke="white" stroke-width="4" stroke-linecap="round"></path>
     <path d="M22.5938 11L10.4104 22.9999" stroke="white" stroke-width="4" stroke-linecap="round"></path>
   </symbol>
+   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" id="error-gray">
+    <circle cx="16.5" cy="16.5" r="16.5" fill="#364060"></circle>
+    <path d="M10.4062 11L22.5897 22.9999" stroke="white" stroke-width="4" stroke-linecap="round"></path>
+    <path d="M22.5938 11L10.4104 22.9999" stroke="white" stroke-width="4" stroke-linecap="round"></path>
+  </symbol>
   <symbol viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" fill="none" id="success-icon">
     <circle cx="9" cy="9" r="9" fill="#058E6E"/>
     <path d="M4.18704 9.58791L7.48383 12.9811C7.8898 13.3989 8.56558 13.3827 8.95097 12.9458L14.1589 7.04201" stroke="white" stroke-width="2" stroke-linecap="round"/>
@@ -170,5 +175,9 @@
     </clipPath>
     </defs>
   </symbol>
+  <symbol viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" id="loop">
+<path d="M9.70002 3C5.46045 3 2 6.46045 2 10.7C2 14.9396 5.46045 18.4 9.70002 18.4C11.6228 18.4 13.3795 17.6829 14.7317 16.5094L15.2 16.9778V18.4L21.3446 24.5446C21.9518 25.1518 22.9374 25.1518 23.5446 24.5446C24.1518 23.9374 24.1518 22.9518 23.5446 22.3446L17.4 16.2H15.9778L15.5094 15.7317C16.6829 14.3795 17.4 12.6228 17.4 10.7C17.4 6.46045 13.9396 3 9.70002 3ZM9.70002 5.20001C12.7506 5.20001 15.2 7.64942 15.2 10.7C15.2 13.7506 12.7506 16.2 9.70002 16.2C6.64942 16.2 4.20001 13.7506 4.20001 10.7C4.20001 7.64942 6.64942 5.20001 9.70002 5.20001Z" fill="white"/>
+</symbol>
+
 
 </svg>

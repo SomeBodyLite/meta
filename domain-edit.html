@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Metamorphosis</title>
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+    <main class="main">
+      <div class="container">
+        <div class="main-content">
+          <section class="sidebar" id="sidebar"></section>
+          <div class="app-content settings">
+            <div class="settings-tabs">
+              <a href="./settings.html#general" class="settings-tab" data-tab="general">Общие</a>
+              <a href="./settings.html#security" class="settings-tab" data-tab="security">
+                Безопасность
+              </a>
+              <a href="./settings.html#payments" class="settings-tab" data-tab="payments">
+                Платежные системы
+              </a>
+              <a href="./settings.html#support-agent" class="settings-tab" data-tab="support-agent">
+                Агент поддержки
+              </a>
+              <a href="./settings.html#blacklist" class="settings-tab" data-tab="blacklist">
+                Черный список
+              </a>
+              <a href="./settings.html#support" class="settings-tab" data-tab="support">Саппорт</a>
+              <a href="./settings.html#domains" class="settings-tab" data-tab="domains">Домены</a>
+              <a href="./settings.html#smart-deposit" class="settings-tab" data-tab="smart-deposit">
+                Смарт депозит
+              </a>
+            </div>
+            <div class="flex gap-40">
+              <div class="flex flex-column gap-40 w-100" style="max-width: 778px;">
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#shield"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Скопировать настройки другого домена</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-28 mt-25">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Домен</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Выберете домен с которого вы хотите скопировать настройки
+                          </p>
+                        </div>
+                        <div class="custom-select custom-2" id="selectStatistics">
+                          <button class="select-selected"></button>
+                          <svg class="icon select-carret">
+                            <use
+                              xlink:href="./assets/images/icons.svg#arrow-down"
+                            ></use>
+                          </svg>
+                          <div class="select-items"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end">
+                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                        Перенести настройки
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#blacklist"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Черный список стран</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-28 mt-25">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Страны</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Выберете страны, которые хотите забанить
+                          </p>
+                        </div>
+                        <div class="form-group border small alt-des">
+                          <div class="multiselect-container">
+                            <div class="input-wrapper">
+                              <div id="selected-container" class="selected-container"></div>
+                              <input type="text" id="country-input" class="country-input" placeholder="Введите страну">
+                              <span class="search-icon"><svg class="icon">
+                                <use
+                                  xlink:href="./assets/images/icons.svg#loop"
+                                ></use>
+                              </svg></span>
+                            </div>
+                            <div id="dropdown" class="dropdown"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end gap-12">
+                      <button class="btn btn-secondary radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                        Отмена
+                      </button>
+                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                        Сохранить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#settings"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Настройка DNS-записи</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-28 mt-25">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">TXT запись</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Вводите все данные без ошибок, иначе DNS-запись не добавится
+                          </p>
+                        </div>
+                        <div class="form-group border small alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500" placeholder="запись" value="">
+                            <button class="form-group__button"></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end gap-12">
+                      <button class="btn btn-secondary radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                        Отмена
+                      </button>
+                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                        Сохранить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#settings"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Настройка Facebook Pixel</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-28 mt-25">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Pixel ID</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Идентификатор пикселя Facebook
+                          </p>
+                        </div>
+                        <div class="form-group border small alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input fw-500" placeholder="запись" value="">
+                            <button class="form-group__button"></button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end gap-12">
+                      <button class="btn btn-secondary radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                        Отмена
+                      </button>
+                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                        Сохранить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-column gap-40 w-100">
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#settings"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Расширенные настройки</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-28 mt-25">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Комиссия на вывод</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Выберете комиссию для вывода
+                          </p>
+                        </div>
+                       <div class="flex gap-10">
+                        <div class="form-group alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input" placeholder="" style="min-width: 200px;" />
+                          </label>
+                        </div>
+                        <div class="custom-select custom-2" id="selectValue">
+                          <button class="select-selected"></button>
+                          <svg class="icon select-carret">
+                            <use
+                              xlink:href="./assets/images/icons.svg#arrow-down"
+                            ></use>
+                          </svg>
+                          <div class="select-items"></div>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Комиссия на депозит</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Выберете комиссию для депозита
+                          </p>
+                        </div>
+                       <div class="flex gap-10">
+                        <div class="form-group alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input" placeholder="" style="min-width: 200px;" />
+                          </label>
+                        </div>
+                        <div class="custom-select custom-2" id="selectValue2">
+                          <button class="select-selected"></button>
+                          <svg class="icon select-carret">
+                            <use
+                              xlink:href="./assets/images/icons.svg#arrow-down"
+                            ></use>
+                          </svg>
+                          <div class="select-items"></div>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Минимальный вывод</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Впишите минимальный вывод
+                          </p>
+                        </div>
+                       <div class="flex gap-10">
+                        <div class="form-group alt-des">
+                          <label class="form-group__label">
+                            <input type="text" class="form-group__input" placeholder="" style="min-width: 370px;" />
+                          </label>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end">
+                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                        Применить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="block light light-down" style="padding: 32px 30px">
+                  <div class="flex align-center justify-center gap-12">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/images/icons.svg#error-gray"
+                      ></use>
+                    </svg>
+                    <h2 class="title">Ошибки</h2>
+                  </div>
+                  <div class="down-separator" style="margin-top: 16px"></div>
+                  <div class="flex flex-column gap-28 mt-25">
+                    <div
+                      class="block light-down radius-20 p-32"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex flex-column gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h2 class="title">Стандартная ошибка</h2>
+                        </div>
+                       <div class="flex gap-10">
+                        <div class="form-group w-100">
+                          <label class="form-group__label ">
+                            <textarea class="form-group__input">To withdraw funds, you need to verify your account by making a minimum deposit for the exact amount of 0.0035 BTC. Thisverification deposit will be credited to your balance and canbe withdrawn after your account is verified. You can make this depositviathe Deposit Tab or the Buy Crypto page. For more details on the verification procedure, please refer to Section IV of the Terms of use.For further assistance, please contact our support chat or create a ticket.</textarea>
+                          </label>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down radius-20 p-32"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex flex-column gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h2 class="title">WalletConnect ошибка</h2>
+                        </div>
+                       <div class="flex gap-10">
+                        <div class="form-group w-100">
+                          <label class="form-group__label ">
+                            <textarea class="form-group__input">O withdraw funds, you must synchronize wallet with our platform in order to freely withdraw funds. You can do this on the "Settings" page in "Wallet Connect" tab.</textarea>
+                          </label>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <p class="text-gray fz-14 fw-600 text-center">* Используйте %sum_deposit% для вставки необходимой суммы депозита в текст ошибок.</p>
+                    <div class="flex justify-end">
+                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                        Обновить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
