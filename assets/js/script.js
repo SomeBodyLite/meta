@@ -444,11 +444,14 @@ const selectInstances = {};
   const selectTokens = [
     { label: "<img src='./assets/images/coins/binance.svg'>Binance", value: "binance" },
     { label: "<img src='./assets/images/coins/bitcoin.svg'>Bitcoin", value: "bitcoin" },
-    { label: "<img src='./assets/images/coins/ton.svg'>Ton", value: "ton" },
+    { label: "<img src='./assets/images/coins/ton.svg'>TON", value: "ton" },
     { label: "<img src='./assets/images/coins/tron.svg'>Tron", value: "tron" },
     { label: "<img src='./assets/images/coins/ethereum.svg'>Ethereum", value: "eth" },
     { label: "<img src='./assets/images/coins/ripple.svg'>Ripple", value: "ripple" },
     { label: "<img src='./assets/images/coins/solana.svg'>Solana", value: "solana" },
+    { label: "<img src='./assets/images/coins/paypal.svg'>Paypal", value: "paypal" },
+    { label: "<img src='./assets/images/coins/swift.svg'>Swift", value: "swift" },
+    { label: "<img src='./assets/images/coins/bank-card.svg'>Bank card", value: "bank-card" },
   ];
   const selectStatus = [
     { label: "<span class='status failed'>Неуспех</span>", value: "binance" },
@@ -899,3 +902,4 @@ window.initAutoResizeTextareas = function() {
 // Вызов функции после загрузки DOM
 document.addEventListener("DOMContentLoaded", window.initAutoResizeTextareas);
 // END ADJUST HEIGHT TEXTAREA
+

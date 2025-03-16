@@ -233,9 +233,10 @@
                           </p>
                         </div>
                         <div class="flex align-center gap-16">
-                          <div class="form-group border copy reset">
+                          <div class="form-group border alt-des copy">
                             <label class="form-group__label">
                               <input
+                                readonly
                                 type="text"
                                 class="form-group__input fw-500 w-100"
                                 placeholder="Пароль"
@@ -793,6 +794,9 @@
                                   ></use>
                                 </svg>
                               </button>
+                              <a href="#" target="_blank" class="form-group__button-2">
+                                <img src="./assets/images/coins/bitcoin-link.png" width="23" alt="">
+                              </a>
                             </label>
                           </div>
                         </div>
@@ -828,6 +832,9 @@
                                   ></use>
                                 </svg>
                               </button>
+                              <a href="#" target="_blank" class="form-group__button-2">
+                                <img src="./assets/images/coins/ethereum-link.png" width="23" alt="">
+                              </a>
                             </label>
                           </div>
                         </div>
@@ -863,6 +870,9 @@
                                   ></use>
                                 </svg>
                               </button>
+                              <a href="#" target="_blank" class="form-group__button-2">
+                                <img src="./assets/images/coins/tron-link.png" width="23" alt="">
+                              </a>
                             </label>
                           </div>
                         </div>
@@ -898,6 +908,9 @@
                                   ></use>
                                 </svg>
                               </button>
+                              <a href="#" target="_blank" class="form-group__button-2">
+                                <img src="./assets/images/coins/binance-link.png" width="23" alt="">
+                              </a>
                             </label>
                           </div>
                         </div>
@@ -933,6 +946,9 @@
                                   ></use>
                                 </svg>
                               </button>
+                              <a href="#" target="_blank" class="form-group__button-2">
+                                <img src="./assets/images/coins/ripple-link.png" width="23" alt="">
+                              </a>
                             </label>
                           </div>
                         </div>
@@ -968,6 +984,9 @@
                                   ></use>
                                 </svg>
                               </button>
+                              <a href="#" target="_blank" class="form-group__button-2">
+                                <img src="./assets/images/coins/solana-link.png" width="23" alt="">
+                              </a>
                             </label>
                           </div>
                         </div>
@@ -1003,6 +1022,9 @@
                                   ></use>
                                 </svg>
                               </button>
+                              <a href="#" target="_blank" class="form-group__button-2">
+                                <img src="./assets/images/coins/ton-link.png" width="23" alt="">
+                              </a>
                             </label>
                           </div>
                         </div>
@@ -1540,7 +1562,7 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
         <div class="down-separator" style="margin-top: 15px"></div>
       </div>
       <div class="mt-25 flex flex-column gap-20">
-        <div class="block-gradient radius-20 px-30 py-14" style="z-index: 2;">
+        <div class="block-gradient radius-20 px-30 py-14" style="z-index: 2">
           <div class="flex align-center">
             <div class="flex flex-column flex-100">
               <h6 class="title text-left">Токен</h6>
@@ -1584,7 +1606,12 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
             </div>
             <div class="form-group alt-des after-content">
               <label class="form-group__label" data-after="$">
-                <input type="text" class="form-group__input" placeholder="" style="min-width: 200px">
+                <input
+                  type="text"
+                  class="form-group__input"
+                  placeholder=""
+                  style="min-width: 200px"
+                />
               </label>
             </div>
           </div>
@@ -1599,7 +1626,13 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
             </div>
             <div class="form-group copy alt-des">
               <label class="form-group__label">
-                <input type="text" class="form-group__input" value="fgdy3y4h445hhb:jdgpo12fgh" placeholder="реквизиты" readonly="true">
+                <input
+                  type="text"
+                  class="form-group__input"
+                  value="fgdy3y4h445hhb:jdgpo12fgh"
+                  placeholder="реквизиты"
+                  readonly="true"
+                />
                 <button class="form-group__button">
                   <svg class="icon hover stroke-hover">
                     <use xlink:href="./assets/images/icons.svg#copy"></use>
@@ -1622,7 +1655,13 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                 <svg class="icon form-group__after stroke">
                   <use xlink:href="./assets/images/icons.svg#calendar"></use>
                 </svg>
-                <input type="text" class="form-group__input" value="01/08/2004" placeholder="" style="min-width: 200px">
+                <input
+                  type="text"
+                  class="form-group__input"
+                  value="01/08/2004"
+                  placeholder=""
+                  style="min-width: 200px"
+                />
               </label>
             </div>
           </div>
@@ -1679,50 +1718,65 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-  // Обработчик для кнопки редактирования
-  document.querySelectorAll('.edit-btn').forEach(function (editButton) {
-    editButton.addEventListener('click', function (e) {
-      e.preventDefault();
+        // Обработчик для кнопки редактирования
+        document.querySelectorAll(".edit-btn").forEach(function (editButton) {
+          editButton.addEventListener("click", function (e) {
+            e.preventDefault();
 
-      // Получаем данные из атрибутов кнопки
-      const coin = this.getAttribute('data-coin');
-      const status = this.getAttribute('data-status');
-      const value = this.getAttribute('data-value');
-      const hash = this.getAttribute('data-hash');
-      const date = this.getAttribute('data-date');
+            // Получаем данные из атрибутов кнопки
+            const coin = this.getAttribute("data-coin");
+            const status = this.getAttribute("data-status");
+            const value = this.getAttribute("data-value");
+            const hash = this.getAttribute("data-hash");
+            const date = this.getAttribute("data-date");
 
-      // Находим модалку
-      const modal = document.querySelector('.modal[data-modal="edit-withdraw"]');
+            // Находим модалку
+            const modal = document.querySelector(
+              '.modal[data-modal="edit-withdraw"]'
+            );
 
-      // Обновляем селект "Токен"
-      const tokenSelect = selectInstances['selectTokens'];
-      if (tokenSelect) {
-        const tokenOption = selectTokens.find(opt => opt.label.includes(coin));
-        if (tokenOption) {
-          tokenSelect.setSelected(tokenOption.label, tokenOption.value);
-        }
-      }
+            // Обновляем селект "Токен"
+            const tokenSelect = selectInstances["selectTokens"];
+            if (tokenSelect) {
+              const tokenOption = selectTokens.find((opt) =>
+                opt.label.includes(coin)
+              );
+              if (tokenOption) {
+                tokenSelect.setSelected(tokenOption.label, tokenOption.value);
+              }
+            }
 
-      // Обновляем селект "Статус"
-      const statusSelect = selectInstances['selectStatus'];
-      if (statusSelect) {
-        const statusOption = selectStatus.find(opt => opt.label.includes(status));
-        if (statusOption) {
-          statusSelect.setSelected(statusOption.label, statusOption.value);
-        }
-      }
+            // Обновляем селект "Статус"
+            const statusSelect = selectInstances["selectStatus"];
+            if (statusSelect) {
+              const statusOption = selectStatus.find((opt) =>
+                opt.label.includes(status)
+              );
+              if (statusOption) {
+                statusSelect.setSelected(
+                  statusOption.label,
+                  statusOption.value
+                );
+              }
+            }
 
-      // Заполняем остальные поля
-      modal.querySelector('.block-gradient:nth-child(3) .form-group__input').value = value;
-      modal.querySelector('.block-gradient:nth-child(4) .form-group__input').value = hash;
-      modal.querySelector('.block-gradient:nth-child(5) .form-group__input').value = date;
+            // Заполняем остальные поля
+            modal.querySelector(
+              ".block-gradient:nth-child(3) .form-group__input"
+            ).value = value;
+            modal.querySelector(
+              ".block-gradient:nth-child(4) .form-group__input"
+            ).value = hash;
+            modal.querySelector(
+              ".block-gradient:nth-child(5) .form-group__input"
+            ).value = date;
 
-      // Показываем модалку
-      modal.classList.add('active');
-      document.querySelector('.js-overlay-modal').classList.add('active');
-    });
-  });
-});
+            // Показываем модалку
+            modal.classList.add("active");
+            document.querySelector(".js-overlay-modal").classList.add("active");
+          });
+        });
+      });
     </script>
   </body>
 </html>

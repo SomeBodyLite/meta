@@ -1,7 +1,7 @@
 const items = [
   {
     login: "RandomUser1@example.com",
-    balance: "345",
+    balance: "345$",
     countryImg: "us",
     country: "US",
     domen: "@example",
@@ -10,7 +10,7 @@ const items = [
   },
   {
     login: "AnotherUser2@example.com",
-    balance: "678",
+    balance: "678$",
     countryImg: "gb",
     country: "GB",
     domen: "@test",
@@ -19,7 +19,7 @@ const items = [
   },
   {
     login: "User3@example.com",
-    balance: "910",
+    balance: "910$",
     countryImg: "ca",
     country: "CA",
     domen: "@sample",
@@ -28,7 +28,7 @@ const items = [
   },
   {
     login: "ExampleUser4@example.com",
-    balance: "112",
+    balance: "112$",
     countryImg: "de",
     country: "DE",
     domen: "@demo",
@@ -37,7 +37,7 @@ const items = [
   },
   {
     login: "TestUser5@example.com",
-    balance: "314",
+    balance: "314$",
     countryImg: "fr",
     country: "FR",
     domen: "@trial",
@@ -46,7 +46,7 @@ const items = [
   },
   {
     login: "SampleUser6@example.com",
-    balance: "516",
+    balance: "516$",
     countryImg: "au",
     country: "AU",
     domen: "@sample",
@@ -55,7 +55,7 @@ const items = [
   },
   {
     login: "TrialUser7@example.com",
-    balance: "718",
+    balance: "718$",
     countryImg: "jp",
     country: "JP",
     domen: "@test",
@@ -64,7 +64,7 @@ const items = [
   },
   {
     login: "DemoUser8@example.com",
-    balance: "920",
+    balance: "920$",
     countryImg: "in",
     country: "IN",
     domen: "@example",
@@ -73,7 +73,7 @@ const items = [
   },
   {
     login: "ExampleUser9@example.com",
-    balance: "122",
+    balance: "122$",
     countryImg: "br",
     country: "BR",
     domen: "@demo",
@@ -82,7 +82,7 @@ const items = [
   },
   {
     login: "RandomUser10@example.com",
-    balance: "324",
+    balance: "324$",
     countryImg: "ru",
     country: "RU",
     domen: "@test",

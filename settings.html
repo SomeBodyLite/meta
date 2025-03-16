@@ -1469,7 +1469,7 @@ dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
                     <h2 class="title">Пресеты сообщений</h2>
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
-                  <div class="flex flex-column gap-16 mt-25">
+                  <div class="flex flex-column gap-16 mt-25" id="presets">
                     <div
                       class="block light-down p-16 radius-20"
                       style="background-color: #0e1323"
@@ -2162,6 +2162,14 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
+    <script>
+      $('#presets').sortable({
+        handle: '.handle',
+        animation: 150
+      })
+    </script>
     <script src="./assets/js/data/params.js"></script>
     <script src="./assets/js/data/paramsTemplate.js"></script>
     <script src="./assets/js/script.js"></script>

@@ -2,7 +2,7 @@ const usersItemTemplate = (item) => {
   const shortHash = item.hash.length > 11 ? item.hash.substring(0, 11) + "..." : item.hash;
 
   return `<tr class="list-item">
-            <td><div class="item">${item.login}</div></td>
+            <td><div class="item"><a class="text-white" href="./user-edit.html">${item.login}</a></div></td>
             <td><div class="item"><img src="${item.coinImg}" alt="">${item.coin}</div></td>
             <td><div class="item">${item.value}</div></td>
             <td><div class="item">${item.domen}</div></td>

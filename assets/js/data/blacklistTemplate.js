@@ -1,7 +1,7 @@
 const blacklistItemTemplate = (item) => {
 
   return `<tr class="list-item">
-            <td><div class="item">${item.login}</div></td>
+            <td><div class="item"><a class="text-white" href="./user-edit.html">${item.login}</a></div></td>
             <td><div class="item">${item.date}</div></td>
             <td>
               <div class="item actions">

@@ -839,6 +839,19 @@ button:hover .icon.stroke-hover {
     background-size: 21px 21px;
   }
 
+  .form-group__button-2 {
+    position: absolute;
+    padding: 0;
+    padding-left: 8px;
+    right: 50px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
   &.password .form-group__label {
     position: relative;
 
@@ -1051,6 +1064,9 @@ button:hover .icon.stroke-hover {
     position: absolute;
     pointer-events: none;
   }
+}
+.form-group__label:has(.form-group__button-2) .form-group__input {
+  padding-right: 85px !important;
 }
 
 .btn {
@@ -1421,6 +1437,7 @@ h6.title {
       border: none;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       border-radius: 17px;
       border: 2px solid rgba(126, 128, 206, 0.28);
@@ -1441,7 +1458,7 @@ h6.title {
         display: flex;
         align-items: center;
         gap: 8px;
-        justify-content: center;
+        justify-content: left;
         border-radius: 17px;
         background: #2C3556;
         font-size: 16px;
@@ -3066,3 +3083,5 @@ canvas {
   background: linear-gradient(180deg, #0E1321 0%, #0B3436 100%), linear-gradient(180deg, rgba(18, 22, 37, 0.47) 0.29%, rgba(17, 22, 45, 0.76) 99.71%);
   justify-content: center;
 }
+
+
