@@ -3085,3 +3085,30 @@ canvas {
 }
 
 
+.sortable-ghost {
+  opacity: 0.6;
+  background: #1a1f33;
+}
+
+.sortable-chosen {
+  transform: scale(1.02);
+}
+
+.sortable-drag {
+  opacity: 1;
+}
+
+.drag-handle {
+  cursor: grab;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+

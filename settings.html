@@ -1469,103 +1469,76 @@ dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
                     <h2 class="title">Пресеты сообщений</h2>
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
-                  <div class="flex flex-column gap-16 mt-25" id="presets">
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
+                  <div class="flex flex-column gap-16 mt-25 drag__list">
+                    <div class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="1">
                       <div class="flex align-center justify-between gap-8">
                         <div class="flex gap-12 align-center">
-                          <svg class="icon mw-30">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <p class="fz-16 fw-500 text-white lh-normal">
-                            исп привет
-                          </p>
+                          <button class="btn reset p-0 drag-handle">
+                            <svg class="icon mw-30">
+                              <use xlink:href="./assets/images/icons.svg#swap"></use>
+                            </svg>
+                          </button>
+                          <p class="fz-16 fw-500 text-white lh-normal">исп привет</p>
                         </div>
                         <div class="flex gap-8">
                           <button class="btn reset p-4">
                             <svg class="icon" style="width: 21px; height: 21px">
-                              <use
-                                xlink:href="./assets/images/icons.svg#edit"
-                              ></use>
+                              <use xlink:href="./assets/images/icons.svg#edit"></use>
                             </svg>
                           </button>
                           <button class="btn reset p-4">
                             <svg class="icon" style="width: 21px; height: 21px">
-                              <use
-                                xlink:href="./assets/images/icons.svg#delete"
-                              ></use>
+                              <use xlink:href="./assets/images/icons.svg#delete"></use>
                             </svg>
                           </button>
                         </div>
                       </div>
                     </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
+                    <div class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="2">
                       <div class="flex align-center justify-between gap-8">
                         <div class="flex gap-12 align-center">
-                          <svg class="icon mw-30">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
+                          <button class="btn reset p-0 drag-handle">
+                            <svg class="icon mw-30">
+                              <use xlink:href="./assets/images/icons.svg#swap"></use>
+                            </svg>
+                          </button>
                           <p class="fz-16 fw-500 text-white lh-normal">
-                            Спасибо за ваше обращение с удовольствием помогли
-                            вам Спасибо за ваше обращение с удовольствием
-                            помогли вам
+                            Спасибо за ваше обращение с удовольствием помогли вам Спасибо за ваше обращение с удовольствием помогли вам
                           </p>
                         </div>
                         <div class="flex gap-8">
                           <button class="btn reset p-4">
                             <svg class="icon" style="width: 21px; height: 21px">
-                              <use
-                                xlink:href="./assets/images/icons.svg#edit"
-                              ></use>
+                              <use xlink:href="./assets/images/icons.svg#edit"></use>
                             </svg>
                           </button>
                           <button class="btn reset p-4">
                             <svg class="icon" style="width: 21px; height: 21px">
-                              <use
-                                xlink:href="./assets/images/icons.svg#delete"
-                              ></use>
+                              <use xlink:href="./assets/images/icons.svg#delete"></use>
                             </svg>
                           </button>
                         </div>
                       </div>
                     </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
+                    <div class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="3">
                       <div class="flex align-center justify-between gap-8">
                         <div class="flex gap-12 align-center">
-                          <svg class="icon mw-30">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <p class="fz-16 fw-500 text-white lh-normal">
-                            исп привет
-                          </p>
+                          <button class="btn reset p-0 drag-handle">
+                            <svg class="icon mw-30">
+                              <use xlink:href="./assets/images/icons.svg#swap"></use>
+                            </svg>
+                          </button>
+                          <p class="fz-16 fw-500 text-white lh-normal">исп привет</p>
                         </div>
                         <div class="flex gap-8">
                           <button class="btn reset p-4">
                             <svg class="icon" style="width: 21px; height: 21px">
-                              <use
-                                xlink:href="./assets/images/icons.svg#edit"
-                              ></use>
+                              <use xlink:href="./assets/images/icons.svg#edit"></use>
                             </svg>
                           </button>
                           <button class="btn reset p-4">
                             <svg class="icon" style="width: 21px; height: 21px">
-                              <use
-                                xlink:href="./assets/images/icons.svg#delete"
-                              ></use>
+                              <use xlink:href="./assets/images/icons.svg#delete"></use>
                             </svg>
                           </button>
                         </div>
@@ -2162,14 +2135,7 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
-    <script>
-      $('#presets').sortable({
-        handle: '.handle',
-        animation: 150
-      })
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <script src="./assets/js/data/params.js"></script>
     <script src="./assets/js/data/paramsTemplate.js"></script>
     <script src="./assets/js/script.js"></script>

@@ -903,3 +903,27 @@ window.initAutoResizeTextareas = function() {
 document.addEventListener("DOMContentLoaded", window.initAutoResizeTextareas);
 // END ADJUST HEIGHT TEXTAREA
 
+// SORT DRAG
+document.addEventListener("DOMContentLoaded", function () {
+  const tasksListElement = document.querySelector('.drag__list');
+
+  const sortable = new Sortable(tasksListElement, {
+    handle: '.drag-handle',
+    animation: 150, 
+    ghostClass: 'sortable-ghost', 
+    chosenClass: 'sortable-chosen', 
+    dragClass: 'sortable-drag',
+    onEnd: function (evt) {
+      updatePositions(); 
+    }
+  });
+
+  function updatePositions() {
+    const items = tasksListElement.querySelectorAll('.drag__item');
+    items.forEach((item, index) => {
+      item.setAttribute('data-position', index + 1);
+      console.log(`Элемент ${item.textContent.trim()} теперь на позиции ${index + 1}`);
+    });
+  }
+});
+// END SORT DRAG
