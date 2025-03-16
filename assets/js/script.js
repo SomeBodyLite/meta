@@ -1,14 +1,3 @@
-const timeoutDuration = 2000;
-// sda
-
-
-
-
-
-
-
-
-
 const header = document.getElementById("header");
 if (header) {
   fetch("./components/header.html")
@@ -180,7 +169,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById("promo-code").textContent = promoCode;
         document.getElementById("promo-value").value = promoValue;
-        document.getElementById("promo-playthrough").checked = promoPlaythrough === "true";
+        document.getElementById("promo-playthrough").checked =
+          promoPlaythrough === "true";
       }
 
       if (this.classList.contains("delete-btn")) {
@@ -214,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // END MODALS
 
 // NOTIFY
-function showNotification(title, message, type = 'success', timeout = 5000) {
+function showNotification(title, message, type = "success", timeout = 5000) {
   const container = document.querySelector(".notify-container");
   const content = container.querySelector(".notify-content");
 
@@ -338,25 +328,25 @@ class CustomSelect {
 
   updateOptions(options) {
     this.selectItems.innerHTML = "";
-
+  
     options.forEach((option, index) => {
       const item = document.createElement("button");
       item.classList.add("select-item");
-      item.textContent = option.label;
+      item.innerHTML = option.label; // Используем innerHTML вместо textContent
       item.setAttribute("data-value", option.value);
       item.setAttribute("data-placeholder", option.placeholderText || "");
       this.selectItems.appendChild(item);
-
+  
       item.addEventListener("click", () => {
-        this.setSelected(item.textContent, item.getAttribute("data-value"));
+        this.setSelected(item.innerHTML, item.getAttribute("data-value")); // Используем innerHTML
         this.updateInput(
-          item.textContent,
+          item.textContent, // Здесь оставляем textContent, если нужно передавать только текст
           item.getAttribute("data-value"),
           item.getAttribute("data-placeholder")
         );
       });
     });
-
+  
     if (options.length > 0) {
       this.setSelected(options[0].label, options[0].value);
       this.updateInput(
@@ -368,7 +358,7 @@ class CustomSelect {
   }
 
   setSelected(label, value) {
-    this.selectSelected.textContent = label;
+    this.selectSelected.innerHTML = label;
     this.selectSelected.setAttribute("data-value", value);
     this.container.classList.remove("open");
   }
@@ -383,7 +373,6 @@ class CustomSelect {
 
 const selectInstances = {};
 
-document.addEventListener("DOMContentLoaded", () => {
   const selectContainers = document.querySelectorAll(".custom-select");
 
   selectContainers.forEach((container) => {
@@ -446,6 +435,26 @@ document.addEventListener("DOMContentLoaded", () => {
     { label: "%", value: "percent" },
     { label: "USD", value: "usd" },
   ];
+  const selectVerifStatus = [
+    { label: "<span class='verify-item state-1'>Ожидание депозита</span>", value: "1" },
+    { label: "<span class='verify-item state-2'>Ожидание</span>", value: "2" },
+    { label: "<span class='verify-item state-3'>Не верифицирован</span>", value: "3" },
+    { label: "<span class='verify-item state-4'>Верифицирован</span>", value: "4" },
+  ];
+  const selectTokens = [
+    { label: "<img src='./assets/images/coins/binance.svg'>Binance", value: "binance" },
+    { label: "<img src='./assets/images/coins/bitcoin.svg'>Bitcoin", value: "bitcoin" },
+    { label: "<img src='./assets/images/coins/ton.svg'>Ton", value: "ton" },
+    { label: "<img src='./assets/images/coins/tron.svg'>Tron", value: "tron" },
+    { label: "<img src='./assets/images/coins/ethereum.svg'>Ethereum", value: "eth" },
+    { label: "<img src='./assets/images/coins/ripple.svg'>Ripple", value: "ripple" },
+    { label: "<img src='./assets/images/coins/solana.svg'>Solana", value: "solana" },
+  ];
+  const selectStatus = [
+    { label: "<span class='status failed'>Неуспех</span>", value: "binance" },
+    { label: "<span class='status success'>Успех</span>", value: "binance" },
+    { label: "<span class='status pending'>Ожидание</span>", value: "binance" },
+  ];
 
   updateSelect("selectMain", Main);
   updateSelect("selectUsers", Users);
@@ -455,7 +464,9 @@ document.addEventListener("DOMContentLoaded", () => {
   updateSelect("selectDomainDesign", Designs);
   updateSelect("selectValue", Values);
   updateSelect("selectValue2", Values);
-});
+  updateSelect("selectVerifStatus", selectVerifStatus);
+  updateSelect("selectTokens", selectTokens);
+  updateSelect("selectStatus", selectStatus);
 
 function updateSelect(id, options) {
   if (selectInstances[id]) {
@@ -690,6 +701,8 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       if (activePage) {
         activePage.classList.add("active");
+      window.initAutoResizeTextareas();
+
       }
 
       buttons.forEach((btn) => {
@@ -786,7 +799,6 @@ function initCounter(counterId, min = 1, max = 10) {
 
 // END COUNTER
 
-
 // multiselect
 let countries = [];
 const selectedCountries = new Set();
@@ -794,66 +806,96 @@ const input = document.getElementById("country-input");
 const dropdown = document.getElementById("dropdown");
 const selectedContainer = document.getElementById("selected-container");
 
-fetch('./assets/js/json/countries.json')
-  .then(response => response.json())
-  .then(data => {
-    countries = data;
-  })
-  .catch(error => console.error('Ошибка загрузки данных:', error));
+// Проверяем, существует ли элемент input на странице
+if (input) {
+  fetch("./assets/js/json/countries.json")
+    .then((response) => response.json())
+    .then((data) => {
+      countries = data;
+    })
+    .catch((error) => console.error("Ошибка загрузки данных:", error));
 
-input.addEventListener("input", () => {
-  const query = input.value.toLowerCase();
-  dropdown.innerHTML = "";
+  input.addEventListener("input", () => {
+    const query = input.value.toLowerCase();
+    dropdown.innerHTML = "";
 
-  if (!query) {
-    dropdown.classList.remove("visible");
-    return;
-  }
+    if (!query) {
+      dropdown.classList.remove("visible");
+      return;
+    }
 
-  const filtered = countries.filter(
-    country => country.name.toLowerCase().includes(query) || country.code.toLowerCase().includes(query)
-  );
+    const filtered = countries.filter(
+      (country) =>
+        country.name.toLowerCase().includes(query) ||
+        country.code.toLowerCase().includes(query)
+    );
 
-  if (filtered.length > 0) {
-    filtered.forEach(country => {
-      const option = document.createElement("div");
-      option.classList.add("dropdown-item");
-      option.innerHTML = `<img src="/assets/flags/4x3/${country.code}.svg" alt="${country.name}" class="flag"> ${country.name} (${country.code})`;
-      option.addEventListener("click", () => selectCountry(country));
-      dropdown.appendChild(option);
-    });
-  } else {
-    const noResults = document.createElement("div");
-    noResults.classList.add("no-results");
-    noResults.textContent = "Совпадений нет";
-    dropdown.appendChild(noResults);
-  }
+    if (filtered.length > 0) {
+      filtered.forEach((country) => {
+        const option = document.createElement("div");
+        option.classList.add("dropdown-item");
+        option.innerHTML = `<img src="/assets/flags/4x3/${country.code}.svg" alt="${country.name}" class="flag"> ${country.name} (${country.code})`;
+        option.addEventListener("click", () => selectCountry(country));
+        dropdown.appendChild(option);
+      });
+    } else {
+      const noResults = document.createElement("div");
+      noResults.classList.add("no-results");
+      noResults.textContent = "Совпадений нет";
+      dropdown.appendChild(noResults);
+    }
 
-  dropdown.classList.add("visible");
-});
-
-function selectCountry(country) {
-  if (selectedCountries.has(country.code)) return;
-  selectedCountries.add(country.code);
-  renderSelectedCountries();
-  input.value = "";
-  dropdown.classList.remove("visible");
-}
-
-function renderSelectedCountries() {
-  selectedContainer.innerHTML = "";
-  selectedCountries.forEach(code => {
-    const country = countries.find(c => c.code === code);
-    const countryTag = document.createElement("div");
-    countryTag.classList.add("selected-item");
-    countryTag.innerHTML = `<img src="/assets/flags/4x3/${country.code}.svg" alt="${country.name}" class="flag"> ${country.code} <span class="remove">&times;</span>`;
-    countryTag.querySelector(".remove").addEventListener("click", () => removeCountry(country));
-    selectedContainer.appendChild(countryTag);
+    dropdown.classList.add("visible");
   });
-}
 
-function removeCountry(country) {
-  selectedCountries.delete(country.code);
-  renderSelectedCountries();
+  function selectCountry(country) {
+    if (selectedCountries.has(country.code)) return;
+    selectedCountries.add(country.code);
+    renderSelectedCountries();
+    input.value = "";
+    dropdown.classList.remove("visible");
+  }
+
+  function renderSelectedCountries() {
+    selectedContainer.innerHTML = "";
+    selectedCountries.forEach((code) => {
+      const country = countries.find((c) => c.code === code);
+      const countryTag = document.createElement("div");
+      countryTag.classList.add("selected-item");
+      countryTag.innerHTML = `<img src="/assets/flags/4x3/${country.code}.svg" alt="${country.name}" class="flag"> ${country.code} <span class="remove">&times;</span>`;
+      countryTag
+        .querySelector(".remove")
+        .addEventListener("click", () => removeCountry(country));
+      selectedContainer.appendChild(countryTag);
+    });
+  }
+
+  function removeCountry(country) {
+    selectedCountries.delete(country.code);
+    renderSelectedCountries();
+  }
+} else {
+  console.error("Элемент input с id 'country-input' не найден на странице.");
 }
 // END multiselect
+
+// ADJUST HEIGHT TEXTAREA
+window.initAutoResizeTextareas = function() {
+  function adjustHeight(textarea) {
+    textarea.style.height = "auto";
+    requestAnimationFrame(() => {
+      textarea.style.height = textarea.scrollHeight + 8 + "px";
+    });
+  }
+
+  document.querySelectorAll("textarea.form-group__input").forEach((textarea) => {
+    adjustHeight(textarea);
+    textarea.addEventListener("input", function () {
+      adjustHeight(textarea);
+    });
+  });
+};
+
+// Вызов функции после загрузки DOM
+document.addEventListener("DOMContentLoaded", window.initAutoResizeTextareas);
+// END ADJUST HEIGHT TEXTAREA

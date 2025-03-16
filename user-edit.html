@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Metamorphosis</title>
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+    <main class="main">
+      <div class="container">
+        <div class="main-content">
+          <section class="sidebar" id="sidebar"></section>
+          <div class="app-content user-edit">
+            <div class="block p-30">
+              <div class="flex flex-column">
+                <div
+                  class="flex align-center justify-center gap-12"
+                  style="padding: 0 85px"
+                >
+                  <svg class="icon">
+                    <use xlink:href="./assets/images/icons.svg#users"></use>
+                  </svg>
+                  <h2 class="title">Пользователь</h2>
+                </div>
+                <div class="down-separator" style="margin-top: 15px"></div>
+                <div class="flex flex-column gap-30 mt-30">
+                  <div class="block-gradient px-30 py-14 radius-30">
+                    <div class="flex align-center gap-10 justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Почта</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          Логин пользователя
+                        </p>
+                      </div>
+                      <div class="flex align-center gap-16">
+                        <p class="fz-16 fw-600 text-white text-right">
+                          gfhhhsjhgsa@mail.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-gradient px-30 py-14 radius-30">
+                    <div class="flex align-center gap-10 justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Страна</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          Страна, в которой была выполнена регистрация
+                          пользователя
+                        </p>
+                      </div>
+                      <div class="flex align-center gap-16">
+                        <span class="flag-icon flag-icon-de"></span>
+                        <p class="fz-16 fw-600 text-white">DE</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-gradient px-30 py-14 radius-30">
+                    <div class="flex align-center gap-10 justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Домен</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          Домен, использованный пользователем для регистрации
+                        </p>
+                      </div>
+                      <div class="flex align-center gap-16">
+                        <p class="fz-16 fw-600 text-white text-right">
+                          metzas.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-gradient px-30 py-14 radius-30">
+                    <div class="flex align-center gap-10 justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Промокод</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          Последний промокод веденный пользователем
+                        </p>
+                      </div>
+                      <div class="flex align-center gap-16">
+                        <p class="fz-16 fw-600 text-white text-right">buster</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-gradient px-30 py-14 radius-30">
+                    <div class="flex align-center gap-10 justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Отыгрыш</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          процесс отыгрывания суммы промокода
+                        </p>
+                      </div>
+                      <div class="flex align-center gap-16">
+                        <p class="fz-16 fw-600 text-white text-right">
+                          Без отыгрывания
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-gradient px-30 py-14 radius-30">
+                    <div class="flex align-center gap-10 justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Верификация</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          Статус верификации пользователя
+                        </p>
+                      </div>
+                      <div class="flex align-center gap-16">
+                        <span class="verify-item state-1"
+                          >Ожидание депозита</span
+                        >
+                        <!-- <span class="verify-item state-2">Ожидание</span> -->
+                        <!-- <span class="verify-item state-3">Не верифицирован</span> -->
+                        <!-- <span class="verify-item state-4">Верифицирован</span> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-gradient px-30 py-14 radius-30">
+                    <div class="flex align-center gap-10 justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Дата регистрации</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          Дата регистрации пользователя
+                        </p>
+                      </div>
+                      <div class="flex align-center gap-16">
+                        <p class="fz-16 fw-600 text-white text-right">
+                          01.12.2020 17:03:45
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-gradient px-30 py-14 radius-30">
+                    <div class="flex align-center gap-10 justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Последний Онлайн</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          Время, когда пользователь последний раз был в сети
+                        </p>
+                      </div>
+                      <div class="flex align-center gap-16">
+                        <p class="fz-16 fw-600 text-white text-right">
+                          Вчера 14:00
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-gradient px-30 py-14 radius-30">
+                    <div class="flex align-center gap-10 justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">IP регистрации</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          IP-адрес, с которого пользователь выполнил регистрацию
+                        </p>
+                      </div>
+                      <div class="flex align-center gap-16">
+                        <p class="fz-16 fw-600 text-white text-right">
+                          192.168.0.1
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-gradient px-30 py-14 radius-30">
+                    <div class="flex align-center gap-10 justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Последний IP входа</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          IP-адрес, с которого пользователь выполнил последнюю
+                          авторизацию
+                        </p>
+                      </div>
+                      <div class="flex align-center gap-16">
+                        <p class="fz-16 fw-600 text-white text-right">
+                          128.123.17.34
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-end gap-24">
+                    <a
+                      href="./support.html#gfhhhsjhgsa@mail.com"
+                      class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                    >
+                      Открыть Лайв Саппорт
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-column gap-40">
+              <div class="users-tabs">
+                <button class="tab-btn" data-tab="general">Общие</button>
+                <button class="tab-btn" data-tab="verification">
+                  Верификация
+                </button>
+                <button class="tab-btn" data-tab="transactions">
+                  Транзакции
+                </button>
+                <button class="tab-btn" data-tab="wallets">Кошельки</button>
+                <button class="tab-btn" data-tab="errors">Ошибки</button>
+                <button class="tab-btn" data-tab="logs">Логи</button>
+              </div>
+              <div class="tab-container" data-tab="general">
+                <div class="flex flex-column gap-30">
+                  <div class="block p-30 flex flex-column gap-30">
+                    <div class="flex flex-column">
+                      <div
+                        class="flex align-center justify-center gap-12"
+                        style="padding: 0 85px"
+                      >
+                        <svg class="icon">
+                          <use
+                            xlink:href="./assets/images/icons.svg#blacklist"
+                          ></use>
+                        </svg>
+                        <h2 class="title">Данные</h2>
+                      </div>
+                      <div
+                        class="down-separator"
+                        style="margin-top: 15px"
+                      ></div>
+                    </div>
+                    <div class="block-gradient px-30 py-14 radius-30">
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Почта</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Логин пользователя, с которым он зарегистриовался
+                          </p>
+                        </div>
+                        <div class="flex align-center gap-16">
+                          <div class="form-group border copy reset">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input fw-500 w-100"
+                                placeholder="Пароль"
+                                value="123456Ghjuio"
+                              />
+                              <button class="form-group__button">
+                                <svg class="icon hover stroke-hover">
+                                  <use
+                                    xlink:href="./assets/images/icons.svg#copy"
+                                  ></use>
+                                </svg>
+                              </button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-gradient px-30 py-14 radius-30">
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Пароль</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Личные данные для входа пользователя
+                          </p>
+                        </div>
+                        <div class="flex align-center gap-16">
+                          <div class="form-group border copy alt-des">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input fw-500 w-100"
+                                placeholder="Пароль"
+                                value="123456Ghjuio"
+                              />
+                              <button class="form-group__button">
+                                <svg class="icon hover stroke-hover">
+                                  <use
+                                    xlink:href="./assets/images/icons.svg#copy"
+                                  ></use>
+                                </svg>
+                              </button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-gradient px-30 py-14 radius-30">
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Баланс</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Пользовательский баланс, доступен для изменения
+                          </p>
+                        </div>
+                        <div class="flex align-center gap-16">
+                          <div class="form-group alt-des after-content">
+                            <label class="form-group__label" data-after="$">
+                              <input
+                                type="text"
+                                class="form-group__input"
+                                placeholder=""
+                                style="min-width: 200px"
+                              />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-gradient px-30 py-14 radius-30">
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Минимальный вывод</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Вывод средств будет недоступен для пользователя,
+                            если сумма меньше указанного порога
+                          </p>
+                        </div>
+                        <div class="flex align-center gap-16">
+                          <div class="form-group alt-des after-content">
+                            <label class="form-group__label" data-after="$">
+                              <input
+                                type="text"
+                                class="form-group__input"
+                                placeholder=""
+                                style="min-width: 200px"
+                              />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-gradient px-30 py-14 radius-30">
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Минимальный депозит</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Сумма отображается на странице "Депозит"
+                          </p>
+                        </div>
+                        <div class="flex align-center gap-16">
+                          <div class="form-group alt-des after-content">
+                            <label class="form-group__label" data-after="$">
+                              <input
+                                type="text"
+                                class="form-group__input"
+                                placeholder=""
+                                style="min-width: 200px"
+                              />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end">
+                      <button
+                        class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                      >
+                        Сохранить
+                      </button>
+                    </div>
+                  </div>
+                  <div class="block p-30 flex flex-column gap-30">
+                    <div class="flex flex-column">
+                      <div
+                        class="flex align-center justify-center gap-12"
+                        style="padding: 0 85px"
+                      >
+                        <svg class="icon">
+                          <use
+                            xlink:href="./assets/images/icons.svg#settings"
+                          ></use>
+                        </svg>
+                        <h2 class="title">Настройки пользователя</h2>
+                      </div>
+                      <div
+                        class="down-separator"
+                        style="margin-top: 15px"
+                      ></div>
+                    </div>
+                    <div
+                      class="grid-wrap gap-16"
+                      style="
+                        grid-template-columns: repeat(
+                          auto-fill,
+                          minmax(410px, 1fr)
+                        );
+                      "
+                    >
+                      <div
+                        class="block-gradient align-center flex px-30 py-14 radius-30"
+                      >
+                        <div
+                          class="flex align-center gap-10 justify-between w-100"
+                        >
+                          <div class="flex flex-column">
+                            <h3 class="title">Подкрутка</h3>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              Включена ли подкрутка у юзера
+                            </p>
+                          </div>
+                          <div class="flex align-center gap-16">
+                            <input
+                              name="twist"
+                              type="checkbox"
+                              class="switch"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="block-gradient align-center flex px-30 py-14 radius-30"
+                      >
+                        <div
+                          class="flex align-center gap-10 justify-between w-100"
+                        >
+                          <div class="flex flex-column">
+                            <h3 class="title">Абуз промокода</h3>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              Использовать промокоды неограниченное количество
+                              раз
+                            </p>
+                          </div>
+                          <div class="flex align-center gap-16">
+                            <input
+                              name="abuse"
+                              type="checkbox"
+                              class="switch"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="block-gradient align-center flex px-30 py-14 radius-30"
+                      >
+                        <div
+                          class="flex align-center gap-10 justify-between w-100"
+                        >
+                          <div class="flex flex-column">
+                            <h3 class="title">Бан</h3>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              Статус блокировки данного пользователся
+                            </p>
+                          </div>
+                          <div class="flex align-center gap-16">
+                            <input
+                              name="banStatus"
+                              type="checkbox"
+                              class="switch"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="block-gradient align-center flex px-30 py-14 radius-30"
+                      >
+                        <div
+                          class="flex align-center gap-10 justify-between w-100"
+                        >
+                          <div class="flex flex-column">
+                            <h3 class="title">Фейковый вывод</h3>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              При выводе всегда показывается окно об успешном
+                              действии.
+                            </p>
+                          </div>
+                          <div class="flex align-center gap-16">
+                            <input
+                              name="fakeWithdraw"
+                              type="checkbox"
+                              class="switch"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="block-gradient align-center flex px-30 py-14 radius-30"
+                      >
+                        <div
+                          class="flex align-center gap-10 justify-between w-100"
+                        >
+                          <div class="flex flex-column">
+                            <h3 class="title">Wallet connect</h3>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              Включен ли wallet connect у юзера.
+                            </p>
+                          </div>
+                          <div class="flex align-center gap-16">
+                            <input
+                              name="walletConnect"
+                              type="checkbox"
+                              class="switch"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end">
+                      <button
+                        class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                      >
+                        Сохранить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-container" data-tab="verification">
+                <div class="flex flex-column gap-30">
+                  <div class="block p-30 flex flex-column gap-30">
+                    <div class="flex flex-column">
+                      <div
+                        class="flex align-center justify-center gap-12"
+                        style="padding: 0 85px"
+                      >
+                        <svg class="icon">
+                          <use
+                            xlink:href="./assets/images/icons.svg#check"
+                          ></use>
+                        </svg>
+                        <h2 class="title">Верификация</h2>
+                      </div>
+                      <div
+                        class="down-separator"
+                        style="margin-top: 15px"
+                      ></div>
+                    </div>
+                    <div class="block-gradient px-30 py-14 radius-30">
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Состояние верификаци</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Текущий статус у пользователя
+                          </p>
+                        </div>
+                        <div class="flex align-center gap-16">
+                          <div
+                            class="custom-select custom-2"
+                            id="selectVerifStatus"
+                          >
+                            <button
+                              class="select-selected"
+                              style="min-width: 260px"
+                            ></button>
+                            <svg class="icon select-carret">
+                              <use
+                                xlink:href="./assets/images/icons.svg#arrow-down"
+                              ></use>
+                            </svg>
+                            <div class="select-items"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-gradient px-30 py-14 radius-30">
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Имя</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Настоящее имя пользователя
+                          </p>
+                        </div>
+                        <div class="flex align-center gap-16">
+                          <div class="form-group alt-des">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input"
+                                value="Сергей"
+                                placeholder=""
+                                style="min-width: 200px"
+                              />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-gradient px-30 py-14 radius-30">
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Фамилия</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Настоящая фамилия пользователя
+                          </p>
+                        </div>
+                        <div class="flex align-center gap-16">
+                          <div class="form-group alt-des">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input"
+                                value="Иванов"
+                                placeholder=""
+                                style="min-width: 200px"
+                              />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-gradient px-30 py-14 radius-30">
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Страна</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Страна гражданства польователя
+                          </p>
+                        </div>
+                        <div class="flex align-center gap-16">
+                          <div class="form-group alt-des">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input"
+                                value="Россия"
+                                placeholder=""
+                                style="min-width: 200px"
+                              />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-gradient px-30 py-14 radius-30">
+                      <div class="flex align-center gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">Дата рождения</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Настоящая дата рождения пользователя
+                          </p>
+                        </div>
+                        <div class="flex align-center gap-16">
+                          <div class="form-group alt-des">
+                            <label class="form-group__label relative">
+                              <svg class="icon form-group__after stroke">
+                                <use
+                                  xlink:href="./assets/images/icons.svg#calendar"
+                                ></use>
+                              </svg>
+                              <input
+                                type="text"
+                                class="form-group__input"
+                                value="01/08/2004"
+                                placeholder=""
+                                style="min-width: 200px"
+                              />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end gap-24">
+                      <button
+                        class="btn btn-secondary radius-20 fz-20 fw-600 btn-big"
+                      >
+                        Отмена
+                      </button>
+                      <button
+                        class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                      >
+                        Сохранить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-container" data-tab="transactions">
+                <div class="flex flex-column gap-30">
+                  <div class="block flex flex-column">
+                    <div class="transactions-header">
+                      <button class="transactions-btn" data-content="deposits">
+                        Депозиты
+                      </button>
+                      <button class="transactions-btn" data-content="withdraws">
+                        Выплаты
+                      </button>
+                      <button class="transactions-btn" data-content="promos">
+                        Промокоды
+                      </button>
+                    </div>
+                    <div class="flex flex-column p-30">
+                      <div class="transactions-content" data-content="deposits">
+                        <div class="table-container">
+                          <div class="table-item">
+                            <table class="deposits__list list-wrapper mt-0">
+                              <thead class="list-header">
+                                <tr>
+                                  <th class="list-title">Токен</th>
+                                  <th class="list-title">Сумма</th>
+                                  <th class="list-title">Хеш</th>
+                                  <th class="list-title">Дата</th>
+                                  <th class="list-title">Действия</th>
+                                </tr>
+                              </thead>
+                              <tbody class="list-body list-container"></tbody>
+                            </table>
+                          </div>
+                          <div class="list-pagination"></div>
+                        </div>
+                      </div>
+                      <div
+                        class="transactions-content"
+                        data-content="withdraws"
+                      >
+                        <div class="table-container">
+                          <div class="table-item">
+                            <table class="withdraws__list list-wrapper mt-0">
+                              <thead class="list-header">
+                                <tr>
+                                  <th class="list-title">Токен</th>
+                                  <th class="list-title">Сумма</th>
+                                  <th class="list-title">Реквизиты</th>
+                                  <th class="list-title">Статус</th>
+                                  <th class="list-title">Дата</th>
+                                  <th class="list-title">Действия</th>
+                                </tr>
+                              </thead>
+                              <tbody class="list-body list-container"></tbody>
+                            </table>
+                          </div>
+                          <div class="list-pagination"></div>
+                        </div>
+                      </div>
+                      <div class="transactions-content" data-content="promos">
+                        <div class="table-container">
+                          <div class="table-item">
+                            <table class="promos__list list-wrapper mt-0">
+                              <thead class="list-header">
+                                <tr>
+                                  <th class="list-title">Промокод</th>
+                                  <th class="list-title">Сумма</th>
+                                  <th class="list-title">Отыгрыш</th>
+                                  <th class="list-title">Дата активации</th>
+                                </tr>
+                              </thead>
+                              <tbody class="list-body list-container"></tbody>
+                            </table>
+                          </div>
+                          <div class="list-pagination"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-container" data-tab="wallets">
+                <div class="flex flex-column gap-30">
+                  <div class="block p-30">
+                    <div class="flex flex-column">
+                      <div
+                        class="flex align-center justify-center gap-12"
+                        style="padding: 0 85px"
+                      >
+                        <svg class="icon">
+                          <use
+                            xlink:href="./assets/images/icons.svg#wallet"
+                          ></use>
+                        </svg>
+                        <h2 class="title">Кошельки</h2>
+                      </div>
+                      <div
+                        class="down-separator"
+                        style="margin-top: 15px"
+                      ></div>
+                    </div>
+
+                    <div class="flex flex-column gap-28 mt-25">
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex align-center justify-between gap-20">
+                          <div class="flex flex-column">
+                            <div class="flex align-center gap-12">
+                              <img
+                                src="./assets/images/coins/bitcoin.svg"
+                                width="19"
+                                alt=""
+                              />
+                              <h3 class="title">Bitcoin</h3>
+                            </div>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              Кошелек пользователя в сети BTC
+                            </p>
+                          </div>
+                          <div class="form-group border copy alt-des">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input fw-500"
+                                placeholder="ключевое слово"
+                                value="ayujhsdhjawuoyhdashjkldioaWhioads"
+                                readonly="true"
+                              />
+                              <button class="form-group__button">
+                                <svg class="icon hover stroke-hover">
+                                  <use
+                                    xlink:href="./assets/images/icons.svg#copy"
+                                  ></use>
+                                </svg>
+                              </button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex align-center justify-between gap-20">
+                          <div class="flex flex-column">
+                            <div class="flex align-center gap-12">
+                              <img
+                                src="./assets/images/coins/ethereum.svg"
+                                width="19"
+                                alt=""
+                              />
+                              <h3 class="title">Ethereum</h3>
+                            </div>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              Кошелек пользователя в сети Ethereum
+                            </p>
+                          </div>
+                          <div class="form-group border copy alt-des">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input fw-500"
+                                placeholder="ключевое слово"
+                                value="ayujhsdhjawuoyhdashjkldioaWhioads"
+                                readonly="true"
+                              />
+                              <button class="form-group__button">
+                                <svg class="icon hover stroke-hover">
+                                  <use
+                                    xlink:href="./assets/images/icons.svg#copy"
+                                  ></use>
+                                </svg>
+                              </button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex align-center justify-between gap-20">
+                          <div class="flex flex-column">
+                            <div class="flex align-center gap-12">
+                              <img
+                                src="./assets/images/coins/tron.svg"
+                                width="19"
+                                alt=""
+                              />
+                              <h3 class="title">Tron</h3>
+                            </div>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              Кошелек пользователя в сети Tron
+                            </p>
+                          </div>
+                          <div class="form-group border copy alt-des">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input fw-500"
+                                placeholder="ключевое слово"
+                                value="ayujhsdhjawuoyhdashjkldioaWhioads"
+                                readonly="true"
+                              />
+                              <button class="form-group__button">
+                                <svg class="icon hover stroke-hover">
+                                  <use
+                                    xlink:href="./assets/images/icons.svg#copy"
+                                  ></use>
+                                </svg>
+                              </button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex align-center justify-between gap-20">
+                          <div class="flex flex-column">
+                            <div class="flex align-center gap-12">
+                              <img
+                                src="./assets/images/coins/binance.svg"
+                                width="19"
+                                alt=""
+                              />
+                              <h3 class="title">Binance Smart Chain</h3>
+                            </div>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              Кошелек пользователя в сети Chain
+                            </p>
+                          </div>
+                          <div class="form-group border copy alt-des">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input fw-500"
+                                placeholder="ключевое слово"
+                                value="ayujhsdhjawuoyhdashjkldioaWhioads"
+                                readonly="true"
+                              />
+                              <button class="form-group__button">
+                                <svg class="icon hover stroke-hover">
+                                  <use
+                                    xlink:href="./assets/images/icons.svg#copy"
+                                  ></use>
+                                </svg>
+                              </button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex align-center justify-between gap-20">
+                          <div class="flex flex-column">
+                            <div class="flex align-center gap-12">
+                              <img
+                                src="./assets/images/coins/ripple.svg"
+                                width="19"
+                                alt=""
+                              />
+                              <h3 class="title">Ripple</h3>
+                            </div>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              Кошелек пользователя в сети Ripple
+                            </p>
+                          </div>
+                          <div class="form-group border copy alt-des">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input fw-500"
+                                placeholder="ключевое слово"
+                                value="ayujhsdhjawuoyhdashjkldioaWhioads"
+                                readonly="true"
+                              />
+                              <button class="form-group__button">
+                                <svg class="icon hover stroke-hover">
+                                  <use
+                                    xlink:href="./assets/images/icons.svg#copy"
+                                  ></use>
+                                </svg>
+                              </button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex align-center justify-between gap-20">
+                          <div class="flex flex-column">
+                            <div class="flex align-center gap-12">
+                              <img
+                                src="./assets/images/coins/solana.svg"
+                                width="19"
+                                alt=""
+                              />
+                              <h3 class="title">Solana</h3>
+                            </div>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              Кошелек пользователя в сети Solana
+                            </p>
+                          </div>
+                          <div class="form-group border copy alt-des">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input fw-500"
+                                placeholder="ключевое слово"
+                                value="ayujhsdhjawuoyhdashjkldioaWhioads"
+                                readonly="true"
+                              />
+                              <button class="form-group__button">
+                                <svg class="icon hover stroke-hover">
+                                  <use
+                                    xlink:href="./assets/images/icons.svg#copy"
+                                  ></use>
+                                </svg>
+                              </button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex align-center justify-between gap-20">
+                          <div class="flex flex-column">
+                            <div class="flex align-center gap-12">
+                              <img
+                                src="./assets/images/coins/ton.svg"
+                                width="19"
+                                alt=""
+                              />
+                              <h3 class="title">TON</h3>
+                            </div>
+                            <p class="fz-14 fw-600 text-gray lh-normal">
+                              Кошелек пользователя в сети TON
+                            </p>
+                          </div>
+                          <div class="form-group border copy alt-des">
+                            <label class="form-group__label">
+                              <input
+                                type="text"
+                                class="form-group__input fw-500"
+                                placeholder="ключевое слово"
+                                value="ayujhsdhjawuoyhdashjkldioaWhioads"
+                                readonly="true"
+                              />
+                              <button class="form-group__button">
+                                <svg class="icon hover stroke-hover">
+                                  <use
+                                    xlink:href="./assets/images/icons.svg#copy"
+                                  ></use>
+                                </svg>
+                              </button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-container" data-tab="errors">
+                <div class="flex flex-column gap-30 block">
+                  <div
+                    class="block light light-down p-30 flex-column"
+                    data-list-page="1"
+                  >
+                    <div class="flex align-center justify-center gap-12">
+                      <svg class="icon">
+                        <use
+                          xlink:href="./assets/images/icons.svg#error-gray"
+                        ></use>
+                      </svg>
+                      <h2 class="title">Ошибки</h2>
+                    </div>
+                    <div class="down-separator" style="margin-top: 16px"></div>
+                    <div class="flex flex-column gap-28 mt-25">
+                      <div
+                        class="block light-down radius-20 p-32"
+                        style="background-color: #0e1323"
+                      >
+                        <div class="flex flex-column gap-10 justify-between">
+                          <div class="flex flex-column">
+                            <h2 class="title">Стандартная ошибка</h2>
+                          </div>
+                          <div class="flex gap-10">
+                            <div class="form-group w-100">
+                              <label class="form-group__label">
+                                <textarea
+                                  class="form-group__input"
+                                  style="height: 142px"
+                                >
+To withdraw funds, you need to verify your account by making a minimum deposit for the exact amount of 0.0035 BTC. Thisverification deposit will be credited to your balance and canbe withdrawn after your account is verified. You can make this depositviathe Deposit Tab or the Buy Crypto page. For more details on the verification procedure, please refer to Section IV of the Terms of use.For further assistance, please contact our support chat or create a ticket.</textarea
+                                >
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="block light-down radius-20 p-32"
+                        style="background-color: #0e1323"
+                      >
+                        <div class="flex flex-column gap-10 justify-between">
+                          <div class="flex flex-column">
+                            <h2 class="title">WalletConnect ошибка</h2>
+                          </div>
+                          <div class="flex gap-10">
+                            <div class="form-group w-100">
+                              <label class="form-group__label">
+                                <textarea
+                                  class="form-group__input"
+                                  style="height: 69px"
+                                >
+O withdraw funds, you must synchronize wallet with our platform in order to freely withdraw funds. You can do this on the "Settings" page in "Wallet Connect" tab.</textarea
+                                >
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="text-gray fz-14 fw-600 text-center">
+                        * Используйте %sum_deposit% для вставки необходимой
+                        суммы депозита в текст ошибок.
+                      </p>
+                      <div class="flex justify-end">
+                        <button
+                          class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                        >
+                          Обновить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-column gap-30" data-list-page="2">
+                    <div class="block light light-down p-30">
+                      <div class="flex align-center justify-center gap-12">
+                        <svg class="icon">
+                          <use
+                            xlink:href="./assets/images/icons.svg#payments"
+                          ></use>
+                        </svg>
+                        <h2 class="title">Депозит</h2>
+                      </div>
+                      <div
+                        class="down-separator"
+                        style="margin-top: 16px"
+                      ></div>
+                      <div class="flex flex-column gap-28 mt-25">
+                        <div class="block-gradient px-30 py-14">
+                          <div class="flex align-center gap-10 justify-between">
+                            <div class="flex flex-column">
+                              <h3 class="title">Депозит для верификации</h3>
+                              <p class="fz-14 fw-600 text-gray lh-normal">
+                                Сумма, указанная в сообщении "Ошибка
+                                верификации" после заполнения данных на странице
+                                верификации. Эту сумму нужно будет внести на
+                                баланс для успешного прохождения верификации.
+                                Переменная - %domain_name%
+                              </p>
+                            </div>
+                            <div class="form-group alt-des after-content">
+                              <label class="form-group__label" data-after="$">
+                                <input
+                                  type="text"
+                                  class="form-group__input"
+                                  placeholder=""
+                                  style="min-width: 200px"
+                                />
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="block-gradient px-30 py-14">
+                          <div class="flex align-center gap-10 justify-between">
+                            <div class="flex flex-column">
+                              <h3 class="title">
+                                Депозит на активацию права собственности
+                              </h3>
+                              <p class="fz-14 fw-600 text-gray lh-normal">
+                                Сумма, которая отобразится в сообщении "Ошибка
+                                после верификации" после того, как пользователь
+                                отыграл промоакцию, прошел верификацию и
+                                пытается вывести средства. Эту сумму потребуется
+                                пополнить на баланс для якобы успешного
+                                завершения вывода средств. Переменная -
+                                %sum_activate%
+                              </p>
+                            </div>
+                            <div class="form-group alt-des after-content">
+                              <label class="form-group__label" data-after="$">
+                                <input
+                                  type="text"
+                                  class="form-group__input"
+                                  placeholder=""
+                                  style="min-width: 200px"
+                                />
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="block-gradient px-30 py-14">
+                          <div class="flex align-center gap-10 justify-between">
+                            <div class="flex flex-column">
+                              <h3 class="title">
+                                Депозит на покупку VIP статуса
+                              </h3>
+                              <p class="fz-14 fw-600 text-gray lh-normal">
+                                Сумма, которая отобразится в сообщении "Ошибка
+                                после верификации" после того, как пользователь
+                                отыграл промоакцию, прошел верификацию и оплатил
+                                право собственности, а затем пытается вывести
+                                средства. Эту сумму потребуется пополнить на
+                                баланс для якобы успешного завершения вывода
+                                средств. Переменная - %sum_confirm%
+                              </p>
+                            </div>
+                            <div class="form-group alt-des after-content">
+                              <label class="form-group__label" data-after="$">
+                                <input
+                                  type="text"
+                                  class="form-group__input"
+                                  placeholder=""
+                                  style="min-width: 200px"
+                                />
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="block-gradient px-30 py-14">
+                          <div class="flex align-center gap-10 justify-between">
+                            <div class="flex flex-column">
+                              <h3 class="title">Депозит на оплату комиссии</h3>
+                              <p class="fz-14 fw-600 text-gray lh-normal">
+                                Сумма, которая отобразится в сообщении "Ошибка
+                                после верификации" после того, как пользователь
+                                отыграл промоакцию, прошел верификацию, оплатил
+                                право собственности и купил премиум статус, а
+                                затем пытается вывести средства. Эту сумму
+                                потребуется пополнить на баланс для якобы
+                                успешного завершения вывода средств. Переменная
+                                - %sum_vip%
+                              </p>
+                            </div>
+                            <div class="form-group alt-des after-content">
+                              <label class="form-group__label" data-after="$">
+                                <input
+                                  type="text"
+                                  class="form-group__input"
+                                  placeholder=""
+                                  style="min-width: 200px"
+                                />
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex justify-end">
+                          <button
+                            class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                          >
+                            Сохранить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block light light-down p-30">
+                      <div class="flex align-center justify-center gap-12">
+                        <svg class="icon">
+                          <use
+                            xlink:href="./assets/images/icons.svg#error-gray"
+                          ></use>
+                        </svg>
+                        <h2 class="title">Ошибки</h2>
+                      </div>
+                      <div
+                        class="down-separator"
+                        style="margin-top: 16px"
+                      ></div>
+                      <div class="flex flex-column gap-28 mt-25">
+                        <div class="block-gradient px-30 py-14">
+                          <div class="flex flex-column gap-10 justify-between">
+                            <div class="flex flex-column">
+                              <h3 class="title">Ошибка после верификации</h3>
+                              <p class="fz-14 fw-600 text-gray lh-normal">
+                                Ошибка верификации возникает, когда пользователь
+                                вводит данные на странице верификации, но для её
+                                завершения требуется пополнить баланс.
+                                Используйте переменную %sum_activate%, чтобы
+                                указать сумму, необходимую для пополнения
+                                баланса и успешного прохождения верификации.
+                              </p>
+                            </div>
+                            <div class="form-group w-100">
+                              <label class="form-group__label">
+                                <textarea
+                                  class="form-group__input text-white fz-16 fw-600 p-16"
+                                  style="height: 168px"
+                                >
+To withdraw funds, you need to verify your account by making a minimum deposit for the exact amount of 0.0035 BTC. Thisverification deposit will be credited to your balance and canbe withdrawn after your account is verified. You can make this depositviathe Deposit Tab or the Buy Crypto page. For more details on the verification procedure, please refer to Section IV of the Terms of use.For further assistance, please contact our support chat or create a ticket.</textarea
+                                >
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="block-gradient px-30 py-14">
+                          <div class="flex flex-column gap-10 justify-between">
+                            <div class="flex flex-column">
+                              <h3 class="title">
+                                Ошибка после депозита на прохождения верификации
+                              </h3>
+                              <p class="fz-14 fw-600 text-gray lh-normal">
+                                Ошибка верификации предусмотрена для ситуации,
+                                когда пользователь отыграл промо-акцию, завершил
+                                верификацию и пытается вывести средства -
+                                требуется депозит на подтверждение права
+                                собственности. Вы можете изменить текст этой
+                                ошибки в профиле пользователя в любой момент.
+                                Используйте переменную %sum_confirm%, чтобы
+                                указать сумму, на которую необходимо пополнить
+                                баланс для подтверждения права собственности и
+                                имитации успешного вывода средств.
+                              </p>
+                            </div>
+                            <div class="form-group w-100">
+                              <label class="form-group__label">
+                                <textarea
+                                  class="form-group__input text-white fz-16 fw-600 p-16"
+                                  style="height: 77px"
+                                >
+o withdraw funds to your wallet you need to make a %sum_afterverif% deposit from it to confirm ownership.</textarea
+                                >
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="block-gradient px-30 py-14">
+                          <div class="flex flex-column gap-10 justify-between">
+                            <div class="flex flex-column">
+                              <h3 class="title">
+                                Ошибка после подтверждения права собственности
+                              </h3>
+                              <p class="fz-14 fw-600 text-gray lh-normal">
+                                Ошибка верификации предусмотрена для ситуации,
+                                когда пользователь отыграл промо-акцию, завершил
+                                верификацию, подтвердил право собственности и
+                                пытается вывести средства - требуется депозит на
+                                приобретение серебрянного VIP статуса. Вы можете
+                                изменить текст этой ошибки в профиле
+                                пользователя в любой момент. Используйте
+                                переменную %sum_vip%, чтобы указать сумму, на
+                                которую необходимо пополнить баланс для
+                                приобретения VIP статуса и имитации успешного
+                                вывода средств.
+                              </p>
+                            </div>
+                            <div class="form-group w-100">
+                              <label class="form-group__label">
+                                <textarea
+                                  class="form-group__input text-white fz-16 fw-600 p-16"
+                                  style="height: 77px"
+                                >
+To withdraw funds you need premium status. You can get it by making a deposit of %sum_vip%.</textarea
+                                >
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="block-gradient px-30 py-14">
+                          <div class="flex flex-column gap-10 justify-between">
+                            <div class="flex flex-column">
+                              <h3 class="title">
+                                Ошибка после получения VIP статуса
+                              </h3>
+                              <p class="fz-14 fw-600 text-gray lh-normal">
+                                Ошибка верификации предусмотрена для ситуации,
+                                когда пользователь отыграл промо-акцию, завершил
+                                верификацию, подтвердил право собственности,
+                                купил премиум статус и пытается вывести средства
+                                - требуется депозит на оплату комиссии. Вы
+                                можете изменить текст этой ошибки в профиле
+                                пользователя в любой момент. Используйте
+                                переменную %sum_fee%, чтобы указать сумму, на
+                                которую необходимо пополнить баланс для оплаты
+                                комиссии и якобы успешного вывода средств.
+                              </p>
+                            </div>
+                            <div class="form-group w-100">
+                              <label class="form-group__label">
+                                <textarea
+                                  class="form-group__input text-white fz-16 fw-600 p-16"
+                                  style="height: 77px"
+                                >
+Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you have any questions, please contact support.</textarea
+                                >
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="flex justify-end">
+                          <button
+                            class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                          >
+                            Сохранить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stats-pagination">
+                    <button class="btn active" data-select-page="1">1</button>
+                    <button class="btn" data-select-page="2">2</button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-container" data-tab="logs">
+                <div class="flex flex-column gap-30">
+                  <div class="block p-30 flex flex-column gap-30">
+                    <div class="flex flex-column">
+                      <div class="flex align-center justify-center gap-12">
+                        <svg class="icon">
+                          <use
+                            xlink:href="./assets/images/icons.svg#logs"
+                          ></use>
+                        </svg>
+                        <h2 class="title">Логи пользователя</h2>
+                      </div>
+                      <div class="down-separator mt-16"></div>
+                    </div>
+                    <div
+                      class="scroll-container flex flex-column gap-16"
+                      style="max-height: 900px"
+                    >
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Перешел на страницу депозита</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Перешел на страницу стейкинга</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Перешел на страницу рефералкии</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Отправил данные для верификации</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Перешел на страницу депозита</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Перешел на страницу стейкинга</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Перешел на страницу рефералкии</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Отправил данные для верификации</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Перешел на страницу депозита</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Перешел на страницу стейкинга</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Перешел на страницу рефералкии</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                      <div class="block-gradient px-30 py-14 radius-30">
+                        <div class="flex flex-column">
+                          <h3 class="title">Отправил данные для верификации</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            12 января 2025г 00:10:01
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="overlay js-overlay-modal"></div>
+    <div class="modal" data-modal="delete-withdraw">
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#shield"></use>
+          </svg>
+          <h2 class="title">Вы уверены?</h2>
+        </div>
+        <div class="down-separator" style="margin-top: 15px"></div>
+      </div>
+      <div class="mt-25 flex flex-column gap-20">
+        <div class="block-inner p-16">
+          <div class="flex align-start">
+            <div class="flex flex-column flex-100">
+              <h6 class="title text-left">
+                Вы собираетесь удалить выплату с ID
+                <span id="data-delete-value"></span>
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end gap-12 mt-10">
+          <button class="btn btn-secondary radius-20 js-modal-close btn-big">
+            Отмена
+          </button>
+          <button
+            class="btn btn-gradient radius-20 js-modal-close btn-big"
+            onclick="showNotification('Успешно', 'Выплата удалена.', 'success', timer = 2000)"
+          >
+            Удалить
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="edit-withdraw">
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#edit"></use>
+          </svg>
+          <h2 class="title">Редактирование выплаты</h2>
+        </div>
+        <div class="down-separator" style="margin-top: 15px"></div>
+      </div>
+      <div class="mt-25 flex flex-column gap-20">
+        <div class="block-gradient radius-20 px-30 py-14" style="z-index: 2;">
+          <div class="flex align-center">
+            <div class="flex flex-column flex-100">
+              <h6 class="title text-left">Токен</h6>
+              <p class="fz-14 fw-500 text-gray lh-normal text-left">
+                Валюта выплаты
+              </p>
+            </div>
+            <div class="custom-select custom-2 min-w-unset" id="selectTokens">
+              <button class="select-selected" style></button>
+              <svg class="icon select-carret">
+                <use xlink:href="./assets/images/icons.svg#arrow-down"></use>
+              </svg>
+              <div class="select-items"></div>
+            </div>
+          </div>
+        </div>
+        <div class="block-gradient radius-20 px-30 py-14">
+          <div class="flex align-center">
+            <div class="flex flex-column flex-100">
+              <h6 class="title text-left">Статус</h6>
+              <p class="fz-14 fw-500 text-gray lh-normal text-left">
+                Статус выплаты
+              </p>
+            </div>
+            <div class="custom-select custom-2 min-w-unset" id="selectStatus">
+              <button class="select-selected" style></button>
+              <svg class="icon select-carret">
+                <use xlink:href="./assets/images/icons.svg#arrow-down"></use>
+              </svg>
+              <div class="select-items"></div>
+            </div>
+          </div>
+        </div>
+        <div class="block-gradient radius-20 px-30 py-14">
+          <div class="flex align-center">
+            <div class="flex flex-column flex-100">
+              <h6 class="title text-left">Сумма</h6>
+              <p class="fz-14 fw-500 text-gray lh-normal text-left">
+                Сумма выплаты
+              </p>
+            </div>
+            <div class="form-group alt-des after-content">
+              <label class="form-group__label" data-after="$">
+                <input type="text" class="form-group__input" placeholder="" style="min-width: 200px">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="block-gradient radius-20 px-30 py-14">
+          <div class="flex align-center">
+            <div class="flex flex-column flex-100">
+              <h6 class="title text-left">Реквизиты</h6>
+              <p class="fz-14 fw-500 text-gray lh-normal text-left">
+                Реквизиты пользователя
+              </p>
+            </div>
+            <div class="form-group copy alt-des">
+              <label class="form-group__label">
+                <input type="text" class="form-group__input" value="fgdy3y4h445hhb:jdgpo12fgh" placeholder="реквизиты" readonly="true">
+                <button class="form-group__button">
+                  <svg class="icon hover stroke-hover">
+                    <use xlink:href="./assets/images/icons.svg#copy"></use>
+                  </svg>
+                </button>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="block-gradient radius-20 px-30 py-14">
+          <div class="flex align-start">
+            <div class="flex flex-column flex-100">
+              <h6 class="title text-left">Дата</h6>
+              <p class="fz-14 fw-500 text-gray lh-normal text-left">
+                Дата создания выплаты
+              </p>
+            </div>
+            <div class="form-group alt-des">
+              <label class="form-group__label relative">
+                <svg class="icon form-group__after stroke">
+                  <use xlink:href="./assets/images/icons.svg#calendar"></use>
+                </svg>
+                <input type="text" class="form-group__input" value="01/08/2004" placeholder="" style="min-width: 200px">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end gap-12">
+          <button
+            class="btn btn-secondary radius-20 js-modal-close"
+            style="padding: 14px 50px"
+          >
+            Отмена
+          </button>
+          <button
+            class="btn btn-gradient radius-20 js-modal-close"
+            style="padding: 14px 50px"
+            onclick="showNotification('Успешно', 'Выплата обновлена.', 'success')"
+          >
+            Сохранить
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/data/user-editDeposits.js"></script>
+    <script src="./assets/js/data/user-editDepositsTemplate.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/tabs.js"></script>
+    <script src="./assets/js/user-edit.js"></script>
+    <script>
+      renderList(depItems, {
+        itemsPerPage: 5,
+        containerSelector: ".deposits__list",
+        tepmlateFn: (item) => depItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+    <script src="./assets/js/data/user-editWithdraws.js"></script>
+    <script src="./assets/js/data/user-editWithdrawsTemplate.js"></script>
+    <script>
+      renderList(withdrawItems, {
+        itemsPerPage: 5,
+        containerSelector: ".withdraws__list",
+        tepmlateFn: (item) => withdrawItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+    <script src="./assets/js/data/user-editPromos.js"></script>
+    <script src="./assets/js/data/user-editPromosTemplate.js"></script>
+    <script>
+      renderList(promoItems, {
+        itemsPerPage: 5,
+        containerSelector: ".promos__list",
+        tepmlateFn: (item) => promoItemTemplate(item),
+        callbackShow: () => console.log("Page updated"),
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  // Обработчик для кнопки редактирования
+  document.querySelectorAll('.edit-btn').forEach(function (editButton) {
+    editButton.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // Получаем данные из атрибутов кнопки
+      const coin = this.getAttribute('data-coin');
+      const status = this.getAttribute('data-status');
+      const value = this.getAttribute('data-value');
+      const hash = this.getAttribute('data-hash');
+      const date = this.getAttribute('data-date');
+
+      // Находим модалку
+      const modal = document.querySelector('.modal[data-modal="edit-withdraw"]');
+
+      // Обновляем селект "Токен"
+      const tokenSelect = selectInstances['selectTokens'];
+      if (tokenSelect) {
+        const tokenOption = selectTokens.find(opt => opt.label.includes(coin));
+        if (tokenOption) {
+          tokenSelect.setSelected(tokenOption.label, tokenOption.value);
+        }
+      }
+
+      // Обновляем селект "Статус"
+      const statusSelect = selectInstances['selectStatus'];
+      if (statusSelect) {
+        const statusOption = selectStatus.find(opt => opt.label.includes(status));
+        if (statusOption) {
+          statusSelect.setSelected(statusOption.label, statusOption.value);
+        }
+      }
+
+      // Заполняем остальные поля
+      modal.querySelector('.block-gradient:nth-child(3) .form-group__input').value = value;
+      modal.querySelector('.block-gradient:nth-child(4) .form-group__input').value = hash;
+      modal.querySelector('.block-gradient:nth-child(5) .form-group__input').value = date;
+
+      // Показываем модалку
+      modal.classList.add('active');
+      document.querySelector('.js-overlay-modal').classList.add('active');
+    });
+  });
+});
+    </script>
+  </body>
+</html>

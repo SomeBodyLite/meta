@@ -15,29 +15,26 @@
         <div class="main-content">
           <section class="sidebar" id="sidebar"></section>
           <div class="app-content settings">
-            <div class="settings-tabs">
-              <button class="settings-tab" data-tab="general">Общие</button>
-              <button class="settings-tab" data-tab="security">
+            <div class="settings-tabs justify-between">
+              <button class="settings-tab tab-btn" data-tab="general">Общие</button>
+              <button class="settings-tab tab-btn" data-tab="security">
                 Безопасность
               </button>
-              <button class="settings-tab" data-tab="payments">
-                Платежные системы
-              </button>
-              <button class="settings-tab" data-tab="support-agent">
+              <button class="settings-tab tab-btn" data-tab="support-agent">
                 Агент поддержки
               </button>
-              <button class="settings-tab" data-tab="blacklist">
+              <button class="settings-tab tab-btn" data-tab="blacklist">
                 Черный список
               </button>
-              <button class="settings-tab" data-tab="support">Саппорт</button>
-              <button class="settings-tab" data-tab="domains">Домены</button>
-              <button class="settings-tab" data-tab="smart-deposit">
+              <button class="settings-tab tab-btn" data-tab="support">Саппорт</button>
+              <button class="settings-tab tab-btn" data-tab="domains">Домены</button>
+              <button class="settings-tab tab-btn" data-tab="smart-deposit">
                 Смарт депозит
               </button>
             </div>
-            <div class="settings-container" data-tab="general">
+            <div class="settings-container tab-container" data-tab="general">
               <div class="flex flex-column gap-40">
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -49,7 +46,7 @@
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
                     <div
-                      class="block light-down p-16 radius-20"
+                      class="block-gradient p-16 radius-20"
                       style="background-color: #0e1323"
                     >
                       <div class="flex align-center">
@@ -76,7 +73,7 @@
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20"
+                      class="block-gradient p-16 radius-20"
                       style="background-color: #0e1323"
                     >
                       <div class="flex align-start">
@@ -90,7 +87,7 @@
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20"
+                      class="block-gradient p-16 radius-20"
                       style="background-color: #0e1323"
                     >
                       <div class="flex align-start">
@@ -103,10 +100,7 @@
                         <input name="2" type="checkbox" class="switch" />
                       </div>
                     </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
+                    <div class="block-gradient p-16 radius-20">
                       <div class="flex align-start">
                         <div class="flex flex-column flex-100">
                           <h3 class="title">Верифицирован</h3>
@@ -118,10 +112,7 @@
                         <input name="3" type="checkbox" class="switch" />
                       </div>
                     </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
+                    <div class="block-gradient p-16 radius-20">
                       <div class="flex align-start">
                         <div class="flex flex-column flex-100">
                           <h3 class="title">Абуз промокодов</h3>
@@ -132,10 +123,7 @@
                         <input name="4" type="checkbox" class="switch" />
                       </div>
                     </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
+                    <div class="block-gradient p-16 radius-20">
                       <div class="flex align-start">
                         <div class="flex flex-column flex-100">
                           <h3 class="title">Заход на любые домена</h3>
@@ -150,7 +138,7 @@
                 </div>
               </div>
               <div class="flex flex-column gap-40">
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -160,11 +148,8 @@
                     <h2 class="title">Параметры</h2>
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
-                  <div class="flex flex-column gap-16">
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
+                  <div class="flex flex-column gap-16 mt-25">
+                    <div class="block-gradient p-16 radius-20">
                       <div class="flex align-start">
                         <div class="flex flex-column flex-100">
                           <h3 class="title">Заявки</h3>
@@ -197,10 +182,7 @@
                         </div>
                       </div>
                     </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
+                    <div class="block-gradient p-16 radius-20">
                       <div class="flex align-start">
                         <div class="flex flex-column flex-100">
                           <h3 class="title">Депозиты</h3>
@@ -213,7 +195,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -246,9 +228,9 @@
                 </div>
               </div>
             </div>
-            <div class="settings-container" data-tab="security">
-              <div class="flex flex-column gap-40" style="max-width: 895px">
-                <div class="block light light-down" style="padding: 32px 30px">
+            <div class="settings-container tab-container" data-tab="security">
+              <div class="flex flex-column gap-40">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -535,7 +517,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -604,7 +586,7 @@
                 </div>
               </div>
               <div class="flex flex-column gap-40">
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -714,647 +696,552 @@
                 </div>
               </div>
             </div>
-            <div class="settings-container" data-tab="payments">
-              <div
-                class="flex flex-column gap-40 w-100"
-                style="max-width: 780px"
-              >
-                <div class="block light light-down" style="padding: 32px 30px">
-                  <div class="flex align-center justify-center gap-12">
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#chart"></use>
-                    </svg>
-                    <h2 class="title">Информация</h2>
+            <div class="settings-container tab-container" data-tab="support-agent">
+              <div class="block light light-down p-30">
+                <div class="flex align-center justify-center gap-12">
+                  <svg class="icon">
+                    <use xlink:href="./assets/images/icons.svg#support"></use>
+                  </svg>
+                  <h2 class="title">Добавить саппорта</h2>
+                </div>
+                <div class="down-separator" style="margin-top: 16px"></div>
+                <div class="flex flex-column gap-28 mt-25">
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Логин</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          Придумайте логин для нового аккаунта
+                        </p>
+                      </div>
+                      <div class="form-group border alt-des">
+                        <label class="form-group__label">
+                          <input
+                            type="text"
+                            class="form-group__input fw-500"
+                            placeholder="Логин"
+                            value=""
+                          />
+                          <button class="form-group__button"></button>
+                        </label>
+                      </div>
+                    </div>
                   </div>
-                  <div class="down-separator" style="margin-top: 16px"></div>
-                  <div class="flex flex-column gap-28 mt-25">
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Пароль</h3>
+                        <p class="fz-14 fw-600 text-gray lh-normal">
+                          Придумайте пароль для нового аккаунта
+                        </p>
+                      </div>
+                      <div class="form-group border password alt-des">
+                        <label class="form-group__label">
+                          <input
+                            type="text"
+                            class="form-group__input fw-500"
+                            placeholder="Пароль"
+                            value=""
+                          />
+                          <button class="form-group__button"></button>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-end mt-20">
+                    <button
+                      class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
                     >
-                      <div class="flex align-center">
-                        <div class="flex flex-column">
-                          <h3 class="title">Важно</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">
-                            Включение и изменение позиции мерчантов на домене
-                            происходит в реальном времени после нажатия кнопки
-                            обновить.
-                          </p>
-                        </div>
+                      Добавить
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="block light light-down p-30 h-unset">
+                <div class="flex align-center justify-center gap-12">
+                  <svg class="icon">
+                    <use xlink:href="./assets/images/icons.svg#support"></use>
+                  </svg>
+                  <h2 class="title">Обработка трафика саппортами</h2>
+                </div>
+                <div class="down-separator" style="margin-top: 16px"></div>
+                <div class="flex flex-column gap-28 mt-25">
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex gap-30 align-center">
+                        <h3 class="title">Включить/выключить</h3>
+                      </div>
+                      <input
+                        name="accountActiveStatus"
+                        type="checkbox"
+                        class="switch"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Важно</h3>
+                        <p class="fz-18 fw-600 text-gray lh-normal mt-6">
+                          При включении данной функции все сообщения в
+                          техническую поддержки вашей панели будут
+                          переадресовываться нашим агентам поддержки.
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="block light light-down p-30">
+                <div class="flex align-center justify-center gap-12">
+                  <svg class="icon">
+                    <use xlink:href="./assets/images/icons.svg#support"></use>
+                  </svg>
+                  <h2 class="title">Агент</h2>
+                </div>
+                <div class="down-separator" style="margin-top: 16px"></div>
+                <div class="flex flex-column gap-28 mt-25">
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Логин</h3>
+                      </div>
+                      <div class="form-group border small copy">
+                        <label class="form-group__label">
+                          <input
+                            type="text"
+                            class="form-group__input fw-500"
+                            placeholder="Логин"
+                            value=""
+                          />
+                          <button class="form-group__button">
+                            <svg class="icon hover stroke-hover">
+                              <use
+                                xlink:href="./assets/images/icons.svg#copy"
+                              ></use>
+                            </svg>
+                          </button>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Пароль</h3>
+                      </div>
+                      <div class="form-group border small copy">
+                        <label class="form-group__label">
+                          <input
+                            type="text"
+                            class="form-group__input fw-500"
+                            placeholder="Пароль"
+                            value=""
+                          />
+                          <button class="form-group__button">
+                            <svg class="icon hover stroke-hover">
+                              <use
+                                xlink:href="./assets/images/icons.svg#copy"
+                              ></use>
+                            </svg>
+                          </button>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Последняя активность</h3>
+                      </div>
+                      <div class="form-group border small">
+                        <label class="form-group__label">
+                          <input
+                            type="text"
+                            class="form-group__input fw-500"
+                            readonly
+                            placeholder="Дата"
+                            value="26.01.15 21:43:45"
+                          />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex gap-30 align-center">
+                        <h3 class="title">Активен ли аккаунт</h3>
+                      </div>
+                      <input
+                        name="accountActiveStatus"
+                        type="checkbox"
+                        class="switch"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-center gap-12">
+                      <h2 class="title">Доступные страницы</h2>
+                    </div>
+                    <div class="flex flex-column gap-16 mt-25">
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Главная страница</h3>
+                          </div>
+                          <input
+                            name="mainPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Пользователи</h3>
+                          </div>
+                          <input
+                            name="usersPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Логи</h3>
+                          </div>
+                          <input
+                            name="logsPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Депозиты</h3>
+                          </div>
+                          <input
+                            name="depositsPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Лайв саппорт</h3>
+                          </div>
+                          <input
+                            name="supportPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Промокоды</h3>
+                          </div>
+                          <input
+                            name="promosPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Выплаты</h3>
+                          </div>
+                          <input
+                            name="paymentsPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Статистика</h3>
+                          </div>
+                          <input
+                            name="statisticsPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-end mt-20 gap-32">
+                    <button class="btn btn-red radius-20 fz-20 fw-600 btn-big">
+                      Удалить аккаунт
+                    </button>
+                    <button
+                      class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                    >
+                      Обновить
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="block light light-down p-30">
+                <div class="flex align-center justify-center gap-12">
+                  <svg class="icon">
+                    <use xlink:href="./assets/images/icons.svg#support"></use>
+                  </svg>
+                  <h2 class="title">Агент</h2>
+                </div>
+                <div class="down-separator" style="margin-top: 16px"></div>
+                <div class="flex flex-column gap-28 mt-25">
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Логин</h3>
+                      </div>
+                      <div class="form-group border small copy">
+                        <label class="form-group__label">
+                          <input
+                            type="text"
+                            class="form-group__input fw-500"
+                            placeholder="Логин"
+                            value=""
+                          />
+                          <button class="form-group__button">
+                            <svg class="icon hover stroke-hover">
+                              <use
+                                xlink:href="./assets/images/icons.svg#copy"
+                              ></use>
+                            </svg>
+                          </button>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Пароль</h3>
+                      </div>
+                      <div class="form-group border small copy">
+                        <label class="form-group__label">
+                          <input
+                            type="text"
+                            class="form-group__input fw-500"
+                            placeholder="Пароль"
+                            value=""
+                          />
+                          <button class="form-group__button">
+                            <svg class="icon hover stroke-hover">
+                              <use
+                                xlink:href="./assets/images/icons.svg#copy"
+                              ></use>
+                            </svg>
+                          </button>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex flex-column">
+                        <h3 class="title">Последняя активность</h3>
+                      </div>
+                      <div class="form-group border small">
+                        <label class="form-group__label">
+                          <input
+                            type="text"
+                            class="form-group__input fw-500"
+                            readonly
+                            placeholder="Дата"
+                            value="26.01.15 21:43:45"
+                          />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-between">
+                      <div class="flex gap-30 align-center">
+                        <h3 class="title">Активен ли аккаунт</h3>
+                      </div>
+                      <input
+                        name="accountActiveStatus"
+                        type="checkbox"
+                        class="switch"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="block light-down p-16 radius-20"
+                    style="background-color: #0e1323"
+                  >
+                    <div class="flex align-center justify-center gap-12">
+                      <h2 class="title">Доступные страницы</h2>
+                    </div>
+                    <div class="flex flex-column gap-16 mt-25">
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Главная страница</h3>
+                          </div>
+                          <input
+                            name="mainPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Пользователи</h3>
+                          </div>
+                          <input
+                            name="usersPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Логи</h3>
+                          </div>
+                          <input
+                            name="logsPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Депозиты</h3>
+                          </div>
+                          <input
+                            name="depositsPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Лайв саппорт</h3>
+                          </div>
+                          <input
+                            name="supportPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Промокоды</h3>
+                          </div>
+                          <input
+                            name="promosPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Выплаты</h3>
+                          </div>
+                          <input
+                            name="paymentsPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                      <div class="block-inner-4">
+                        <div class="flex align-center justify-between">
+                          <div class="flex gap-30 align-center">
+                            <h3 class="title">Статистика</h3>
+                          </div>
+                          <input
+                            name="statisticsPage"
+                            type="checkbox"
+                            class="switch"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-end mt-20 gap-32">
+                    <button class="btn btn-red radius-20 fz-20 fw-600 btn-big">
+                      Удалить аккаунт
+                    </button>
+                    <button
+                      class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                    >
+                      Обновить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="settings-container tab-container" data-tab="blacklist">
               <div class="flex flex-column gap-40 w-100">
-                <div class="block light light-down" style="padding: 32px 30px">
-                  <div class="flex justify-center align-center">
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#money"></use>
-                    </svg>
-                    <h2 class="title">Мерчанты</h2>
-                  </div>
-                  <div class="down-separator" style="margin-top: 16px"></div>
-                  <div class="flex flex-column gap-16 mt-25">
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Banxa</h3>
-                        </div>
-                        <input name="Banxa" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Moonpay</h3>
-                        </div>
-                        <input name="Moonpay" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Paybis</h3>
-                        </div>
-                        <input name="Paybis" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Changenow</h3>
-                        </div>
-                        <input name="Changenow" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Revolut</h3>
-                        </div>
-                        <input name="Revolut" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">CEX</h3>
-                        </div>
-                        <input name="CEX" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Bitpay</h3>
-                        </div>
-                        <input name="Bitpay" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Coingate</h3>
-                        </div>
-                        <input name="Coingate" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Ramp.network</h3>
-                        </div>
-                        <input name="Ramp.network" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Paxful</h3>
-                        </div>
-                        <input name="Paxful" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Invity</h3>
-                        </div>
-                        <input name="Invity" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Sardine4</h3>
-                        </div>
-                        <input name="Sardine4" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Simplex</h3>
-                        </div>
-                        <input name="Simplex" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <svg class="icon">
-                            <use
-                              xlink:href="./assets/images/icons.svg#swap"
-                            ></use>
-                          </svg>
-                          <h3 class="title">Transak</h3>
-                        </div>
-                        <input name="Transak" type="checkbox" class="switch" />
-                      </div>
-                    </div>
-                    <div class="flex justify-end mt-20">
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
-                        Обновить
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="settings-container" data-tab="support-agent">
-              <div class="flex flex-column gap-40 w-100" style="max-width: 50%">
-                <div class="block light light-down" style="padding: 32px 30px">
-                  <div class="flex align-center justify-center gap-12">
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#support"></use>
-                    </svg>
-                    <h2 class="title">Добавить саппорта</h2>
-                  </div>
-                  <div class="down-separator" style="margin-top: 16px"></div>
-                  <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Логин</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">
-                            Придумайте логин для нового аккаунта
-                          </p>
-                        </div>
-                        <div class="form-group border alt-des">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Логин" value="">
-                            <button class="form-group__button"></button>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Пароль</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">
-                            Придумайте пароль для нового аккаунта
-                          </p>
-                        </div>
-                        <div class="form-group border password alt-des">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Пароль" value="">
-                            <button class="form-group__button"></button>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="flex justify-end mt-20">
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
-                        Добавить
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="block light light-down" style="padding: 32px 30px">
-                  <div class="flex align-center justify-center gap-12">
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#support"></use>
-                    </svg>
-                    <h2 class="title">Агент</h2>
-                  </div>
-                  <div class="down-separator" style="margin-top: 16px"></div>
-                  <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Логин</h3>
-                        </div>
-                        <div class="form-group border small copy">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Логин" value="">
-                            <button class="form-group__button"><svg class="icon hover stroke-hover">
-                              <use xlink:href="./assets/images/icons.svg#copy"></use>
-                            </svg></button>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Пароль</h3>
-                        </div>
-                        <div class="form-group border small copy">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Пароль" value="">
-                            <button class="form-group__button"><svg class="icon hover stroke-hover">
-                              <use xlink:href="./assets/images/icons.svg#copy"></use>
-                            </svg></button>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Последняя активность</h3>
-                        </div>
-                        <div class="form-group border small">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" readonly placeholder="Дата" value="26.01.15 21:43:45">
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <h3 class="title">Активен ли аккаунт</h3>
-                        </div>
-                        <input name="accountActiveStatus" type="checkbox" class="switch">
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-center gap-12">
-                        <h2 class="title">Доступные страницы</h2>
-                      </div>
-                      <div class="flex flex-column gap-16 mt-25">
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Главная страница</h3>
-                            </div>
-                            <input name="mainPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Пользователи</h3>
-                            </div>
-                            <input name="usersPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Логи</h3>
-                            </div>
-                            <input name="logsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Депозиты</h3>
-                            </div>
-                            <input name="depositsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Лайв саппорт</h3>
-                            </div>
-                            <input name="supportPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Промокоды</h3>
-                            </div>
-                            <input name="promosPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Выплаты</h3>
-                            </div>
-                            <input name="paymentsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Статистика</h3>
-                            </div>
-                            <input name="statisticsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="flex justify-end mt-20 gap-32">
-                      <button class="btn btn-red radius-20 fz-20 fw-600" style="padding: 14px 35px">
-                        Удалить аккаунт
-                      </button>
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
-                        Обновить
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-column gap-40 w-100" style="max-width: 50%">
-                <div class="block light light-down" style="padding: 32px 30px">
-                  <div class="flex align-center justify-center gap-12">
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#support"></use>
-                    </svg>
-                    <h2 class="title">Обработка трафика саппортами</h2>
-                  </div>
-                  <div class="down-separator" style="margin-top: 16px"></div>
-                  <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <h3 class="title">Включить/выключить</h3>
-                        </div>
-                        <input name="accountActiveStatus" type="checkbox" class="switch">
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Обработка трафика командой саппортов панели</h3>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="block light light-down" style="padding: 32px 30px">
-                  <div class="flex align-center justify-center gap-12">
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#support"></use>
-                    </svg>
-                    <h2 class="title">Агент</h2>
-                  </div>
-                  <div class="down-separator" style="margin-top: 16px"></div>
-                  <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Логин</h3>
-                        </div>
-                        <div class="form-group border small copy">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Логин" value="">
-                            <button class="form-group__button"><svg class="icon hover stroke-hover">
-                              <use xlink:href="./assets/images/icons.svg#copy"></use>
-                            </svg></button>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Пароль</h3>
-                        </div>
-                        <div class="form-group border small copy">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Пароль" value="">
-                            <button class="form-group__button"><svg class="icon hover stroke-hover">
-                              <use xlink:href="./assets/images/icons.svg#copy"></use>
-                            </svg></button>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Последняя активность</h3>
-                        </div>
-                        <div class="form-group border small">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" readonly placeholder="Дата" value="26.01.15 21:43:45">
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <h3 class="title">Активен ли аккаунт</h3>
-                        </div>
-                        <input name="accountActiveStatus" type="checkbox" class="switch">
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-center gap-12">
-                        <h2 class="title">Доступные страницы</h2>
-                      </div>
-                      <div class="flex flex-column gap-16 mt-25">
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Главная страница</h3>
-                            </div>
-                            <input name="mainPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Пользователи</h3>
-                            </div>
-                            <input name="usersPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Логи</h3>
-                            </div>
-                            <input name="logsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Депозиты</h3>
-                            </div>
-                            <input name="depositsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Лайв саппорт</h3>
-                            </div>
-                            <input name="supportPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Промокоды</h3>
-                            </div>
-                            <input name="promosPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Выплаты</h3>
-                            </div>
-                            <input name="paymentsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Статистика</h3>
-                            </div>
-                            <input name="statisticsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="flex justify-end mt-20 gap-32">
-                      <button class="btn btn-red radius-20 fz-20 fw-600" style="padding: 14px 35px">
-                        Удалить аккаунт
-                      </button>
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
-                        Обновить
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="settings-container" data-tab="blacklist">
-              <div
-                class="flex flex-column gap-40 w-100"
-                style="max-width: 895px"
-              >
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -1420,7 +1307,7 @@
                 </div>
               </div>
               <div class="flex flex-column gap-40 w-100">
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex justify-between align-center">
                     <div
                       class="flex align-center justify-center gap-12"
@@ -1465,375 +1352,232 @@
                 </div>
               </div>
             </div>
-            <div class="settings-container" data-tab="support">
-              <div class="flex flex-column gap-40 w-100" style="max-width: 50%">
-                <div class="block light light-down" style="padding: 32px 30px">
+            <div class="settings-container tab-container" data-tab="support">
+              <div class="flex flex-column gap-40 w-100">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#support"></use>
+                      <use xlink:href="./assets/images/icons.svg#chart"></use>
                     </svg>
-                    <h2 class="title">Добавить саппорта</h2>
+                    <h2 class="title">Лайв-чат</h2>
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                    <div class="block-gradient p-16 radius-20 flex-column">
                       <div class="flex align-center justify-between">
                         <div class="flex flex-column">
-                          <h3 class="title">Логин</h3>
+                          <h3 class="title">Приветственное сообщение</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
-                            Придумайте логин для нового аккаунта
+                            Показывается пользователю, при открытии чата
                           </p>
                         </div>
-                        <div class="form-group border alt-des">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Логин" value="">
-                            <button class="form-group__button"></button>
-                          </label>
-                        </div>
+                        <input
+                          name="welcomeMesage"
+                          type="checkbox"
+                          class="switch"
+                        />
                       </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Пароль</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">
-                            Придумайте пароль для нового аккаунта
-                          </p>
-                        </div>
-                        <div class="form-group border password alt-des">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Пароль" value="">
-                            <button class="form-group__button"></button>
-                          </label>
-                        </div>
+                      <div class="form-group w-100 mt-16">
+                        <label class="form-group__label">
+                          <textarea
+                            class="form-group__input text-white fz-16 fw-600 p-16"
+                          >
+dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
+                          >
+                        </label>
                       </div>
                     </div>
                     <div class="flex justify-end mt-20">
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
-                        Добавить
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="block light light-down" style="padding: 32px 30px">
-                  <div class="flex align-center justify-center gap-12">
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#support"></use>
-                    </svg>
-                    <h2 class="title">Агент</h2>
-                  </div>
-                  <div class="down-separator" style="margin-top: 16px"></div>
-                  <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Логин</h3>
-                        </div>
-                        <div class="form-group border small copy">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Логин" value="">
-                            <button class="form-group__button"><svg class="icon hover stroke-hover">
-                              <use xlink:href="./assets/images/icons.svg#copy"></use>
-                            </svg></button>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Пароль</h3>
-                        </div>
-                        <div class="form-group border small copy">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Пароль" value="">
-                            <button class="form-group__button"><svg class="icon hover stroke-hover">
-                              <use xlink:href="./assets/images/icons.svg#copy"></use>
-                            </svg></button>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Последняя активность</h3>
-                        </div>
-                        <div class="form-group border small">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" readonly placeholder="Дата" value="26.01.15 21:43:45">
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <h3 class="title">Активен ли аккаунт</h3>
-                        </div>
-                        <input name="accountActiveStatus" type="checkbox" class="switch">
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-center gap-12">
-                        <h2 class="title">Доступные страницы</h2>
-                      </div>
-                      <div class="flex flex-column gap-16 mt-25">
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Главная страница</h3>
-                            </div>
-                            <input name="mainPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Пользователи</h3>
-                            </div>
-                            <input name="usersPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Логи</h3>
-                            </div>
-                            <input name="logsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Депозиты</h3>
-                            </div>
-                            <input name="depositsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Лайв саппорт</h3>
-                            </div>
-                            <input name="supportPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Промокоды</h3>
-                            </div>
-                            <input name="promosPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Выплаты</h3>
-                            </div>
-                            <input name="paymentsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Статистика</h3>
-                            </div>
-                            <input name="statisticsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="flex justify-end mt-20 gap-32">
-                      <button class="btn btn-red radius-20 fz-20 fw-600" style="padding: 14px 35px">
-                        Удалить аккаунт
-                      </button>
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
-                        Обновить
+                      <button
+                        class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                      >
+                        Сохранить
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="flex flex-column gap-40 w-100" style="max-width: 50%">
-                <div class="block light light-down" style="padding: 32px 30px">
+              <div class="flex flex-column gap-40 w-100">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#support"></use>
+                      <use xlink:href="./assets/images/icons.svg#chart"></use>
                     </svg>
-                    <h2 class="title">Обработка трафика саппортами</h2>
+                    <h2 class="title">Добавить пресет</h2>
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <h3 class="title">Включить/выключить</h3>
-                        </div>
-                        <input name="accountActiveStatus" type="checkbox" class="switch">
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
+                    <div class="block-gradient light-down p-16 radius-20">
+                      <div class="flex align-center justify-between gap-20">
                         <div class="flex flex-column">
-                          <h3 class="title">Важно</h3>
-                          <p class="fz-18 fw-600 text-gray lh-normal mt-6">
-                            При включении данной функции все сообщения в техническую поддержки вашей панели будут переадресовываться нашим агентам поддержки.
+                          <div class="flex align-center gap-12">
+                            <h3 class="title">Название</h3>
+                          </div>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Придумайте название для нового пресета
                           </p>
                         </div>
+                        <div class="form-group border alt-des">
+                          <label class="form-group__label">
+                            <input
+                              type="text"
+                              class="form-group__input fw-500"
+                              placeholder="имя пресета"
+                              value=""
+                            />
+                            <button class="form-group__button"></button>
+                          </label>
+                        </div>
                       </div>
+                    </div>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between">
+                        <div class="flex flex-column w-100">
+                          <h3 class="title">Содержание</h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Текст пресета
+                          </p>
+                          <div class="form-group w-100 mt-16">
+                            <label class="form-group__label">
+                              <textarea
+                                class="form-group__input text-white fz-16 fw-600 p-16"
+                              >
+Текст пресета вводить туту. ЫВФЗЫВфцджыволдф ывоф жжцо</textarea
+                              >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end mt-20">
+                      <button
+                        class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                      >
+                        Сохранить
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div class="block light light-down" style="padding: 32px 30px">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#support"></use>
+                      <use xlink:href="./assets/images/icons.svg#chart"></use>
                     </svg>
-                    <h2 class="title">Агент</h2>
+                    <h2 class="title">Пресеты сообщений</h2>
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
-                  <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Логин</h3>
+                  <div class="flex flex-column gap-16 mt-25">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-8">
+                        <div class="flex gap-12 align-center">
+                          <svg class="icon mw-30">
+                            <use
+                              xlink:href="./assets/images/icons.svg#swap"
+                            ></use>
+                          </svg>
+                          <p class="fz-16 fw-500 text-white lh-normal">
+                            исп привет
+                          </p>
                         </div>
-                        <div class="form-group border small copy">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Логин" value="">
-                            <button class="form-group__button"><svg class="icon hover stroke-hover">
-                              <use xlink:href="./assets/images/icons.svg#copy"></use>
-                            </svg></button>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Пароль</h3>
-                        </div>
-                        <div class="form-group border small copy">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" placeholder="Пароль" value="">
-                            <button class="form-group__button"><svg class="icon hover stroke-hover">
-                              <use xlink:href="./assets/images/icons.svg#copy"></use>
-                            </svg></button>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Последняя активность</h3>
-                        </div>
-                        <div class="form-group border small">
-                          <label class="form-group__label">
-                            <input type="text" class="form-group__input fw-500" readonly placeholder="Дата" value="26.01.15 21:43:45">
-                          </label>
+                        <div class="flex gap-8">
+                          <button class="btn reset p-4">
+                            <svg class="icon" style="width: 21px; height: 21px">
+                              <use
+                                xlink:href="./assets/images/icons.svg#edit"
+                              ></use>
+                            </svg>
+                          </button>
+                          <button class="btn reset p-4">
+                            <svg class="icon" style="width: 21px; height: 21px">
+                              <use
+                                xlink:href="./assets/images/icons.svg#delete"
+                              ></use>
+                            </svg>
+                          </button>
                         </div>
                       </div>
                     </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-between">
-                        <div class="flex gap-30 align-center">
-                          <h3 class="title">Активен ли аккаунт</h3>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-8">
+                        <div class="flex gap-12 align-center">
+                          <svg class="icon mw-30">
+                            <use
+                              xlink:href="./assets/images/icons.svg#swap"
+                            ></use>
+                          </svg>
+                          <p class="fz-16 fw-500 text-white lh-normal">
+                            Спасибо за ваше обращение с удовольствием помогли
+                            вам Спасибо за ваше обращение с удовольствием
+                            помогли вам
+                          </p>
                         </div>
-                        <input name="accountActiveStatus" type="checkbox" class="switch">
-                      </div>
-                    </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
-                      <div class="flex align-center justify-center gap-12">
-                        <h2 class="title">Доступные страницы</h2>
-                      </div>
-                      <div class="flex flex-column gap-16 mt-25">
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Главная страница</h3>
-                            </div>
-                            <input name="mainPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Пользователи</h3>
-                            </div>
-                            <input name="usersPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Логи</h3>
-                            </div>
-                            <input name="logsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Депозиты</h3>
-                            </div>
-                            <input name="depositsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Лайв саппорт</h3>
-                            </div>
-                            <input name="supportPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Промокоды</h3>
-                            </div>
-                            <input name="promosPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Выплаты</h3>
-                            </div>
-                            <input name="paymentsPage" type="checkbox" class="switch">
-                          </div>
-                        </div>
-                        <div class="block-inner-4">
-                          <div class="flex align-center justify-between">
-                            <div class="flex gap-30 align-center">
-                              <h3 class="title">Статистика</h3>
-                            </div>
-                            <input name="statisticsPage" type="checkbox" class="switch">
-                          </div>
+                        <div class="flex gap-8">
+                          <button class="btn reset p-4">
+                            <svg class="icon" style="width: 21px; height: 21px">
+                              <use
+                                xlink:href="./assets/images/icons.svg#edit"
+                              ></use>
+                            </svg>
+                          </button>
+                          <button class="btn reset p-4">
+                            <svg class="icon" style="width: 21px; height: 21px">
+                              <use
+                                xlink:href="./assets/images/icons.svg#delete"
+                              ></use>
+                            </svg>
+                          </button>
                         </div>
                       </div>
                     </div>
-                    <div class="flex justify-end mt-20 gap-32">
-                      <button class="btn btn-red radius-20 fz-20 fw-600" style="padding: 14px 35px">
-                        Удалить аккаунт
-                      </button>
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
-                        Обновить
-                      </button>
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex align-center justify-between gap-8">
+                        <div class="flex gap-12 align-center">
+                          <svg class="icon mw-30">
+                            <use
+                              xlink:href="./assets/images/icons.svg#swap"
+                            ></use>
+                          </svg>
+                          <p class="fz-16 fw-500 text-white lh-normal">
+                            исп привет
+                          </p>
+                        </div>
+                        <div class="flex gap-8">
+                          <button class="btn reset p-4">
+                            <svg class="icon" style="width: 21px; height: 21px">
+                              <use
+                                xlink:href="./assets/images/icons.svg#edit"
+                              ></use>
+                            </svg>
+                          </button>
+                          <button class="btn reset p-4">
+                            <svg class="icon" style="width: 21px; height: 21px">
+                              <use
+                                xlink:href="./assets/images/icons.svg#delete"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="settings-container" data-tab="domains">
-              <div
-                class="flex flex-column gap-40 w-100"
-                style="max-width: 895px"
-              >
-                <div class="block light light-down" style="padding: 32px 30px">
+            <div class="settings-container tab-container" data-tab="domains">
+              <div class="flex flex-column gap-40 w-100">
+                <div class="block p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use xlink:href="./assets/images/icons.svg#shield"></use>
@@ -1842,10 +1586,7 @@
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
+                    <div class="block-gradient light-down p-16 radius-20">
                       <div class="flex align-center justify-between gap-20">
                         <div class="flex flex-column">
                           <div class="flex align-center gap-12">
@@ -1868,10 +1609,7 @@
                         </div>
                       </div>
                     </div>
-                    <div
-                      class="block light-down p-16 radius-20"
-                      style="background-color: #0e1323"
-                    >
+                    <div class="block-gradient light-down p-16 radius-20">
                       <div class="flex align-center justify-between gap-20">
                         <div class="flex flex-column">
                           <div class="flex align-center gap-12">
@@ -1908,7 +1646,7 @@
                 </div>
               </div>
               <div class="flex flex-column gap-40 w-100">
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex justify-between align-center">
                     <div
                       class="flex align-center justify-center gap-12"
@@ -1954,106 +1692,174 @@
                 </div>
               </div>
             </div>
-            <div class="settings-container" data-tab="smart-deposit">
-              <div class="flex flex-column gap-40 w-100" style="max-width: 900px;">
-                <div class="block light light-down" style="padding: 32px 30px">
+            <div class="settings-container tab-container" data-tab="smart-deposit">
+              <div class="flex flex-column gap-40 w-100">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#payments"></use>
+                      <use
+                        xlink:href="./assets/images/icons.svg#payments"
+                      ></use>
                     </svg>
                     <h2 class="title">Депозит для верификации</h2>
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Депозит для верификации</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
-                            Сумма, указанная в сообщении "Ошибка верификации" после заполнения данных на странице верификации. Эту сумму нужно будет внести на баланс для успешного прохождения верификации. Переменная - %domain_name%
+                            Сумма, указанная в сообщении "Ошибка верификации"
+                            после заполнения данных на странице верификации. Эту
+                            сумму нужно будет внести на баланс для успешного
+                            прохождения верификации. Переменная - %domain_name%
                           </p>
                         </div>
-                        <div class="form-group alt-des after-content" >
+                        <div class="form-group alt-des after-content">
                           <label class="form-group__label" data-after="$">
-                            <input type="text" class="form-group__input" placeholder="" style="min-width: 200px;">
+                            <input
+                              type="text"
+                              class="form-group__input"
+                              placeholder=""
+                              style="min-width: 200px"
+                            />
                           </label>
                         </div>
                       </div>
                     </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
-                          <h3 class="title">Депозит на активацию права собственности</h3>
+                          <h3 class="title">
+                            Депозит на активацию права собственности
+                          </h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
-                            Сумма, которая отобразится в сообщении "Ошибка после верификации" после того, как пользователь отыграл промоакцию, прошел верификацию и пытается вывести средства. Эту сумму потребуется пополнить на баланс для якобы успешного завершения вывода средств. Переменная - %sum_activate%
+                            Сумма, которая отобразится в сообщении "Ошибка после
+                            верификации" после того, как пользователь отыграл
+                            промоакцию, прошел верификацию и пытается вывести
+                            средства. Эту сумму потребуется пополнить на баланс
+                            для якобы успешного завершения вывода средств.
+                            Переменная - %sum_activate%
                           </p>
                         </div>
-                        <div class="form-group alt-des after-content" >
+                        <div class="form-group alt-des after-content">
                           <label class="form-group__label" data-after="$">
-                            <input type="text" class="form-group__input" placeholder="" style="min-width: 200px;">
+                            <input
+                              type="text"
+                              class="form-group__input"
+                              placeholder=""
+                              style="min-width: 200px"
+                            />
                           </label>
                         </div>
                       </div>
                     </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Депозит на покупку VIP статуса</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
-                            Сумма, которая отобразится в сообщении "Ошибка после верификации" после того, как пользователь отыграл промоакцию, прошел верификацию и оплатил право собственности, а затем пытается вывести средства. Эту сумму потребуется пополнить на баланс для якобы успешного завершения вывода средств. Переменная - %sum_confirm%
+                            Сумма, которая отобразится в сообщении "Ошибка после
+                            верификации" после того, как пользователь отыграл
+                            промоакцию, прошел верификацию и оплатил право
+                            собственности, а затем пытается вывести средства.
+                            Эту сумму потребуется пополнить на баланс для якобы
+                            успешного завершения вывода средств. Переменная -
+                            %sum_confirm%
                           </p>
                         </div>
-                        <div class="form-group alt-des after-content" >
+                        <div class="form-group alt-des after-content">
                           <label class="form-group__label" data-after="$">
-                            <input type="text" class="form-group__input" placeholder="" style="min-width: 200px;">
+                            <input
+                              type="text"
+                              class="form-group__input"
+                              placeholder=""
+                              style="min-width: 200px"
+                            />
                           </label>
                         </div>
                       </div>
                     </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Депозит на оплату комиссии</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
-                            Сумма, которая отобразится в сообщении "Ошибка после верификации" после того, как пользователь отыграл промоакцию, прошел верификацию, оплатил право собственности и купил премиум статус, а затем пытается вывести средства. Эту сумму потребуется пополнить на баланс для якобы успешного завершения вывода средств. Переменная - %sum_vip%
+                            Сумма, которая отобразится в сообщении "Ошибка после
+                            верификации" после того, как пользователь отыграл
+                            промоакцию, прошел верификацию, оплатил право
+                            собственности и купил премиум статус, а затем
+                            пытается вывести средства. Эту сумму потребуется
+                            пополнить на баланс для якобы успешного завершения
+                            вывода средств. Переменная - %sum_vip%
                           </p>
                         </div>
-                        <div class="form-group alt-des after-content" >
+                        <div class="form-group alt-des after-content">
                           <label class="form-group__label" data-after="$">
-                            <input type="text" class="form-group__input" placeholder="" style="min-width: 200px;">
+                            <input
+                              type="text"
+                              class="form-group__input"
+                              placeholder=""
+                              style="min-width: 200px"
+                            />
                           </label>
                         </div>
                       </div>
                     </div>
                     <div class="flex justify-end">
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                      <button
+                        class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                      >
                         Сохранить
                       </button>
                     </div>
                   </div>
                 </div>
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#payments"></use>
+                      <use
+                        xlink:href="./assets/images/icons.svg#payments"
+                      ></use>
                     </svg>
                     <h2 class="title">Смарт депозит</h2>
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                    <div
+                      class="block light-down p-16 radius-20"
+                      style="background-color: #0e1323"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Активен ли смарт депозит</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
-                            При активации смарт депозита ошибки устанавливаются автоматически. Когда смарт депозит выключен, то ошибки устанавливаются в настройках домена или пользователя вручную
+                            При активации смарт депозита ошибки устанавливаются
+                            автоматически. Когда смарт депозит выключен, то
+                            ошибки устанавливаются в настройках домена или
+                            пользователя вручную
                           </p>
                         </div>
-                        <input name="smart" type="checkbox" class="switch">
+                        <input name="smart" type="checkbox" class="switch" />
                       </div>
                     </div>
                     <div class="flex justify-end gap-12">
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                      <button
+                        class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                      >
                         Обновить
                       </button>
                     </div>
@@ -2061,85 +1867,208 @@
                 </div>
               </div>
               <div class="flex flex-column gap-40 w-100">
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#error-gray"></use>
+                      <use
+                        xlink:href="./assets/images/icons.svg#error-gray"
+                      ></use>
                     </svg>
                     <h2 class="title">Ошибки</h2>
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down radius-20 p-32" style="background-color: #0e1323">
+                    <div
+                      class="block light-down radius-20 p-32"
+                      style="background-color: #0e1323"
+                    >
                       <div class="flex flex-column gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Ошибка после верификации</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">Ошибка верификации возникает, когда пользователь вводит данные на странице верификации, но для её завершения требуется пополнить баланс. Используйте переменную %sum_activate%, чтобы указать сумму, необходимую для пополнения баланса и успешного прохождения верификации.</p>
-                        </div>
-                        <div class="form-group w-100">
-                          <label class="form-group__label ">
-                            <textarea class="form-group__input text-white fz-16 fw-600 p-16">To withdraw funds, you need to verify your account by making a minimum deposit for the exact amount of 0.0035 BTC. Thisverification deposit will be credited to your balance and canbe withdrawn after your account is verified. You can make this depositviathe Deposit Tab or the Buy Crypto page. For more details on the verification procedure, please refer to Section IV of the Terms of use.For further assistance, please contact our support chat or create a ticket.</textarea>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down radius-20 p-32" style="background-color: #0e1323">
-                      <div class="flex flex-column gap-10 justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Ошибка после депозита на прохождения верификации</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">Ошибка верификации предусмотрена для ситуации, когда пользователь отыграл промо-акцию, завершил верификацию и пытается вывести средства - требуется депозит на подтверждение права собственности. Вы можете изменить текст этой ошибки в профиле пользователя в любой момент. Используйте переменную %sum_confirm%, чтобы указать сумму, на которую необходимо пополнить баланс для подтверждения права собственности и имитации успешного вывода средств.</p>
-                        </div>
-                        <div class="form-group w-100">
-                          <label class="form-group__label ">
-                            <textarea class="form-group__input text-white fz-16 fw-600 p-16">o withdraw funds to your wallet you need to make a %sum_afterverif% deposit from it to confirm ownership.</textarea>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down radius-20 p-32" style="background-color: #0e1323">
-                      <div class="flex flex-column gap-10 justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Ошибка после подтверждения права собственности</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">Ошибка верификации предусмотрена для ситуации, когда пользователь отыграл промо-акцию, завершил верификацию, подтвердил право собственности и пытается вывести средства - требуется депозит на приобретение серебрянного VIP статуса. Вы можете изменить текст этой ошибки в профиле пользователя в любой момент. Используйте переменную %sum_vip%, чтобы указать сумму, на которую необходимо пополнить баланс для приобретения VIP статуса и имитации успешного вывода средств.</p>
-                        </div>
-                        <div class="form-group w-100">
-                          <label class="form-group__label ">
-                            <textarea class="form-group__input text-white fz-16 fw-600 p-16">To withdraw funds you need premium status. You can get it by making a deposit of %sum_vip%.</textarea>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down radius-20 p-32" style="background-color: #0e1323">
-                      <div class="flex flex-column gap-10 justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Ошибка после получения VIP статуса</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">Ошибка верификации предусмотрена для ситуации, когда пользователь отыграл промо-акцию, завершил верификацию, подтвердил право собственности, купил премиум статус и пытается вывести средства - требуется депозит на оплату комиссии. Вы можете изменить текст этой ошибки в профиле пользователя в любой момент. Используйте переменную %sum_fee%, чтобы указать сумму, на которую необходимо пополнить баланс для оплаты комиссии и якобы успешного вывода средств.
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Ошибка верификации возникает, когда пользователь
+                            вводит данные на странице верификации, но для её
+                            завершения требуется пополнить баланс. Используйте
+                            переменную %sum_activate%, чтобы указать сумму,
+                            необходимую для пополнения баланса и успешного
+                            прохождения верификации.
                           </p>
                         </div>
                         <div class="form-group w-100">
-                          <label class="form-group__label ">
-                            <textarea class="form-group__input text-white fz-16 fw-600 p-16">Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you have any questions, please contact support.</textarea>
+                          <label class="form-group__label">
+                            <textarea
+                              class="form-group__input text-white fz-16 fw-600 p-16"
+                            >
+To withdraw funds, you need to verify your account by making a minimum deposit for the exact amount of 0.0035 BTC. Thisverification deposit will be credited to your balance and canbe withdrawn after your account is verified. You can make this depositviathe Deposit Tab or the Buy Crypto page. For more details on the verification procedure, please refer to Section IV of the Terms of use.For further assistance, please contact our support chat or create a ticket.</textarea
+                            >
                           </label>
                         </div>
                       </div>
                     </div>
-                    
-                    
+                    <div
+                      class="block light-down radius-20 p-32"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex flex-column gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">
+                            Ошибка после депозита на прохождения верификации
+                          </h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Ошибка верификации предусмотрена для ситуации, когда
+                            пользователь отыграл промо-акцию, завершил
+                            верификацию и пытается вывести средства - требуется
+                            депозит на подтверждение права собственности. Вы
+                            можете изменить текст этой ошибки в профиле
+                            пользователя в любой момент. Используйте переменную
+                            %sum_confirm%, чтобы указать сумму, на которую
+                            необходимо пополнить баланс для подтверждения права
+                            собственности и имитации успешного вывода средств.
+                          </p>
+                        </div>
+                        <div class="form-group w-100">
+                          <label class="form-group__label">
+                            <textarea
+                              class="form-group__input text-white fz-16 fw-600 p-16"
+                            >
+o withdraw funds to your wallet you need to make a %sum_afterverif% deposit from it to confirm ownership.</textarea
+                            >
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down radius-20 p-32"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex flex-column gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">
+                            Ошибка после подтверждения права собственности
+                          </h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Ошибка верификации предусмотрена для ситуации, когда
+                            пользователь отыграл промо-акцию, завершил
+                            верификацию, подтвердил право собственности и
+                            пытается вывести средства - требуется депозит на
+                            приобретение серебрянного VIP статуса. Вы можете
+                            изменить текст этой ошибки в профиле пользователя в
+                            любой момент. Используйте переменную %sum_vip%,
+                            чтобы указать сумму, на которую необходимо пополнить
+                            баланс для приобретения VIP статуса и имитации
+                            успешного вывода средств.
+                          </p>
+                        </div>
+                        <div class="form-group w-100">
+                          <label class="form-group__label">
+                            <textarea
+                              class="form-group__input text-white fz-16 fw-600 p-16"
+                            >
+To withdraw funds you need premium status. You can get it by making a deposit of %sum_vip%.</textarea
+                            >
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down radius-20 p-32"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex flex-column gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">
+                            Ошибка после получения VIP статуса
+                          </h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Ошибка верификации предусмотрена для ситуации, когда
+                            пользователь отыграл промо-акцию, завершил
+                            верификацию, подтвердил право собственности, купил
+                            премиум статус и пытается вывести средства -
+                            требуется депозит на оплату комиссии. Вы можете
+                            изменить текст этой ошибки в профиле пользователя в
+                            любой момент. Используйте переменную %sum_fee%,
+                            чтобы указать сумму, на которую необходимо пополнить
+                            баланс для оплаты комиссии и якобы успешного вывода
+                            средств.
+                          </p>
+                        </div>
+                        <div class="form-group w-100">
+                          <label class="form-group__label">
+                            <textarea
+                              class="form-group__input text-white fz-16 fw-600 p-16"
+                            >
+Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you have any questions, please contact support.</textarea
+                            >
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
                     <div class="flex justify-end">
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600" style="padding: 14px 35px">
+                      <button
+                        class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                      >
                         Сохранить
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
-            
             </div>
           </div>
         </div>
       </div>
     </main>
     <div class="overlay js-overlay-modal"></div>
+    <div class="modal" data-modal="accountActiveStatus-modal">
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <h2 class="title">Вы уверены?</h2>
+        </div>
+        <div class="down-separator" style="margin-top: 15px"></div>
+      </div>
+      <div class="mt-25 flex flex-column gap-16">
+        <div class="block-inner-2 light-down p-16 radius-20 text-left" style="max-width: unset;">
+          <div class="flex align-center justify-between gap-20">
+            <div class="flex flex-column">
+              <div class="flex align-center gap-12">
+                <h3 class="title fz-24">Условия</h3>
+              </div>
+              <p class="fz-18 fw-500 text-white lh-normal">
+                При включении данной функции все сообщения от пользователей
+                будут переадресованы нашей службе поддержки. Если у вас нет
+                времени, сил или опыта, вы можете подключить эту опцию <span class="fw-800 fz-20">за 8% от
+                  всех депозитов.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="block-inner-2 red-block light-down p-16 radius-20 text-left" style="max-width: unset;">
+          <div class="flex align-center justify-between gap-20">
+            <div class="flex flex-column">
+              <div class="flex align-center gap-12">
+                <h3 class="title fz-24">Важно</h3>
+              </div>
+              <p class="fz-18 fw-500 text-white lh-normal">
+                После активации функции отключить её можно только через личные
+                сообщения администратору панели.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end gap-12 mt-10">
+          <button class="btn btn-secondary radius-20 js-modal-close btn-big">
+            Отмена
+          </button>
+          <button class="btn btn-gradient radius-20 js-modal-close btn-big" onclick="activeSupport();">
+            Согласен
+          </button>
+        </div>
+      </div>
+    </div>
     <div class="modal" data-modal="add-domain">
       <svg class="icon modal-close-icon js-modal-close">
         <use xlink:href="./assets/images/icons.svg#close"></use>
@@ -2190,10 +2119,7 @@
           </label>
         </div>
         <div class="flex justify-end gap-12 mt-10">
-          <button
-            class="btn btn-primary radius-20 js-modal-close"
-            style="padding: 14px 50px"
-          >
+          <button class="btn btn-primary radius-20 js-modal-close btn-big">
             Готово
           </button>
         </div>
@@ -2224,15 +2150,11 @@
           </div>
         </div>
         <div class="flex justify-end gap-12 mt-10">
-          <button
-            class="btn btn-secondary radius-20 js-modal-close"
-            style="padding: 14px 50px"
-          >
+          <button class="btn btn-secondary radius-20 js-modal-close btn-big">
             Отмена
           </button>
           <button
-            class="btn btn-gradient radius-20 js-modal-close"
-            style="padding: 14px 50px"
+            class="btn btn-gradient radius-20 js-modal-close btn-big"
             onclick="showNotification('Успешно', 'Домен удалён.', 'success', timer = 2000)"
           >
             Удалить
@@ -2243,7 +2165,7 @@
     <script src="./assets/js/data/params.js"></script>
     <script src="./assets/js/data/paramsTemplate.js"></script>
     <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/settings.js"></script>
+    <script src="./assets/js/tabs.js"></script>
     <script>
       renderList(items, {
         itemsPerPage: 5,
@@ -2271,6 +2193,24 @@
         tepmlateFn: (item) => domenSettingItemTemplate(item),
         callbackShow: () => console.log("Page updated"),
       });
+    </script>
+    <script>
+      document.querySelectorAll('input[name="accountActiveStatus"]').forEach(el => {
+        el.addEventListener('click', event => {
+          event.preventDefault();
+          document.querySelector('.modal[data-modal="accountActiveStatus-modal"]').classList.add('active');
+          document.querySelector('.overlay').classList.add('active');
+        })
+      });
+      document.querySelectorAll('input[name="accountActiveStatus"]').forEach(el => {
+        if (el.checked) {
+          el.disabled = true;
+        }
+      });
+      function activeSupport() {
+        document.querySelector('input[name="accountActiveStatus"]').checked = true;
+        document.querySelector('input[name="accountActiveStatus"]').disabled = true;
+      }
     </script>
   </body>
 </html>

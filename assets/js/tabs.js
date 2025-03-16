@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.querySelectorAll(".settings-tab");
-  const containers = document.querySelectorAll(".settings-container");
+  const tabs = document.querySelectorAll(".tab-btn");
+  const containers = document.querySelectorAll(".tab-container");
 
   function activateTab(tabName) {
     tabs.forEach(tab => {
@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
       activateTab(tab.dataset.tab);
+      window.initAutoResizeTextareas();
     });
   });
 
