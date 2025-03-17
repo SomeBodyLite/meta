@@ -13,6 +13,21 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Metamorphosis" />
     <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      @media (max-width: 600px) {
+        .block.p-30 {
+          padding: 16px;
+        }
+        .group-column {
+          h3.title {
+            font-size: 12px;
+          }
+          p {
+            font-size: 10px !important;
+          }
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header" id="header"></header>
@@ -22,7 +37,9 @@
           <section class="sidebar" id="sidebar"></section>
           <div class="app-content settings">
             <div class="settings-tabs tabs-container">
-              <button class="settings-tab tab-btn" data-tab="general">Общие</button>
+              <button class="settings-tab tab-btn" data-tab="general">
+                Общие
+              </button>
               <button class="settings-tab tab-btn" data-tab="payments">
                 Платежные системы
               </button>
@@ -32,7 +49,7 @@
             </div>
             <div class="settings-container tab-container" data-tab="general">
               <div class="flex flex-column gap-40 w-100">
-                <div class="block" style="padding: 32px 30px; z-index: 3;">
+                <div class="block p-30" style="z-index: 3">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use xlink:href="./assets/images/icons.svg#shield"></use>
@@ -42,7 +59,7 @@
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
                     <div
-                      class="block-gradient light-down p-16 radius-20"
+                      class="block-gradient light-down p-16 radius-20 group-column"
                     >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
@@ -75,7 +92,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="block" style="padding: 32px 30px; z-index: 2;">
+                <div class="block p-30" style="z-index: 2">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -87,8 +104,7 @@
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
                     <div
-                      class="block-gradient light-down p-16 radius-20"
-                      
+                      class="block-gradient light-down p-16 radius-20 group-column"
                     >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
@@ -136,7 +152,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -148,7 +164,7 @@
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
                     <div
-                      class="block light-down p-16 radius-20"
+                       class="block light-down p-16 radius-20 group-column"
                       style="background-color: #0e1323"
                     >
                       <div class="flex align-center gap-10 justify-between">
@@ -186,7 +202,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -198,7 +214,7 @@
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
                     <div
-                      class="block light-down p-16 radius-20"
+                       class="block light-down p-16 radius-20 group-column"
                       style="background-color: #0e1323"
                     >
                       <div class="flex align-center gap-10 justify-between">
@@ -237,7 +253,7 @@
                 </div>
               </div>
               <div class="flex flex-column gap-40 w-100">
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -249,7 +265,7 @@
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
                     <div
-                      class="block-gradient light-down p-16 radius-20"
+                      class="block-gradient light-down p-16 radius-20 group-column"
                       style="z-index: 3"
                     >
                       <div class="flex align-center gap-10 justify-between">
@@ -282,7 +298,10 @@
                         </div>
                       </div>
                     </div>
-                    <div class="block-gradient light-down p-16 radius-20" style="z-index: 2;">
+                    <div
+                      class="block-gradient light-down p-16 radius-20 group-column"
+                      style="z-index: 2"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Комиссия на депозит</h3>
@@ -314,7 +333,7 @@
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20"
+                       class="block light-down p-16 radius-20 group-column"
                       style="background-color: #0e1323"
                     >
                       <div class="flex align-center gap-10 justify-between">
@@ -331,7 +350,7 @@
                                 type="text"
                                 class="form-group__input"
                                 placeholder=""
-                                style="min-width: 370px"
+                                style="min-width: 200px"
                               />
                             </label>
                           </div>
@@ -347,7 +366,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use
@@ -359,7 +378,7 @@
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
                     <div
-                      class="block light-down radius-20 p-32"
+                      class="block light-down radius-20 p-32 group-column"
                       style="background-color: #0e1323"
                     >
                       <div class="flex flex-column gap-10 justify-between">
@@ -378,7 +397,7 @@ To withdraw funds, you need to verify your account by making a minimum deposit f
                       </div>
                     </div>
                     <div
-                      class="block light-down radius-20 p-32"
+                      class="block light-down radius-20 p-32 group-column"
                       style="background-color: #0e1323"
                     >
                       <div class="flex flex-column gap-10 justify-between">
@@ -416,7 +435,7 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                 class="flex flex-column gap-40 w-100"
                 style="max-width: 780px"
               >
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
                       <use xlink:href="./assets/images/icons.svg#chart"></use>
@@ -426,7 +445,7 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
                     <div
-                      class="block light-down p-16 radius-20"
+                       class="block light-down p-16 radius-20 group-column"
                       style="background-color: #0e1323"
                     >
                       <div class="flex align-center">
@@ -444,7 +463,7 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                 </div>
               </div>
               <div class="flex flex-column gap-40 w-100">
-                <div class="block light light-down" style="padding: 32px 30px">
+                <div class="block light light-down p-30">
                   <div class="flex justify-center align-center">
                     <svg class="icon">
                       <use xlink:href="./assets/images/icons.svg#money"></use>
@@ -454,7 +473,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-16 mt-25 drag__list">
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="1">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="1"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -468,7 +490,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="2">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="2"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -482,7 +507,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="3">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="3"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -496,7 +524,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="4">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="4"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -506,11 +537,18 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                           </svg>
                           <h3 class="title">Changenow</h3>
                         </div>
-                        <input name="Changenow" type="checkbox" class="switch" />
+                        <input
+                          name="Changenow"
+                          type="checkbox"
+                          class="switch"
+                        />
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="5">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="5"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -524,7 +562,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="6">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="6"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -538,7 +579,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="7">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="7"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -552,7 +596,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="8">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="8"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -566,7 +613,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="9">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="9"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -576,11 +626,18 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                           </svg>
                           <h3 class="title">Ramp.network</h3>
                         </div>
-                        <input name="Ramp.network" type="checkbox" class="switch" />
+                        <input
+                          name="Ramp.network"
+                          type="checkbox"
+                          class="switch"
+                        />
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="10">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="10"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -594,7 +651,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="11">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="11"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -608,7 +668,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="12">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="12"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -622,7 +685,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="13">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="13"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -636,7 +702,10 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                       </div>
                     </div>
                     <div
-                      class="block light-down p-16 radius-20 drag__item" style="background-color: #0e1323" data-position="14">
+                      class="block light-down p-16 radius-20 drag__item"
+                      style="background-color: #0e1323"
+                      data-position="14"
+                    >
                       <div class="flex align-center justify-between">
                         <div class="flex gap-30 align-center">
                           <svg class="icon drag-handle">
@@ -649,90 +718,151 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                         <input name="Transak" type="checkbox" class="switch" />
                       </div>
                     </div>
-                    
                   </div>
                   <div class="flex justify-end mt-20">
-                    <button class="btn btn-gradient radius-20 fz-20 fw-600 btn-big">
+                    <button
+                      class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                    >
                       Обновить
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="settings-container tab-container" data-tab="smart-deposit">
-
+            <div
+              class="settings-container tab-container"
+              data-tab="smart-deposit"
+            >
               <div class="flex flex-column gap-40 w-100">
                 <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#payments"></use>
+                      <use
+                        xlink:href="./assets/images/icons.svg#payments"
+                      ></use>
                     </svg>
                     <h2 class="title">Депозит для верификации</h2>
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                    <div
+                       class="block light-down p-16 radius-20 group-column"
+                      style="background-color: #0e1323"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Депозит для верификации</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
-                            Сумма, указанная в сообщении "Ошибка верификации" после заполнения данных на странице верификации. Эту сумму нужно будет внести на баланс для успешного прохождения верификации. Переменная - %domain_name%
+                            Сумма, указанная в сообщении "Ошибка верификации"
+                            после заполнения данных на странице верификации. Эту
+                            сумму нужно будет внести на баланс для успешного
+                            прохождения верификации. Переменная - %domain_name%
                           </p>
                         </div>
                         <div class="form-group alt-des after-content">
                           <label class="form-group__label" data-after="$">
-                            <input type="text" class="form-group__input" placeholder="" style="min-width: 200px;">
+                            <input
+                              type="text"
+                              class="form-group__input"
+                              placeholder=""
+                              style="min-width: 200px"
+                            />
                           </label>
                         </div>
                       </div>
                     </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                    <div
+                       class="block light-down p-16 radius-20 group-column"
+                      style="background-color: #0e1323"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
-                          <h3 class="title">Депозит на активацию права собственности</h3>
+                          <h3 class="title">
+                            Депозит на активацию права собственности
+                          </h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
-                            Сумма, которая отобразится в сообщении "Ошибка после верификации" после того, как пользователь отыграл промоакцию, прошел верификацию и пытается вывести средства. Эту сумму потребуется пополнить на баланс для якобы успешного завершения вывода средств. Переменная - %sum_activate%
+                            Сумма, которая отобразится в сообщении "Ошибка после
+                            верификации" после того, как пользователь отыграл
+                            промоакцию, прошел верификацию и пытается вывести
+                            средства. Эту сумму потребуется пополнить на баланс
+                            для якобы успешного завершения вывода средств.
+                            Переменная - %sum_activate%
                           </p>
                         </div>
                         <div class="form-group alt-des after-content">
                           <label class="form-group__label" data-after="$">
-                            <input type="text" class="form-group__input" placeholder="" style="min-width: 200px;">
+                            <input
+                              type="text"
+                              class="form-group__input"
+                              placeholder=""
+                              style="min-width: 200px"
+                            />
                           </label>
                         </div>
                       </div>
                     </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                    <div
+                       class="block light-down p-16 radius-20 group-column"
+                      style="background-color: #0e1323"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Депозит на покупку VIP статуса</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
-                            Сумма, которая отобразится в сообщении "Ошибка после верификации" после того, как пользователь отыграл промоакцию, прошел верификацию и оплатил право собственности, а затем пытается вывести средства. Эту сумму потребуется пополнить на баланс для якобы успешного завершения вывода средств. Переменная - %sum_confirm%
+                            Сумма, которая отобразится в сообщении "Ошибка после
+                            верификации" после того, как пользователь отыграл
+                            промоакцию, прошел верификацию и оплатил право
+                            собственности, а затем пытается вывести средства.
+                            Эту сумму потребуется пополнить на баланс для якобы
+                            успешного завершения вывода средств. Переменная -
+                            %sum_confirm%
                           </p>
                         </div>
                         <div class="form-group alt-des after-content">
                           <label class="form-group__label" data-after="$">
-                            <input type="text" class="form-group__input" placeholder="" style="min-width: 200px;">
+                            <input
+                              type="text"
+                              class="form-group__input"
+                              placeholder=""
+                              style="min-width: 200px"
+                            />
                           </label>
                         </div>
                       </div>
                     </div>
-                    <div class="block light-down p-16 radius-20" style="background-color: #0e1323">
+                    <div
+                       class="block light-down p-16 radius-20 group-column"
+                      style="background-color: #0e1323"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Депозит на оплату комиссии</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
-                            Сумма, которая отобразится в сообщении "Ошибка после верификации" после того, как пользователь отыграл промоакцию, прошел верификацию, оплатил право собственности и купил премиум статус, а затем пытается вывести средства. Эту сумму потребуется пополнить на баланс для якобы успешного завершения вывода средств. Переменная - %sum_vip%
+                            Сумма, которая отобразится в сообщении "Ошибка после
+                            верификации" после того, как пользователь отыграл
+                            промоакцию, прошел верификацию, оплатил право
+                            собственности и купил премиум статус, а затем
+                            пытается вывести средства. Эту сумму потребуется
+                            пополнить на баланс для якобы успешного завершения
+                            вывода средств. Переменная - %sum_vip%
                           </p>
                         </div>
                         <div class="form-group alt-des after-content">
                           <label class="form-group__label" data-after="$">
-                            <input type="text" class="form-group__input" placeholder="" style="min-width: 200px;">
+                            <input
+                              type="text"
+                              class="form-group__input"
+                              placeholder=""
+                              style="min-width: 200px"
+                            />
                           </label>
                         </div>
                       </div>
                     </div>
                     <div class="flex justify-end">
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600 btn-big">
+                      <button
+                        class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                      >
                         Сохранить
                       </button>
                     </div>
@@ -743,77 +873,150 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                 <div class="block light light-down p-30">
                   <div class="flex align-center justify-center gap-12">
                     <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#error-gray"></use>
+                      <use
+                        xlink:href="./assets/images/icons.svg#error-gray"
+                      ></use>
                     </svg>
                     <h2 class="title">Ошибки</h2>
                   </div>
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
-                    <div class="block light-down radius-20 p-32" style="background-color: #0e1323">
+                    <div
+                      class="block light-down radius-20 p-32 group-column"
+                      style="background-color: #0e1323"
+                    >
                       <div class="flex flex-column gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Ошибка после верификации</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">Ошибка верификации возникает, когда пользователь вводит данные на странице верификации, но для её завершения требуется пополнить баланс. Используйте переменную %sum_activate%, чтобы указать сумму, необходимую для пополнения баланса и успешного прохождения верификации.</p>
-                        </div>
-                        <div class="form-group w-100">
-                          <label class="form-group__label ">
-                            <textarea class="form-group__input text-white fz-16 fw-600 p-16">To withdraw funds, you need to verify your account by making a minimum deposit for the exact amount of 0.0035 BTC. Thisverification deposit will be credited to your balance and canbe withdrawn after your account is verified. You can make this depositviathe Deposit Tab or the Buy Crypto page. For more details on the verification procedure, please refer to Section IV of the Terms of use.For further assistance, please contact our support chat or create a ticket.</textarea>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down radius-20 p-32" style="background-color: #0e1323">
-                      <div class="flex flex-column gap-10 justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Ошибка после депозита на прохождения верификации</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">Ошибка верификации предусмотрена для ситуации, когда пользователь отыграл промо-акцию, завершил верификацию и пытается вывести средства - требуется депозит на подтверждение права собственности. Вы можете изменить текст этой ошибки в профиле пользователя в любой момент. Используйте переменную %sum_confirm%, чтобы указать сумму, на которую необходимо пополнить баланс для подтверждения права собственности и имитации успешного вывода средств.</p>
-                        </div>
-                        <div class="form-group w-100">
-                          <label class="form-group__label ">
-                            <textarea class="form-group__input text-white fz-16 fw-600 p-16">o withdraw funds to your wallet you need to make a %sum_afterverif% deposit from it to confirm ownership.</textarea>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down radius-20 p-32" style="background-color: #0e1323">
-                      <div class="flex flex-column gap-10 justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Ошибка после подтверждения права собственности</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">Ошибка верификации предусмотрена для ситуации, когда пользователь отыграл промо-акцию, завершил верификацию, подтвердил право собственности и пытается вывести средства - требуется депозит на приобретение серебрянного VIP статуса. Вы можете изменить текст этой ошибки в профиле пользователя в любой момент. Используйте переменную %sum_vip%, чтобы указать сумму, на которую необходимо пополнить баланс для приобретения VIP статуса и имитации успешного вывода средств.</p>
-                        </div>
-                        <div class="form-group w-100">
-                          <label class="form-group__label ">
-                            <textarea class="form-group__input text-white fz-16 fw-600 p-16">To withdraw funds you need premium status. You can get it by making a deposit of %sum_vip%.</textarea>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block light-down radius-20 p-32" style="background-color: #0e1323">
-                      <div class="flex flex-column gap-10 justify-between">
-                        <div class="flex flex-column">
-                          <h3 class="title">Ошибка после получения VIP статуса</h3>
-                          <p class="fz-14 fw-600 text-gray lh-normal">Ошибка верификации предусмотрена для ситуации, когда пользователь отыграл промо-акцию, завершил верификацию, подтвердил право собственности, купил премиум статус и пытается вывести средства - требуется депозит на оплату комиссии. Вы можете изменить текст этой ошибки в профиле пользователя в любой момент. Используйте переменную %sum_fee%, чтобы указать сумму, на которую необходимо пополнить баланс для оплаты комиссии и якобы успешного вывода средств.
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Ошибка верификации возникает, когда пользователь
+                            вводит данные на странице верификации, но для её
+                            завершения требуется пополнить баланс. Используйте
+                            переменную %sum_activate%, чтобы указать сумму,
+                            необходимую для пополнения баланса и успешного
+                            прохождения верификации.
                           </p>
                         </div>
                         <div class="form-group w-100">
-                          <label class="form-group__label ">
-                            <textarea class="form-group__input text-white fz-16 fw-600 p-16">Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you have any questions, please contact support.</textarea>
+                          <label class="form-group__label">
+                            <textarea
+                              class="form-group__input text-white fz-16 fw-600 p-16"
+                            >
+To withdraw funds, you need to verify your account by making a minimum deposit for the exact amount of 0.0035 BTC. Thisverification deposit will be credited to your balance and canbe withdrawn after your account is verified. You can make this depositviathe Deposit Tab or the Buy Crypto page. For more details on the verification procedure, please refer to Section IV of the Terms of use.For further assistance, please contact our support chat or create a ticket.</textarea
+                            >
                           </label>
                         </div>
                       </div>
                     </div>
-                    
-                    
+                    <div
+                      class="block light-down radius-20 p-32 group-column"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex flex-column gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">
+                            Ошибка после депозита на прохождения верификации
+                          </h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Ошибка верификации предусмотрена для ситуации, когда
+                            пользователь отыграл промо-акцию, завершил
+                            верификацию и пытается вывести средства - требуется
+                            депозит на подтверждение права собственности. Вы
+                            можете изменить текст этой ошибки в профиле
+                            пользователя в любой момент. Используйте переменную
+                            %sum_confirm%, чтобы указать сумму, на которую
+                            необходимо пополнить баланс для подтверждения права
+                            собственности и имитации успешного вывода средств.
+                          </p>
+                        </div>
+                        <div class="form-group w-100">
+                          <label class="form-group__label">
+                            <textarea
+                              class="form-group__input text-white fz-16 fw-600 p-16"
+                            >
+o withdraw funds to your wallet you need to make a %sum_afterverif% deposit from it to confirm ownership.</textarea
+                            >
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down radius-20 p-32 group-column"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex flex-column gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">
+                            Ошибка после подтверждения права собственности
+                          </h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Ошибка верификации предусмотрена для ситуации, когда
+                            пользователь отыграл промо-акцию, завершил
+                            верификацию, подтвердил право собственности и
+                            пытается вывести средства - требуется депозит на
+                            приобретение серебрянного VIP статуса. Вы можете
+                            изменить текст этой ошибки в профиле пользователя в
+                            любой момент. Используйте переменную %sum_vip%,
+                            чтобы указать сумму, на которую необходимо пополнить
+                            баланс для приобретения VIP статуса и имитации
+                            успешного вывода средств.
+                          </p>
+                        </div>
+                        <div class="form-group w-100">
+                          <label class="form-group__label">
+                            <textarea
+                              class="form-group__input text-white fz-16 fw-600 p-16"
+                            >
+To withdraw funds you need premium status. You can get it by making a deposit of %sum_vip%.</textarea
+                            >
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="block light-down radius-20 p-32 group-column"
+                      style="background-color: #0e1323"
+                    >
+                      <div class="flex flex-column gap-10 justify-between">
+                        <div class="flex flex-column">
+                          <h3 class="title">
+                            Ошибка после получения VIP статуса
+                          </h3>
+                          <p class="fz-14 fw-600 text-gray lh-normal">
+                            Ошибка верификации предусмотрена для ситуации, когда
+                            пользователь отыграл промо-акцию, завершил
+                            верификацию, подтвердил право собственности, купил
+                            премиум статус и пытается вывести средства -
+                            требуется депозит на оплату комиссии. Вы можете
+                            изменить текст этой ошибки в профиле пользователя в
+                            любой момент. Используйте переменную %sum_fee%,
+                            чтобы указать сумму, на которую необходимо пополнить
+                            баланс для оплаты комиссии и якобы успешного вывода
+                            средств.
+                          </p>
+                        </div>
+                        <div class="form-group w-100">
+                          <label class="form-group__label">
+                            <textarea
+                              class="form-group__input text-white fz-16 fw-600 p-16"
+                            >
+Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you have any questions, please contact support.</textarea
+                            >
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
                     <div class="flex justify-end">
-                      <button class="btn btn-gradient radius-20 fz-20 fw-600 btn-big">
+                      <button
+                        class="btn btn-gradient radius-20 fz-20 fw-600 btn-big"
+                      >
                         Сохранить
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
-            
-            
             </div>
           </div>
         </div>

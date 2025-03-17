@@ -913,7 +913,7 @@
                         <label class="form-group__label">
                           <input
                             type="text"
-                            class="form-group__input fw-500"
+                            class="form-group__input fw-500 text-center" 
                             readonly
                             placeholder="Дата"
                             value="26.01.15 21:43:45"
@@ -931,7 +931,7 @@
                         <h3 class="title">Активен ли аккаунт</h3>
                       </div>
                       <input
-                        name="accountActiveStatus"
+                        name="supportActive"
                         type="checkbox"
                         class="switch"
                       />
@@ -1130,7 +1130,7 @@
                         <label class="form-group__label">
                           <input
                             type="text"
-                            class="form-group__input fw-500"
+                            class="form-group__input fw-500 text-center"
                             readonly
                             placeholder="Дата"
                             value="26.01.15 21:43:45"
@@ -1148,7 +1148,7 @@
                         <h3 class="title">Активен ли аккаунт</h3>
                       </div>
                       <input
-                        name="accountActiveStatus"
+                        name="supportActive"
                         type="checkbox"
                         class="switch"
                       />
@@ -1690,7 +1690,7 @@ dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
               </div>
               <div class="flex flex-column gap-40 w-100">
                 <div class="block light light-down p-30">
-                  <div class="flex justify-between align-center">
+                  <div class="flex justify-between align-center mb-flex-column">
                     <div
                       class="flex align-center justify-center gap-12"
                       style="padding: 0 18px"
@@ -1925,7 +1925,7 @@ dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-28 mt-25">
                     <div
-                      class="block light-down radius-20 p-32"
+                      class="block light-down radius-20 p-32 group-column"
                       style="background-color: #0e1323"
                     >
                       <div class="flex flex-column gap-10 justify-between">
@@ -1952,7 +1952,7 @@ To withdraw funds, you need to verify your account by making a minimum deposit f
                       </div>
                     </div>
                     <div
-                      class="block light-down radius-20 p-32"
+                      class="block light-down radius-20 p-32 group-column"
                       style="background-color: #0e1323"
                     >
                       <div class="flex flex-column gap-10 justify-between">
@@ -1984,7 +1984,7 @@ o withdraw funds to your wallet you need to make a %sum_afterverif% deposit from
                       </div>
                     </div>
                     <div
-                      class="block light-down radius-20 p-32"
+                      class="block light-down radius-20 p-32 group-column"
                       style="background-color: #0e1323"
                     >
                       <div class="flex flex-column gap-10 justify-between">
@@ -2017,7 +2017,7 @@ To withdraw funds you need premium status. You can get it by making a deposit of
                       </div>
                     </div>
                     <div
-                      class="block light-down radius-20 p-32"
+                      class="block light-down radius-20 p-32 group-column"
                       style="background-color: #0e1323"
                     >
                       <div class="flex flex-column gap-10 justify-between">
@@ -2209,7 +2209,7 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
             Отмена
           </button>
           <button
-            class="btn btn-gradient radius-20 js-modal-close btn-big"
+            class="btn btn-red radius-20 js-modal-close btn-big"
             onclick="showNotification('Успешно', 'Домен удалён.', 'success', timer = 2000)"
           >
             Удалить

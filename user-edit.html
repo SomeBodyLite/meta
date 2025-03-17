@@ -13,6 +13,30 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Metamorphosis" />
     <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      @media (max-width: 600px) {
+        .block.p-30 {
+          padding: 16px;
+        }
+        .group-column {
+          &.not-column {
+            > .flex {
+              flex-direction: unset;
+            }
+          }
+
+          h3.title {
+            font-size: 12px;
+          }
+          p {
+            font-size: 10px !important;
+          }
+        }
+        .block-gradient.radius-30 {
+          border-radius: 20px !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header" id="header"></header>
@@ -25,7 +49,6 @@
               <div class="flex flex-column">
                 <div
                   class="flex align-center justify-center gap-12"
-                  style="padding: 0 85px"
                 >
                   <svg class="icon">
                     <use xlink:href="./assets/images/icons.svg#users"></use>
@@ -34,7 +57,9 @@
                 </div>
                 <div class="down-separator" style="margin-top: 15px"></div>
                 <div class="flex flex-column gap-30 mt-30">
-                  <div class="block-gradient px-30 py-14 radius-30">
+                  <div
+                    class="block-gradient px-30 py-14 radius-30 group-column not-column"
+                  >
                     <div class="flex align-center gap-10 justify-between">
                       <div class="flex flex-column">
                         <h3 class="title">Почта</h3>
@@ -49,7 +74,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="block-gradient px-30 py-14 radius-30">
+                  <div
+                    class="block-gradient px-30 py-14 radius-30 group-column not-column"
+                  >
                     <div class="flex align-center gap-10 justify-between">
                       <div class="flex flex-column">
                         <h3 class="title">Страна</h3>
@@ -64,7 +91,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="block-gradient px-30 py-14 radius-30">
+                  <div
+                    class="block-gradient px-30 py-14 radius-30 group-column not-column"
+                  >
                     <div class="flex align-center gap-10 justify-between">
                       <div class="flex flex-column">
                         <h3 class="title">Домен</h3>
@@ -79,7 +108,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="block-gradient px-30 py-14 radius-30">
+                  <div
+                    class="block-gradient px-30 py-14 radius-30 group-column not-column"
+                  >
                     <div class="flex align-center gap-10 justify-between">
                       <div class="flex flex-column">
                         <h3 class="title">Промокод</h3>
@@ -92,7 +123,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="block-gradient px-30 py-14 radius-30">
+                  <div
+                    class="block-gradient px-30 py-14 radius-30 group-column not-column"
+                  >
                     <div class="flex align-center gap-10 justify-between">
                       <div class="flex flex-column">
                         <h3 class="title">Отыгрыш</h3>
@@ -107,7 +140,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="block-gradient px-30 py-14 radius-30">
+                  <div
+                    class="block-gradient px-30 py-14 radius-30 group-column not-column"
+                  >
                     <div class="flex align-center gap-10 justify-between">
                       <div class="flex flex-column">
                         <h3 class="title">Верификация</h3>
@@ -125,7 +160,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="block-gradient px-30 py-14 radius-30">
+                  <div
+                    class="block-gradient px-30 py-14 radius-30 group-column not-column"
+                  >
                     <div class="flex align-center gap-10 justify-between">
                       <div class="flex flex-column">
                         <h3 class="title">Дата регистрации</h3>
@@ -140,7 +177,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="block-gradient px-30 py-14 radius-30">
+                  <div
+                    class="block-gradient px-30 py-14 radius-30 group-column not-column"
+                  >
                     <div class="flex align-center gap-10 justify-between">
                       <div class="flex flex-column">
                         <h3 class="title">Последний Онлайн</h3>
@@ -155,7 +194,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="block-gradient px-30 py-14 radius-30">
+                  <div
+                    class="block-gradient px-30 py-14 radius-30 group-column not-column"
+                  >
                     <div class="flex align-center gap-10 justify-between">
                       <div class="flex flex-column">
                         <h3 class="title">IP регистрации</h3>
@@ -170,7 +211,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="block-gradient px-30 py-14 radius-30">
+                  <div
+                    class="block-gradient px-30 py-14 radius-30 group-column not-column"
+                  >
                     <div class="flex align-center gap-10 justify-between">
                       <div class="flex flex-column">
                         <h3 class="title">Последний IP входа</h3>
@@ -216,7 +259,6 @@
                     <div class="flex flex-column">
                       <div
                         class="flex align-center justify-center gap-12"
-                        style="padding: 0 85px"
                       >
                         <svg class="icon">
                           <use
@@ -230,7 +272,9 @@
                         style="margin-top: 15px"
                       ></div>
                     </div>
-                    <div class="block-gradient px-30 py-14 radius-30">
+                    <div
+                      class="block-gradient px-30 py-14 radius-30 group-column"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Почта</h3>
@@ -260,7 +304,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="block-gradient px-30 py-14 radius-30">
+                    <div
+                      class="block-gradient px-30 py-14 radius-30 group-column"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Пароль</h3>
@@ -289,7 +335,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="block-gradient px-30 py-14 radius-30">
+                    <div
+                      class="block-gradient px-30 py-14 radius-30 group-column"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Баланс</h3>
@@ -304,14 +352,16 @@
                                 type="text"
                                 class="form-group__input"
                                 placeholder=""
-                                style="min-width: 300px"
+                                style="min-width: 200px"
                               />
                             </label>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="block-gradient px-30 py-14 radius-30">
+                    <div
+                      class="block-gradient px-30 py-14 radius-30 group-column"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Минимальный вывод</h3>
@@ -334,7 +384,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="block-gradient px-30 py-14 radius-30">
+                    <div
+                      class="block-gradient px-30 py-14 radius-30 group-column"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Минимальный депозит</h3>
@@ -368,7 +420,6 @@
                     <div class="flex flex-column">
                       <div
                         class="flex align-center justify-center gap-12"
-                        style="padding: 0 85px"
                       >
                         <svg class="icon">
                           <use
@@ -392,7 +443,7 @@
                       "
                     >
                       <div
-                        class="block-gradient align-center flex px-30 py-14 radius-30"
+                        class="block-gradient align-center flex px-30 py-14 radius-30 group-column"
                       >
                         <div
                           class="flex align-center gap-10 justify-between w-100"
@@ -413,7 +464,7 @@
                         </div>
                       </div>
                       <div
-                        class="block-gradient align-center flex px-30 py-14 radius-30"
+                        class="block-gradient align-center flex px-30 py-14 radius-30 group-column"
                       >
                         <div
                           class="flex align-center gap-10 justify-between w-100"
@@ -435,7 +486,7 @@
                         </div>
                       </div>
                       <div
-                        class="block-gradient align-center flex px-30 py-14 radius-30"
+                        class="block-gradient align-center flex px-30 py-14 radius-30 group-column"
                       >
                         <div
                           class="flex align-center gap-10 justify-between w-100"
@@ -456,7 +507,7 @@
                         </div>
                       </div>
                       <div
-                        class="block-gradient align-center flex px-30 py-14 radius-30"
+                        class="block-gradient align-center flex px-30 py-14 radius-30 group-column"
                       >
                         <div
                           class="flex align-center gap-10 justify-between w-100"
@@ -478,7 +529,7 @@
                         </div>
                       </div>
                       <div
-                        class="block-gradient align-center flex px-30 py-14 radius-30"
+                        class="block-gradient align-center flex px-30 py-14 radius-30 group-column"
                       >
                         <div
                           class="flex align-center gap-10 justify-between w-100"
@@ -529,7 +580,9 @@
                         style="margin-top: 15px"
                       ></div>
                     </div>
-                    <div class="block-gradient px-30 py-14 radius-30">
+                    <div
+                      class="block-gradient px-30 py-14 radius-30 group-column"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Состояние верификаци</h3>
@@ -556,7 +609,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="block-gradient px-30 py-14 radius-30">
+                    <div
+                      class="block-gradient px-30 py-14 radius-30 group-column"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Имя</h3>
@@ -579,7 +634,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="block-gradient px-30 py-14 radius-30">
+                    <div
+                      class="block-gradient px-30 py-14 radius-30 group-column"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Фамилия</h3>
@@ -602,7 +659,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="block-gradient px-30 py-14 radius-30">
+                    <div
+                      class="block-gradient px-30 py-14 radius-30 group-column"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Страна</h3>
@@ -625,7 +684,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="block-gradient px-30 py-14 radius-30">
+                    <div
+                      class="block-gradient px-30 py-14 radius-30 group-column"
+                    >
                       <div class="flex align-center gap-10 justify-between">
                         <div class="flex flex-column">
                           <h3 class="title">Дата рождения</h3>
@@ -753,7 +814,6 @@
                     <div class="flex flex-column">
                       <div
                         class="flex align-center justify-center gap-12"
-                        style="padding: 0 85px"
                       >
                         <svg class="icon">
                           <use
@@ -769,7 +829,9 @@
                     </div>
 
                     <div class="flex flex-column gap-28 mt-25">
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex align-center justify-between gap-20">
                           <div class="flex flex-column">
                             <div class="flex align-center gap-12">
@@ -800,14 +862,24 @@
                                   ></use>
                                 </svg>
                               </button>
-                              <a href="#" target="_blank" class="form-group__button-2">
-                                <img src="./assets/images/coins/bitcoin-link.png" width="23" alt="">
+                              <a
+                                href="#"
+                                target="_blank"
+                                class="form-group__button-2"
+                              >
+                                <img
+                                  src="./assets/images/coins/bitcoin-link.png"
+                                  width="23"
+                                  alt=""
+                                />
                               </a>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex align-center justify-between gap-20">
                           <div class="flex flex-column">
                             <div class="flex align-center gap-12">
@@ -838,14 +910,24 @@
                                   ></use>
                                 </svg>
                               </button>
-                              <a href="#" target="_blank" class="form-group__button-2">
-                                <img src="./assets/images/coins/ethereum-link.png" width="23" alt="">
+                              <a
+                                href="#"
+                                target="_blank"
+                                class="form-group__button-2"
+                              >
+                                <img
+                                  src="./assets/images/coins/ethereum-link.png"
+                                  width="23"
+                                  alt=""
+                                />
                               </a>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex align-center justify-between gap-20">
                           <div class="flex flex-column">
                             <div class="flex align-center gap-12">
@@ -876,14 +958,24 @@
                                   ></use>
                                 </svg>
                               </button>
-                              <a href="#" target="_blank" class="form-group__button-2">
-                                <img src="./assets/images/coins/tron-link.png" width="23" alt="">
+                              <a
+                                href="#"
+                                target="_blank"
+                                class="form-group__button-2"
+                              >
+                                <img
+                                  src="./assets/images/coins/tron-link.png"
+                                  width="23"
+                                  alt=""
+                                />
                               </a>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex align-center justify-between gap-20">
                           <div class="flex flex-column">
                             <div class="flex align-center gap-12">
@@ -914,14 +1006,24 @@
                                   ></use>
                                 </svg>
                               </button>
-                              <a href="#" target="_blank" class="form-group__button-2">
-                                <img src="./assets/images/coins/binance-link.png" width="23" alt="">
+                              <a
+                                href="#"
+                                target="_blank"
+                                class="form-group__button-2"
+                              >
+                                <img
+                                  src="./assets/images/coins/binance-link.png"
+                                  width="23"
+                                  alt=""
+                                />
                               </a>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex align-center justify-between gap-20">
                           <div class="flex flex-column">
                             <div class="flex align-center gap-12">
@@ -952,14 +1054,24 @@
                                   ></use>
                                 </svg>
                               </button>
-                              <a href="#" target="_blank" class="form-group__button-2">
-                                <img src="./assets/images/coins/ripple-link.png" width="23" alt="">
+                              <a
+                                href="#"
+                                target="_blank"
+                                class="form-group__button-2"
+                              >
+                                <img
+                                  src="./assets/images/coins/ripple-link.png"
+                                  width="23"
+                                  alt=""
+                                />
                               </a>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex align-center justify-between gap-20">
                           <div class="flex flex-column">
                             <div class="flex align-center gap-12">
@@ -990,14 +1102,24 @@
                                   ></use>
                                 </svg>
                               </button>
-                              <a href="#" target="_blank" class="form-group__button-2">
-                                <img src="./assets/images/coins/solana-link.png" width="23" alt="">
+                              <a
+                                href="#"
+                                target="_blank"
+                                class="form-group__button-2"
+                              >
+                                <img
+                                  src="./assets/images/coins/solana-link.png"
+                                  width="23"
+                                  alt=""
+                                />
                               </a>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex align-center justify-between gap-20">
                           <div class="flex flex-column">
                             <div class="flex align-center gap-12">
@@ -1028,8 +1150,16 @@
                                   ></use>
                                 </svg>
                               </button>
-                              <a href="#" target="_blank" class="form-group__button-2">
-                                <img src="./assets/images/coins/ton-link.png" width="23" alt="">
+                              <a
+                                href="#"
+                                target="_blank"
+                                class="form-group__button-2"
+                              >
+                                <img
+                                  src="./assets/images/coins/ton-link.png"
+                                  width="23"
+                                  alt=""
+                                />
                               </a>
                             </label>
                           </div>
@@ -1411,7 +1541,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                       class="scroll-container flex flex-column gap-16"
                       style="max-height: 900px"
                     >
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Перешел на страницу депозита</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
@@ -1419,7 +1551,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                           </p>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Перешел на страницу стейкинга</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
@@ -1427,7 +1561,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                           </p>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Перешел на страницу рефералкии</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
@@ -1435,7 +1571,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                           </p>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Отправил данные для верификации</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
@@ -1443,7 +1581,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                           </p>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Перешел на страницу депозита</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
@@ -1451,7 +1591,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                           </p>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Перешел на страницу стейкинга</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
@@ -1459,7 +1601,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                           </p>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Перешел на страницу рефералкии</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
@@ -1467,7 +1611,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                           </p>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Отправил данные для верификации</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
@@ -1475,7 +1621,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                           </p>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Перешел на страницу депозита</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
@@ -1483,7 +1631,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                           </p>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Перешел на страницу стейкинга</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
@@ -1491,7 +1641,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                           </p>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Перешел на страницу рефералкии</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">
@@ -1499,7 +1651,9 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
                           </p>
                         </div>
                       </div>
-                      <div class="block-gradient px-30 py-14 radius-30">
+                      <div
+                        class="block-gradient px-30 py-14 radius-30 group-column"
+                      >
                         <div class="flex flex-column">
                           <h3 class="title">Отправил данные для верификации</h3>
                           <p class="fz-14 fw-600 text-gray lh-normal">

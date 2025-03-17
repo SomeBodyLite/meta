@@ -25,30 +25,24 @@ if (header) {
         mobileNav.classList.toggle("active");
         document.body.classList.toggle("ov-h");
       });
+
+      const currentUrl = window.location.pathname;
+      const sidebarItems = mobileNav.querySelectorAll(".sidebar-item");
+
+      sidebarItems.forEach((item) => {
+        const itemHref = new URL(
+          item.getAttribute("href"),
+          window.location.origin
+        ).pathname;
+
+        if (currentUrl === itemHref) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
     });
 }
-// const header = document.getElementById("header");
-// if (header) {
-//   fetch("./components/header.html")
-//     .then((response) => response.text())
-//     .then((data) => {
-//       header.innerHTML = data;
-
-//       const script = document.createElement("script");
-//       script.src = "./static/scripts/themeSwitch.js";
-//       document.body.appendChild(script);
-
-//       const mobileBtn = document.getElementById("mobileMenuBtn");
-
-//       mobileBtn.addEventListener("click", () => {
-//         const mobileMenuContainer = document.getElementById(
-//           "mobileMenuContainer"
-//         );
-//         document.body.classList.toggle("overflow-y-hidden");
-//         mobileMenuContainer.classList.toggle("hidden");
-//       });
-//     });
-// }
 
 const sidebar = document.getElementById("sidebar");
 if (sidebar) {
@@ -58,17 +52,14 @@ if (sidebar) {
       sidebar.innerHTML = data;
 
       const currentUrl = window.location.pathname;
-      console.log("currentUrl: ", currentUrl);
 
       const sidebarItems = sidebar.querySelectorAll(".sidebar-item");
 
       sidebarItems.forEach((item) => {
-        // const itemHref = item.getAttribute("href");
         const itemHref = new URL(
           item.getAttribute("href"),
           window.location.origin
         ).pathname;
-        console.log("itemHref: ", itemHref);
 
         if (currentUrl === itemHref) {
           item.classList.add("active");
@@ -918,11 +909,15 @@ if (input) {
 
 // ADJUST HEIGHT TEXTAREA
 window.initAutoResizeTextareas = function () {
+  // function adjustHeight(textarea) {
+  //   textarea.style.height = "auto";
+  //   requestAnimationFrame(() => {
+  //     textarea.style.height = textarea.scrollHeight + 8 + "px";
+  //   });
+  // }
   function adjustHeight(textarea) {
-    textarea.style.height = "auto";
-    requestAnimationFrame(() => {
-      textarea.style.height = textarea.scrollHeight + 8 + "px";
-    });
+    textarea.style.height = "5px";
+    textarea.style.height = (textarea.scrollHeight) + 4 + "px";
   }
 
   document

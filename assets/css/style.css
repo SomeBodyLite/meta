@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(31, 37, 55, 0.55) #0E1323;
+}
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -972,6 +977,7 @@ button:hover .icon.stroke-hover {
       background: #1E2541;
       scrollbar-width: thin;
       max-height: 300px;
+      min-height: 100px;
     }
   }
 
@@ -1469,6 +1475,7 @@ h6.title {
         font-size: 16px;
         padding: 12px 14px;
         font-weight: 600;
+        white-space: nowrap;
       }
 
       &.inner-center {
@@ -3283,8 +3290,22 @@ canvas {
   .form-group {
     & .form-group__label {
       & .form-group__input {
-        padding: 5px 10px;
-        font-size: 10px;
+        padding: 5px 10px !important;
+        font-size: 10px !important;
+      }
+    }
+  }
+
+  .form-group {
+    & .form-group__label {
+      border-radius: 12px;
+    }
+  }
+
+  .form-group {
+    & .form-group__label {
+      & textarea.form-group__input {
+        border-radius: 12px !important;
       }
     }
   }
@@ -3551,7 +3572,8 @@ canvas {
     }
   }
 
-  .custom-select {
+  .custom-select,
+  .custom-select.custom-2 {
     & .select-selected {
       font-size: 14px;
       padding: 3px 12px;
@@ -3564,6 +3586,7 @@ canvas {
 
       .select-item {
         font-size: 11px;
+        padding: 4px;
       }
     }
   }
@@ -3611,6 +3634,18 @@ canvas {
     }
 
   }
+
+  .app-content {
+    &.user-edit {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .verify-item {
+    font-size: 10px;
+    padding: 6px 11px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -3643,9 +3678,83 @@ canvas {
 
   .settings-tabs {
     padding: 16px 12px;
+
     & .settings-tab {
       font-size: 12px !important;
       padding: 10px 12px;
     }
   }
+
+  .users-tabs {
+    padding: 16px 12px;
+
+    & .tab-btn {
+      font-size: 12px !important;
+      padding: 10px 12px;
+    }
+  }
+
+  .transactions-header {
+    padding: 16px 12px;
+
+    & .transactions-btn {
+      font-size: 12px !important;
+      padding: 10px 12px;
+    }
+  }
+
+  .drag__item {
+    padding: 12px 15px !important;
+
+    p {
+      font-size: 12px !important;
+    }
+  }
+
+  .form-group {
+    &.after-content {
+      & ::after {
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  .grid-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tab-container {
+    &.active {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .form-group {
+    &.alt-des {
+      width: 100%;
+
+      & .form-group__button {
+        padding: 0 5px;
+        min-width: 20px;
+      }
+
+      & .form-group__label {
+        & .form-group__input {
+          min-width: unset;
+        }
+      }
+    }
+
+    .form-group__button-2 {
+      right: 30px;
+
+      img {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
 }
