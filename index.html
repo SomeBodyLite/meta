@@ -6,6 +6,77 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Metamorphosis</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Metamorphosis" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      .mobile-illustration {
+        display: none;
+      }
+      @media (max-width: 1150px) {
+        .main-statistics-block {
+          padding: 15px;
+          order: 1;
+          h2.title {
+            font-size: 16px !important;
+          }
+          h3.title {
+            font-size: 14px !important;
+          }
+        }
+        .block-inner {
+          padding: 8px 17px;
+          & .value {
+            font-size: 24px !important;
+          }
+        }
+        .main-info-block {
+          & .illustration {
+            max-width: 312px;
+          }
+          & .content {
+            top: unset;
+            right: unset;
+            left: 12px;
+            bottom: 12px;
+            background: unset;
+            backdrop-filter: unset;
+            padding: 0;
+            & p {
+              font-size: 13px;
+            }
+            & span {
+              font-size: 20px;
+            }
+          }
+        }
+        .gap-30 {
+          gap: 10px;
+        }
+        .app-content {
+          flex-direction: column;
+        }
+        .mobile-illustration {
+          display: block;
+          width: 100%;
+          min-height: 140px;
+          object-fit: cover;
+          object-position: left;
+        }
+        .illustration {
+          display: none;
+        }
+        .block.p-32 {
+          padding: 20px;
+        }
+        #selectMain{
+          min-width: unset;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header" id="header"></header>
@@ -14,7 +85,7 @@
         <div class="main-content">
           <section class="sidebar" id="sidebar"></section>
           <div class="app-content">
-            <div class="flex flex-column" style="gap: 48px">
+            <div class="flex flex-column gap-40">
               <div class="block light light-down main-statistics-block">
                 <div class="flex align-center justify-center gap-12">
                   <svg class="icon">
@@ -24,8 +95,8 @@
                   </svg>
                   <h2 class="title">Общая статистика</h2>
                 </div>
-                <div class="down-separator" style="margin-top: 16px"></div>
-                <div class="flex gap-30" style="padding-top: 25px">
+                <div class="down-separator mt-16"></div>
+                <div class="flex gap-30 pt-30 justify-center">
                   <div class="block-inner flex-column gap-10 align-center">
                     <h3 class="title text-center">Регистрации</h3>
                     <span class="value text-center fz-32 fw-800">1000</span>
@@ -44,6 +115,11 @@
                 <img
                   class="illustration"
                   src="./assets/images/main-illustration.png"
+                  alt=""
+                />
+                <img
+                  class="mobile-illustration"
+                  src="./assets/images/main-illustration_mobile.png"
                   alt=""
                 />
               </div>
@@ -76,7 +152,7 @@
               <div class="grid-main-auto gap-40">
                 <div class="block light p-32">
                   <div class="flex align-center gap-12">
-                    <svg class="icon" style="width: 38px; height: 38px">
+                    <svg class="icon" >
                       <use xlink:href="./assets/images/icons.svg#logs"></use>
                     </svg>
                     <h2 class="title">Последняя активность</h2>
@@ -140,7 +216,7 @@
                 </div>
                 <div class="block light p-32">
                   <div class="flex align-center gap-12">
-                    <svg class="icon" style="width: 38px; height: 38px">
+                    <svg class="icon" >
                       <use xlink:href="./assets/images/icons.svg#clock"></use>
                     </svg>
                     <h2 class="title">Последние регистрации</h2>

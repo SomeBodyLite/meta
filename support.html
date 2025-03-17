@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="./assets/css/flag-icon.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Metamorphosis</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Metamorphosis" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
     <header class="header" id="header"></header>
@@ -16,7 +22,16 @@
           <section class="sidebar" id="sidebar"></section>
           <div class="app-content support">
             <div class="block light light-down support-side">
-              <h2 class="title fw-800">Лайв саппорт</h2>
+              <div class="flex justify-between align-center">
+                <h2 class="title fw-800">Лайв саппорт</h2>
+                <button class="btn reset read-all" data-tooltip="readAll">
+                  <svg class="icon">
+                    <use
+                      xlink:href="./assets/images/icons.svg#push-read-2"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
               <div class="form-group border mt-12">
                 <label class="form-group__label">
                   <input
@@ -32,7 +47,7 @@
               ></div>
 
               <div class="chats-container">
-                <div class="chat-item active">
+                <div class="chat-item active" data-id="1">
                   <div class="status active"></div>
                   <div class="flex-column gap-4">
                     <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
@@ -45,10 +60,16 @@
                         <use xlink:href="./assets/images/icons.svg#pin"></use>
                       </svg>
                     </button>
-                    <button class="bookmark"></button>
+                    <button class="btn reset readItem" data-tooltip="readItem">
+                      <svg class="icon">
+                        <use
+                          xlink:href="./assets/images/icons.svg#push-read-1"
+                        ></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
-                <div class="chat-item">
+                <div class="chat-item" data-id="2">
                   <div class="status"></div>
                   <div class="flex-column gap-4">
                     <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
@@ -61,183 +82,13 @@
                         <use xlink:href="./assets/images/icons.svg#pin"></use>
                       </svg>
                     </button>
-                    <button class="bookmark"></button>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
-                  <div class="item-actions">
-                    <span class="notifications">1</span>
-                    <button class="clipped">
-                      <svg class="icon hover">
-                        <use xlink:href="./assets/images/icons.svg#pin"></use>
+                    <button class="btn reset readItem" data-tooltip="readItem">
+                      <svg class="icon">
+                        <use
+                          xlink:href="./assets/images/icons.svg#push-read-1"
+                        ></use>
                       </svg>
                     </button>
-                    <button class="bookmark"></button>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
-                  <div class="item-actions">
-                    <span class="notifications">1</span>
-                    <button class="clipped">
-                      <svg class="icon hover">
-                        <use xlink:href="./assets/images/icons.svg#pin"></use>
-                      </svg>
-                    </button>
-                    <button class="bookmark"></button>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
-                  <div class="item-actions">
-                    <span class="notifications">1</span>
-                    <button class="clipped">
-                      <svg class="icon hover">
-                        <use xlink:href="./assets/images/icons.svg#pin"></use>
-                      </svg>
-                    </button>
-                    <button class="bookmark"></button>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
-                  <div class="item-actions">
-                    <span class="notifications">1</span>
-                    <button class="clipped">
-                      <svg class="icon hover">
-                        <use xlink:href="./assets/images/icons.svg#pin"></use>
-                      </svg>
-                    </button>
-                    <button class="bookmark"></button>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
-                  <div class="item-actions">
-                    <span class="notifications">1</span>
-                    <button class="clipped">
-                      <svg class="icon hover">
-                        <use xlink:href="./assets/images/icons.svg#pin"></use>
-                      </svg>
-                    </button>
-                    <button class="bookmark"></button>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
-                  <div class="item-actions">
-                    <span class="notifications">1</span>
-                    <button class="clipped">
-                      <svg class="icon hover">
-                        <use xlink:href="./assets/images/icons.svg#pin"></use>
-                      </svg>
-                    </button>
-                    <button class="bookmark"></button>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
-                  <div class="item-actions">
-                    <span class="notifications">1</span>
-                    <button class="clipped">
-                      <svg class="icon hover">
-                        <use xlink:href="./assets/images/icons.svg#pin"></use>
-                      </svg>
-                    </button>
-                    <button class="bookmark"></button>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
-                  <div class="item-actions">
-                    <span class="notifications">1</span>
-                    <button class="clipped">
-                      <svg class="icon hover">
-                        <use xlink:href="./assets/images/icons.svg#pin"></use>
-                      </svg>
-                    </button>
-                    <button class="bookmark"></button>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
-                  <div class="item-actions">
-                    <span class="notifications">1</span>
-                    <button class="clipped">
-                      <svg class="icon hover">
-                        <use xlink:href="./assets/images/icons.svg#pin"></use>
-                      </svg>
-                    </button>
-                    <button class="bookmark"></button>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
-                  <div class="item-actions">
-                    <span class="notifications">1</span>
-                    <button class="clipped">
-                      <svg class="icon hover">
-                        <use xlink:href="./assets/images/icons.svg#pin"></use>
-                      </svg>
-                    </button>
-                    <button class="bookmark"></button>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
-                  <div class="item-actions">
-                    <span class="notifications">1</span>
-                    <button class="clipped">
-                      <svg class="icon hover">
-                        <use xlink:href="./assets/images/icons.svg#pin"></use>
-                      </svg>
-                    </button>
-                    <button class="bookmark"></button>
                   </div>
                 </div>
               </div>
@@ -246,7 +97,9 @@
               <div class="support-header">
                 <div class="header-content">
                   <div class="header-content-start">
-                    <h6 class="fz-16 fw-600 text-white">Ldanio12@gmail.com</h6>
+                    <a href="./user-edit.html" class="fz-16 fw-600 text-white"
+                      >Ldanio12@gmail.com</a
+                    >
                     <div class="flex align-center gap-6">
                       <span class="flag-icon flag-icon-us"></span>
                       <div class="fz-14 fw-600 text-white">US</div>
@@ -279,7 +132,7 @@
               <div class="support-body">
                 <div class="chat-container">
                   <div class="time-section">10 декабря</div>
-                  <div class="chat-item">
+                  <div class="chat-item" data-id="1">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -292,7 +145,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="2">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -305,7 +158,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="3">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -319,7 +172,7 @@
                     </div>
                   </div>
                   <div class="time-section">11 декабря</div>
-                  <div class="chat-item">
+                  <div class="chat-item" data-id="4">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -332,7 +185,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item">
+                  <div class="chat-item" data-id="5">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -345,7 +198,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="6">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -358,7 +211,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="7">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -371,7 +224,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="8">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -384,7 +237,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="9">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -398,7 +251,7 @@
                     </div>
                   </div>
                   <div class="time-section">12 декабря</div>
-                  <div class="chat-item">
+                  <div class="chat-item" data-id="10">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -411,7 +264,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="11">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -424,7 +277,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="12">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -438,7 +291,7 @@
                     </div>
                   </div>
                   <div class="time-section">13 декабря</div>
-                  <div class="chat-item">
+                  <div class="chat-item" data-id="13">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -451,7 +304,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="14">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -464,7 +317,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="15">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -478,7 +331,7 @@
                     </div>
                   </div>
                   <div class="time-section">14 декабря</div>
-                  <div class="chat-item">
+                  <div class="chat-item" data-id="16">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -491,7 +344,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="17">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -504,7 +357,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="18">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -518,7 +371,7 @@
                     </div>
                   </div>
                   <div class="time-section">16 декабря</div>
-                  <div class="chat-item">
+                  <div class="chat-item" data-id="19">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -531,7 +384,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="20">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -544,7 +397,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="21">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -557,7 +410,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item">
+                  <div class="chat-item" data-id="22">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -570,7 +423,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="23">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -583,7 +436,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="24">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -596,7 +449,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item">
+                  <div class="chat-item" data-id="25">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -609,7 +462,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="26">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -622,7 +475,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="27">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -635,7 +488,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item">
+                  <div class="chat-item" data-id="28">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -648,7 +501,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="29">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -661,7 +514,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-item user">
+                  <div class="chat-item user" data-id="30">
                     But to prove my banc account i also have to depos
                     <div class="item-info">
                       <div class="time">9:59</div>
@@ -717,6 +570,49 @@
         </div>
       </div>
     </main>
+    <div class="context-menu" id="context-menu">
+      <button data-action="copy">
+        <svg class="icon hover stroke-hover">
+          <use xlink:href="./assets/images/icons.svg#copy"></use>
+        </svg>
+        Копировать
+      </button>
+      <button data-action="edit">
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#edit"></use>
+        </svg>
+        Изменить
+      </button>
+      <button data-action="delete">
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#delete"></use></svg
+        >Удалить
+      </button>
+    </div>
+    <div class="context-menu" id="chat-context-menu">
+      <button data-action="pin">
+        <svg class="icon hover">
+          <use xlink:href="./assets/images/icons.svg#pin"></use></svg
+        >Закрепить
+      </button>
+    </div>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/context-menu.js"></script>
+    <span class="tooltip" id="readAll">
+      Пометить все как <br />
+      прочитанное
+      <svg class="icon" style="fill: #626e8f">
+        <use xlink:href="./assets/images/icons.svg#readed"></use>
+      </svg>
+    </span>
+
+    <span class="tooltip" id="readItem">
+      Пометить как <br />
+      прочитанное
+      <svg class="icon" style="fill: #626e8f">
+        <use xlink:href="./assets/images/icons.svg#readed"></use>
+      </svg>
+    </span>
+    <script src="./assets/js/tooltip.js"></script>
   </body>
 </html>

@@ -4,9 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="./assets/css/flag-icon.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Metamorphosis</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Metamorphosis" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      .mobile-illustration {
+        display: none;
+      }
+      @media (max-width: 900px) {
+        .app-content {
+          flex-direction: column-reverse;
+        }
+        .statistics-info-block {
+          width: 100%;
+          height: 88px;
+          overflow: unset;
+          position: relative;
+          max-width: unset;
+          .content {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+          }
+          .illustration {
+            display: none;
+          }
+          .mobile-illustration {
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            height: 100%;
+          }
+        }
+      }
+      @media (max-width: 1300px) {
+        .grid-auto {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        h3.title {
+          font-size: 16px;
+        }
+        .p-10.radius-20.text-white.text-center.fz-24.fw-800 {
+          font-size: 14px !important;
+          padding: 4px;
+        }
+        .fz-32.fw-800 {
+          font-size: 20px !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header" id="header"></header>
@@ -22,10 +76,7 @@
               <div class="stats-grid" data-list-page="1">
                 <div class="block light light-down p-24">
                   <div class="flex flex-column">
-                    <div
-                      class="flex align-center justify-center gap-12"
-                      style="padding: 0 85px"
-                    >
+                    <div class="flex align-center justify-center gap-12">
                       <svg class="icon">
                         <use xlink:href="./assets/images/icons.svg#chart"></use>
                       </svg>
@@ -51,10 +102,7 @@
                 </div>
                 <div class="block light light-down p-24">
                   <div class="flex flex-column">
-                    <div
-                      class="flex align-center justify-center gap-12"
-                      style="padding: 0 85px"
-                    >
+                    <div class="flex align-center justify-center gap-12">
                       <svg class="icon">
                         <use xlink:href="./assets/images/icons.svg#chart"></use>
                       </svg>
@@ -82,10 +130,7 @@
                 </div>
                 <div class="block light light-down p-24">
                   <div class="flex flex-column">
-                    <div
-                      class="flex align-center justify-center gap-12"
-                      style="padding: 0 85px"
-                    >
+                    <div class="flex align-center justify-center gap-12">
                       <svg class="icon">
                         <use xlink:href="./assets/images/icons.svg#chart"></use>
                       </svg>
@@ -113,10 +158,7 @@
                 </div>
                 <div class="block light light-down p-24">
                   <div class="flex flex-column">
-                    <div
-                      class="flex align-center justify-center gap-12"
-                      style="padding: 0 85px"
-                    >
+                    <div class="flex align-center justify-center gap-12">
                       <svg class="icon">
                         <use xlink:href="./assets/images/icons.svg#chart"></use>
                       </svg>
@@ -171,8 +213,9 @@
                       <div class="flex gap-12 align-center justify-between">
                         <span
                           class="p-10 radius-20 text-white text-center fz-24 fw-800"
-                          >$ 140</span>
-                          <p class="fz-32 fw-800">+12%</p>
+                          >$ 140</span
+                        >
+                        <p class="fz-32 fw-800">+12%</p>
                       </div>
                     </div>
                     <div class="block-inner-2 red-block flex-column gap-10">
@@ -180,8 +223,9 @@
                       <div class="flex gap-12 align-center justify-between">
                         <span
                           class="p-10 radius-20 text-white text-center fz-24 fw-800"
-                          >$ 1200</span>
-                          <p class="fz-32 fw-800">-19%</p>
+                          >$ 1200</span
+                        >
+                        <p class="fz-32 fw-800">-19%</p>
                       </div>
                     </div>
                     <div class="block-inner-2 green-block flex-column gap-10">
@@ -189,8 +233,9 @@
                       <div class="flex gap-12 align-center justify-between">
                         <span
                           class="p-10 radius-20 text-white text-center fz-24 fw-800"
-                          >$ 18000</span>
-                          <p class="fz-32 fw-800">+12%</p>
+                          >$ 18000</span
+                        >
+                        <p class="fz-32 fw-800">+12%</p>
                       </div>
                     </div>
                   </div>
@@ -222,8 +267,9 @@
                       <div class="flex gap-12 align-center justify-between">
                         <span
                           class="p-10 radius-20 text-white text-center fz-24 fw-800"
-                          >140</span>
-                          <p class="fz-32 fw-800">+12%</p>
+                          >140</span
+                        >
+                        <p class="fz-32 fw-800">+12%</p>
                       </div>
                     </div>
                     <div class="block-inner-2 red-block flex-column gap-10">
@@ -231,8 +277,9 @@
                       <div class="flex gap-12 align-center justify-between">
                         <span
                           class="p-10 radius-20 text-white text-center fz-24 fw-800"
-                          >1200</span>
-                          <p class="fz-32 fw-800">-19%</p>
+                          >1200</span
+                        >
+                        <p class="fz-32 fw-800">-19%</p>
                       </div>
                     </div>
                     <div class="block-inner-2 green-block flex-column gap-10">
@@ -240,8 +287,9 @@
                       <div class="flex gap-12 align-center justify-between">
                         <span
                           class="p-10 radius-20 text-white text-center fz-24 fw-800"
-                          >18000</span>
-                          <p class="fz-32 fw-800">+12%</p>
+                          >18000</span
+                        >
+                        <p class="fz-32 fw-800">+12%</p>
                       </div>
                     </div>
                   </div>
@@ -268,36 +316,48 @@
                   </p>
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="grid-auto gap-30" style="padding-top: 25px">
-                    <div class="block-inner-2  flex-column gap-10">
+                    <div class="block-inner-2 flex-column gap-10">
                       <h3 class="title text-center">Минимальные депозиты</h3>
-                      <div class="flex gap-12 align-center justify-between mt-auto">
+                      <div
+                        class="flex gap-12 align-center justify-between mt-auto"
+                      >
                         <span
                           class="p-10 radius-20 text-white text-center fz-24 fw-800"
-                          >10</span>
+                          >10</span
+                        >
                       </div>
                     </div>
-                    <div class="block-inner-2  flex-column gap-10">
+                    <div class="block-inner-2 flex-column gap-10">
                       <h3 class="title text-center">Додепы</h3>
-                      <div class="flex gap-12 align-center justify-between mt-auto">
+                      <div
+                        class="flex gap-12 align-center justify-between mt-auto"
+                      >
                         <span
                           class="p-10 radius-20 text-white text-center fz-24 fw-800"
-                          >70</span>
+                          >70</span
+                        >
                       </div>
                     </div>
-                    <div class="block-inner-2  flex-column gap-10">
+                    <div class="block-inner-2 flex-column gap-10">
                       <h3 class="title text-center">Минимальные депозиты</h3>
-                      <div class="flex gap-12 align-center justify-between mt-auto">
+                      <div
+                        class="flex gap-12 align-center justify-between mt-auto"
+                      >
                         <span
                           class="p-10 radius-20 text-white text-center fz-24 fw-800"
-                          >190$</span>
+                          >190$</span
+                        >
                       </div>
                     </div>
-                    <div class="block-inner-2  flex-column gap-10">
+                    <div class="block-inner-2 flex-column gap-10">
                       <h3 class="title text-center">Додепы</h3>
-                      <div class="flex gap-12 align-center justify-between mt-auto">
+                      <div
+                        class="flex gap-12 align-center justify-between mt-auto"
+                      >
                         <span
                           class="p-10 radius-20 text-white text-center fz-24 fw-800"
-                          >10000$</span>
+                          >10000$</span
+                        >
                       </div>
                     </div>
                   </div>
@@ -325,146 +385,16 @@
                 src="./assets/images/statistics-illustration.png"
                 alt=""
               />
+              <img
+                class="mobile-illustration"
+                src="./assets/images/statistics-illustration_mobile.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
       </div>
     </main>
-    <!-- Модалка для статистики промо -->
-    <!-- <div class="modal light" data-modal="total-stats-promo" >
-      <svg class="icon modal-close-icon js-modal-close">
-        <use xlink:href="./assets/images/icons.svg#close"></use>
-      </svg>
-      <div class="flex flex-column">
-        <div class="flex align-center justify-center gap-12">
-          <svg class="icon">
-            <use xlink:href="./assets/images/icons.svg#statistics"></use>
-          </svg>
-          <h2 class="title">Cтатистика</h2>
-        </div>
-        <span class="fw-700 mt-10 fz-18 text-white">промо</span>
-      </div>
-      <div class="down-separator mt-30 mb-30"></div>
-      <div class="modal-info">
-        <div class="item">
-          <h3 class="fz-18 fw-700 text-white">Активации</h3>
-          <div class="cover">
-            <div class="progress" style="width: 50%"></div>
-            <span class="cover-item">1000</span>
-          </div>
-        </div>
-        <div class="item">
-          <h3 class="fz-18 fw-700 text-white">Сумма депозитов</h3>
-          <div class="cover">
-            <div class="progress" style="width: 50%"></div>
-            <span class="cover-item">800$</span>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- модалка для статистики юзера -->
-    <!-- <div class="modal light" data-modal="total-stats-user" >
-      <svg class="icon modal-close-icon js-modal-close">
-        <use xlink:href="./assets/images/icons.svg#close"></use>
-      </svg>
-      <div class="flex flex-column">
-        <div class="flex align-center justify-center gap-12">
-          <svg class="icon">
-            <use xlink:href="./assets/images/icons.svg#statistics"></use>
-          </svg>
-          <h2 class="title">Cтатистика</h2>
-        </div>
-        <div class="flex gap-12 align-center justify-center mt-10">
-          <span class="fw-700 fz-18 text-white">Ldanio12@gmail.com</span>
-          <img class="stats-user-img" src="./assets/images/locations/afghanistan_img.svg" alt="">
-          <span class="fw-700 fz-18 text-white">Af</span>
-        </div>
-      </div>
-      <div class="down-separator mt-20 mb-20"></div>
-      <div class="modal-info">
-        <div class="item">
-          <h3 class="fz-18 fw-700 text-white">Депозит</h3>
-          <div class="cover">
-            <div class="progress" style="width: 50%"></div>
-            <span class="cover-item">800$</span>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Модалка для статистики домена -->
-    <!-- <div class="modal light" data-modal="total-stats-domain">
-      <svg class="icon modal-close-icon js-modal-close">
-        <use xlink:href="./assets/images/icons.svg#close"></use>
-      </svg>
-      <div class="flex flex-column">
-        <div class="flex align-center justify-center gap-12">
-          <svg class="icon">
-            <use xlink:href="./assets/images/icons.svg#statistics"></use>
-          </svg>
-          <h2 class="title">Cтатистика</h2>
-        </div>
-        <span class="fw-700 mt-10 fz-18 text-white">$домен</span>
-      </div>
-      <div class="down-separator mt-30 mb-30"></div>
-      <div class="modal-info">
-        <div class="item">
-          <h3 class="fz-18 fw-700 text-white">Регистрации</h3>
-          <div class="cover">
-            <div class="progress" style="width: 50%"></div>
-            <span class="cover-item">1000</span>
-          </div>
-        </div>
-        <div class="item">
-          <h3 class="fz-18 fw-700 text-white">Сумма депозитов</h3>
-          <div class="cover">
-            <div class="progress" style="width: 50%"></div>
-            <span class="cover-item">800$</span>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Модалка для статистики страны -->
-    <!-- <div class="modal light" data-modal="total-stats-country">
-      <svg class="icon modal-close-icon js-modal-close">
-        <use xlink:href="./assets/images/icons.svg#close"></use>
-      </svg>
-      <div class="flex flex-column">
-        <div class="flex align-center justify-center gap-12">
-          <svg class="icon">
-            <use xlink:href="./assets/images/icons.svg#statistics"></use>
-          </svg>
-          <h2 class="title">Cтатистика</h2>
-        </div>
-        <div class="flex gap-12 align-center justify-center mt-10">
-          <img class="stats-user-img" src="./assets/images/locations/afghanistan_img.svg" alt="">
-          <span class="fw-700 fz-18 text-white">Af</span>
-        </div>
-      </div>
-      <div class="down-separator mt-30 mb-30"></div>
-      <div class="modal-info">
-        <div class="item">
-          <h3 class="fz-18 fw-700 text-white">Регистрации</h3>
-          <div class="cover">
-            <div class="progress" style="width: 50%"></div>
-            <span class="cover-item">1000</span>
-          </div>
-        </div>
-        <div class="item">
-          <h3 class="fz-18 fw-700 text-white">Сумма депозитов</h3>
-          <div class="cover">
-            <div class="progress" style="width: 50%"></div>
-            <span class="cover-item">800$</span>
-          </div>
-        </div>
-        <div class="item">
-          <h3 class="fz-18 fw-700 text-white">Конверсия</h3>
-          <div class="cover">
-            <div class="progress" style="width: 50%"></div>
-            <span class="cover-item">500</span>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="modal light" data-modal="stats-modal">
       <svg class="icon modal-close-icon js-modal-close">
         <use xlink:href="./assets/images/icons.svg#close"></use>
@@ -477,9 +407,9 @@
           <h2 class="title">Cтатистика</h2>
         </div>
         <!-- Динамический заголовок -->
-         <div class="flex gap-12 align-center justify-center mt-10">
+        <div class="flex gap-12 align-center justify-center mt-10">
           <span class="fw-700 fz-18 text-white" id="stats-title"></span>
-         </div>
+        </div>
       </div>
       <div class="down-separator mt-30 mb-30"></div>
       <div class="modal-info" id="stats-content">
@@ -496,7 +426,9 @@
           const dynamicElements = document.querySelectorAll(".dynamic-element");
           dynamicElements.forEach((element) => element.remove());
         }
-        var modalButtons = document.querySelectorAll(".js-open-modal, .list-item"),
+        var modalButtons = document.querySelectorAll(
+            ".js-open-modal, .list-item"
+          ),
           overlay = document.querySelector(".js-overlay-modal"),
           closeButtons = document.querySelectorAll(".js-modal-close");
 
@@ -504,24 +436,32 @@
           item.addEventListener("click", function (e) {
             e.preventDefault();
 
-            var modalElem = document.querySelector('.modal[data-modal="stats-modal"]');
+            var modalElem = document.querySelector(
+              '.modal[data-modal="stats-modal"]'
+            );
             modalElem.classList.add("active");
             overlay.classList.add("active");
 
-            // Очищаем динамические элементы
             clearDynamicElements();
 
-            const type = this.getAttribute("data-type"); 
-            const title = this.getAttribute("data-title"); 
+            const type = this.getAttribute("data-type");
+            const title = this.getAttribute("data-title");
             const statsContent = document.getElementById("stats-content");
 
             statsContent.innerHTML = "";
 
-            document.getElementById("stats-title").textContent = title;
+            const statsTitle = document.getElementById("stats-title");
+            if (type === "user") {
+              statsTitle.innerHTML = `<a class="text-white" href="./user-edit.html#${title}">${title}</a>`;
+            } else {
+              statsTitle.textContent = title;
+            }
 
             if (type === "promo") {
               const activations = this.getAttribute("data-activations");
-              const activationsWidth = this.getAttribute("data-activationsWidth");
+              const activationsWidth = this.getAttribute(
+                "data-activationsWidth"
+              );
               const deposits = this.getAttribute("data-deposits");
               const depositsWidth = this.getAttribute("data-depositsWidth");
 
@@ -559,7 +499,6 @@
                 </div>
               `;
 
-              // Добавляем изображение страны и название
               document.getElementById("stats-title").insertAdjacentHTML(
                 "afterend",
                 `<div class="flex gap-12 align-center justify-center dynamic-element">
@@ -571,7 +510,9 @@
 
             if (type === "domain") {
               const registrations = this.getAttribute("data-registrations");
-              const registrationsWidth = this.getAttribute("data-registrationsWidth");
+              const registrationsWidth = this.getAttribute(
+                "data-registrationsWidth"
+              );
               const deposits = this.getAttribute("data-deposits");
               const depositsWidth = this.getAttribute("data-depositsWidth");
 
@@ -595,7 +536,9 @@
 
             if (type === "country") {
               const registrations = this.getAttribute("data-registrations");
-              const registrationsWidth = this.getAttribute("data-registrationsWidth");
+              const registrationsWidth = this.getAttribute(
+                "data-registrationsWidth"
+              );
               const deposits = this.getAttribute("data-deposits");
               const depositsWidth = this.getAttribute("data-depositsWidth");
               const conversion = this.getAttribute("data-conversion");
@@ -628,7 +571,9 @@
               document.getElementById("stats-title").insertAdjacentHTML(
                 "beforebegin",
                 `<div class="flex gap-12 align-center justify-center dynamic-element">
-                  <span class="flag-icon flag-icon-big flag-icon-${this.getAttribute("data-country-img")}">
+                  <span class="flag-icon flag-icon-big flag-icon-${this.getAttribute(
+                    "data-country-img"
+                  )}">
                 </div>`
               );
             }

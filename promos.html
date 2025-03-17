@@ -4,9 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="./assets/css/flag-icon.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Metamorphosis</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Metamorphosis" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      @media (max-width: 1700px) {
+        .app-content {
+          flex-direction: column;
+        }
+        .grid-auto {
+          display: grid;
+        }
+      }
+      @media (max-width: 900px) {
+        .grid-auto {
+          display: flex !important;
+          flex-wrap: wrap !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header" id="header"></header>
@@ -15,15 +37,7 @@
         <div class="main-content">
           <section class="sidebar" id="sidebar"></section>
           <div class="app-content">
-            <div
-              class="block light light-down"
-              style="
-                padding: 27px 30px 25px;
-                width: 100%;
-                max-width: 544px;
-                height: fit-content;
-              "
-            >
+            <div class="block light light-down p-32 pay-stats">
               <div class="flex align-center justify-center gap-12">
                 <svg class="icon">
                   <use xlink:href="./assets/images/icons.svg#ticket"></use>
@@ -33,11 +47,11 @@
               <div class="down-separator" style="margin-top: 16px"></div>
               <div class="mt-25 flex flex-column gap-20">
                 <div
-                  class="block light-down p-16 radius-20"
+                  class="block light-down p-16 radius-20 group-column"
                   style="background-color: #0e1323"
                 >
                   <div class="flex align-start">
-                    <div class="flex flex-column">
+                    <div class="flex flex-column flex-100">
                       <h6 class="title">Промокод</h6>
                       <p class="fz-14 fw-500 text-gray lh-normal">
                         Оставьте поле пустым чтобы получить случайный промо
@@ -56,7 +70,7 @@
                   </div>
                 </div>
                 <div
-                  class="block light-down p-16 radius-20"
+                  class="block light-down p-16 radius-20 group-column"
                   style="background-color: #0e1323"
                 >
                   <div class="flex align-start">
@@ -79,7 +93,7 @@
                   </div>
                 </div>
                 <div
-                  class="block light-down p-16 radius-20"
+                  class="block light-down p-16 radius-20 group-column"
                   style="background-color: #0e1323"
                 >
                   <div class="flex align-start">
@@ -104,17 +118,17 @@
               </div>
             </div>
             <div class="block w-100 p-32 light">
-              <div class="flex justify-between">
-                  <div
-                    class="flex align-center justify-center gap-12"
-                    style="padding: 0 85px"
-                  >
-                    <svg class="icon">
-                      <use xlink:href="./assets/images/icons.svg#ticket"></use>
-                    </svg>
-                    <h2 class="title">Промокоды</h2>
-                  </div>
-                <div class="flex align-center gap-24">
+              <div class="flex justify-between mb-flex-column">
+                <div
+                  class="flex align-center justify-center gap-12"
+                  style="padding: 0 85px"
+                >
+                  <svg class="icon">
+                    <use xlink:href="./assets/images/icons.svg#ticket"></use>
+                  </svg>
+                  <h2 class="title">Промокоды</h2>
+                </div>
+                <div class="flex align-center gap-24 justify-center">
                   <div class="form-group border">
                     <label class="form-group__label">
                       <input

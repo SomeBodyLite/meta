@@ -18,6 +18,13 @@ if (header) {
           .querySelector(".notify-container")
           .addEventListener("click", closeAllNotifications);
       }
+      let burger = document.querySelector(".burger");
+      let mobileNav = document.querySelector(".mobile-nav")
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+        document.body.classList.toggle("ov-h");
+      });
     });
 }
 // const header = document.getElementById("header");
@@ -328,7 +335,7 @@ class CustomSelect {
 
   updateOptions(options) {
     this.selectItems.innerHTML = "";
-  
+
     options.forEach((option, index) => {
       const item = document.createElement("button");
       item.classList.add("select-item");
@@ -336,7 +343,7 @@ class CustomSelect {
       item.setAttribute("data-value", option.value);
       item.setAttribute("data-placeholder", option.placeholderText || "");
       this.selectItems.appendChild(item);
-  
+
       item.addEventListener("click", () => {
         this.setSelected(item.innerHTML, item.getAttribute("data-value")); // Используем innerHTML
         this.updateInput(
@@ -346,7 +353,7 @@ class CustomSelect {
         );
       });
     });
-  
+
     if (options.length > 0) {
       this.setSelected(options[0].label, options[0].value);
       this.updateInput(
@@ -373,103 +380,133 @@ class CustomSelect {
 
 const selectInstances = {};
 
-  const selectContainers = document.querySelectorAll(".custom-select");
+const selectContainers = document.querySelectorAll(".custom-select");
 
-  selectContainers.forEach((container) => {
-    const id = container.id;
-    const select = new CustomSelect(container);
-    selectInstances[id] = select;
-  });
+selectContainers.forEach((container) => {
+  const id = container.id;
+  const select = new CustomSelect(container);
+  selectInstances[id] = select;
+});
 
-  const Main = [
-    { label: "Месяц", value: "month", placeholderText: "Введите месяц" },
-    { label: "День", value: "day", placeholderText: "Введите день" },
-    { label: "Неделя", value: "week", placeholderText: "Введите неделю" },
-    { label: "Все время", value: "all", placeholderText: "Введите период" },
-  ];
+const Main = [
+  { label: "Месяц", value: "month", placeholderText: "Введите месяц" },
+  { label: "День", value: "day", placeholderText: "Введите день" },
+  { label: "Неделя", value: "week", placeholderText: "Введите неделю" },
+  { label: "Все время", value: "all", placeholderText: "Введите период" },
+];
 
-  const Users = [
-    {
-      label: "Почте",
-      value: "mails",
-      placeholderText: "Введите почту пользователя",
-    },
-    {
-      label: "Домену",
-      value: "domain",
-      placeholderText: "Введите домен пользователя",
-    },
-    { label: "Промокоду", value: "promo", placeholderText: "Введите промокод" },
-    { label: "Стране", value: "country", placeholderText: "Введите страну" },
-    { label: "Кошельку", value: "wallet", placeholderText: "Введите кошелек" },
-  ];
+const Users = [
+  {
+    label: "Почте",
+    value: "mails",
+    placeholderText: "Введите почту пользователя",
+  },
+  {
+    label: "Домену",
+    value: "domain",
+    placeholderText: "Введите домен пользователя",
+  },
+  { label: "Промокоду", value: "promo", placeholderText: "Введите промокод" },
+  { label: "Стране", value: "country", placeholderText: "Введите страну" },
+  { label: "Кошельку", value: "wallet", placeholderText: "Введите кошелек" },
+];
 
-  const DepositsStats = [
-    { label: "Месяц", value: "month", placeholderText: "Введите месяц" },
-    { label: "День", value: "day", placeholderText: "Введите день" },
-    { label: "Неделя", value: "week", placeholderText: "Введите неделю" },
-    { label: "Все время", value: "all", placeholderText: "Введите период" },
-  ];
+const DepositsStats = [
+  { label: "Месяц", value: "month", placeholderText: "Введите месяц" },
+  { label: "День", value: "day", placeholderText: "Введите день" },
+  { label: "Неделя", value: "week", placeholderText: "Введите неделю" },
+  { label: "Все время", value: "all", placeholderText: "Введите период" },
+];
 
-  const Deposits = [
-    { label: "Почте", value: "mails", placeholderText: "Введите почту" },
-    { label: "Домену", value: "domain", placeholderText: "Введите домен" },
-    { label: "Промокоду", value: "promo", placeholderText: "Введите промокод" },
-    { label: "Стране", value: "country", placeholderText: "Введите страну" },
-    { label: "Кошельку", value: "wallet", placeholderText: "Введите кошелек" },
-  ];
+const Deposits = [
+  { label: "Почте", value: "mails", placeholderText: "Введите почту" },
+  { label: "Домену", value: "domain", placeholderText: "Введите домен" },
+  { label: "Промокоду", value: "promo", placeholderText: "Введите промокод" },
+  { label: "Стране", value: "country", placeholderText: "Введите страну" },
+  { label: "Кошельку", value: "wallet", placeholderText: "Введите кошелек" },
+];
 
-  const Statistics = [
-    { label: "Общая", value: "all" },
-    { label: "meta.ru", value: "domainRu" },
-    { label: "meta.pro", value: "domainPro" },
-    { label: "meta.com", value: "domainCom" },
-  ];
-  const Designs = [
-    { label: "Общая", value: "all" },
-    { label: "meta.ru", value: "domainRu" },
-    { label: "meta.pro", value: "domainPro" },
-    { label: "meta.com", value: "domainCom" },
-  ];
-  const Values = [
-    { label: "%", value: "percent" },
-    { label: "USD", value: "usd" },
-  ];
-  const selectVerifStatus = [
-    { label: "<span class='verify-item state-1'>Ожидание депозита</span>", value: "1" },
-    { label: "<span class='verify-item state-2'>Ожидание</span>", value: "2" },
-    { label: "<span class='verify-item state-3'>Не верифицирован</span>", value: "3" },
-    { label: "<span class='verify-item state-4'>Верифицирован</span>", value: "4" },
-  ];
-  const selectTokens = [
-    { label: "<img src='./assets/images/coins/binance.svg'>Binance", value: "binance" },
-    { label: "<img src='./assets/images/coins/bitcoin.svg'>Bitcoin", value: "bitcoin" },
-    { label: "<img src='./assets/images/coins/ton.svg'>TON", value: "ton" },
-    { label: "<img src='./assets/images/coins/tron.svg'>Tron", value: "tron" },
-    { label: "<img src='./assets/images/coins/ethereum.svg'>Ethereum", value: "eth" },
-    { label: "<img src='./assets/images/coins/ripple.svg'>Ripple", value: "ripple" },
-    { label: "<img src='./assets/images/coins/solana.svg'>Solana", value: "solana" },
-    { label: "<img src='./assets/images/coins/paypal.svg'>Paypal", value: "paypal" },
-    { label: "<img src='./assets/images/coins/swift.svg'>Swift", value: "swift" },
-    { label: "<img src='./assets/images/coins/bank-card.svg'>Bank card", value: "bank-card" },
-  ];
-  const selectStatus = [
-    { label: "<span class='status failed'>Неуспех</span>", value: "binance" },
-    { label: "<span class='status success'>Успех</span>", value: "binance" },
-    { label: "<span class='status pending'>Ожидание</span>", value: "binance" },
-  ];
+const Statistics = [
+  { label: "Общая", value: "all" },
+  { label: "meta.ru", value: "domainRu" },
+  { label: "meta.pro", value: "domainPro" },
+  { label: "meta.com", value: "domainCom" },
+];
+const Designs = [
+  { label: "Общая", value: "all" },
+  { label: "meta.ru", value: "domainRu" },
+  { label: "meta.pro", value: "domainPro" },
+  { label: "meta.com", value: "domainCom" },
+];
+const Values = [
+  { label: "%", value: "percent" },
+  { label: "USD", value: "usd" },
+];
+const selectVerifStatus = [
+  {
+    label: "<span class='verify-item state-1'>Ожидание депозита</span>",
+    value: "1",
+  },
+  { label: "<span class='verify-item state-2'>Ожидание</span>", value: "2" },
+  {
+    label: "<span class='verify-item state-3'>Не верифицирован</span>",
+    value: "3",
+  },
+  {
+    label: "<span class='verify-item state-4'>Верифицирован</span>",
+    value: "4",
+  },
+];
+const selectTokens = [
+  {
+    label: "<img src='./assets/images/coins/binance.svg'>Binance",
+    value: "binance",
+  },
+  {
+    label: "<img src='./assets/images/coins/bitcoin.svg'>Bitcoin",
+    value: "bitcoin",
+  },
+  { label: "<img src='./assets/images/coins/ton.svg'>TON", value: "ton" },
+  { label: "<img src='./assets/images/coins/tron.svg'>Tron", value: "tron" },
+  {
+    label: "<img src='./assets/images/coins/ethereum.svg'>Ethereum",
+    value: "eth",
+  },
+  {
+    label: "<img src='./assets/images/coins/ripple.svg'>Ripple",
+    value: "ripple",
+  },
+  {
+    label: "<img src='./assets/images/coins/solana.svg'>Solana",
+    value: "solana",
+  },
+  {
+    label: "<img src='./assets/images/coins/paypal.svg'>Paypal",
+    value: "paypal",
+  },
+  { label: "<img src='./assets/images/coins/swift.svg'>Swift", value: "swift" },
+  {
+    label: "<img src='./assets/images/coins/bank-card.svg'>Bank card",
+    value: "bank-card",
+  },
+];
+const selectStatus = [
+  { label: "<span class='status failed'>Неуспех</span>", value: "binance" },
+  { label: "<span class='status success'>Успех</span>", value: "binance" },
+  { label: "<span class='status pending'>Ожидание</span>", value: "binance" },
+];
 
-  updateSelect("selectMain", Main);
-  updateSelect("selectUsers", Users);
-  updateSelect("selectDepositsStats", DepositsStats);
-  updateSelect("selectDeposits", Deposits);
-  updateSelect("selectStatistics", Statistics);
-  updateSelect("selectDomainDesign", Designs);
-  updateSelect("selectValue", Values);
-  updateSelect("selectValue2", Values);
-  updateSelect("selectVerifStatus", selectVerifStatus);
-  updateSelect("selectTokens", selectTokens);
-  updateSelect("selectStatus", selectStatus);
+updateSelect("selectMain", Main);
+updateSelect("selectUsers", Users);
+updateSelect("selectDepositsStats", DepositsStats);
+updateSelect("selectDeposits", Deposits);
+updateSelect("selectStatistics", Statistics);
+updateSelect("selectDomainDesign", Designs);
+updateSelect("selectValue", Values);
+updateSelect("selectValue2", Values);
+updateSelect("selectVerifStatus", selectVerifStatus);
+updateSelect("selectTokens", selectTokens);
+updateSelect("selectStatus", selectStatus);
 
 function updateSelect(id, options) {
   if (selectInstances[id]) {
@@ -704,8 +741,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       if (activePage) {
         activePage.classList.add("active");
-      window.initAutoResizeTextareas();
-
+        window.initAutoResizeTextareas();
       }
 
       buttons.forEach((btn) => {
@@ -797,8 +833,8 @@ function initCounter(counterId, min = 1, max = 10) {
 }
 
 // Инициализация с разными параметрами
-// initCounter("counter1", 1, 5);
-// initCounter("counter2", 0, 100);
+initCounter("counter1", 1, 5);
+initCounter("counter2", 0, 100);
 
 // END COUNTER
 
@@ -877,13 +913,11 @@ if (input) {
     selectedCountries.delete(country.code);
     renderSelectedCountries();
   }
-} else {
-  console.error("Элемент input с id 'country-input' не найден на странице.");
 }
 // END multiselect
 
 // ADJUST HEIGHT TEXTAREA
-window.initAutoResizeTextareas = function() {
+window.initAutoResizeTextareas = function () {
   function adjustHeight(textarea) {
     textarea.style.height = "auto";
     requestAnimationFrame(() => {
@@ -891,12 +925,14 @@ window.initAutoResizeTextareas = function() {
     });
   }
 
-  document.querySelectorAll("textarea.form-group__input").forEach((textarea) => {
-    adjustHeight(textarea);
-    textarea.addEventListener("input", function () {
+  document
+    .querySelectorAll("textarea.form-group__input")
+    .forEach((textarea) => {
       adjustHeight(textarea);
+      textarea.addEventListener("input", function () {
+        adjustHeight(textarea);
+      });
     });
-  });
 };
 
 // Вызов функции после загрузки DOM
@@ -905,24 +941,26 @@ document.addEventListener("DOMContentLoaded", window.initAutoResizeTextareas);
 
 // SORT DRAG
 document.addEventListener("DOMContentLoaded", function () {
-  const tasksListElement = document.querySelector('.drag__list');
+  const tasksListElement = document.querySelector(".drag__list");
 
   const sortable = new Sortable(tasksListElement, {
-    handle: '.drag-handle',
-    animation: 150, 
-    ghostClass: 'sortable-ghost', 
-    chosenClass: 'sortable-chosen', 
-    dragClass: 'sortable-drag',
+    handle: ".drag-handle",
+    animation: 150,
+    ghostClass: "sortable-ghost",
+    chosenClass: "sortable-chosen",
+    dragClass: "sortable-drag",
     onEnd: function (evt) {
-      updatePositions(); 
-    }
+      updatePositions();
+    },
   });
 
   function updatePositions() {
-    const items = tasksListElement.querySelectorAll('.drag__item');
+    const items = tasksListElement.querySelectorAll(".drag__item");
     items.forEach((item, index) => {
-      item.setAttribute('data-position', index + 1);
-      console.log(`Элемент ${item.textContent.trim()} теперь на позиции ${index + 1}`);
+      item.setAttribute("data-position", index + 1);
+      console.log(
+        `Элемент ${item.textContent.trim()} теперь на позиции ${index + 1}`
+      );
     });
   }
 });
