@@ -1505,7 +1505,7 @@ dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
                   <div class="down-separator" style="margin-top: 16px"></div>
                   <div class="flex flex-column gap-16 mt-25 drag__list">
                     <div
-                      class="block light-down p-16 radius-20 drag__item"
+                      class="block light-down p-16 radius-20 drag__item preset-block"
                       style="background-color: #0e1323"
                       data-position="1"
                     >
@@ -1518,19 +1518,20 @@ dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
                               ></use>
                             </svg>
                           </button>
-                          <p class="fz-16 fw-500 text-white lh-normal">
+                          <span class="invisible" id="item-name">Приветственное</span>
+                          <p class="fz-16 fw-500 text-white lh-normal" id="item-value">
                             исп привет
                           </p>
                         </div>
                         <div class="flex gap-8">
-                          <button class="btn reset p-4">
+                          <button class="btn reset p-4 edit-preset" data-modal="edit-presets" data-name="" data-value="">
                             <svg class="icon" style="width: 21px; height: 21px">
                               <use
                                 xlink:href="./assets/images/icons.svg#edit"
                               ></use>
                             </svg>
                           </button>
-                          <button class="btn reset p-4">
+                          <button class="btn reset p-4 delete-preset" data-modal="delete-presets" data-name="">
                             <svg class="icon" style="width: 21px; height: 21px">
                               <use
                                 xlink:href="./assets/images/icons.svg#delete"
@@ -1540,8 +1541,9 @@ dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
                         </div>
                       </div>
                     </div>
+                    
                     <div
-                      class="block light-down p-16 radius-20 drag__item"
+                      class="block light-down p-16 radius-20 drag__item preset-block"
                       style="background-color: #0e1323"
                       data-position="2"
                     >
@@ -1554,21 +1556,20 @@ dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
                               ></use>
                             </svg>
                           </button>
-                          <p class="fz-16 fw-500 text-white lh-normal">
-                            Спасибо за ваше обращение с удовольствием помогли
-                            вам Спасибо за ваше обращение с удовольствием
-                            помогли вам
+                          <span class="invisible" id="item-name">Благодарность</span>
+                          <p class="fz-16 fw-500 text-white lh-normal" id="item-value">
+                            Спасибо за ваше обращение с удовольствием помогли вам Спасибо за ваше обращение с удовольствием помогли вам 
                           </p>
                         </div>
                         <div class="flex gap-8">
-                          <button class="btn reset p-4">
+                          <button class="btn reset p-4 edit-preset" data-modal="edit-presets" data-name="" data-value="">
                             <svg class="icon" style="width: 21px; height: 21px">
                               <use
                                 xlink:href="./assets/images/icons.svg#edit"
                               ></use>
                             </svg>
                           </button>
-                          <button class="btn reset p-4">
+                          <button class="btn reset p-4 delete-preset" data-modal="delete-presets" data-name="">
                             <svg class="icon" style="width: 21px; height: 21px">
                               <use
                                 xlink:href="./assets/images/icons.svg#delete"
@@ -1578,8 +1579,9 @@ dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
                         </div>
                       </div>
                     </div>
+                    
                     <div
-                      class="block light-down p-16 radius-20 drag__item"
+                      class="block light-down p-16 radius-20 drag__item preset-block"
                       style="background-color: #0e1323"
                       data-position="3"
                     >
@@ -1592,19 +1594,20 @@ dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
                               ></use>
                             </svg>
                           </button>
-                          <p class="fz-16 fw-500 text-white lh-normal">
+                          <span class="invisible" id="item-name">Приветственное</span>
+                          <p class="fz-16 fw-500 text-white lh-normal" id="item-value">
                             исп привет
                           </p>
                         </div>
                         <div class="flex gap-8">
-                          <button class="btn reset p-4">
+                          <button class="btn reset p-4 edit-preset" data-modal="edit-presets" data-name="" data-value="">
                             <svg class="icon" style="width: 21px; height: 21px">
                               <use
                                 xlink:href="./assets/images/icons.svg#edit"
                               ></use>
                             </svg>
                           </button>
-                          <button class="btn reset p-4">
+                          <button class="btn reset p-4 delete-preset" data-modal="delete-presets" data-name="">
                             <svg class="icon" style="width: 21px; height: 21px">
                               <use
                                 xlink:href="./assets/images/icons.svg#delete"
@@ -1614,6 +1617,7 @@ dsgsdrw4%^FDYshbxfhsjkl;s.,mvdcfsgytatsrdgjsgydgw6^&*</textarea
                         </div>
                       </div>
                     </div>
+                    
                   </div>
                 </div>
               </div>
@@ -2078,7 +2082,7 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
       </div>
       <div class="mt-25 flex flex-column gap-16">
         <div
-          class="block-inner-2 light-down p-16 radius-20 text-left"
+          class="block-inner-2 light-down p-16 radius-20 text-left group-column"
           style="max-width: unset"
         >
           <div class="flex align-center justify-between gap-20">
@@ -2176,6 +2180,99 @@ Your transaction is awaiting payment of a fee in the amount of %sum_fee%. If you
         <div class="flex justify-end gap-12 mt-10">
           <button class="btn btn-primary radius-20 js-modal-close btn-big">
             Готово
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="edit-presets">
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#edit"></use>
+          </svg>
+          <h2 class="title">Редактирование пресета</h2>
+        </div>
+        <div class="down-separator" style="margin-top: 15px"></div>
+      </div>
+      <div class="mt-25 flex flex-column gap-16">
+        <div class="block-gradient px-30 py-14 radius-30 group-column">
+          <div class="flex align-center gap-10 justify-between">
+            <div class="flex flex-column text-left">
+              <h3 class="title">Название пресета</h3>
+              <p class="fz-14 fw-600 text-gray lh-normal">
+                Введите название пресета
+              </p>
+            </div>
+            <div class="flex align-center gap-16">
+              <div class="form-group alt-des">
+                <label class="form-group__label">
+                  <input type="text" class="form-group__input" id="preset-name" placeholder="" style="min-width: 200px">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-gradient px-30 py-14 radius-30 group-column">
+          <div class="flex align-center justify-between">
+            <div class="flex flex-column w-100 text-left">
+              <h3 class="title">Содержание</h3>
+              <p class="fz-14 fw-600 text-gray lh-normal">
+                Текст пресета
+              </p>
+              <div class="form-group w-100 mt-16">
+                <label class="form-group__label">
+                  <textarea class="form-group__input text-white fz-16 fw-600 p-16" id="preset-text" style="height: 102px;">Текст пресета вводить туту. ЫВФЗЫВфцджыволдф ывоф жжцо</textarea>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end gap-12 mt-10">
+          <button class="btn btn-secondary radius-20 js-modal-close btn-big">
+            Отмена
+          </button>
+          <button class="btn btn-gradient radius-20 js-modal-close btn-big">
+            Сохранить
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="delete-presets">
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#chart"></use>
+          </svg>
+          <h2 class="title">Вы уверены?</h2>
+        </div>
+        <div class="down-separator" style="margin-top: 15px"></div>
+      </div>
+      <div class="mt-25 flex flex-column gap-20">
+        <div class="block-inner p-16">
+          <div class="flex align-start">
+            <div class="flex flex-column flex-100">
+              <h6 class="title text-left">
+                Вы собираетесь удалить пресет 
+                "<span id="preset-name-2"></span>"
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end gap-12 mt-10">
+          <button class="btn btn-secondary radius-20 js-modal-close btn-big">
+            Отмена
+          </button>
+          <button
+            class="btn btn-red radius-20 js-modal-close btn-big"
+            onclick="showNotification('Успешно', 'Домен удалён.', 'success', timer = 2000)"
+          >
+            Удалить
           </button>
         </div>
       </div>

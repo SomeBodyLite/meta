@@ -2021,7 +2021,8 @@ h6.title {
   &[data-modal="stats-promo"],
   &[data-modal="stats-modal"],
   &[data-modal="add-domain"],
-  &[data-modal="edit-withdraw"] {
+  &[data-modal="edit-withdraw"],
+  &[data-modal="edit-presets"] {
     /* max-width: 740px; */
     max-width: 670px;
     padding: 25px;
@@ -2051,7 +2052,9 @@ h6.title {
 
 
 }
-
+.invisible{
+  display: none;
+}
 .modal-close-icon {
   position: absolute;
   top: 30px;
@@ -3389,6 +3392,7 @@ canvas {
   }
 
   .burger {
+    outline: 1px solid red;
     visibility: visible;
     width: 30px;
     height: 30px;
@@ -3401,7 +3405,7 @@ canvas {
   .burger div {
     background: #828FA8;
     content: "";
-    display: block;
+    display: flex;
     height: 3px;
     border-radius: 3px;
     margin: 5px 0;
@@ -3682,6 +3686,43 @@ canvas {
   .verify-item {
     font-size: 10px;
     padding: 6px 11px;
+  }
+
+  .modal {
+    padding: 16px !important;
+  }
+
+  .modal {
+
+    &[data-modal="total-stats-promo"],
+    &[data-modal="total-stats-domain"],
+    &[data-modal="total-stats-user"],
+    &[data-modal="total-stats-country"],
+    &[data-modal="stats-promo"],
+    &[data-modal="stats-modal"],
+    &[data-modal="add-domain"],
+    &[data-modal="edit-withdraw"] {
+      padding: 16px;
+    }
+
+    .fz-24 {
+      font-size: 14px !important;
+    }
+
+    .fz-16 {
+      font-size: 12px !important;
+    }
+
+    .fz-20 {
+      font-size: 12px !important;
+    }
+  }
+
+  .modal-close-icon {
+    right: 10px;
+    top: 10px;
+    width: 35px;
+    height: 35px;
   }
 }
 

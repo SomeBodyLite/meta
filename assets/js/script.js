@@ -19,7 +19,7 @@ if (header) {
           .addEventListener("click", closeAllNotifications);
       }
       let burger = document.querySelector(".burger");
-      let mobileNav = document.querySelector(".mobile-nav")
+      let mobileNav = document.querySelector(".mobile-nav");
       burger.addEventListener("click", () => {
         burger.classList.toggle("active");
         mobileNav.classList.toggle("active");
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // MODALS
 document.addEventListener("DOMContentLoaded", function () {
   var modalButtons = document.querySelectorAll(
-      ".js-open-modal, .edit-btn, .stats-btn, .delete-btn"
+      ".js-open-modal, .edit-btn, .stats-btn, .delete-btn, .edit-preset, .delete-preset"
     ),
     overlay = document.querySelector(".js-overlay-modal"),
     closeButtons = document.querySelectorAll(".js-modal-close");
@@ -174,6 +174,16 @@ document.addEventListener("DOMContentLoaded", function () {
       if (this.classList.contains("delete-btn")) {
         const dataValue = this.getAttribute("data-value");
         document.getElementById("data-delete-value").textContent = dataValue;
+      }
+      if (this.classList.contains("edit-preset")) {
+        const dataName = this.getAttribute("data-name");
+        document.getElementById("preset-name").value = dataName;
+        const dataValue = this.getAttribute("data-value");
+        document.getElementById("preset-text").textContent = dataValue;
+      }
+      if (this.classList.contains("delete-preset")) {
+        const dataName = this.getAttribute("data-name");
+        document.getElementById("preset-name-2").textContent = dataName;
       }
     });
   });
@@ -917,7 +927,7 @@ window.initAutoResizeTextareas = function () {
   // }
   function adjustHeight(textarea) {
     textarea.style.height = "5px";
-    textarea.style.height = (textarea.scrollHeight) + 4 + "px";
+    textarea.style.height = textarea.scrollHeight + 4 + "px";
   }
 
   document
@@ -960,3 +970,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 // END SORT DRAG
+
+const presetBlocks = document.querySelectorAll(".preset-block");
+presetBlocks.forEach((block) => {
+  const value = block.querySelector("#item-value").textContent.trim();
+  const name = block.querySelector("#item-name").textContent;
+  block.querySelector(".edit-preset").setAttribute("data-value", value);
+  block.querySelector(".edit-preset").setAttribute("data-name", name);
+  block.querySelector(".delete-preset").setAttribute("data-name", name);
+});
+
