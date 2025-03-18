@@ -117,6 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
           '.modal[data-modal="' + modalId + '"]'
         );
 
+      document.body.style.overflow = "hidden";
+      console.log('document.body: ', document.body);
       modalElem.classList.add("active");
       overlay.classList.add("active");
 
@@ -193,6 +195,8 @@ document.addEventListener("DOMContentLoaded", function () {
       var parentModal = this.closest(".modal");
       parentModal.classList.remove("active");
       overlay.classList.remove("active");
+      document.body.style.overflow = "";
+      console.log("закрыть");
     });
   });
 
@@ -200,12 +204,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.keyCode === 27) {
       document.querySelector(".modal.active").classList.remove("active");
       document.querySelector(".overlay").classList.remove("active");
+      document.body.style.overflow = "";
+      console.log("закрыть");
     }
   });
 
   overlay.addEventListener("click", function () {
     document.querySelector(".modal.active").classList.remove("active");
     this.classList.remove("active");
+    document.body.style.overflow = "";
+    console.log("закрыть");
   });
 });
 
@@ -823,13 +831,13 @@ function initCounter(counterId, min, max) {
   const incrementBtn = counter.querySelector(".counter-btn.right");
 
   decrementBtn.addEventListener("click", () => {
-    console.log('decrementBtn');
+    console.log("decrementBtn");
     let value = parseInt(input.value, 10);
     if (value > min) input.value = value - 1;
   });
 
   incrementBtn.addEventListener("click", () => {
-    console.log('incrementBtn');
+    console.log("incrementBtn");
     let value = parseInt(input.value, 10);
     if (value < max) input.value = value + 1;
   });
@@ -981,4 +989,3 @@ presetBlocks.forEach((block) => {
   block.querySelector(".edit-preset").setAttribute("data-name", name);
   block.querySelector(".delete-preset").setAttribute("data-name", name);
 });
-

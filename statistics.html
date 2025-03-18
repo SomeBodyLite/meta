@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/flag-icon.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -20,6 +23,13 @@
       @media (max-width: 900px) {
         .app-content {
           flex-direction: column-reverse;
+          gap: 14px;
+        }
+        .stats-grid {
+          gap: 14px;
+        }
+        .stats-page2 {
+          gap: 14px;
         }
         .statistics-info-block {
           width: 100%;
@@ -41,6 +51,29 @@
             position: absolute;
             top: 0;
             height: 100%;
+          }
+        }
+        .modal {
+          .fz-16.text-white.fw-600.title.text-center {
+            font-size: 8px !important;
+          }
+          .down-separator{
+            margin-top: 10px!important;
+            margin-bottom: 10px!important;
+          }
+          .fz-18.fw-700.text-white {
+            font-size: 12px !important;
+          }
+          .modal-info {
+            & .item {
+              gap: 8px;
+              .cover {
+                padding: 6px;
+                .cover-item{
+                  font-size: 11px;
+                }
+              }
+            }
           }
         }
       }
@@ -441,6 +474,8 @@
             );
             modalElem.classList.add("active");
             overlay.classList.add("active");
+            document.body.style.overflow = "hidden";
+            console.log("document.body: ", document.body);
 
             clearDynamicElements();
 

@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/flag-icon.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -23,9 +26,62 @@
         }
       }
       @media (max-width: 900px) {
+        .app-content{
+          gap: 14px;
+        }
         .grid-auto {
           display: flex !important;
           flex-wrap: wrap !important;
+        }
+        .modal .grid-auto {
+          display: grid !important;
+          gap: 8px;
+        }
+        .modal {
+          .subtitle.text-center.mt-10{
+            margin-top: 4px!important;
+          }
+          .down-separator{
+            margin-top: 4px!important;
+          }
+          .down-separator.mt-30.mb-30{
+            margin-top: 20px!important;
+            margin-bottom: 20px!important;
+          }
+          #stats-activations,
+          #stats-deposits,
+          #stats-conversion {
+            border-radius: 10px !important;
+            padding: 7px !important;
+            font-size: 14px !important;
+          }
+          .fz-16.text-white.fw-600.title.text-center {
+            font-size: 8px !important;
+          }
+          .fz-18.fw-700.text-white {
+            font-size: 12px !important;
+          }
+          #stats-promo{
+            max-height: unset;
+          }
+          .modal-stats-grid {
+            gap: 14px;
+            max-height: 220px;
+            overflow: auto;
+            & .item {
+              grid-template-columns: 1fr 110px;
+              gap: 13px;
+              .value{
+                font-size: 11px;
+                padding: 10px;
+              }
+              & .cover {
+                .cover-item {
+                  font-size: 11px;
+                }
+              }
+            }
+          }
         }
       }
     </style>
@@ -121,7 +177,6 @@
               <div class="flex justify-between mb-flex-column">
                 <div
                   class="flex align-center justify-center gap-12"
-                  style="padding: 0 85px"
                 >
                   <svg class="icon">
                     <use xlink:href="./assets/images/icons.svg#ticket"></use>

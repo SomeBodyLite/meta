@@ -1996,7 +1996,7 @@ h6.title {
   padding: 45px;
   transition: 0.3s all;
 
-  &.light {
+  /* &.light {
     overflow: hidden;
 
     &::before {
@@ -2012,7 +2012,7 @@ h6.title {
       right: -43px;
       top: -49px;
     }
-  }
+  } */
 
   &[data-modal="total-stats-promo"],
   &[data-modal="total-stats-domain"],
@@ -3299,9 +3299,40 @@ canvas {
   opacity: 1;
 }
 
+.burger {
+  visibility: visible;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+}
+
+.burger:before,
+.burger:after,
+.burger div {
+  background: #828FA8;
+  content: "";
+  display: flex;
+  height: 3px;
+  border-radius: 3px;
+  margin: 5px 0;
+  transition: 0.5s;
+}
+
+.burger.active:before {
+  transform: translateY(8px) rotate(135deg);
+}
+
+.burger.active:after {
+  transform: translateY(-8px) rotate(-135deg);
+}
+
+.burger.active div {
+  transform: scale(0);
+}
 
 .burger {
-  visibility: hidden;
+  display: none;
 }
 
 .mobile-nav {
@@ -3359,6 +3390,21 @@ canvas {
 }
 
 @media (max-width: 900px) {
+  .gap-28 {
+    gap: 12px;
+  }
+
+  .switch {
+    min-width: 42px;
+    width: 42px;
+    height: 25px;
+
+    &::before {
+      height: 17px;
+      width: 17px;
+    }
+  }
+
   .list-pagination {
     & .pagination-info {
       font-size: 10px;
@@ -3370,6 +3416,14 @@ canvas {
       & .form-group__input {
         padding: 5px 10px !important;
         font-size: 10px !important;
+      }
+    }
+  }
+
+  .form-group {
+    &.copy {
+      .form-group__input {
+        padding-right: 32px !important;
       }
     }
   }
@@ -3428,38 +3482,9 @@ canvas {
       left: 0;
     }
   }
-
-  .burger {
-    outline: 1px solid red;
-    visibility: visible;
-    width: 30px;
-    height: 30px;
-    background: none;
-    border: none;
-  }
-
-  .burger:before,
-  .burger:after,
-  .burger div {
-    background: #828FA8;
-    content: "";
-    display: flex;
-    height: 3px;
-    border-radius: 3px;
-    margin: 5px 0;
-    transition: 0.5s;
-  }
-
-  .burger.active:before {
-    transform: translateY(8px) rotate(135deg);
-  }
-
-  .burger.active:after {
-    transform: translateY(-8px) rotate(-135deg);
-  }
-
-  .burger.active div {
-    transform: scale(0);
+  .burger{
+    display: block;
+    padding: 0 3px;
   }
 
   .header {
@@ -3518,6 +3543,20 @@ canvas {
   .icon:not(.modal-close-icon) {
     width: 20px;
     height: 20px;
+  }
+
+  .list-body {
+    & td {
+      & .action-btn {
+        padding: 0 5px !important;
+
+        svg,
+        img {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
   }
 
   .stats-grid.active {
@@ -3685,6 +3724,10 @@ canvas {
     align-items: unset;
   }
 
+  .group-column>.flex:has(input[type="checkbox"]) {
+    flex-direction: row;
+  }
+
   h6.title {
     font-size: 12px;
 
@@ -3726,11 +3769,12 @@ canvas {
     padding: 6px 11px;
   }
 
-  .modal {
-    padding: 16px !important;
-  }
 
   .modal {
+    top: 60px;
+    padding: 16px !important;
+    max-height: calc(100dvh - 180px);
+    overflow: auto;
 
     &[data-modal="total-stats-promo"],
     &[data-modal="total-stats-domain"],
@@ -3762,6 +3806,11 @@ canvas {
     width: 35px;
     height: 35px;
   }
+
+  .flag-icon {
+    width: 20px;
+    height: 14px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -3777,6 +3826,8 @@ canvas {
   .form-group {
     &.copy {
       & .form-group__button {
+        padding: 0 10px;
+
         & svg {
           width: 12px;
           height: 12px;
@@ -3818,12 +3869,46 @@ canvas {
       padding: 10px 12px;
     }
   }
+  .selected-container:not(:empty) {
+    width: 100%;
+  }
+  .multiselect-container {
+    width: 100%;
+  }
+  .input-wrapper {
+    padding: 0;
+  }
+  .country-input {
+    font-size: 11px;
+  }
+  .selected-item {
+    font-size: 11px;
+  }
+  .dropdown {
+    padding: 4px;
+  }
+  .dropdown-item {
+    font-size: 11px;
+  }
 
   .drag__item {
     padding: 12px 15px !important;
 
     p {
       font-size: 12px !important;
+    }
+
+    .flex.gap-30 {
+      gap: 9px;
+    }
+
+    .title {
+      font-size: 11px !important;
+    }
+
+    .drag-handle {
+      width: 14px;
+      height: 14px;
     }
   }
 
@@ -3873,6 +3958,23 @@ canvas {
     }
   }
 
+  .chat-item {
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+  }
+  .context-menu{
+    padding: 7px 6px;
+    button{
+      padding: 4px 6px;
+      font-size: 10px;
+      .icon{
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1400px) {
@@ -4076,6 +4178,7 @@ canvas {
       padding-top: 10px;
       overflow: auto;
       max-height: calc(100vh - 205px);
+
       .item {
         font-size: 10px;
       }
@@ -4114,3 +4217,4 @@ canvas {
     }
   }
 }
+
