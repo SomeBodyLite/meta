@@ -17,15 +17,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Metamorphosis" />
     <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      header {
+        margin-bottom: 0 !important;
+      }
+    </style>
   </head>
   <body>
     <header class="header" id="header"></header>
-    <main class="main">
+    <main class="main support">
       <div class="container">
         <div class="main-content">
           <section class="sidebar" id="sidebar"></section>
           <div class="app-content support">
-            <div class="block light light-down support-side">
+            <div class="block support-side">
               <div class="flex justify-between align-center">
                 <h2 class="title fw-800">Лайв саппорт</h2>
                 <button class="btn reset read-all" data-tooltip="readAll">
@@ -53,10 +58,10 @@
               <div class="chats-container">
                 <div class="chat-item active" data-id="1">
                   <div class="status active"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">в сети</p>
-                  </div>
+                  <h4 class="fz-14 fw-600 text-white">
+                    Ldanio12@gmail.comLdanio12@gmail.com
+                  </h4>
+                  <p class="online">в сети</p>
                   <div class="item-actions">
                     <span class="notifications">1</span>
                     <button class="clipped">
@@ -75,10 +80,8 @@
                 </div>
                 <div class="chat-item" data-id="2">
                   <div class="status"></div>
-                  <div class="flex-column gap-4">
-                    <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
-                    <p class="online">был(а) 18.12.24</p>
-                  </div>
+                  <h4 class="fz-14 fw-600 text-white">Ldanio12@gmail.com</h4>
+                  <p class="online">был(а) 18.12.24</p>
                   <div class="item-actions">
                     <span class="notifications">1</span>
                     <button class="clipped">
@@ -100,6 +103,13 @@
             <div class="block support-main">
               <div class="support-header">
                 <div class="header-content">
+                  <button class="btn reset action-chats">
+                    <svg class="icon hover">
+                      <use
+                        xlink:href="./assets/images/icons.svg#logout-3"
+                      ></use>
+                    </svg>
+                  </button>
                   <div class="header-content-start">
                     <a href="./user-edit.html" class="fz-16 fw-600 text-white"
                       >Ldanio12@gmail.com</a
@@ -123,14 +133,14 @@
                       <p>депозит</p>
                       <p class="text-center">-100$</p>
                     </div>
-                    <button class="btn reset">
-                      <svg class="icon hover">
-                        <use
-                          xlink:href="./assets/images/icons.svg#logout-2"
-                        ></use>
-                      </svg>
-                    </button>
                   </div>
+                  <button class="btn reset action-presets">
+                    <svg class="icon hover">
+                      <use
+                        xlink:href="./assets/images/icons.svg#logout-2"
+                      ></use>
+                    </svg>
+                  </button>
                 </div>
               </div>
               <div class="support-body">
@@ -531,7 +541,12 @@
                       </div>
                     </div>
                   </div>
-                  <a href="./assets/images/chat-img-placeholder.png" data-fancybox="gallery" class="chat-item img" data-id="31">
+                  <a
+                    href="./assets/images/chat-img-placeholder.png"
+                    data-fancybox="gallery"
+                    class="chat-item img"
+                    data-id="31"
+                  >
                     <img
                       src="./assets/images/chat-img-placeholder.png"
                       alt=""
@@ -548,7 +563,12 @@
                       </div>
                     </div>
                   </a>
-                  <a href="./assets/images/chat-img-placeholder.png" data-fancybox="gallery" class="chat-item user img" data-id="32">
+                  <a
+                    href="./assets/images/chat-img-placeholder.png"
+                    data-fancybox="gallery"
+                    class="chat-item user img"
+                    data-id="32"
+                  >
                     <img
                       src="./assets/images/chat-img-placeholder.png"
                       alt=""
@@ -569,19 +589,27 @@
                 <div class="chat-actions-container">
                   <div class="form-group border chat w-100">
                     <label class="form-group__label">
-                      <button class="form-group__button left attach">
-                        <svg class="icon hover">
-                          <use
-                            xlink:href="./assets/images/icons.svg#attach"
-                          ></use>
-                        </svg>
-                      </button>
                       <input
                         type="text"
                         class="form-group__input"
                         id="chatInput"
                         placeholder="Написать сообщение..."
                       />
+                      <input
+                        type="file"
+                        id="fileAttach"
+                        style="display: none"
+                      />
+                      <button
+                        class="form-group__button left attach"
+                        onclick="document.getElementById('fileAttach').click();"
+                      >
+                        <svg class="icon hover">
+                          <use
+                            xlink:href="./assets/images/icons.svg#attach"
+                          ></use>
+                        </svg>
+                      </button>
                       <button class="form-group__button delete">
                         <svg class="icon hover">
                           <use
@@ -591,18 +619,32 @@
                       </button>
                     </label>
                   </div>
-                  <button class="btn btn-gradient chat-btn">Отправить</button>
+                  <button class="btn btn-gradient chat-btn">
+                    <span class="chat-btn-pc">Отправить</span>
+                    <svg class="chat-btn-mb" width="12" height="12" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.00024 12.005V2.05811M6.00024 2.05811L1.7373 5.37372M6.00024 2.05811L10.2632 5.37372" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
-            <div class="block p-32 light">
+            <div class="block presets-block">
               <div class="flex justify-between align-center">
                 <h4 class="fz-20 fw-800 text-white">Пресеты</h4>
-                <a href="./settings.html#support" class="btn reset">
-                  <svg class="icon hover">
-                    <use xlink:href="./assets/images/icons.svg#settings"></use>
-                  </svg>
-                </a>
+                <div class="flex gap-12">
+                  <a href="./settings.html#support" class="btn reset">
+                    <svg class="icon hover">
+                      <use xlink:href="./assets/images/icons.svg#settings"></use>
+                    </svg>
+                  </a>
+                  <button class="btn reset action-close-presets">
+                    <svg class="icon hover">
+                      <use
+                        xlink:href="./assets/images/icons.svg#logout-2"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
               <div class="down-separator" style="margin-top: 44px"></div>
               <div class="presets-container">
@@ -673,5 +715,6 @@
         },
       });
     </script>
+    <script src="./assets/js/support-adaptive.js"></script>
   </body>
 </html>

@@ -814,7 +814,7 @@ updateChatStyles();
 // END CHAT SCRIPT
 
 // COUNTER
-function initCounter(counterId, min = 1, max = 10) {
+function initCounter(counterId, min, max) {
   const counter = document.getElementById(counterId);
   if (!counter) return;
 
@@ -823,11 +823,13 @@ function initCounter(counterId, min = 1, max = 10) {
   const incrementBtn = counter.querySelector(".counter-btn.right");
 
   decrementBtn.addEventListener("click", () => {
+    console.log('decrementBtn');
     let value = parseInt(input.value, 10);
     if (value > min) input.value = value - 1;
   });
 
   incrementBtn.addEventListener("click", () => {
+    console.log('incrementBtn');
     let value = parseInt(input.value, 10);
     if (value < max) input.value = value + 1;
   });
