@@ -3300,7 +3300,7 @@ canvas {
 }
 
 .burger {
-  visibility: visible;
+  visibility: hidden;
   width: 30px;
   height: 30px;
   background: none;
@@ -3331,9 +3331,7 @@ canvas {
   transform: scale(0);
 }
 
-.burger {
-  display: none;
-}
+
 
 .mobile-nav {
   display: none;
@@ -3484,6 +3482,7 @@ canvas {
   }
 
   .burger {
+    visibility: visible;
     display: block;
     padding: 0 3px;
   }
