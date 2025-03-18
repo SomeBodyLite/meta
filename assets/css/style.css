@@ -4017,7 +4017,7 @@ canvas {
     & .support-body {
       & .chat-container {
         padding: 0 14px;
-        max-height: calc(100vh - 190px);
+        max-height: calc(100dvh - 190px);
 
         .time-section {
           margin: 10px auto !important;
