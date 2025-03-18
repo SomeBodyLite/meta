@@ -1,46 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Находим контейнер с чатами
   const chatsContainer = document.querySelector('.chats-container');
-  console.log('chatsContainer: ', chatsContainer);
-
-  // Находим элемент, которому нужно добавить класс active
   const supportMain = document.querySelector('.support-main');
+  const presetsBlock = document.querySelector('.presets-block');
 
-  // Добавляем обработчик события клика на контейнер с чатами
+  const toggleActiveClass = (element, className, action) => {
+      element.classList[action](className);
+  };
+
   chatsContainer.addEventListener('click', function(event) {
-      // Проверяем, был ли клик на элементе с классом chat-item
       if (event.target.classList.contains('chat-item')) {
-          // Добавляем класс active к элементу support-main
-          supportMain.classList.add('active');
+          toggleActiveClass(supportMain, 'active', 'add');
       }
   });
-  
-  // Находим кнопку, которая отвечает за скрытие чата
-  const actionChats = document.querySelector('.action-chats');
-  
-  // Добавляем обработчик события клика на кнопку action-chats
-  actionChats.addEventListener('click', function(event) {
-      // Убираем класс active у элемента support-main
-      supportMain.classList.remove('active');
-  });
 
-  
-  // Находим кнопку, которая отвечает за скрытие пресетов
-  const actionPresets = document.querySelector('.action-presets');
-  
-  // Добавляем обработчик события клика на кнопку action-presets
-  actionPresets.addEventListener('click', function(event) {
-      // Добавляем класс active к элементу params-block
-      document.querySelector('.presets-block').classList.add('active');
+  const actionHandlers = {
+      '.action-chats': () => {
+        toggleActiveClass(supportMain, 'active', 'remove');
+        toggleActiveClass(presetsBlock, 'active', 'remove');
+      },
+      '.action-presets': () => toggleActiveClass(presetsBlock, 'active', 'add'),
+      '.action-close-presets': () => toggleActiveClass(presetsBlock, 'active', 'remove'),
+  };
+
+  Object.entries(actionHandlers).forEach(([selector, handler]) => {
+      const element = document.querySelector(selector);
+      if (element) {
+          element.addEventListener('click', handler);
+      }
   });
-  
-  // Находим кнопку, которая отвечает за скрытие пресетов
-  const actionClosePresets = document.querySelector('.action-close-presets');
-  
-  // Добавляем обработчик события клика на кнопку action-close-presets
-  actionClosePresets.addEventListener('click', function(event) {
-      // Убираем класс active у элемента presets-block
-      document.querySelector('.presets-block').classList.remove('active');
-  });
-  
 });

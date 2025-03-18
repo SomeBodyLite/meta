@@ -2729,7 +2729,7 @@ canvas {
 
   .item {
     cursor: pointer;
-    background: #0E1323;
+    background: linear-gradient(180deg, #0D111F 0.29%, #141E32 99.71%);
     padding: 10px 12px;
     border-radius: 11px;
     color: #FFF;
