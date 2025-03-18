@@ -1297,7 +1297,7 @@ h6.title {
   display: flex;
   gap: 40px;
   width: 100%;
-  padding-left: 111px;
+  margin-left: 111px;
 
   &.settings {
     flex-direction: column;
@@ -3504,7 +3504,7 @@ canvas {
   }
 
   .app-content {
-    padding-left: 0;
+    margin-left: 0;
   }
 
   h2.title {
