@@ -31,7 +31,7 @@ const items = [
     ],
   },
   {
-    promo: "PROMO1",
+    promo: "PROMO2",
     value: "100$",
     deposits: "200$",
     activations: "5",
@@ -62,7 +62,7 @@ const items = [
     ],
   },
   {
-    promo: "PROMO1",
+    promo: "PROMO3",
     value: "100$",
     deposits: "200$",
     activations: "5",

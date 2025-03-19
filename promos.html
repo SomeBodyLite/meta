@@ -164,8 +164,7 @@
                 </div>
                 <div class="flex justify-end">
                   <button
-                    class="btn btn-gradient radius-20"
-                    style="padding: 14px 50px"
+                    class="btn btn-gradient radius-20 btn-big"
                     onclick="showNotification('Ошибка в создании промокода', 'Такой промокод уже существует. ', 'error')"
                   >
                     Добавить
@@ -174,7 +173,7 @@
               </div>
             </div>
             <div class="block w-100 p-32 light">
-              <div class="flex justify-between mb-flex-column">
+              <div class="flex justify-between">
                 <div
                   class="flex align-center justify-center gap-12"
                 >
@@ -347,6 +346,43 @@
       </div>
       <div class="modal-stats-grid" id="stats-registrations">
         <!-- Здесь будут динамически добавляться элементы -->
+      </div>
+    </div>
+    <div class="modal" data-modal="delete-modal">
+      <svg class="icon modal-close-icon js-modal-close">
+        <use xlink:href="./assets/images/icons.svg#close"></use>
+      </svg>
+      <div class="flex flex-column">
+        <div class="flex align-center justify-center gap-12">
+          <svg class="icon">
+            <use xlink:href="./assets/images/icons.svg#chart"></use>
+          </svg>
+          <h2 class="title">Вы уверены?</h2>
+        </div>
+        <div class="down-separator" style="margin-top: 15px"></div>
+      </div>
+      <div class="mt-25 flex flex-column gap-20">
+        <div class="block-inner p-16">
+          <div class="flex align-start">
+            <div class="flex flex-column flex-100">
+              <h6 class="title text-left">
+                Вы собираетесь удалить промо 
+                "<span id="data-delete-value"></span>"
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end gap-12 mt-10">
+          <button class="btn btn-secondary radius-20 js-modal-close btn-big">
+            Отмена
+          </button>
+          <button
+            class="btn btn-red radius-20 js-modal-close btn-big"
+            onclick="showNotification('Успешно', 'Промо удалён.', 'success', timer = 2000)"
+          >
+            Удалить
+          </button>
+        </div>
       </div>
     </div>
     <script>

@@ -3,7 +3,7 @@ const withdrawItemTemplate = (item) => {
 
   return `<tr class="list-item">
             <td><div class="item"><img src="${item.coinImg}" alt="">${item.coin}<span class="network">${item.network}</span></div></td>
-            <td><div class="item">${item.value}</div></td>
+            <td><div class="item justify-center">${item.value}</div></td>
             <td><div class="item">${shortHash}</div></td>
             <td><div class="item ${item.statusClass}">${item.status}</div></td>
             <td><div class="item">${item.date}</div></td>

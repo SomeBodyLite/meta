@@ -29,6 +29,15 @@
           display: flex !important;
           flex-wrap: wrap !important;
         }
+        .chart-container{
+          padding-top: 20px!important;
+        }
+        .subtitle.mt-10{
+          margin-top: 4px!important;
+        }
+        .down-separator{
+          margin-top: 12px!important;
+        }
       }
     </style>
   </head>
@@ -78,7 +87,7 @@
                   </svg>
                   <h2 class="title">Депозиты</h2>
                 </div>
-                <div class="flex align-center gap-24 justify-center mb-flex-column">
+                <div class="flex align-center gap-24 justify-center">
                   <div class="flex align-center gap-10">
                     <svg class="icon">
                       <use xlink:href="./assets/images/icons.svg#filter"></use>
@@ -176,6 +185,7 @@
       };
 
       const options = {
+        clip: false,
         interaction: {
           mode: "index",
           intersect: false,
@@ -189,7 +199,7 @@
               color: "white",
               font: {
                 family: "Montserrat",
-                size: 15,
+                size: window.innerWidth < 900 ? 10 : 15,
                 weight: "700",
               },
             },
@@ -201,7 +211,7 @@
               callback: (value) => `$${value}`,
               font: {
                 family: "Montserrat",
-                size: 15,
+                size: window.innerWidth < 900 ? 10 : 15,
                 weight: "700",
               },
             },

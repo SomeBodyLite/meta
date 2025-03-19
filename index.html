@@ -56,6 +56,9 @@
         .gap-30 {
           gap: 10px;
         }
+        .pt-30{
+          padding-top: 10px;
+        }
         .app-content {
           gap: 14px;
           flex-direction: column;
@@ -355,12 +358,12 @@
                 gradient.addColorStop(1, "#4490D3");
                 return gradient;
               },
-
               borderRadius: 50,
             },
           ],
         },
         options: {
+          clip: false,
           interaction: {
             mode: "index",
             intersect: false,
@@ -374,7 +377,7 @@
                 color: "#242C3F",
                 font: {
                   family: "Montserrat",
-                  size: 18,
+                  size: window.innerWidth < 900 ? 10 : 18,
                   weight: "600",
                 },
                 callback: (value) => `$${value}`,
@@ -390,15 +393,14 @@
                   weight: "500",
                 },
                 callback: function (val, index) {
-                  // Показываем только первую и последнюю дату
                   if (index === 0 || index === labels.length - 1) {
                     return labels[index];
                   }
                   return "";
                 },
-                autoSkip: false, // Отключаем автоматический пропуск меток
-                maxRotation: 0, // Отключаем поворот меток
-                minRotation: 0, // Отключаем поворот меток
+                autoSkip: false,
+                maxRotation: 0,
+                minRotation: 0,
               },
               grid: { display: false },
             },
@@ -406,7 +408,7 @@
           plugins: {
             legend: { display: false },
             tooltip: {
-              enabled: false, // Отключаем стандартный тултип
+              enabled: false,
               external: function (context) {
                 const tooltipModel = context.tooltip;
                 let tooltip = document.getElementById("custom-tooltip");

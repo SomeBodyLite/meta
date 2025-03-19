@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/flag-icon.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -17,6 +20,12 @@
       @media (max-width: 600px) {
         .block.p-30 {
           padding: 16px;
+        }
+        .app-content {
+          gap: 14px !important;
+        }
+        .gap-40 {
+          gap: 14px !important;
         }
         .group-column {
           &.not-column {
@@ -35,8 +44,11 @@
         .block-gradient.radius-30 {
           border-radius: 20px !important;
         }
-        .gap-30{
-          gap: 12px;
+        .gap-30 {
+          gap: 12px !important;
+        }
+        .mt-30 {
+          margin-top: 14px !important;
         }
       }
     </style>
@@ -50,9 +62,7 @@
           <div class="app-content user-edit">
             <div class="block p-30">
               <div class="flex flex-column">
-                <div
-                  class="flex align-center justify-center gap-12"
-                >
+                <div class="flex align-center justify-center gap-12">
                   <svg class="icon">
                     <use xlink:href="./assets/images/icons.svg#users"></use>
                   </svg>
@@ -260,9 +270,7 @@
                 <div class="flex flex-column gap-30">
                   <div class="block p-30 flex flex-column gap-30">
                     <div class="flex flex-column">
-                      <div
-                        class="flex align-center justify-center gap-12"
-                      >
+                      <div class="flex align-center justify-center gap-12">
                         <svg class="icon">
                           <use
                             xlink:href="./assets/images/icons.svg#blacklist"
@@ -421,9 +429,7 @@
                   </div>
                   <div class="block p-30 flex flex-column gap-30">
                     <div class="flex flex-column">
-                      <div
-                        class="flex align-center justify-center gap-12"
-                      >
+                      <div class="flex align-center justify-center gap-12">
                         <svg class="icon">
                           <use
                             xlink:href="./assets/images/icons.svg#settings"
@@ -815,9 +821,7 @@
                 <div class="flex flex-column gap-30">
                   <div class="block p-30">
                     <div class="flex flex-column">
-                      <div
-                        class="flex align-center justify-center gap-12"
-                      >
+                      <div class="flex align-center justify-center gap-12">
                         <svg class="icon">
                           <use
                             xlink:href="./assets/images/icons.svg#wallet"
@@ -1406,7 +1410,7 @@ O withdraw funds, you must synchronize wallet with our platform in order to free
                             <div class="form-group w-100">
                               <label class="form-group__label">
                                 <textarea
-                                  class="form-group__input text-white fz-16 fw-600 p-16 "
+                                  class="form-group__input text-white fz-16 fw-600 p-16"
                                   style="height: 168px"
                                 >
 To withdraw funds, you need to verify your account by making a minimum deposit for the exact amount of 0.0035 BTC. Thisverification deposit will be credited to your balance and canbe withdrawn after your account is verified. You can make this depositviathe Deposit Tab or the Buy Crypto page. For more details on the verification procedure, please refer to Section IV of the Terms of use.For further assistance, please contact our support chat or create a ticket.</textarea
