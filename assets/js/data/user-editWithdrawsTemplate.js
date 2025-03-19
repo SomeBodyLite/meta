@@ -6,7 +6,7 @@ const withdrawItemTemplate = (item) => {
             <td><div class="item justify-center">${item.value}</div></td>
             <td><div class="item">${shortHash}</div></td>
             <td><div class="item ${item.statusClass}">${item.status}</div></td>
-            <td><div class="item">${item.date}</div></td>
+            <td><div class="item justify-center">${item.date}</div></td>
             <td>
               <div class="item actions">
                 <button class="action-btn edit-btn" data-modal="edit-withdraw" data-id="${item.id}" data-coin="${item.coin}" data-status="${item.status}" data-value="${item.value}" data-hash="${item.hash}" data-date="${item.date}" title="Редактировать">

@@ -1824,6 +1824,7 @@ h6.title {
 
   .list-item {
     transition: background 0.2s ease;
+    background: #0C101D;
 
     &:hover {
       background: rgba(26, 35, 52, 0.836);
@@ -3578,7 +3579,7 @@ canvas {
   }
 
   .subtitle {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .icon:not(.modal-close-icon) {
@@ -3643,7 +3644,6 @@ canvas {
         border-radius: unset;
         position: sticky;
         right: 0;
-        background: #0C101D;
       }
     }
   }
@@ -4337,7 +4337,7 @@ canvas {
           padding: 8px 12px;
 
           .item-info {
-            font-size: 8px;
+            font-size: 11px;
             margin-top: 6px;
           }
         }

@@ -7,7 +7,7 @@ const usersItemTemplate = (item) => {
             <td><div class="item justify-center">${item.value}</div></td>
             <td><div class="item">${item.domen}</div></td>
             <td><div class="item">${shortHash}</div></td>
-            <td><div class="item">${item.date}</div></td>
+            <td><div class="item justify-center">${item.date}</div></td>
             <td>
               <div class="item actions">
                 <button class="action-btn copy-btn" data-value="${item.hash}" title="Копировать">
