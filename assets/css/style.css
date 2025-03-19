@@ -1376,7 +1376,7 @@ h6.title {
     top: calc(100%);
     left: 0;
     right: 0;
-    border-radius: 0 0 19px 19px;
+    border-radius: 19px;
     background: #182539;
     box-shadow: 0px 0px 11.1px 0px rgba(255, 255, 255, 0.1);
     padding: 10px;
@@ -3074,7 +3074,19 @@ canvas {
   justify-content: center;
   padding: 8px 14px;
   border-radius: 17px;
-  border: 2px solid rgba(255, 255, 255, 0.24);
+  position: relative;
+
+  z-index: 0;
+  /* border: 2px solid rgba(255, 255, 255, 0.24); */
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(255, 255, 255, 0.24);
+    z-index: -1;
+    border-radius: inherit;
+  }
 
   &.state-1 {
     background: #DFA13D;
@@ -3728,6 +3740,7 @@ canvas {
 
   .custom-select,
   .custom-select.custom-2 {
+
     & .select-selected {
       font-size: 12px;
       padding: 3px 12px;
@@ -3737,13 +3750,26 @@ canvas {
     & .select-items {
       padding: 5px;
       padding-top: 25px;
+      transform: scale(0.6) translateY(-20px);
 
       .select-item {
         font-size: 11px;
         padding: 4px;
       }
     }
+
+    &.open {
+      .select-items {
+        transform: scale(1) translateY(-20px);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
+  [data-modal="stats-modal"]{
+    top: 100px!important;
+  }
+
 
   .icon.select-carret {
     width: 10px;
@@ -3854,6 +3880,13 @@ canvas {
   }
 }
 
+.drag__item p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @media (max-width: 600px) {
 
   .login-title {
@@ -3957,10 +3990,15 @@ canvas {
   }
 
   .drag__item {
-    padding: 12px 15px !important;
+    padding: 10px 13px !important;
 
     p {
-      font-size: 12px !important;
+      font-size: 10px !important;
+    }
+
+    .icon {
+      width: 15px !important;
+      height: 15px !important;
     }
 
     .flex.gap-30 {
@@ -3987,19 +4025,25 @@ canvas {
       }
     }
   }
-  #selectStatus{
-    .select-items .select-item{
+
+  #selectStatus {
+    .select-items .select-item {
       justify-content: center;
     }
   }
-  .form-group__after{
-    width: 15px!important;
-    height: 15px!important;
+
+  .form-group__after {
+    width: 15px !important;
+    height: 15px !important;
   }
-  .status.pending, .status.failed, .status.success {
+
+  .status.pending,
+  .status.failed,
+  .status.success {
     padding: 5px 8px;
     font-size: 11px;
   }
+
   .grid-wrap {
     display: flex;
     flex-direction: column;
@@ -4122,19 +4166,19 @@ canvas {
     font-size: 12px;
   }
 
-  /* .context-menu {
-    padding: 7px 6px;
+  .context-menu {
+    padding: 8px 7px;
 
     button {
-      padding: 4px 6px;
-      font-size: 10px;
+      padding: 6px 10px;
+      font-size: 13px;
 
       .icon {
-        width: 10px;
-        height: 10px;
+        width: 15px;
+        height: 15px;
       }
     }
-  } */
+  }
 }
 
 @media (max-width: 1400px) {
@@ -4244,12 +4288,12 @@ canvas {
             width: fit-content;
 
             .flag-icon {
-              width: 9px;
-              height: 7px;
+              width: 16px;
+              height: 12px;
             }
 
             .fz-14 {
-              font-size: 7px !important;
+              font-size: 11px !important;
             }
           }
 

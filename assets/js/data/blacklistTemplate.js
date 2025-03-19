@@ -2,7 +2,7 @@ const blacklistItemTemplate = (item) => {
 
   return `<tr class="list-item">
             <td><div class="item"><a class="text-white" href="./user-edit.html">${item.login}</a></div></td>
-            <td><div class="item">${item.date}</div></td>
+            <td><div class="item justify-center">${item.date}</div></td>
             <td>
               <div class="item actions">
                 <button class="action-btn copy-btn" data-value="${item.login}" title="Копировать">
