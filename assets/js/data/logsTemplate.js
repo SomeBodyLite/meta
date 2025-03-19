@@ -3,6 +3,6 @@ const usersItemTemplate = (item) => {
             <td><div class="item"><a class="text-white" href="./user-edit.html">${item.login}</a></div></td>
             <td><div class="item">${item.action}</div></td>
             <td><div class="item">${item.ip}</div></td>
-            <td><div class="item">${item.time}</div></td>
+            <td><div class="item justify-center">${item.time}</div></td>
           </tr>`;
 };
