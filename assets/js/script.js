@@ -20,10 +20,76 @@ if (header) {
       }
       let burger = document.querySelector(".burger");
       let mobileNav = document.querySelector(".mobile-nav");
+      let mobileNavBg = document.querySelector(".mobile-nav__bg");
+      
       burger.addEventListener("click", () => {
         burger.classList.toggle("active");
         mobileNav.classList.toggle("active");
+        mobileNavBg.classList.toggle("active");
         document.body.classList.toggle("ov-h");
+      });
+      
+      mobileNavBg.addEventListener("click", () => {
+        burger.classList.remove("active");
+        mobileNav.classList.remove("active");
+        mobileNavBg.classList.remove("active");
+        document.body.classList.remove("ov-h");
+      });
+      
+      let touchStartX = 0;
+      let touchEndX = 0;
+      let isSwiping = false;
+      
+      mobileNav.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+        isSwiping = true;
+      
+        mobileNav.style.transition = "none";
+      });
+      
+      mobileNav.addEventListener("touchmove", (e) => {
+        if (!isSwiping) return;
+      
+        touchEndX = e.touches[0].clientX;
+        const deltaX = touchEndX - touchStartX;
+      
+        if (deltaX < 0) {
+          mobileNav.style.transform = `translateX(${deltaX}px)`;
+        }
+      });
+      
+      mobileNav.addEventListener("touchend", () => {
+        if (!isSwiping) return;
+      
+        const deltaX = touchEndX - touchStartX;
+        const MIN_SWIPE_DISTANCE = 50; 
+      
+        mobileNav.style.transition = "transform 0.3s ease";
+      
+        if (deltaX < -MIN_SWIPE_DISTANCE) {
+          mobileNav.style.transform = `translateX(-100%)`;
+      
+          setTimeout(() => {
+            burger.classList.remove("active");
+            mobileNav.classList.remove("active");
+            mobileNavBg.classList.remove("active");
+            document.body.classList.remove("ov-h");
+            mobileNav.style.transition = "";
+            mobileNav.style.transform = "";
+          }, 300); // Время анимации
+        } else {
+          
+          mobileNav.style.transform = `translateX(0)`;
+      
+          setTimeout(() => {
+            mobileNav.style.transition = ""; 
+          }, 300); // Время анимации
+        }
+      
+        // Сброс значений
+        touchStartX = 0;
+        touchEndX = 0;
+        isSwiping = false;
       });
 
       const currentUrl = window.location.pathname;
@@ -118,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
       document.body.style.overflow = "hidden";
-      console.log('document.body: ', document.body);
+      console.log("document.body: ", document.body);
       modalElem.classList.add("active");
       overlay.classList.add("active");
 
