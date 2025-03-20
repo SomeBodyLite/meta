@@ -891,6 +891,7 @@ button:hover .icon.stroke-hover {
       .form-group__input {
         font-size: 14px;
         padding: 7px 8px 8px 8px;
+        
       }
     }
   }
@@ -942,7 +943,12 @@ button:hover .icon.stroke-hover {
     font-weight: 700;
     line-height: normal;
   }
-
+  &.mobile-wide{
+    @media (max-width: 600px) {
+      width: 100%;
+      min-width: unset;
+    }
+  }
   .form-group__label {
     border-radius: 25px;
     background: #151c2e;
@@ -962,8 +968,10 @@ button:hover .icon.stroke-hover {
       &::placeholder {
         color: #515560;
       }
+      
 
     }
+    
 
     textarea.form-group__input {
       font-family: Montserrat;
